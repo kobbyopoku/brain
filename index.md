@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 16 sources · 91 entities · 34 concepts · 1 project · 0 syntheses · last updated 2026-05-02
+**Stats**: 17 sources · 91 entities · 34 concepts · 1 project · 0 syntheses · last updated 2026-05-02
 
 ---
 
@@ -38,6 +38,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — Refero's curated DESIGN.md catalog for AI coding agents; landing-page clipping.
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] — 11 patterns shared by 8 YC unicorn landing pages.
+- [[wiki/sources/stripe-design-md]] — first concrete DESIGN.md ingested into the brain (Stripe via Refero); 18 colors, 7-step type scale, 4px spacing system, 5 components.
 
 ## Entities
 
