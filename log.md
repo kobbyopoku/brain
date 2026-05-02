@@ -114,3 +114,12 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - pages updated: [[CLAUDE]] — directory layout adds `wiki/projects/`; frontmatter `type` field accepts `project`; new § Workflows → Adding a project + Updating a project; index.md format mentions Projects grouped by status. [[index]] — new `## Projects` section with status subgroups; stats line includes `0 projects`. [[bin/wiki_lint.py]] — recognizes `wiki/projects/` and `type: project`; skips README.md files in WIKI_DIRS so directory documentation doesn't fail frontmatter checks.
 - companion (outside the vault): added user-level slash commands `~/.claude/commands/brain-add-project.md` and `~/.claude/commands/brain-update-project.md` for surveying a project from its directory and writing/updating its page in the brain.
 - notes: Projects are first-class now. The brain page holds the *durable summary* (status, stack, current focus, decisions, lessons learned); operational state (granular decisions, error postmortems, session notes) belongs in the project's own repo at `<project>/.memory/`. The two are linked by a gitignored `BRAIN.md` at the project root pointing at `~/brain/wiki/projects/<slug>.md`. First real project addition happens in a separate session inside the project (e.g. vedge) running `/brain-add-project`.
+
+## [2026-05-02] add-project | Vedge
+- page created: [[wiki/projects/vedge]]
+- pages updated: [[index]] — Projects → Active now lists Vedge; stats line bumped to `1 project`.
+- status: active
+- repo: multi-repo at github.com/kobbyopoku/{vedge_backend, vedge_frontend, vedge_patient, vedge_staff, vedge_landing, vedge_emails, vedge_agent}
+- local_path: /Users/kobbyopoku/ROAM/CascadeProjects/vedge
+- project-side: BRAIN.md added at workspace root pointing to the brain page. Workspace root is not a git repo and has no .gitignore — the seven submodule repos each have their own; no .gitignore changes were necessary.
+- notes: First project page in the wiki. Vedge is a multi-tenant healthcare OS for African facilities — modular-monolith Spring Boot backend (12 modules) + Next.js web + Flutter patient/staff apps. Surfaced candidates for future concept pages: `multi-tenant-ehr`, `modular-monolith`, `flyway-migration-safety`, `expert-led-implementation-protocol`. No existing brain entities map directly yet (Spring Boot, Flyway, Flutter, Paystack, Flutterwave, Kivora, Railway are all unrepresented).
