@@ -24,6 +24,7 @@ A second value: **role enforcement via tool scoping.** Because each subagent has
 ## Treatment across sources
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — describes a 5-role setup as a recommended baseline: **architect** (specs/plans, no code), **coder** (writes code, full tool access), **reviewer** (security-first PR review), **tester** (TDD enforcement, paired with [[wiki/entities/tdd-guard]]), **ops** (deploy/CI/CD/infra). References two pre-built collections: [[wiki/entities/wshobson-agents]] and [[wiki/entities/davepoon-subagents-collection]].
+- [[wiki/sources/nateherk-claude-code-os-3m-business]] — gives a worked example of the **context-window-isolation pattern**: a Pulse Check skill delegates heavy [[wiki/entities/clickup|ClickUp]] data work to a `clickup-searcher` sub-agent so the heavy data never blows the main context window. The principle: subagents aren't only for role specialization — they're also for **isolating expensive context loads** that would otherwise pollute the main session.
 
 ## Sub-claims and details
 

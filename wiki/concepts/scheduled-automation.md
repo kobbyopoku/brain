@@ -28,6 +28,11 @@ Scheduled automations also make the [[lint]] operation in this wiki concrete —
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — names scheduled-automation design as one of four core technical competencies for an AI automation services builder. Practice prescription: build 3 scheduled automations on the builder's own workflow (daily briefing, weekly review, monthly summary), let them run for 2 weeks, fix issues. Highlights graceful handling of missing data as a key design concern.
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — implicit but central. The "agents work while you sleep" argument depends on scheduled automations as much as on parallel orchestration; orchestration is *how many* run in parallel, scheduling is *when* they run.
+- [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational tradeoff matrix for three cadence options:
+  - **Cloud Routines** (Anthropic infrastructure, laptop can be off): Pro 5/day, Max 15/day, Team/Enterprise 25/day. Gotchas: cloned-repo only (no local files); `.env` not pushed (use cloud env vars); explicit prompt to use env vars not `.env`; default network = "trusted" (Anthropic-vetted only — switch to "full" for ClickUp etc.); each run stateless; minimum interval 1 hour.
+  - **Local Scheduled Tasks** (desktop app): can catch up on missed runs; needs app open + computer awake.
+  - **Loop**: one-off recurring runs in a single session; 3-day expiry then auto-deletes; great for "every 5 minutes check if my deploy is done"; wrong for weekly recurring jobs.
+  Author's framing: *"Routines basically inject a prompt into a real Claude Code session. The same prompt you'd type yourself. So write specific, one-shot prompts; the routine isn't going to ask clarifying questions."*
 
 ## Sub-claims and details
 

@@ -25,11 +25,21 @@ This concept is **distinct from the file format** captured in [[skill-md]]. SKIL
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — characterizes skills as transforming Claude Code "from 'write code when asked' into a complete development methodology." Names specific skill collections: [[wiki/entities/superpowers]] (workflow discipline), [[wiki/entities/trail-of-bits-claude-code-skills]] (security), [[wiki/entities/anthropic-skills]] (official PDF/DOCX/XLSX), [[wiki/entities/tdd-guard]] (TDD enforcement). Asserts skills don't conflict with each other and stack additively.
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — frames skill-file authoring as one of four core competencies for an AI automation services business: "the skill file is the engine of every automation." The author's framing is implementation-side: a skill file is a process-spec the agent executes (process steps, output formats, edge case handling, quality checks, error recovery).
+- [[wiki/sources/HeyZaraKhan-anthropic-skills-announcement]] — announcement-style coverage characterizing skills as *modular, versioned, dynamically loaded* — the shift from "prompt engineering" to "programmable, reusable AI systems."
+- [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]] — architectural framing: a skill is a packaged capability combining *guidance + context + execution*. Names [[progressive-disclosure]] as the conceptual unlock (metadata first, content on demand) and [[reasoning-execution-split]] as why skills with embedded code are reliable in a way pure-prompt skills aren't. Also flags the security risk surface: skills add power, which means they add risk.
+- [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational skill-authoring playbook: six-step framework (name+trigger / one-sentence goal / step-by-step process / reference files / rules+guardrails / improvement loop), three-level loading model (front matter → skill.md → reference files), keep skill.md under 500 lines, project-level vs `~/.claude/skills/` global distinction, hardcode stable values into skill.md instead of querying via MCP every time.
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — the cost counterpoint: skill loading on irrelevant tasks is the 5th-largest [[claude-code-overhead-patterns|overhead pattern]] (~7% of total tokens). Author had 11 active skills loading "just in case"; cut to 4 and saved 9,000+ tokens per task on average. Auto-invocation is conservative (when in doubt, load), so unused skills cost on every task.
 
 ## Sub-claims and details
 
 - **File format**: see [[skill-md]] — markdown plus frontmatter (name, description, when to invoke).
 - **Activation**: based on description matching against the current task. The agent reads available skill descriptions as part of its context and invokes the matching one(s).
+- **Three-level loading** (per [[wiki/sources/nateherk-claude-code-os-3m-business|nateherk]] and [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world|NainsiDwiv50980]]):
+  - **L1**: scan all skill front matter (~100 tokens per skill). Always loaded.
+  - **L2**: full skill.md (~couple thousand tokens). Loaded when L1 metadata matches.
+  - **L3**: reference files. Loaded only when L2 instructions point at them.
+  See [[progressive-disclosure]].
+- **Six-step authoring framework** (per [[wiki/sources/nateherk-claude-code-os-3m-business|nateherk]]): name+trigger / one-sentence goal / step-by-step process / reference files / rules+guardrails / improvement loop. After each run, update the skill.
 - **Namespacing**: plugin-prefixed (e.g. `posthog:querying-posthog-data`, `vercel:nextjs`) when distributed via plugin marketplaces.
 - **Composition**: skills stack — multiple skills can apply to the same task. Reported (regent0x_) as non-conflicting; in practice ordering and interaction may matter for complex stacks.
 - **Composition with [[subagents]]**: each subagent can have its own skill stack; e.g. the reviewer subagent + the trail-of-bits security skill collection.
@@ -43,6 +53,8 @@ This concept is **distinct from the file format** captured in [[skill-md]]. SKIL
 - **Activation collision**: when two skills' descriptions both seem to match the task, who wins? Sources don't address this.
 - **Skill versioning**: as skill files evolve, agents loading older or newer versions may behave differently. No skill-versioning convention captured yet.
 - **Skill quality variance**: open-source skill repos vary widely in quality; "stack as many as you want" assumes the skills are well-authored, which is unsourced.
+- **The "stack additively" claim is contradicted by [[claude-code-overhead-patterns|measured overhead]]**: regent0x_ asserts skills don't conflict and stack additively; Mnilax measures that 9 active skills × ~1,500 tokens = 13,500 tokens of overhead per task even when none of them apply. Both claims are correct in different senses (no behavioral conflict vs. real cost compounding); reconciling them: stack additively but audit aggressively.
+- **Description quality is load-bearing**: a skill with a vague description either over-fires (cost) or under-fires (manual instructions). No tooling for "your description has drifted from your skill's actual behavior."
 
 ## Related concepts
 

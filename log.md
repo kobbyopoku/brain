@@ -111,7 +111,7 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 
 ## [2026-05-02] schema-update | Add Projects as fourth wiki page type
 - pages created: `wiki/projects/README.md` (directory documentation), `templates/project.md`
-- pages updated: [[CLAUDE]] — directory layout adds `wiki/projects/`; frontmatter `type` field accepts `project`; new § Workflows → Adding a project + Updating a project; index.md format mentions Projects grouped by status. [[index]] — new `## Projects` section with status subgroups; stats line includes `0 projects`. [[bin/wiki_lint.py]] — recognizes `wiki/projects/` and `type: project`; skips README.md files in WIKI_DIRS so directory documentation doesn't fail frontmatter checks.
+- pages updated: [[CLAUDE]] — directory layout adds `wiki/projects/`; frontmatter `type` field accepts `project`; new § Workflows → Adding a project + Updating a project; index.md format mentions Projects grouped by status. [[index]] — new `## Projects` section with status subgroups; stats line includes `0 projects`. `bin/wiki_lint.py` — recognizes `wiki/projects/` and `type: project`; skips README.md files in WIKI_DIRS so directory documentation doesn't fail frontmatter checks.
 - companion (outside the vault): added user-level slash commands `~/.claude/commands/brain-add-project.md` and `~/.claude/commands/brain-update-project.md` for surveying a project from its directory and writing/updating its page in the brain.
 - notes: Projects are first-class now. The brain page holds the *durable summary* (status, stack, current focus, decisions, lessons learned); operational state (granular decisions, error postmortems, session notes) belongs in the project's own repo at `<project>/.memory/`. The two are linked by a gitignored `BRAIN.md` at the project root pointing at `~/brain/wiki/projects/<slug>.md`. First real project addition happens in a separate session inside the project (e.g. vedge) running `/brain-add-project`.
 
@@ -123,3 +123,21 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - local_path: /Users/kobbyopoku/ROAM/CascadeProjects/vedge
 - project-side: BRAIN.md added at workspace root pointing to the brain page. Workspace root is not a git repo and has no .gitignore — the seven submodule repos each have their own; no .gitignore changes were necessary.
 - notes: First project page in the wiki. Vedge is a multi-tenant healthcare OS for African facilities — modular-monolith Spring Boot backend (12 modules) + Next.js web + Flutter patient/staff apps. Surfaced candidates for future concept pages: `multi-tenant-ehr`, `modular-monolith`, `flyway-migration-safety`, `expert-led-implementation-protocol`. No existing brain entities map directly yet (Spring Boot, Flyway, Flutter, Paystack, Flutterwave, Kivora, Railway are all unrepresented).
+
+## [2026-05-02] ingest | Equipping Agents for the Real World — NainsiDwiv50980
+- raw: `raw/Equipping Agents for the Real World A Deeper Look at Agent Skills.md` (2026-05-02)
+- pages created: [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]], [[wiki/entities/nainsi-dwiv]], [[wiki/concepts/progressive-disclosure]], [[wiki/concepts/reasoning-execution-split]]
+- pages updated: [[wiki/concepts/claude-code-skills]] (architectural framing + risk surface)
+- notes: Conceptual deep-dive contributing two named patterns (progressive disclosure, reasoning + execution split). Pairs with operational sources (regent0x_, Mnilax, nateherk) — gives them the *why* underneath the *what*.
+
+## [2026-05-02] ingest | 430 Hours of Claude Code Usage — Mnilax
+- raw: `raw/I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns..md` (2026-05-01)
+- pages created: [[wiki/sources/Mnilax-430-hours-claude-code-waste]], [[wiki/entities/mnilax]], [[wiki/concepts/claude-code-overhead-patterns]]
+- pages updated: [[wiki/concepts/claude-code-skills]] (cost counterpoint), [[wiki/concepts/claude-code-hooks]] (hook-injection-waste pattern), [[wiki/concepts/mcp-server]] (tool-definition overhead)
+- notes: Instrumented 90-day study; 9 patterns; ships an audit script. Directly applicable to this wiki's own setup — worth running the audit on `~/.claude/CLAUDE.md` and `~/brain/CLAUDE.md` after this ingest.
+
+## [2026-05-02] ingest | My Claude Code OS Runs My $3M/yr Business — nateherk
+- raw: `raw/My Claude Code OS Runs my $3Myr Business. Steal This..md` (2026-05-01)
+- pages created: [[wiki/sources/nateherk-claude-code-os-3m-business]], [[wiki/entities/nateherk]], [[wiki/entities/ais-os]], [[wiki/entities/skool]], [[wiki/entities/glaido]], [[wiki/entities/clickup]], [[wiki/entities/quickbooks]], [[wiki/entities/fireflies]], [[wiki/entities/notion]], [[wiki/concepts/ai-os-pattern]], [[wiki/concepts/hot-cache]]
+- pages updated: [[wiki/concepts/llm-wiki-pattern]] (second wild secondary citation; hot-cache extension noted), [[wiki/concepts/scheduled-automation]] (Cloud Routines / Local / Loop tradeoff matrix), [[wiki/concepts/mcp-server]] (operational alternative: API-saved-as-markdown), [[wiki/concepts/multi-agent-orchestration]] (cadence framing), [[wiki/concepts/subagents]] (clickup-searcher context-isolation example), [[wiki/concepts/markdown-as-agent-contract]] (layered claude.md/skills/contexts/references), [[wiki/concepts/claude-code-skills]] (six-step authoring framework), [[wiki/concepts/progressive-disclosure]] (three-level loading model corroboration), [[wiki/concepts/reasoning-execution-split]] (boring-is-beautiful corollary)
+- notes: **Second wild secondary citation of Karpathy's LLM Wiki**. Operationally rich — Three Ms + Four Cs frameworks coined. Hot-cache pattern is genuinely new and worth implementing on this brain. Cross-cuts with Mnilax (API-over-MCP = Mnilax's tool-def overhead pattern from a different angle) and Vacca (services-business-shape running on Claude Code).

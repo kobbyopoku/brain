@@ -24,6 +24,7 @@ Hooks complement [[claude-code-skills]] (which teach the agent how to perform ta
 ## Treatment across sources
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — names three concrete hook patterns: a **pre-commit hook** that enforces TDD via [[wiki/entities/tdd-guard]], a **session-start hook** that loads memory from Obsidian and recent session logs (priming context), a **pre-push hook** that runs security review before code hits the remote.
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — **cost counterpoint**. UserPromptSubmit hook injection is the 3rd-largest [[claude-code-overhead-patterns|overhead pattern]] (~11% of tokens). Author had 4 plugins → 3 UserPromptSubmit hooks injecting context = 6,200 tokens *before Claude reads what you asked*. Cut to 1 hook (just git branch); saved 5,800 tokens per prompt. Plugin auto-update SessionStart hooks were a separate 9th pattern (~3% of tokens, just for "loaded successfully" notifications). The principle: audit every hook; if you can't articulate why this hook fires on every prompt, kill it.
 
 ## Sub-claims and details
 

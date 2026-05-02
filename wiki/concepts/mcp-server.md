@@ -25,6 +25,8 @@ For [[ai-automation-services]] specifically, MCP is the layer where the *value* 
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — the canonical source for the concept in this wiki. Names four concrete MCP servers a services builder must master: [[wiki/entities/tavily]] (web search), [[wiki/entities/google-drive]] (file access), [[wiki/entities/gmail]] (email), [[wiki/entities/slack]] (communications). Practice exercise: chain all four (search web → save summary to Drive → email it → post to Slack channel).
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — uses MCP implicitly throughout (GitHub interactions in `/fix-issue`, deploy pipelines in `/deploy staging`, security scanning in pre-push hooks) but does not theorize the layer.
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — the **cost counterpoint**. MCP tool definitions are the 6th-largest [[claude-code-overhead-patterns|overhead pattern]] (~6% of tokens). Each connected MCP ships its tool schema to every request regardless of whether the task involves it. Author had 12 MCPs × ~600 avg tokens = 7,200 tokens of tool defs per request; cut to 3 always-on, saved 6,000 tokens per request. PostgreSQL MCP alone is ~1,200 tokens.
+- [[wiki/sources/nateherk-claude-code-os-3m-business]] — **operational alternative**: prefer API endpoints saved as markdown over MCPs. *"MCPs load every endpoint and every function whether you need it or not. That eats tokens. Tell Claude: research the docs once, save them as a markdown reference, pull from that file when you need an endpoint. Markdown is cheap to read; API docs are expensive to crawl every time."* Same insight as Mnilax's cost analysis from a different starting point.
 
 ## Sub-claims and details
 

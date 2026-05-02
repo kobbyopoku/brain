@@ -24,6 +24,7 @@ This is also where the cost-vs-throughput tradeoff becomes legible. Each paralle
 ## Treatment across sources
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — names two orchestration tools: [[wiki/entities/claude-squad]] (terminal multiplexer; `brew install claude-squad; cs`; uses git worktrees for workspace isolation; `cs -y` for auto-accept on trusted tasks) and [[wiki/entities/claude-flow]] (called "enterprise-grade multi-agent orchestration with persistent memory", 11.4k+ stars per the post). Author's nightly workflow: three sessions on three independent units of work, close the laptop, wake to three PRs.
+- [[wiki/sources/nateherk-claude-code-os-3m-business]] — frames the cadence layer of the [[ai-os-pattern|AI OS]] as the third part of orchestration: capabilities make Claude useful when you ask, **cadence** makes it useful when you don't. Three options with explicit tradeoffs (Cloud Routines / Local Scheduled Tasks / Loop) — see [[scheduled-automation]]. The author's framing of why this matters: *"Capabilities make Claude useful when you ask. Cadence makes it useful when you don't."*
 
 ## Sub-claims and details
 

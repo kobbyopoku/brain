@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 13 sources · 81 entities · 29 concepts · 1 project · 0 syntheses · last updated 2026-05-02
+**Stats**: 16 sources · 91 entities · 34 concepts · 1 project · 0 syntheses · last updated 2026-05-02
 
 ---
 
@@ -17,6 +17,9 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — six-layer Claude Code stack (CLAUDE.md → memory → skills → subagents → hooks → orchestration); first wild citation of Karpathy's LLM Wiki.
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — full course on building an AI agent from scratch; foundational for [[agentic-loop]], [[augmented-llm]], [[agent-workflow-patterns]], [[beginner-agent-types]].
 - [[wiki/sources/heynavtoor-10-repos-replace-eng-team]] — 10 open-source repos that replace each role of an engineering team.
+- [[wiki/sources/nateherk-claude-code-os-3m-business]] — full AI OS playbook from a $3M/yr business; **second wild citation of Karpathy's LLM Wiki**; introduces [[hot-cache]].
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — instrumented 90-day study; 73% of tokens go to 9 named overhead patterns; ships an audit script.
+- [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]] — architectural deep-dive on Anthropic Agent Skills; canonical for [[progressive-disclosure]] and [[reasoning-execution-split]].
 - [[wiki/sources/HeyZaraKhan-anthropic-skills-announcement]] — secondary citation of Anthropic Skills as the "programmable, reusable AI systems" shift.
 - [[wiki/sources/HeyZaraKhan-claude-certified-architect]] — resource list for the Claude Certified Architect program.
 
@@ -50,6 +53,9 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/HeyZaraKhan]] — author of two Claude-ecosystem posts (Skills, Certified Architect).
 - [[wiki/entities/heynavtoor]] — author of the 10-repos-replace-eng-team thesis.
 - [[wiki/entities/hooeem]] — author of the build-an-AI-agent-today course.
+- [[wiki/entities/mnilax]] — author of the 430-hours instrumented Claude Code study.
+- [[wiki/entities/nainsi-dwiv]] — author of the Agent Skills architectural deep-dive.
+- [[wiki/entities/nateherk]] — author of the AI OS playbook; runs a $3M/yr business on Claude Code.
 - [[wiki/entities/regent0x]] — author of the Claude Code 24/7 dev team stack.
 
 ### People — referenced
@@ -80,6 +86,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/anthropic-cookbook]] — Anthropic's curated patterns repository.
 - [[wiki/entities/anthropic-skills]] — Anthropic's official skill collection.
 - [[wiki/entities/aiagency-io]] — Alex Vacca's 12-week services-as-software program.
+- [[wiki/entities/ais-os]] — nateherk's AI OS starter repo.
 - [[wiki/entities/claude-certified-architect]] — Anthropic's certification program.
 - [[wiki/entities/claude-flow]] — enterprise-grade multi-agent orchestration framework.
 - [[wiki/entities/claude-mem]] — session-end memory compression and carry-forward.
@@ -92,6 +99,17 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/trail-of-bits-claude-code-skills]] — Trail of Bits's security audit skill collection.
 - [[wiki/entities/wshobson-agents]] — production subagent collection.
 - [[wiki/entities/wshobson-commands]] — production slash command collection.
+
+### AI OS connections layer (referenced)
+
+Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connection-layer integrations.
+
+- [[wiki/entities/clickup]] — task / comms backend.
+- [[wiki/entities/fireflies]] — meeting transcription.
+- [[wiki/entities/glaido]] — voice-input tool.
+- [[wiki/entities/notion]] — knowledge / tasks platform.
+- [[wiki/entities/quickbooks]] — accounting.
+- [[wiki/entities/skool]] — community platform.
 
 ### AI coding tools (other)
 
@@ -179,11 +197,19 @@ Stub pages awaiting substantive primary sources. Their only current content is a
 ### Claude Code mechanisms
 
 - [[wiki/concepts/claude-code-hooks]] — lifecycle automation (pre-commit, session-start, pre-push).
+- [[wiki/concepts/claude-code-overhead-patterns]] — 9 measured token-waste patterns + fixes.
 - [[wiki/concepts/claude-code-skills]] — the skill mechanism; markdown-defined invokable capabilities.
 - [[wiki/concepts/claude-code-slash-commands]] — user-defined invocation shortcuts.
 - [[wiki/concepts/multi-agent-orchestration]] — running multiple Claude Code agents in parallel against isolated workspaces.
 - [[wiki/concepts/scheduled-automation]] — `/schedule`-registered routines running unattended.
 - [[wiki/concepts/subagents]] — multi-agent role specialization (architect/coder/reviewer/tester/ops).
+
+### Agent architecture
+
+- [[wiki/concepts/ai-os-pattern]] — Three Ms + Four Cs framework for treating Claude Code as an OS.
+- [[wiki/concepts/hot-cache]] — `_hot.md`: 500-token active-state file extending the LLM Wiki pattern.
+- [[wiki/concepts/progressive-disclosure]] — load metadata first, content on demand.
+- [[wiki/concepts/reasoning-execution-split]] — LLM reasons; deterministic code executes.
 
 ### Integration & data layer
 
