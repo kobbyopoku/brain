@@ -32,9 +32,11 @@ This page is a **stub**. SKILL.md is mentioned in this wiki as one of the canoni
 
 ## Related concepts
 
+- [[claude-code-skills]] — the **mechanism** that runs SKILL.md files. SKILL.md is the *file format*; claude-code-skills is the *runtime layer*. Use both: this page for "what's in the file?", that page for "how does it activate?".
 - [[markdown-as-agent-contract]] — the meta-pattern SKILL.md instantiates.
 - [[agents-md]] — sibling instance.
 - [[design-md]] — sibling instance.
+- [[context-file]] — sibling at the per-client scope.
 
 ## Mentioned in
 

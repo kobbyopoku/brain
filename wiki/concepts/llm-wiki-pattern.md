@@ -24,6 +24,7 @@ This is also a workable answer to a problem [[memex]] left open in 1945: *who do
 ## Treatment across sources
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]] — original framing of the pattern. Lays out the three-layer architecture (raw / wiki / schema), the three core operations (ingest / query / lint), and the index-vs-log distinction. Frames the human as curator and the LLM as bookkeeper.
+- [[wiki/sources/regent0x-claude-code-247-dev-team]] — first secondary citation in the wild. Treats Karpathy's LLM Wiki as the conceptual basis for a Claude Code persistent-memory layer, instantiated as a structured Obsidian vault with `/decisions`, `/errors`, `/patterns`, `/sessions`, `/stack` directories plus `Memory.md` and `index.md`. Combines the wiki with [[wiki/entities/claude-mem]] (session-end compression) and [[wiki/entities/claude-subconscious]] (continuous background memory). The source slightly mis-cites the LLM Wiki location (links to a `github.com/karpathy/llm-wiki` URL rather than the gist this wiki uses); content claim is faithful, URL claim is not.
 
 ## Sub-claims and details
 

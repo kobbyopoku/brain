@@ -20,6 +20,7 @@ tags: [meta-pattern, ai-agents, markdown, agent-config, foundational]
 - **`DESIGN.md`** — design system reference for AI coding agents. See [[design-md]].
 - **`SKILL.md`** — instructions for a Claude skill, defining when and how it should activate. See [[skill-md]].
 - **`README.md`** — older convention, but increasingly read by agents as part of their context. See [[readme-md]].
+- **Context files** — per-client/per-principal voice, audience, quality standards. Same shape, narrower audience scope. See [[context-file]].
 
 What unifies these files is not a shared schema (each has its own structure) but a shared *role*: they are the **contract** between human intent and agent execution.
 
@@ -39,6 +40,8 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]] — frames `CLAUDE.md` (or `AGENTS.md`) as "the key configuration file" that "makes the LLM a disciplined wiki maintainer rather than a generic chatbot." This is the strongest articulation of the pattern in the wiki so far; Karpathy's framing of "co-evolved schema" is the canonical statement.
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — instantiates the pattern in the design-systems domain via [[design-md]]. The framing is implicit (the source doesn't theorize the meta-pattern) but the artifact is the same shape.
+- [[wiki/sources/regent0x-claude-code-247-dev-team]] — provides a **highly structured, engineering-domain-specific** CLAUDE.md template (sections for project, conventions, architecture decisions, current focus, rules) and partially answers an open question of this concept ("does the pattern scale beyond moderate complexity?"). The answer demonstrated: yes, by being highly structured per-domain rather than generic. Each subagent ([[subagents]]) gets its own CLAUDE.md, composing the contract into role-specific layers.
+- [[wiki/sources/khairallah-ai-automations-10k-month]] — adds [[context-file]] (per-client business voice/standards) and the [[claude-code-skills|skill file]] (per-task workflow) as instances of the pattern, distinct from the project-wide [[CLAUDE]] contract. Suggests the pattern naturally splits along *audience scope*: project (CLAUDE), client (context file), workflow (skill file), single capability (skill-md).
 
 ## Sub-claims and details
 
@@ -61,6 +64,8 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[agents-md]] — instance of the meta-pattern for OpenAI Codex / generic agents.
 - [[skill-md]] — instance of the meta-pattern at the single-capability scope.
 - [[readme-md]] — older sibling convention being absorbed into the family.
+- [[context-file]] — instance at the per-client / per-principal scope.
+- [[claude-code-skills]] — the *mechanism* through which one of these contracts (skill files) becomes runnable.
 
 ## Related entities
 
