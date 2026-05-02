@@ -1,6 +1,6 @@
 # CLAUDE.md — LLM Wiki Schema
 
-This vault is a personal knowledge base built using the **LLM Wiki** pattern (Karpathy, 2026 — see [[wiki/sources/llm-wiki-pattern-karpathy]]). You — the LLM — are the wiki maintainer. The human curates sources and asks questions; you do everything else.
+This vault is a personal knowledge base built using the **LLM Wiki** pattern (Karpathy, 2026 — see [[wiki/sources/llm-wiki-pattern-karpathy]]). You — the LLM — are the wiki maintainer when working inside this vault, or a read-only consumer when called from another project (see § Modes below).
 
 This file is the schema. It tells you how the wiki is organized, what conventions to follow, and what to do when the human asks you to ingest, query, or lint. **Re-read this file at the start of every session.** It co-evolves over time — when we discover a better convention, update this file along with the rest of the wiki.
 
@@ -17,6 +17,34 @@ Three layers, strictly separated:
 | **Schema + index + log** | `CLAUDE.md`, `index.md`, `log.md` | Co-owned | Update with every operation |
 
 If you find yourself wanting to edit a file under `raw/`, stop. Add a note to the relevant wiki page instead.
+
+---
+
+## Modes — maintainer vs. read
+
+This wiki is consumed in two distinct modes. Most of this file is written for **maintainer mode** (you, the agent in a session opened inside the wiki, doing ingest/query/lint). But the wiki may also be read by an agent in a different project — typically via a `~/brain` clone and a user-level `/brain` slash command. In that case you operate in **read mode**, which has its own contract.
+
+### Maintainer mode (default)
+
+You are inside the wiki. You can read everything, write to `wiki/`, update `index.md` and `log.md`, follow every workflow in this file. The rest of this document assumes maintainer mode unless explicitly noted.
+
+### Read mode (when consumed from another project)
+
+You are in a different project's session. The wiki is a read-only resource at `~/brain` (or wherever the user has cloned it). You answer questions by reading the wiki and citing pages.
+
+**Read-mode rules — non-negotiable:**
+
+1. **You are a reader, not a maintainer.** Do not modify any file under the wiki — no edits to `wiki/`, no updates to `index.md`, no appends to `log.md`. If you find an error, flag it in your response; do not fix it from read mode.
+2. **Read the schema first.** Re-read this `CLAUDE.md` at the start of every read-mode session before answering, exactly as in maintainer mode.
+3. **Use the index, then drill in.** Read `index.md` to find candidate pages; then read those pages; follow wikilinks. If the index isn't enough, grep over `wiki/` for keywords.
+4. **Cite specifically.** Every non-trivial claim sourced from the wiki carries a wikilink to the specific page that supports it (e.g. `[[brain/wiki/concepts/foo]]`). The user must be able to follow the citation back to the source.
+5. **Silence is honest.** If the wiki does not contain the answer, say so explicitly. Do not fabricate or extrapolate beyond cited content. Suggest sources the user might want to ingest.
+6. **Substantive answers should be offered for filing.** If the answer is over ~200 words and synthesizes 2+ wiki pages, end with: *"This would be filable as a synthesis page — say so and I'll switch to maintainer mode and add it."* The user must explicitly opt in before any write happens.
+7. **New sources go through `/brain-ingest`, not direct edits.** If the user wants to add a new source while in read mode, the convention is the user-level `/brain-ingest` slash command, which queues the source into `raw/`. The actual wiki-page ingest happens in a separate session inside the wiki.
+
+### Switching modes
+
+Read mode → maintainer mode requires an explicit user signal ("yes, file it as a synthesis", "open a session in the brain"). The signal opens a new session in the wiki itself; do not attempt to do maintenance writes from a foreign project's session.
 
 ---
 

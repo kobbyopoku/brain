@@ -103,3 +103,8 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 ## [2026-05-02] skip | Post by @wizofecom — too thin to ingest
 - raw: `raw/Post by @wizofecom on X.md` (2026-04-17)
 - decision: NOT ingested. Source is one line + three image attachments not viewable from the captured clipping. No entity, concept, or claim survived a substantive read. Documenting the skip here so future audits know it was considered.
+
+## [2026-05-02] schema-update | Add Read mode (consumption from other projects)
+- pages updated: [[CLAUDE]] — added § Modes section distinguishing maintainer mode (default) from read mode (when the wiki is consumed from another project, e.g. via `~/brain` clone + `/brain` slash command). Read-mode rules: read-only, schema-first, cite specifically, silence-is-honest, substantive-answers-offered-for-filing, new-sources-via-/brain-ingest. Adjusted intro to reference mode-awareness.
+- companion (outside the vault): added user-level slash commands `~/.claude/commands/brain.md` (read-mode query) and `~/.claude/commands/brain-ingest.md` (queue new source to raw/) so the wiki can be reached from any Claude Code session.
+- notes: This addresses the schema gap flagged in the previous ingest's insight ("the brain's CLAUDE.md is written assuming the agent IS the brain's maintainer"). The wiki is now bidirectional — same file governs both maintainer and consumer agents.
