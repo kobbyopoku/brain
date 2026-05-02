@@ -1,13 +1,18 @@
 ---
-title: "How to Build & Sell AI Automations That Generate $10K Per Month (Full Course)"
-source: "https://x.com/eng_khairallah1/status/2050505874125529592"
+title: How to Build & Sell AI Automations That Generate $10K Per Month (Full Course)
+source: https://x.com/eng_khairallah1/status/2050505874125529592
 author:
   - "[[@eng_khairallah1]]"
 published: 2026-05-02
 created: 2026-05-02
-description: "There is a massive gap in the market right now, and it is growing every single week.Save this :)On one side you have millions of businesses ..."
+description: There is a massive gap in the market right now, and it is growing every single week.Save this :)On one side you have millions of businesses ...
 tags:
-  - "clippings"
+  - ai-automation
+  - agents
+  - architecture
+  - software
+  - slash-commands
+  - claude-code-ecosystem
 ---
 ![Image](https://pbs.twimg.com/media/HHRPhsYaIAE6nTC?format=jpg&name=large)
 

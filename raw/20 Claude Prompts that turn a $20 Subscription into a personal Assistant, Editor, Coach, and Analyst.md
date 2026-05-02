@@ -1,13 +1,20 @@
 ---
-title: "20 Claude Prompts that turn a $20 Subscription into a personal Assistant, Editor, Coach, and Analyst"
-source: "https://x.com/AnatoliKopadze/status/2049492553133629950"
+title: 20 Claude Prompts that turn a $20 Subscription into a personal Assistant, Editor, Coach, and Analyst
+source: https://x.com/AnatoliKopadze/status/2049492553133629950
 author:
   - "[[@AnatoliKopadze]]"
 published: 2026-04-29
 created: 2026-05-02
-description: "You pay $20/month for Claude. Most people use 10% of it.Ask a question. Rewrite a text. Summarize a document. That's the average Claude sess..."
+description: You pay $20/month for Claude. Most people use 10% of it.Ask a question. Rewrite a text. Summarize a document. That's the average Claude sess...
 tags:
-  - "clippings"
+  - claude-code
+  - claude-code-ecosystem
+  - ai-agents
+  - ai-tooling
+  - ai-automation
+  - ai-research
+  - agents
+  - agent-config
 ---
 ![Image](https://pbs.twimg.com/media/HHFBc3bbgAAI3KK?format=jpg&name=large)
 

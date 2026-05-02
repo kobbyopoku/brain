@@ -37,21 +37,30 @@ Claude Code is Anthropic's official CLI for working with Claude models. It is po
 
 - **Claude Code is enough**, with the right configuration, to function as a "24/7 dev team" on a $20/mo subscription. *(Claim of [[wiki/sources/regent0x-claude-code-247-dev-team]]; this wiki's own existence is corroborating evidence at smaller scale.)*
 - **Claude Code is the platform on which a viable AI automations services business runs.** *(Claim of [[wiki/sources/khairallah-ai-automations-10k-month]].)*
+- **AI-assisted coding tools (Claude Code among them) let non-developers build functional apps**, replacing static digital products with apps that AI cannot replicate. *(Claim of [[wiki/sources/realbrianmoran-making-money-online-2026]] in the build-your-own-app argument.)*
+- **The from-scratch agentic loop wrapped by Claude Code is the substrate for everything else.** *(Implicit cross-source agreement with [[wiki/sources/hooeem-build-an-ai-agent-today]]'s framing.)*
 
 ## Mentioned in
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — central subject.
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — implicit platform across all six phases.
+- [[wiki/sources/realbrianmoran-making-money-online-2026]] — named as a build-your-own-app tool (model #5).
+- [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — referenced as the tooling that turned tens-of-thousands-of-dollar internal tool builds into weekend projects.
+- [[wiki/sources/hooeem-build-an-ai-agent-today]] — implicit; the Anthropic Agent SDK / Claude Code SDK is named as one of two recommended starting points.
 
 ## Related entities
 
 - [[wiki/entities/anthropic]] — maintainer.
+- [[wiki/entities/anthropic-agent-sdk]] — the underlying SDK Claude Code is built on.
 - [[wiki/entities/superpowers]] — workflow plugin built for Claude Code.
 - [[wiki/entities/claude-mem]] — persistent-memory tool.
 - [[wiki/entities/claude-subconscious]] — background-memory agent.
 - [[wiki/entities/anthropic-skills]] — official skill collection.
 - [[wiki/entities/trail-of-bits-claude-code-skills]] — third-party skill collection.
 - [[wiki/entities/tdd-guard]] — TDD-enforcement skill.
+- [[wiki/entities/claude-task-master]] — long-build task scaffold.
+- [[wiki/entities/cursor]] — sibling AI-coding tool.
+- [[wiki/entities/replit]] — sibling build-your-own-app tool.
 - [[wiki/entities/claude-squad]] — terminal multiplexer for parallel Claude Code agents.
 - [[wiki/entities/claude-flow]] — enterprise orchestration framework.
 - [[wiki/entities/wshobson-agents]] — subagent collection.

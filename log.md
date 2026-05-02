@@ -50,3 +50,56 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - pages created: [[wiki/entities/acctual]], [[wiki/entities/anthropic]], [[wiki/entities/antimetal]], [[wiki/entities/apple]], [[wiki/entities/base44]], [[wiki/entities/column]], [[wiki/entities/cursor]], [[wiki/entities/dia-browser]], [[wiki/entities/elevenlabs]], [[wiki/entities/family]], [[wiki/entities/general-intelligence-company]], [[wiki/entities/hyperstudio]], [[wiki/entities/linear]], [[wiki/entities/mercury]], [[wiki/entities/minimalissimo]], [[wiki/entities/monopo-saigon]], [[wiki/entities/raycast]], [[wiki/entities/stripe]], [[wiki/entities/superhuman]], [[wiki/entities/titan]]
 - pages updated: [[wiki/entities/refero]] (added "Featured brands in catalog" section linking all 20; added website frontmatter), [[wiki/sources/refero-design-systems-for-ai-agents]] (expanded "Mentioned entities" with all 20 backlinks), [[index]] (new "Brands in Refero catalog (stubs)" subsection; stats updated)
 - notes: Per Kobby's standing preference — completionist entity coverage. All 20 pages tagged `stub` with consistent structure (one-line citable framing, no fabricated profile prose). When future ingests bring in a primary source about any of these brands, expand the corresponding stub. The schema-conventions section in [[CLAUDE]] should probably be updated to formalize the stub convention; flagging here for next schema-update pass.
+
+## [2026-05-02] ingest | 10 GitHub Repos to Replace an Engineering Team — heynavtoor
+- raw: `raw/Post by @heynavtoor on X.md` (Web Clipper from x.com/heynavtoor, 2026-04-22)
+- pages created: [[wiki/sources/heynavtoor-10-repos-replace-eng-team]], [[wiki/entities/heynavtoor]], [[wiki/entities/openhands]], [[wiki/entities/aider]], [[wiki/entities/cline]], [[wiki/entities/claude-task-master]], [[wiki/entities/crewai]], [[wiki/entities/langgraph]], [[wiki/entities/n8n]], [[wiki/entities/coolify]], [[wiki/entities/posthog]], [[wiki/entities/chatwoot]]
+- notes: Tool-discovery source. CrewAI and LangGraph cross-cite immediately with [[wiki/sources/hooeem-build-an-ai-agent-today]] (also ingested in this batch).
+
+## [2026-05-02] ingest | 6 Paul Graham-Style Startup Evaluation Prompts — godofprompt
+- raw: `raw/Post by @godofprompt on X.md` (2026-04-04)
+- pages created: [[wiki/sources/godofprompt-paul-graham-startup-prompts]], [[wiki/entities/godofprompt]], [[wiki/entities/paul-graham]]
+- notes: Prompt content is partially truncated in source. The `<role>...<task>` format is one stylistic alternative to AnatoliKopadze's markdown-structured prompts.
+
+## [2026-05-02] ingest | Anthropic Just Open-Sourced Skills — HeyZaraKhan
+- raw: `raw/Post by @HeyZaraKhan on X.md` (2026-03-22)
+- pages created: [[wiki/sources/HeyZaraKhan-anthropic-skills-announcement]], [[wiki/entities/HeyZaraKhan]]
+- notes: Secondary citation reinforcing existing [[claude-code-skills]] / [[wiki/entities/anthropic-skills]]. Comments on source flag the "BREAKING" overreach (feature was already months old).
+
+## [2026-05-02] ingest | Claude Certified Architect Resource List — HeyZaraKhan
+- raw: `raw/Post by @HeyZaraKhan on X 1.md` (2026-03-22)
+- pages created: [[wiki/sources/HeyZaraKhan-claude-certified-architect]], [[wiki/entities/anthropic-cookbook]], [[wiki/entities/claude-certified-architect]]
+- notes: Resource pointer source. Program is gated to corporate-email registrations (per comments).
+
+## [2026-05-02] ingest | 8 YC Unicorn Landing Pages — clear_graphics
+- raw: `raw/the anatomy of 8 YC unicorn landing pages and the exact patterns they share.md` (2026-04-24)
+- pages created: [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]], [[wiki/entities/clear_graphics]], [[wiki/entities/airbnb]], [[wiki/entities/coinbase]], [[wiki/entities/instacart]], [[wiki/entities/doordash]], [[wiki/entities/dropbox]], [[wiki/entities/gitlab]], [[wiki/entities/gusto]], [[wiki/concepts/landing-page-patterns]]
+- pages updated: [[wiki/entities/stripe]] — first cross-source-cited entity: previously a Refero-catalog stub, now substantively expanded with landing-page treatment. Removed `stub` tag.
+- notes: 11 patterns observed across 8 unicorns ($280B+ combined market cap). Concept page captures all 11; brand pages are stubs except Stripe.
+
+## [2026-05-02] ingest | The Truth About Making Money Online in 2026 — Brian Moran
+- raw: `raw/The Truth About Making Money Online in 2026 (And What's About to Die).md` (2026-02-07)
+- pages created: [[wiki/sources/realbrianmoran-making-money-online-2026]], [[wiki/entities/brian-moran]], [[wiki/entities/samcart]], [[wiki/entities/agora]], [[wiki/entities/replit]], [[wiki/concepts/online-business-models-2026]]
+- pages updated: [[wiki/entities/cursor]] (added build-your-own-app treatment, removed stub tag), [[wiki/entities/claude-code]] (additional citations + new mentions section + entities), [[wiki/concepts/ai-automation-services]] (Brian Moran model #10 added to Treatment across sources)
+- notes: Contains a falsifiable claim ("monthly $20-$200 communities are dying") worth tracking against future ingests. Triangulates with Khairallah and Vacca on the AI-services-for-businesses opportunity.
+
+## [2026-05-02] ingest | $7M Services-as-Software Agency — Alex Vacca
+- raw: `raw/How I Quit Working for Sam Altman and Built a $7M Services-as-Software Agency.md` (2026-05-01)
+- pages created: [[wiki/sources/itsalexvacca-services-as-software-7m-agency]], [[wiki/entities/alex-vacca]], [[wiki/entities/coldiq]], [[wiki/entities/worldcoin]], [[wiki/entities/sam-altman]], [[wiki/entities/aiagency-io]], [[wiki/concepts/services-as-software]], [[wiki/concepts/churn-at-scale]]
+- pages updated: [[wiki/concepts/ai-automation-services]] (added scaled-version Treatment); [[wiki/entities/claude-code]] (referenced for "internal tools that used to cost tens of thousands of dollars to build are weekend projects").
+- notes: The most operationally substantive source on services-business economics yet. Churn-at-scale math is the standout contribution. Pairs with Khairallah (early stage) and Brian Moran (one of 10 viable 2026 models) — three vintages, same domain.
+
+## [2026-05-02] ingest | 20 Claude Prompts — Anatoli Kopadze
+- raw: `raw/20 Claude Prompts that turn a $20 Subscription into a personal Assistant, Editor, Coach, and Analyst.md` (2026-04-29)
+- pages created: [[wiki/sources/AnatoliKopadze-20-claude-prompts]], [[wiki/entities/anatoli-kopadze]], [[wiki/concepts/personal-claude-prompts]]
+- notes: 20 detailed prompt templates across 5 categories (deep research, writing, career, daily life, learning). Several prompts (Multi-Source Synthesis, Brutal Editor, Devil's Advocate, Mental Model Builder) are candidates to register as actual Claude Code skills for this vault.
+
+## [2026-05-02] ingest | I Want to Build an AI Agent Today (Course) — hooeem
+- raw: `raw/I want to build an AI agent today (full course).md` (2026 Q1; frontmatter date 2023-03-26 likely a metadata error — content references events through March 2026)
+- pages created: [[wiki/sources/hooeem-build-an-ai-agent-today]], [[wiki/entities/hooeem]], [[wiki/entities/anthropic-agent-sdk]], [[wiki/entities/openai-agents-sdk]], [[wiki/concepts/agentic-loop]], [[wiki/concepts/augmented-llm]], [[wiki/concepts/agent-workflow-patterns]], [[wiki/concepts/beginner-agent-types]]
+- pages updated: [[wiki/entities/claude-code]] (added anthropic-agent-sdk relation); [[wiki/entities/crewai]] and [[wiki/entities/langgraph]] (cross-cited from heynavtoor's ingest in same batch).
+- notes: Foundational source on agent-building. Resolves multiple open questions across the wiki (e.g. regent0x_'s 5-role subagent setup is an instance of orchestrator-workers + evaluator-optimizer composed).
+
+## [2026-05-02] skip | Post by @wizofecom — too thin to ingest
+- raw: `raw/Post by @wizofecom on X.md` (2026-04-17)
+- decision: NOT ingested. Source is one line + three image attachments not viewable from the captured clipping. No entity, concept, or claim survived a substantive read. Documenting the skip here so future audits know it was considered.

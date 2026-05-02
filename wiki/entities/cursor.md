@@ -6,16 +6,16 @@ created: 2026-05-02
 updated: 2026-05-02
 website: https://cursor.com
 aliases: []
-tags: [refero-catalog, stub]
+tags: [refero-catalog, ai-coding, build-your-own-app]
 ---
 
 # Cursor
 
-> Featured brand in the [[wiki/entities/refero|Refero]] design-reference catalog. Stub awaiting a substantive primary source.
+> AI-assisted code editor — referenced in two sources: as a featured brand in the [[wiki/entities/refero|Refero]] design-reference catalog, and as one of three "build your own app" tools (alongside [[wiki/entities/claude-code]] and [[wiki/entities/replit]]) in [[wiki/sources/realbrianmoran-making-money-online-2026]].
 
 ## Profile
 
-This page is a **stub**. Cursor appears in this wiki only via [[wiki/sources/refero-design-systems-for-ai-agents]], which lists it among the products whose design system is published in Refero's [[design-md|DESIGN.md]] catalog. Substantive claims about what Cursor builds, who runs it, or what its strategy is are not yet sourced in this wiki and will be added when a primary source is ingested.
+Cursor is an AI-assisted code editor. The wiki's understanding of Cursor is still partial — it has been ingested via design-aesthetic ([[wiki/entities/refero|Refero]]) and commercial-implication ([[wiki/sources/realbrianmoran-making-money-online-2026]]) sources, but no primary source about Cursor's architecture, agent capabilities, or specific differentiation versus other AI editors is yet captured. [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] also refers to "Cursor-driven work" as a category in agency operations documentation.
 
 ## Key facts
 
@@ -25,17 +25,22 @@ This page is a **stub**. Cursor appears in this wiki only via [[wiki/sources/ref
 
 ## Positions and claims
 
-_(none yet — no substantive sources ingested.)_
+- **AI-assisted editors let non-developers build functional apps** — [[wiki/sources/realbrianmoran-making-money-online-2026]] cites Cursor (alongside Claude Code and Replit) as the toolchain enabling model #5 (build-your-own-apps) in the 2026 online-business catalog.
 
 ## Mentioned in
 
-- [[wiki/sources/refero-design-systems-for-ai-agents]]
+- [[wiki/sources/refero-design-systems-for-ai-agents]] — featured brand in the design-reference catalog.
+- [[wiki/sources/realbrianmoran-making-money-online-2026]] — named as a build-your-own-app tool.
+- [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — referenced ("Cursor-driven work" as a category in ops documentation).
 
 ## Related entities
 
-- [[wiki/entities/refero]] — publishes the catalog this entity appears in.
+- [[wiki/entities/refero]] — publishes the catalog Cursor appears in.
+- [[wiki/entities/claude-code]] — sibling AI-coding tool.
+- [[wiki/entities/replit]] — sibling build-your-own-app tool.
 
 ## Related concepts
 
 - [[wiki/concepts/design-md]]
 - [[wiki/concepts/markdown-as-agent-contract]]
+- [[online-business-models-2026]] — substrate for model #5.

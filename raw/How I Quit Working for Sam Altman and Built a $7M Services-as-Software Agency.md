@@ -1,13 +1,15 @@
 ---
-title: "How I Quit Working for Sam Altman and Built a $7M Services-as-Software Agency"
-source: "https://x.com/itsalexvacca/status/2050231011242594537"
+title: How I Quit Working for Sam Altman and Built a $7M Services-as-Software Agency
+source: https://x.com/itsalexvacca/status/2050231011242594537
 author:
   - "[[@itsalexvacca]]"
 published: 2026-05-01
 created: 2026-05-02
-description: "I spent two years working at Sam Altman's company before I quit. It was one of the best business decisions I've ever made.I got hired at Wor..."
+description: I spent two years working at Sam Altman's company before I quit. It was one of the best business decisions I've ever made.I got hired at Wor...
 tags:
-  - "clippings"
+  - software
+  - ai-agents
+  - multi-agent
 ---
 ![Image](https://pbs.twimg.com/media/HHPiDLWboAAU5Tj?format=jpg&name=large)
 

@@ -1,13 +1,24 @@
 ---
-title: "How I Turned My Claude Code Into 24/7 Dev Team (Full Guide + Repos)"
-source: "https://x.com/regent0x_/status/2049499354323399002"
+title: How I Turned My Claude Code Into 24/7 Dev Team (Full Guide + Repos)
+source: https://x.com/regent0x_/status/2049499354323399002
 author:
   - "[[@regent0x_]]"
 published: 2026-04-29
 created: 2026-05-02
-description: "most people use claude code like a chatbot. i turned mine into a 24/7 dev team that remembers everything and gets smarter every sessionboo..."
+description: most people use claude code like a chatbot. i turned mine into a 24/7 dev team that remembers everything and gets smarter every sessionboo...
 tags:
-  - "clippings"
+  - agents
+  - ai-agents
+  - claude-code
+  - claude-code-ecosystem
+  - agent-config
+  - ai-automation
+  - ai-research
+  - ai-tooling
+  - architecture
+  - automation
+  - background-agent
+  - dev
 ---
 ![Image](https://pbs.twimg.com/media/HHFImuGbkAAKLL4?format=jpg&name=large)
 

@@ -1,12 +1,19 @@
 ---
-title: "Design Systems for AI Agents"
-source: "https://styles.refero.design/"
+title: Design Systems for AI Agents
+source: https://styles.refero.design/
 author:
 published:
 created: 2026-05-02
 description: "Search a curated DESIGN.md library for AI agents: colors, typography, spacing, and component patterns from top websites. Part of Refero."
 tags:
-  - "clippings"
+  - agent-config
+  - agents
+  - ai-agents
+  - ai-automation
+  - ai-research
+  - ai-tooling
+  - design-md
+  - design-systems
 ---
 Save
 

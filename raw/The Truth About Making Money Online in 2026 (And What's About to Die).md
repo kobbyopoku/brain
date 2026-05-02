@@ -1,13 +1,15 @@
 ---
-title: "The Truth About Making Money Online in 2026 (And What's About to Die)"
-source: "https://x.com/realbrianmoran/status/2020158933885739490"
+title: The Truth About Making Money Online in 2026 (And What's About to Die)
+source: https://x.com/realbrianmoran/status/2020158933885739490
 author:
   - "[[@realbrianmoran]]"
 published: 2026-02-07
 created: 2026-05-02
-description: "Most \"make money online\" advice is outdated.I've been watching online businesses succeed and fail for 15 years. I built my first business fr..."
+description: Most "make money online" advice is outdated.I've been watching online businesses succeed and fail for 15 years. I built my first business fr...
 tags:
-  - "clippings"
+  - monetization
+  - automation
+  - communications
 ---
 ![Image](https://pbs.twimg.com/media/HAkLWRuWAAAfqWj?format=jpg&name=large)
 

@@ -23,7 +23,9 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 
 ## Treatment across sources
 
-- [[wiki/sources/khairallah-ai-automations-10k-month]] — the canonical source for this concept in the wiki. Frames it as a six-phase playbook: build toolkit → pick niche → free first case study → package and price → acquire clients → scale via templates and retainers. Argues a ~18-month window before market saturation. Pricing math: 5 retainer × $750 + 2 builds × $5,000 = $13,750/mo ≈ $165k/yr.
+- [[wiki/sources/khairallah-ai-automations-10k-month]] — the early-stage canonical source. Six-phase playbook: build toolkit → pick niche → free first case study → package and price → acquire clients → scale via templates and retainers. Argues a ~18-month window before market saturation. Pricing math: 5 retainer × $750 + 2 builds × $5,000 = $13,750/mo ≈ $165k/yr.
+- [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — the **scaled** version of the playbook from a $7M ARR / 70-client / 4-year-old agency. Coins [[services-as-software]] as a sibling concept that adds the **content-driven accelerator layer** (structural revenue independent of delivery headcount) — the piece that makes the math survive [[churn-at-scale]]. The 12-week packaged program is at [[wiki/entities/aiagency-io|aiagency.io]].
+- [[wiki/sources/realbrianmoran-making-money-online-2026]] — names "AI services for businesses" as model #10 in a 10-model 2026 catalog. *"If you can build AI workflows, automations, and little apps for businesses that are lagging behind, you can charge premium prices."* Pricing range cited: $5K-$20K per project. The shorter treatment than the other two but useful as a third independent source confirming the market thesis.
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — *implicitly relevant*: every primitive regent0x_ teaches (CLAUDE.md, skills, hooks, subagents, orchestration) is a billable component in a services package. The personal-use source is also a *de facto* training ground for the services builder.
 
 ## Sub-claims and details
@@ -46,6 +48,9 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 
 ## Related concepts
 
+- [[services-as-software]] — sibling concept; the scaled playbook (with explicit accelerator-layer mechanics).
+- [[churn-at-scale]] — the math that motivates the accelerator layer.
+- [[online-business-models-2026]] — places this concept as one of 10 viable 2026 business models.
 - [[context-file]] — described in this concept as one of four core competencies.
 - [[claude-code-skills]] — the skill-file mechanism the toolkit phase teaches.
 - [[mcp-server]] — the integration layer central to skills 3 and 4.
