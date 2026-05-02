@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 13 sources · 81 entities · 29 concepts · 0 syntheses · last updated 2026-05-02
+**Stats**: 13 sources · 81 entities · 29 concepts · 0 projects · 0 syntheses · last updated 2026-05-02
 
 ---
 
@@ -211,6 +211,26 @@ Stub pages awaiting substantive primary sources. Their only current content is a
 ### Personal productivity / prompts
 
 - [[wiki/concepts/personal-claude-prompts]] — curated personal prompt libraries as a productivity multiplier.
+
+## Projects
+
+_(none yet — add a project from inside its directory with `/brain-add-project` in any Claude Code session. Pages live at `wiki/projects/<slug>.md` and group here by status.)_
+
+### Active
+
+_(none yet)_
+
+### Paused
+
+_(none yet)_
+
+### Exploring
+
+_(none yet)_
+
+### Completed / archived
+
+_(none yet)_
 
 ## Syntheses
 

@@ -62,12 +62,14 @@ Read mode → maintainer mode requires an explicit user signal ("yes, file it as
 │   ├── sources/           # One page per ingested source. Summary + key takeaways.
 │   ├── entities/          # People, orgs, products, places, works — proper-noun things.
 │   ├── concepts/          # Ideas, topics, themes, frameworks — common-noun things.
+│   ├── projects/          # One page per project the human is (or was) building.
 │   ├── syntheses/         # Comparisons, analyses, derived insights, queries-filed-back.
 │   └── overview.md        # (Optional) top-level synthesis when the wiki has enough mass.
 └── templates/             # Page templates. Copy from these when creating new pages.
     ├── source.md
     ├── entity.md
     ├── concept.md
+    ├── project.md
     └── synthesis.md
 ```
 
@@ -83,7 +85,7 @@ Every wiki page starts with YAML frontmatter so that Obsidian's Dataview plugin 
 
 ```yaml
 ---
-type: source | entity | concept | synthesis
+type: source | entity | concept | project | synthesis
 title: Human-readable title
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
@@ -161,6 +163,38 @@ When the human asks a question:
 4. **If the answer is substantive, ask whether to file it back** as a `wiki/syntheses/<slug>.md` page. Good answers compound — don't let them disappear into chat.
 5. **If you can't answer from the wiki**, say so explicitly. Don't fabricate. Suggest sources to ingest or web searches that would close the gap.
 
+### Adding a project
+
+When the human says "add this project to the brain" or runs the user-level `/brain-add-project` slash command from inside a project directory:
+
+1. **Verify project root.** Check for `.git`, `README.md`, or a stack manifest (`package.json`, `Cargo.toml`, `pyproject.toml`, `pom.xml`, `go.mod`, etc.). If none, ask where the project root is.
+2. **Survey the project** — read `README.md`, `CLAUDE.md` (if any), the stack manifest(s), `git remote -v`, recent `git log`, top-level structure (don't read source code line-by-line; understand shape). Sample any `.memory/` directory if present.
+3. **Discuss the draft profile with the human** before writing — proposed status, current focus, key decisions, open questions. Wait for explicit confirmation.
+4. **Write the project page** at `wiki/projects/<slug>.md` using `templates/project.md`. Slug is kebab-case ASCII.
+5. **Update `index.md`** under the `## Projects` section, grouped by status (active / paused / exploring / completed / archived).
+6. **Append `log.md`**: `## [YYYY-MM-DD] add-project | <Project name>` with page created and a one-line summary.
+7. **Drop a `BRAIN.md` reference at the project root** (a one-line file pointing at `~/brain/wiki/projects/<slug>.md`). Add `BRAIN.md` to the project's `.gitignore` so it stays personal to this clone.
+8. **Commit and push the brain.**
+9. **Run the lint** (`python3 bin/wiki_lint.py`) to confirm clean.
+10. **Tell the human** what was created, page path, and anything ambiguous you flagged.
+
+**Constraints**: do NOT modify project source code; the only project-side write is `BRAIN.md` at the root and a `.gitignore` line. Within the brain, only touch `wiki/projects/<slug>.md`, `index.md`, and `log.md`.
+
+### Updating a project
+
+When the human says "update this project's brain page" or runs `/brain-update-project`:
+
+1. **Find the project's brain page** via `BRAIN.md` at the project root.
+2. **Re-survey the project** — same sources as adding. The natural diff window is the brain page's `updated:` date.
+3. **Read the existing brain page.**
+4. **Identify what changed** — current focus, new decisions, completed open questions, new lessons learned, status transitions.
+5. **Discuss the diff with the human** before writing. Surgical edits only — do not rewrite wholesale.
+6. **Edit the page**; bump `updated:` to today.
+7. **If a lesson generalizes**, propose creating a concept page in `wiki/concepts/` and linking from the project page.
+8. **Update `index.md`** if status changed.
+9. **Append `log.md`**: `## [YYYY-MM-DD] update-project | <name>` with a one-line summary of what changed.
+10. **Commit, push, lint** as above.
+
 ### Lint
 
 When the human says "lint the wiki" (or periodically, when it feels stale):
@@ -192,6 +226,7 @@ Exit code is 1 if any issues are found, 0 if clean. The script honors inline-cod
 - **Sources** — every page in `wiki/sources/`, with one-line summary.
 - **Entities** — grouped by entity_type (people, orgs, products, places, works).
 - **Concepts** — alphabetical, with one-line summary.
+- **Projects** — grouped by status (active, paused, exploring, completed, archived).
 - **Syntheses** — derived analyses and filed-back queries.
 
 Each line: `- [[link]] — one-line summary`

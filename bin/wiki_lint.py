@@ -19,7 +19,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT_PAGES = ["CLAUDE.md", "index.md", "log.md", "Welcome.md"]
-WIKI_DIRS = ["wiki/sources", "wiki/entities", "wiki/concepts", "wiki/syntheses"]
+WIKI_DIRS = ["wiki/sources", "wiki/entities", "wiki/concepts", "wiki/projects", "wiki/syntheses"]
 
 WIKILINK_RE = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]")
 
@@ -94,7 +94,12 @@ def collect_files(vault: Path):
     for d in WIKI_DIRS:
         d_path = vault / d
         if d_path.exists():
-            files.extend(sorted(d_path.glob("*.md")))
+            for p in sorted(d_path.glob("*.md")):
+                # Skip directory-documentation files (READMEs explaining
+                # what goes in this folder are not content pages).
+                if p.name == "README.md":
+                    continue
+                files.append(p)
     return files
 
 
@@ -196,6 +201,8 @@ def main(argv):
             expected = "entity"
         elif "wiki/concepts/" in rel[f]:
             expected = "concept"
+        elif "wiki/projects/" in rel[f]:
+            expected = "project"
         elif "wiki/syntheses/" in rel[f]:
             expected = "synthesis"
         actual = fm.get("type", "")
@@ -270,7 +277,7 @@ def main(argv):
         tags = fms[f].get("tags", "")
         if "stub" in tags:
             stub_count += 1
-    for t in ("source", "entity", "concept", "synthesis"):
+    for t in ("source", "entity", "concept", "project", "synthesis"):
         if t in by_type:
             print(f"  {t}: {by_type[t]}")
     print(f"  stubs: {stub_count}")
