@@ -24,7 +24,54 @@ For a knowledge worker building UIs with AI assistance, a curated DESIGN.md libr
 ## Treatment across sources
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — names DESIGN.md as the unit of output for Refero's catalog. Asserts the contents are colors, typography, spacing, and component patterns, but does not include an actual DESIGN.md to inspect.
-- [[wiki/sources/stripe-design-md]] — **first concrete DESIGN.md ingested into the brain** (2026-05-02). Validates the format with content: 18 named colors organized brand/gradients/neutrals, a 7-step type scale on `sohne-var`, 4px-base spacing system, 5-radius / 4-shadow vocabulary, 5 token-referenced components (3 buttons + 2 cards), and a one-paragraph design philosophy ("architectural blueprint on white marble"). Resolves the open question "what does an actual DESIGN.md look like?" — at least for Refero's flavor.
+- [[wiki/sources/stripe-design-md]] — **first concrete DESIGN.md ingested into the brain** (2026-05-02). Validates the format with content: 18 named colors organized brand/gradients/neutrals, a 7-step type scale on `sohne-var`, 4px-base spacing system, 5-radius / 4-shadow vocabulary, 5 token-referenced components (3 buttons + 2 cards), and a one-paragraph design philosophy ("architectural blueprint on white marble").
+- **The remaining 19 Refero brands** (acctual / anthropic / antimetal / apple / base44 / column / cursor / dia-browser / elevenlabs / family / general-intelligence-company / hyperstudio / linear / mercury / minimalissimo / monopo-saigon / raycast / superhuman / titan) — each ingested as its own `<brand>-design-md.md` source 2026-05-02. With all 20 brands ingested, the brain can now make cross-brand observations about the format itself (see Cross-brand patterns below).
+
+## Cross-brand patterns (across 20 ingested DESIGN.md files)
+
+Now that every Refero brand's DESIGN.md is in the brain, real comparative observations become possible:
+
+### Common patterns
+- **Most brands use 4px base unit.** Exceptions: Dia Browser and Raycast use 8px (more spacious feel).
+- **"No box-shadows" is a recurring rule.** Apple, Anthropic, Mercury, Titan, Base44 (single subtle), Family (inset borders only), Minimalissimo, Hyperstudio. Box-shadow elevation is increasingly considered visually noisy in 2026 design culture.
+- **Single-color brand identity** is dominant: one saturated color reserved for the primary CTA. Stripe (Deep Violet), Apple (Azure), Antimetal (Chartreuse), Linear (Neon Lime), Mercury (Mercury Blue), Acctual (Sky Teal), Titan (Highlight Orange), Hyperstudio (Amber Glow). The two-color exceptions (Family with 4 brand + 6 illustration accents) deliberately use color as identity differentiation.
+- **Pill-radius for buttons** (`9999px` or large finite values like 32-160px) is more common than rounded rectangles. Stripe (4px) and Linear (6px) are notable counter-examples preferring "soft rectangles."
+- **Achromatic-only neutrals** (no color tint) are now uncommon. Most brands use tinted neutrals — Stripe blue-tinted, Anthropic warm-stone, Linear pitch-black layered. Pure-grayscale neutrals appear only at Minimalissimo (whose entire system is grayscale) and a few others.
+- **"Never pure white" as page background** appears across at least 8 brands: Anthropic (Ivory `#faf9f5`), Family (Warm Canvas `#fbfaf9`), ElevenLabs (Eggshell `#fdfcfc`), Cursor (Canvas Parchment `#f7f7f4`), Apple (Fog `#f5f5f7`), Superhuman (Parchment Canvas `#f2f0eb`), Minimalissimo (Canvas `#f5f5f5`). Slightly-warm or slightly-cool off-whites read as more deliberate than `#ffffff`.
+
+### Distinctive signatures (one-of-a-kind moves)
+- **Apple's 28px card radius** — explicitly named as "the page's geometric signature."
+- **Antimetal & ElevenLabs's 0px input radius** — deliberate against a pill-heavy system.
+- **Mercury's 0px card radius** — distinctive against a pill-heavy buttons set.
+- **Anthropic's asymmetric "Try Claude" button** — flat top, rounded bottom (`0px 0px 8px 8px`).
+- **monopo saigon's 225px display type** — far larger than any other brand.
+- **Titan's 160px button radius** — largest specific (non-9999) pill in the catalog.
+- **Family's 10 saturated colors** — most chromatic; identity through illustration not minimalism.
+- **Linear's 9 shadow tokens** — most explicit shadow vocabulary; depth via layered surfaces.
+- **Raycast's glass surfaces via `backdrop-filter: blur(36-48px)`** — atmospheric layering.
+- **Anthropic's three custom typefaces** — Sans + Serif + Mono, where most brands use one.
+
+### Philosophical archetypes (the catalog's "moods")
+The 20 brands cluster into recognizable archetypes — useful as reference categories for an agent generating UI:
+
+- **"Architectural blueprint on white marble"** — Stripe, Column. Cool restraint, single-color, structured.
+- **"Architect's blueprint on warm vellum"** — ElevenLabs, Acctual (warm-toned). Editorial.
+- **"Research journal printed on warm stone"** — Anthropic. Type-first, achromatic+thematic-tags.
+- **"Gallery wall at natural light"** — Apple. Reductive, signature-radius driven.
+- **"Midnight Command Center"** — Linear. Dark layered surfaces, single-color action.
+- **"Mountain Top Command Center" / "Twilight"** — Mercury. Dark + light type + spacious.
+- **"Obsidian command terminal"** — Raycast. Glass + atmospheric, deepest-dark.
+- **"Monochrome terminal with amber accents"** — Hyperstudio, Titan. High-contrast, dev-aesthetic.
+- **"Warm ivory software studio"** — Cursor. Light + warm tones for dev tools (counter to Linear).
+- **"Pixar storyboard on cream paper"** — Family. Illustration-led, chromatic, warm.
+- **"Softly Lit Gradient Canvas"** — Base44, Dia Browser. Pastel/airy gradient atmospheres.
+- **"Cinematic cockpit behind warm light"** — Superhuman. Aubergine + glassmorphic + warm.
+- **"Electric storm over a blueprint"** — Antimetal. Two-mode dark + light bridged by accent.
+- **"Architectural Night Sky"** — General Intelligence Company. Dark hero + light UI.
+- **"Shifting gradient depths on darkness"** — monopo saigon. Agency-extreme typography.
+- **"White gallery canvas"** — Minimalissimo. Reductive achromatic.
+
+Each archetype answers different design problems; an agent generating "a brand-distinct landing page" can reach for the archetype that matches the desired tone.
 
 ## Sub-claims and details
 
@@ -49,9 +96,10 @@ The shape is consistent enough that an agent reading any Refero DESIGN.md can ex
 
 ## Open questions and contradictions
 
-- **Variation between brands**: Stripe is one DESIGN.md. Linear, Apple, Anthropic etc. may follow the same Refero shape or differ. Worth ingesting a second one to compare.
-- **Is DESIGN.md a Refero-specific name or a general convention?** Likely the latter (analogous to AGENTS.md, CLAUDE.md, README.md), but unconfirmed from current sources.
+- **Refero shape is consistent across all 20 ingested brands**: same section order (color palette → typography → spacing/shape → components → philosophy), same field shapes (named colors with hex, type scale with size/weight/line-height/tracking, spacing with named tokens). Resolves the earlier "is the shape consistent?" question — for Refero specifically, yes.
+- **Is DESIGN.md a Refero-specific name or a general convention?** Likely the latter (analogous to AGENTS.md, CLAUDE.md, README.md), but unconfirmed from current sources outside Refero. A non-Refero DESIGN.md ingest would test this.
 - **Relation to design-token standards** (W3C Design Tokens, Style Dictionary): DESIGN.md is plainer-text and seemingly not aimed at toolchain interop — it's aimed at LLMs reading prose. The Refero page mentions Tailwind v4, CSS Variables, and Design Tokens as alternate export formats — so the markdown is the human-readable surface and the structured exports are the toolchain surface.
+- **Provenance limitation**: all 20 ingests were captured via WebFetch from the rendered HTML (the official "Copy.md" button is clipboard-driven, not directly fetchable). Content may not be 100% identical to the official Copy.md export — some advanced fields (motion tokens, icon specs, breakpoint definitions) may be missing.
 
 ## Related concepts
 
@@ -61,9 +109,9 @@ The shape is consistent enough that an agent reading any Refero DESIGN.md can ex
 ## Related entities
 
 - [[wiki/entities/refero]] — primary publisher of DESIGN.md files.
-- [[wiki/entities/stripe]] — first brand whose DESIGN.md has been ingested.
+- All 20 Refero brands have ingested DESIGN.md pages now: [[wiki/entities/acctual]], [[wiki/entities/anthropic]], [[wiki/entities/antimetal]], [[wiki/entities/apple]], [[wiki/entities/base44]], [[wiki/entities/column]], [[wiki/entities/cursor]], [[wiki/entities/dia-browser]], [[wiki/entities/elevenlabs]], [[wiki/entities/family]], [[wiki/entities/general-intelligence-company]], [[wiki/entities/hyperstudio]], [[wiki/entities/linear]], [[wiki/entities/mercury]], [[wiki/entities/minimalissimo]], [[wiki/entities/monopo-saigon]], [[wiki/entities/raycast]], [[wiki/entities/stripe]], [[wiki/entities/superhuman]], [[wiki/entities/titan]].
 
 ## Mentioned in
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]]
-- [[wiki/sources/stripe-design-md]]
+- [[wiki/sources/stripe-design-md]] and 19 other `<brand>-design-md` source pages.

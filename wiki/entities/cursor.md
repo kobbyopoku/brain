@@ -6,7 +6,7 @@ created: 2026-05-02
 updated: 2026-05-02
 website: https://cursor.com
 aliases: []
-tags: [refero-catalog, ai-coding, build-your-own-app]
+tags: [refero-catalog, ai-coding, build-your-own-app, design-md-ingested]
 ---
 
 # Cursor
@@ -23,6 +23,10 @@ Cursor is an AI-assisted code editor. The wiki's understanding of Cursor is stil
 - **Refero style page**: https://styles.refero.design/style/4e3b4717-84c8-4599-baaf-a343c3d619b6
 - **Refero mood descriptor**: "Warm ivory software studio."
 
+## Design system summary
+
+From [[wiki/sources/cursor-design-md]]: warm-ivory contra dark-mode positioning. Canvas Parchment `#f7f7f4` ground distinguishes Cursor from black-canvas competitors (Linear, Raycast). Three accents (Onyx Outline `#f54e00` for outlined buttons + links; Forest Green `#34785c` for PR-related actions; Goldenrod `#c08532` for interactive states). CursorGothic display + Berkeley Mono code + Lato secondary. Single complex shadow uses an oklab() perceptual color space — modern color-science adoption.
+
 ## Positions and claims
 
 - **AI-assisted editors let non-developers build functional apps** — [[wiki/sources/realbrianmoran-making-money-online-2026]] cites Cursor (alongside Claude Code and Replit) as the toolchain enabling model #5 (build-your-own-apps) in the 2026 online-business catalog.
@@ -32,6 +36,7 @@ Cursor is an AI-assisted code editor. The wiki's understanding of Cursor is stil
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — featured brand in the design-reference catalog.
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — named as a build-your-own-app tool.
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — referenced ("Cursor-driven work" as a category in ops documentation).
+- [[wiki/sources/cursor-design-md]] — full DESIGN.md ingested 2026-05-02.
 
 ## Related entities
 

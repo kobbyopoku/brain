@@ -6,16 +6,16 @@ created: 2026-05-02
 updated: 2026-05-02
 website: https://mercury.com
 aliases: []
-tags: [refero-catalog, stub]
+tags: [refero-catalog, design-md-ingested]
 ---
 
 # Mercury
 
-> Featured brand in the [[wiki/entities/refero|Refero]] design-reference catalog. Stub awaiting a substantive primary source.
+> Featured brand in the [[wiki/entities/refero|Refero]] design-reference catalog; full DESIGN.md ingested into the brain. See [[wiki/sources/mercury-design-md]].
 
 ## Profile
 
-This page is a **stub**. Mercury appears in this wiki only via [[wiki/sources/refero-design-systems-for-ai-agents]], which lists it among the products whose design system is published in Refero's [[design-md|DESIGN.md]] catalog. Substantive claims about what Mercury builds, who runs it, or what its strategy is are not yet sourced in this wiki and will be added when a primary source is ingested.
+Mercury appears in this wiki via [[wiki/sources/refero-design-systems-for-ai-agents|Refero's catalog]] and via the dedicated DESIGN.md ingest at [[wiki/sources/mercury-design-md]]. The brain has captured Mercury's **design tokens** (colors, typography, spacing, components, philosophy) but no primary source yet on what Mercury *builds* — product, business model, history are still un-sourced. The treatment here is design-aesthetic only.
 
 ## Key facts
 
@@ -23,13 +23,18 @@ This page is a **stub**. Mercury appears in this wiki only via [[wiki/sources/re
 - **Refero style page**: https://styles.refero.design/style/3172cd4d-118a-4a16-a259-6b634d32322e
 - **Refero mood descriptor**: "Mountain Top Command Center"
 
+## Design system summary
+
+From [[wiki/sources/mercury-design-md]]: Twilight dark palette (`#171721` outer / `#1e1e2a` primary / `#272735` interactive) with single Mercury Blue `#5266eb` for primary CTAs. arcadiaDisplay 360-weight (light) for major headlines. **Cards at 0px radius** as deliberate signature. **No shadows** — color and opacity shifts only.
+
 ## Positions and claims
 
-_(none yet — no substantive sources ingested.)_
+- **Design discipline matters as identity** — Mercury's DESIGN.md captures explicit Do/Don't rules that constrain how the brand can ever appear in UI. *(See [[wiki/sources/mercury-design-md]] for the full ruleset.)*
 
 ## Mentioned in
 
-- [[wiki/sources/refero-design-systems-for-ai-agents]]
+- [[wiki/sources/refero-design-systems-for-ai-agents]] — initial catalog reference.
+- [[wiki/sources/mercury-design-md]] — full DESIGN.md ingested 2026-05-02.
 
 ## Related entities
 

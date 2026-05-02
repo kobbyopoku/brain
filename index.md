@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 17 sources · 91 entities · 34 concepts · 1 project · 0 syntheses · last updated 2026-05-02
+**Stats**: 36 sources · 91 entities · 34 concepts · 1 project · 0 syntheses · last updated 2026-05-02
 
 ---
 
@@ -38,7 +38,29 @@ The content-oriented index of this wiki. Read this first when answering a query,
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — Refero's curated DESIGN.md catalog for AI coding agents; landing-page clipping.
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] — 11 patterns shared by 8 YC unicorn landing pages.
-- [[wiki/sources/stripe-design-md]] — first concrete DESIGN.md ingested into the brain (Stripe via Refero); 18 colors, 7-step type scale, 4px spacing system, 5 components.
+
+#### DESIGN.md ingests (all 20 Refero brands, 2026-05-02)
+
+- [[wiki/sources/stripe-design-md]] — *"Architectural blueprint on white marble."*
+- [[wiki/sources/acctual-design-md]] — multi-typeface pill-everything system.
+- [[wiki/sources/anthropic-design-md]] — *"Research journal printed on warm stone."*
+- [[wiki/sources/antimetal-design-md]] — two-mode dark/light bridged by chartreuse.
+- [[wiki/sources/apple-design-md]] — *"Gallery wall at natural light."* 28px card radius signature.
+- [[wiki/sources/base44-design-md]] — pastel gradients on Canvas Pearl.
+- [[wiki/sources/column-design-md]] — same-philosophy as Stripe, different execution.
+- [[wiki/sources/cursor-design-md]] — *"Warm ivory software studio."*
+- [[wiki/sources/dia-browser-design-md]] — 8px base, 5-stop spectrum gradient.
+- [[wiki/sources/elevenlabs-design-md]] — most chromatically restrained.
+- [[wiki/sources/family-design-md]] — most chromatically rich; illustration-led.
+- [[wiki/sources/general-intelligence-company-design-md]] — bi-modal dark hero + light UI.
+- [[wiki/sources/hyperstudio-design-md]] — most spartan; monochrome with amber.
+- [[wiki/sources/linear-design-md]] — *"Midnight Command Center."* Reference dark-mode.
+- [[wiki/sources/mercury-design-md]] — twilight palette; cards at 0px radius.
+- [[wiki/sources/minimalissimo-design-md]] — most reductive; achromatic-only.
+- [[wiki/sources/monopo-saigon-design-md]] — agency-extreme typography; 225px display.
+- [[wiki/sources/raycast-design-md]] — deepest dark; glass via backdrop-blur.
+- [[wiki/sources/superhuman-design-md]] — Aubergine + Iris brand pair; Super Sans VF.
+- [[wiki/sources/titan-design-md]] — 160px button radius; largest specific pill.
 
 ## Entities
 
