@@ -4,7 +4,7 @@ title: LLM Wiki Pattern
 created: 2026-05-02
 updated: 2026-05-02
 aliases: [LLM Wiki, Karpathy wiki pattern]
-tags: [pattern, knowledge-management, foundational]
+tags: [pattern, knowledge-management, foundational, agent-config]
 ---
 
 # LLM Wiki Pattern
@@ -47,6 +47,7 @@ This is also a workable answer to a problem [[memex]] left open in 1945: *who do
 
 ## Related concepts
 
+- [[markdown-as-agent-contract]] — the broader meta-pattern; the LLM Wiki is one instance of this family alongside [[design-md]], [[agents-md]], [[skill-md]], [[readme-md]].
 - [[retrieval-augmented-generation]] — the contrast case the pattern is positioned against.
 - [[memex]] — the 1945 conceptual ancestor.
 - [[ingest]] — one of the three core operations.

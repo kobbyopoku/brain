@@ -84,6 +84,26 @@ Always update `updated:` when you modify a page.
 - Use `##` for major sections, `###` for sub-sections.
 - Don't go deeper than `####` unless absolutely necessary — flatten instead.
 
+### Stubs
+
+A page may be created as a **stub** when its name first appears in an ingested source but no substantive content about it exists in the wiki yet. The default policy in this vault (set 2026-05-02) is **completionist coverage**: create a stub for every named entity and significant concept in a source, even thin mentions, so backlinks resolve immediately and future ingests can fill them in.
+
+A stub:
+
+- Carries `tags: [..., stub]` in frontmatter.
+- Has a one-line framing note ("appears in this wiki via [source]") instead of a full Profile / Definition.
+- Lists only **citable facts** drawn from the source(s) that introduced it. No fabricated profile prose, no speculation.
+- Includes the standard "Mentioned in" / "Related entities" / "Related concepts" sections, populated from existing wiki content only.
+
+When a substantive primary source about a stub is ingested:
+
+- Replace the stub framing with a full Profile (entity) or Definition (concept).
+- Add Key facts and Positions and claims from the new source.
+- Remove the `stub` tag.
+- Bump `updated:`.
+
+A [[lint]] pass should surface stubs that have not been expanded after a long period as candidates for either expansion (ingest a primary source) or deletion (the stub no longer earns its keep).
+
 ---
 
 ## Workflows
@@ -126,6 +146,14 @@ When the human says "lint the wiki" (or periodically, when it feels stale):
 7. **Frontmatter drift** — `updated:` dates that haven't moved despite edits, missing tags, type mismatches.
 
 Output a lint report and ask the human what to address. Append a `## [YYYY-MM-DD] lint | <summary>` entry to `log.md`.
+
+**Tooling**: this vault ships `bin/wiki_lint.py`, a Python script that automates the mechanical lint checks (broken wikilinks, ambiguous links, orphan pages, index drift, frontmatter type/required-field issues). Run it as the first step of every lint pass:
+
+```bash
+python3 bin/wiki_lint.py
+```
+
+Exit code is 1 if any issues are found, 0 if clean. The script honors inline-code and fenced-code spans so example wikilinks in the schema do not register as broken. Semantic checks (contradictions, stale claims, missing-but-implied pages) still require an LLM read pass — the script narrows the work, it doesn't replace the lint operation.
 
 ---
 

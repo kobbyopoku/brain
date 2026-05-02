@@ -1,0 +1,73 @@
+---
+type: concept
+title: Markdown as Agent Contract
+created: 2026-05-02
+updated: 2026-05-02
+aliases: [markdown as agent config, agent-readable markdown]
+tags: [meta-pattern, ai-agents, markdown, agent-config, foundational]
+---
+
+# Markdown as Agent Contract
+
+> An emerging meta-pattern in which markdown files (`CLAUDE.md`, `AGENTS.md`, `DESIGN.md`, `SKILL.md`, `README.md`) serve as the durable, human-readable configuration and instruction layer between humans and AI agents.
+
+## Definition
+
+"Markdown as agent contract" is the observation that markdown files are becoming the default place where humans encode the rules, conventions, taste, and context that AI agents should respect when operating in a domain. The files are durable artifacts (versioned, diffable, reviewable), human-readable (so the human stays in the loop), and natively consumable by LLMs (no parser, no schema, no special tooling). Examples in the wild:
+
+- **`CLAUDE.md`** — schema for a Claude Code session; defines workflows, conventions, allowed actions. (See [[CLAUDE]] in this vault.)
+- **`AGENTS.md`** — analogous file for OpenAI Codex / generic-agent setups. See [[agents-md]].
+- **`DESIGN.md`** — design system reference for AI coding agents. See [[design-md]].
+- **`SKILL.md`** — instructions for a Claude skill, defining when and how it should activate. See [[skill-md]].
+- **`README.md`** — older convention, but increasingly read by agents as part of their context. See [[readme-md]].
+
+What unifies these files is not a shared schema (each has its own structure) but a shared *role*: they are the **contract** between human intent and agent execution.
+
+## Why it matters
+
+This pattern reframes the question "how do I configure my AI agent?" away from per-tool UI surfaces or proprietary config formats and toward a portable, human-first artifact in the codebase. Several second-order consequences:
+
+1. **Co-evolution**. Because the contract is a markdown file the human edits, both parties can update it as understanding deepens. The schema is alive.
+2. **Knowledge compounds**. A `CLAUDE.md` written for one project carries forward; tweaks survive across sessions. Same for `DESIGN.md`.
+3. **Tool-agnostic**. The same `AGENTS.md` works in Codex today and (in theory) in any future agent that respects the convention.
+4. **Reviewable**. Pull-request review applies — a team can argue about the contract the same way they argue about code.
+5. **Observable failure mode**: the agent does the wrong thing because the contract underspecifies or misspecifies, not because the agent is broken. Diagnose by reading the markdown.
+
+This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern]] is the pattern, the wiki is the artifact the contract governs.
+
+## Treatment across sources
+
+- [[wiki/sources/llm-wiki-pattern-karpathy]] — frames `CLAUDE.md` (or `AGENTS.md`) as "the key configuration file" that "makes the LLM a disciplined wiki maintainer rather than a generic chatbot." This is the strongest articulation of the pattern in the wiki so far; Karpathy's framing of "co-evolved schema" is the canonical statement.
+- [[wiki/sources/refero-design-systems-for-ai-agents]] — instantiates the pattern in the design-systems domain via [[design-md]]. The framing is implicit (the source doesn't theorize the meta-pattern) but the artifact is the same shape.
+
+## Sub-claims and details
+
+- **Each file is contractual, not configurational.** The human commits to instructions; the agent is expected to follow them. Configuration is a value; a contract is a relationship.
+- **Naming convention is converging on `<DOMAIN>.md` in CAPS.** CLAUDE, AGENTS, DESIGN, SKILL — all CAPS, suggesting "this is the canonical contract for this domain in this repo."
+- **MCP servers are the runtime complement.** Where markdown contracts express *what the agent should do*, MCP servers expose *what the agent can call*. Refero (in [[wiki/entities/refero]]) ships both: a DESIGN.md catalog and a Refero MCP server.
+- **The pattern crosses domains.** Personal knowledge (CLAUDE.md), design (DESIGN.md), generic agents (AGENTS.md), individual capabilities (SKILL.md). The shared property is "human writes prose; agent acts on it."
+
+## Open questions and contradictions
+
+- **Does the pattern scale beyond moderate complexity?** A 50-line CLAUDE.md is easy; a 5,000-line one starts to fail in obvious ways (the agent stops respecting later sections, contradictions accumulate). When does prose-as-contract break, and what replaces it? Possibly: split into multiple smaller contract files; possibly: structured frontmatter + prose hybrid.
+- **Versioning**. Should agents be told *which version* of the contract they are operating against? In practice no one does this, but cross-session drift is a real failure mode.
+- **Contract conflicts**. When `CLAUDE.md` says X and `DESIGN.md` says Y and they conflict, who wins? No convention exists. Likely solved per-project for now.
+- **Discovery**. How does an agent know which contract files exist in a repo? `CLAUDE.md` is auto-loaded by Claude Code; arbitrary `<DOMAIN>.md` files are not. This may push toward a manifest/index file that lists all contracts.
+
+## Related concepts
+
+- [[llm-wiki-pattern]] — instance of the meta-pattern in the personal-knowledge domain.
+- [[design-md]] — instance of the meta-pattern in the design-systems domain.
+- [[agents-md]] — instance of the meta-pattern for OpenAI Codex / generic agents.
+- [[skill-md]] — instance of the meta-pattern at the single-capability scope.
+- [[readme-md]] — older sibling convention being absorbed into the family.
+
+## Related entities
+
+- [[wiki/entities/refero]] — ships DESIGN.md, an instance of the pattern.
+- [[wiki/entities/andrej-karpathy]] — strongest articulator of the pattern in the wiki so far (via the LLM Wiki gist).
+
+## Mentioned in
+
+- [[wiki/sources/llm-wiki-pattern-karpathy]]
+- [[wiki/sources/refero-design-systems-for-ai-agents]]
