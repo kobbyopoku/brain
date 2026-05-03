@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 36 sources · 91 entities · 34 concepts · 1 project · 0 syntheses · last updated 2026-05-02
+**Stats**: 37 sources · 93 entities · 37 concepts · 1 project · 0 syntheses · last updated 2026-05-03
 
 ---
 
@@ -28,6 +28,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — six-phase early-stage playbook for selling AI automations at $3-15k per build.
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — scaled $7M ARR services-as-software agency playbook with explicit churn-at-scale math.
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — 10 online business models that work in 2026 + 1 that's collapsing.
+- [[wiki/sources/saraev-agentic-workflows-2026]] — 5h+ definitive course; coins the DO framework, horizontal-leverage thesis, reliability-decay-math. The architectural companion to the three economic playbooks above.
 
 ### Prompts and prompt-engineering
 
@@ -79,6 +80,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/mnilax]] — author of the 430-hours instrumented Claude Code study.
 - [[wiki/entities/nainsi-dwiv]] — author of the Agent Skills architectural deep-dive.
 - [[wiki/entities/nateherk]] — author of the AI OS playbook; runs a $3M/yr business on Claude Code.
+- [[wiki/entities/nick-saraev]] — author of the 5h+ Agentic Workflows course; coined the DO framework.
 - [[wiki/entities/regent0x]] — author of the Claude Code 24/7 dev team stack.
 
 ### People — referenced
@@ -230,9 +232,11 @@ Stub pages awaiting substantive primary sources. Their only current content is a
 ### Agent architecture
 
 - [[wiki/concepts/ai-os-pattern]] — Three Ms + Four Cs framework for treating Claude Code as an OS.
+- [[wiki/concepts/do-framework]] — Saraev's Directives + Executions architecture for deterministic agentic workflows.
 - [[wiki/concepts/hot-cache]] — `_hot.md`: 500-token active-state file extending the LLM Wiki pattern.
 - [[wiki/concepts/progressive-disclosure]] — load metadata first, content on demand.
 - [[wiki/concepts/reasoning-execution-split]] — LLM reasons; deterministic code executes.
+- [[wiki/concepts/reliability-decay-math]] — chained-probability problem that motivates separation-of-concerns architectures.
 
 ### Integration & data layer
 
@@ -251,6 +255,7 @@ Stub pages awaiting substantive primary sources. Their only current content is a
 - [[wiki/concepts/ai-automation-services]] — services-business model for selling AI automations.
 - [[wiki/concepts/services-as-software]] — scaled agency-shape with software-margin accelerator layer.
 - [[wiki/concepts/churn-at-scale]] — the agency-growth math that motivates the accelerator layer.
+- [[wiki/concepts/horizontal-leverage]] — automating 90% of many roles is 9,000× more valuable than 100% of one.
 - [[wiki/concepts/online-business-models-2026]] — Brian Moran's 10-models-that-work catalog.
 
 ### Design / UI

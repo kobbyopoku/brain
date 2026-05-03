@@ -39,6 +39,7 @@ The Three Ms separately address the **mindset trap** that kills most AI OS attem
 ## Treatment across sources
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — canonical wiki source. Author runs the pattern at $3M/yr business scale; ships a starter repo ([[wiki/entities/ais-os|github.com/nateherkai/AIS-OS]]) with three skills (Audit, Level Up, Onboard) that bootstrap the OS in five minutes. Includes operational specifics: separate API accounts per service, "prefer API endpoints saved as markdown over MCPs", `.env` discipline, daily/weekly improvement loops via `/audit` + `/level-up`.
+- [[wiki/sources/saraev-agentic-workflows-2026]] — sibling architecture at the workflow scope. Saraev's [[do-framework]] (Directives + Executions) is structurally similar to nateherk's AI OS (`Contexts/`, `Decisions/`, `References/`, `.claude/skills/`). Both are folder-shaped agent contracts; nateherk's is broader (the OS), Saraev's is more workflow-specific (one directive per repeatable task). The DO framework can be read as the *delivery surface* of an AI OS — workflows the OS exposes to the user.
 
 ## Sub-claims and details
 

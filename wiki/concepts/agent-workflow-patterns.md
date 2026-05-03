@@ -32,6 +32,7 @@ Patterns also give you a vocabulary for describing existing agent setups. The 5-
 ## Treatment across sources
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — canonical wiki source. Names all five patterns, describes when each applies, and gives concrete use cases. Argues *"most problems can actually be solved without needing full autonomy."*
+- [[wiki/sources/saraev-agentic-workflows-2026]] — independently arrives at the workflow-vs-agent tradeoff via the [[reliability-decay-math]] argument: chained probabilistic steps decay multiplicatively, so deterministic workflow patterns are economically necessary for client-grade reliability. Saraev's [[do-framework]] is a specific implementation of orchestrator-workers where the workers (executions) are deterministic Python rather than additional LLM calls.
 
 ## Sub-claims and details
 

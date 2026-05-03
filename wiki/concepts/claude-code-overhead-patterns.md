@@ -30,6 +30,7 @@ For the brain itself, the concept is operationally critical. The wiki's [[CLAUDE
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — canonical wiki source. 90-day instrumented study; 9 named patterns with measured percentages and concrete fixes; ships an audit script (`claude-audit.sh`) that flags all 9 at once.
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational sibling: Nate independently identifies *"prefer API endpoints saved as markdown over MCPs"* (same as Mnilax's pattern #6) and emphasizes hardcoding values into skill.md to avoid runtime data crawls (variant of #6).
 - [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]] — conceptual sibling: [[progressive-disclosure]] is the architectural answer to pattern #5 (skill loading on irrelevant tasks).
+- [[wiki/sources/saraev-agentic-workflows-2026]] — independently observes the MCP overhead pattern in action: *"This thing has basically filled up about half of my entire context window. ... [MCP tools eat] 8.2% of my entire context window."* Third independent confirmation of Mnilax's pattern #6, with the same operational fix (load only the MCPs the directive needs).
 
 ## The 9 patterns (ranked by cost)
 
