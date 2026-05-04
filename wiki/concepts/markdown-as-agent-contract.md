@@ -2,7 +2,7 @@
 type: concept
 title: Markdown as Agent Contract
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 aliases: [markdown as agent config, agent-readable markdown]
 tags: [meta-pattern, ai-agents, markdown, agent-config, foundational]
 ---
@@ -45,6 +45,7 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational layered version: the AI OS uses claude.md (master prompt, updated 2× a day) + skills (`.claude/skills/<name>/skill.md`) + reference files (in `References/`) + contexts (in `Contexts/`) all as agent contracts at different scopes. Adds a strong cost discipline: *"Markdown is cheap to read; API docs are expensive to crawl every time"* — the *cost* of a contract file matters too, not just its content. Cross-cuts with [[claude-code-overhead-patterns]].
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — **the cost discipline made literal**: CLAUDE.md bloat is the largest single overhead pattern (~14% of all tokens). Every word in an agent-contract file is paid for on every turn of every session. The pattern's value depends on its size discipline; the source's target is combined user + project CLAUDE.md under 1,500 tokens.
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — the pattern applied to **operations** rather than agents: ColdIQ documents repeatable client tasks as workflow files in markdown ("Written for someone who started Monday with zero context"). Same shape; different consumer (humans + agents both).
+- [[wiki/sources/noisyb0y1-marketingskills-repo]] — the pattern applied to **public-web buying-agent surfaces**: machine-readable endpoints like `/llms.txt`, `/pricing.md`, `/changelog.md` that expose product information directly to AI buying agents in a format they can consume. *"If pricing is hidden behind JavaScript or 'contact sales' an AI agent may simply exclude your product from a comparison."* The marketingskills repo itself is also an instance — a [[claude-code-skills|skill-pack]] in markdown — and its mandatory `product-marketing-context.md` is yet another instance ([[context-file]] applied to product-marketing). Three layers of the same meta-pattern visible in one source: the skill-pack (agent contract), the context file (agent contract), and the public web endpoints (buying-agent contract).
 
 ## Sub-claims and details
 
@@ -52,6 +53,7 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - **Naming convention is converging on `<DOMAIN>.md` in CAPS.** CLAUDE, AGENTS, DESIGN, SKILL — all CAPS, suggesting "this is the canonical contract for this domain in this repo."
 - **MCP servers are the runtime complement.** Where markdown contracts express *what the agent should do*, MCP servers expose *what the agent can call*. Refero (in [[wiki/entities/refero]]) ships both: a DESIGN.md catalog and a Refero MCP server.
 - **The pattern crosses domains.** Personal knowledge (CLAUDE.md), design (DESIGN.md), generic agents (AGENTS.md), individual capabilities (SKILL.md). The shared property is "human writes prose; agent acts on it."
+- **The pattern extends to public-web surfaces.** `/llms.txt` (site summary), `/pricing.md` (structured pricing), `/changelog.md` (public update log) expose product information for AI buying agents to read. Same shape, different consumer: not a coding agent in the user's IDE but a *third-party* agent acting on behalf of a prospect. See [[ai-seo]].
 
 ## Open questions and contradictions
 
@@ -69,13 +71,22 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[readme-md]] — older sibling convention being absorbed into the family.
 - [[context-file]] — instance at the per-client / per-principal scope.
 - [[claude-code-skills]] — the *mechanism* through which one of these contracts (skill files) becomes runnable.
+- [[ai-seo]] — public-web instance of the meta-pattern; `/llms.txt` and `/pricing.md` are buying-agent contracts.
 
 ## Related entities
 
 - [[wiki/entities/refero]] — ships DESIGN.md, an instance of the pattern.
 - [[wiki/entities/andrej-karpathy]] — strongest articulator of the pattern in the wiki so far (via the LLM Wiki gist).
 
+- [[wiki/entities/marketingskills-repo]] — instantiates the pattern at three layers (skill-pack + context file + public endpoints).
+
 ## Mentioned in
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]]
 - [[wiki/sources/refero-design-systems-for-ai-agents]]
+- [[wiki/sources/regent0x-claude-code-247-dev-team]]
+- [[wiki/sources/khairallah-ai-automations-10k-month]]
+- [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
+- [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
+- [[wiki/sources/noisyb0y1-marketingskills-repo]]

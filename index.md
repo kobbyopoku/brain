@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 37 sources · 93 entities · 37 concepts · 1 project · 0 syntheses · last updated 2026-05-03
+**Stats**: 39 sources · 97 entities · 39 concepts · 1 project · 0 syntheses · last updated 2026-05-04
 
 ---
 
@@ -29,6 +29,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — scaled $7M ARR services-as-software agency playbook with explicit churn-at-scale math.
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — 10 online business models that work in 2026 + 1 that's collapsing.
 - [[wiki/sources/saraev-agentic-workflows-2026]] — 5h+ definitive course; coins the DO framework, horizontal-leverage thesis, reliability-decay-math. The architectural companion to the three economic playbooks above.
+- [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]] — 5th source on the AI automation services model; functionally a derivative of Khairallah with new niche (law firms), Cowork as Claude Code alternative, three-trap framing.
 
 ### Prompts and prompt-engineering
 
@@ -39,6 +40,10 @@ The content-oriented index of this wiki. Read this first when answering a query,
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — Refero's curated DESIGN.md catalog for AI coding agents; landing-page clipping.
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] — 11 patterns shared by 8 YC unicorn landing pages.
+
+### Marketing / CRO / SEO
+
+- [[wiki/sources/noisyb0y1-marketingskills-repo]] — surfaces [[wiki/entities/marketingskills-repo|coreyhaines31/marketingskills]]: a free Claude Code skill-pack with 139 growth tactics, 12 SEO playbooks, CRO/A/B/pricing/AI-SEO frameworks, and a 16-tool tool registry.
 
 #### DESIGN.md ingests (all 20 Refero brands, 2026-05-02)
 
@@ -72,6 +77,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/alex-vacca]] — author of the services-as-software $7M agency playbook.
 - [[wiki/entities/brian-moran]] — author of the 10 online business models for 2026.
 - [[wiki/entities/clear_graphics]] — author of the YC unicorn landing-pages analysis.
+- [[wiki/entities/corey-haines]] — *(stub)* maintainer of the marketingskills Claude Code skill-pack.
 - [[wiki/entities/eng-khairallah]] — author of the AI Automations early-stage services playbook.
 - [[wiki/entities/godofprompt]] — author of the Paul Graham startup-eval prompts.
 - [[wiki/entities/HeyZaraKhan]] — author of two Claude-ecosystem posts (Skills, Certified Architect).
@@ -81,6 +87,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/nainsi-dwiv]] — author of the Agent Skills architectural deep-dive.
 - [[wiki/entities/nateherk]] — author of the AI OS playbook; runs a $3M/yr business on Claude Code.
 - [[wiki/entities/nick-saraev]] — author of the 5h+ Agentic Workflows course; coined the DO framework.
+- [[wiki/entities/noisyb0y1]] — *(stub)* author who surfaced the marketingskills skill-pack.
 - [[wiki/entities/regent0x]] — author of the Claude Code 24/7 dev team stack.
 
 ### People — referenced
@@ -103,6 +110,10 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/entities/obsidian]] — local-first markdown editor; the working environment for this vault, also the persistent-memory layer in regent0x_'s stack.
 - [[wiki/entities/qmd]] — local hybrid search engine for markdown wikis at scale.
 - [[wiki/entities/refero]] — curated DESIGN.md library + MCP server for AI coding agents.
+
+### Open-source skill-packs
+
+- [[wiki/entities/marketingskills-repo]] — coreyhaines31/marketingskills: 139 growth tactics + 12 SEO playbooks + CRO/A/B/pricing/AI-SEO frameworks + 16-tool tool registry. Marketing-domain analogue to Refero.
 
 ### Claude Code ecosystem
 
@@ -140,6 +151,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 
 - [[wiki/entities/aider]] — terminal pair programmer (mid-level dev replacement per heynavtoor).
 - [[wiki/entities/cline]] — VS Code autonomous agent.
+- [[wiki/entities/cowork]] — *(stub)* Claude Code alternative named by heynavtoor.
 - [[wiki/entities/cursor]] — AI-assisted code editor.
 - [[wiki/entities/openhands]] — autonomous SWE agent (junior dev replacement per heynavtoor).
 - [[wiki/entities/replit]] — browser dev environment with AI coding.
@@ -159,6 +171,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 
 ### MCP integrations
 
+- [[wiki/entities/anymailfinder]] — *(stub)* email enrichment tool; MCP-candidate per Saraev's worked example.
 - [[wiki/entities/gmail]] — email MCP integration.
 - [[wiki/entities/google-drive]] — file-storage MCP integration.
 - [[wiki/entities/slack]] — communications MCP integration.
@@ -262,6 +275,11 @@ Stub pages awaiting substantive primary sources. Their only current content is a
 
 - [[wiki/concepts/landing-page-patterns]] — 11 patterns shared by YC unicorn landing pages.
 
+### Marketing / CRO / SEO
+
+- [[wiki/concepts/ai-seo]] — optimizing for AI citation rather than keyword ranking; three pillars (Structure / Authority / Presence) + machine-readable endpoints (`/llms.txt`, `/pricing.md`).
+- [[wiki/concepts/switching-forces]] — push/pull/habit/anxiety: the four forces that explain why customers switch and why they don't. Worked example mapped for Vedge.
+
 ### Personal productivity / prompts
 
 - [[wiki/concepts/personal-claude-prompts]] — curated personal prompt libraries as a productivity multiplier.
@@ -309,3 +327,5 @@ A few suggested entry points into the wiki:
 - **"How do I get more out of my $20 Claude subscription?"** → [[wiki/sources/AnatoliKopadze-20-claude-prompts]] → [[wiki/concepts/personal-claude-prompts]].
 - **"What MCP servers should I know about?"** → [[wiki/concepts/mcp-server]] → [[wiki/entities/tavily]], [[wiki/entities/gmail]], [[wiki/entities/google-drive]], [[wiki/entities/slack]].
 - **"What makes a great landing page?"** → [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] → [[wiki/concepts/landing-page-patterns]].
+- **"Why isn't my landing page converting?"** → [[wiki/concepts/switching-forces]] (push/pull/habit/anxiety) → [[wiki/concepts/landing-page-patterns]] (the 11 patterns) → [[wiki/entities/marketingskills-repo]] (CRO 7-question audit + skill-pack).
+- **"How do I show up in AI overview answers?"** → [[wiki/concepts/ai-seo]] → [[wiki/entities/marketingskills-repo]] → [[wiki/sources/noisyb0y1-marketingskills-repo]].

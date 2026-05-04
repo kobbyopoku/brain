@@ -2,7 +2,7 @@
 type: project
 title: Vedge
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 status: active
 repo: multi-repo (github.com/kobbyopoku/vedge_backend, vedge_frontend, vedge_patient, vedge_staff, vedge_landing, vedge_emails, vedge_agent)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/vedge
@@ -74,8 +74,14 @@ Seeded from `tasks/lessons.md` and auto-memory. Will be promoted to `wiki/concep
 
 ## Related
 
-- **Concepts**: *(no existing brain pages map directly yet — candidates to seed later: `multi-tenant-ehr`, `modular-monolith`, `flyway-migration-safety`, `expert-led-implementation-protocol`.)*
-- **Entities**: *(no existing brain pages — candidates: Spring Boot, Flyway, Flutter, Riverpod, Paystack, Flutterwave, Kivora, Railway.)*
+- **Concepts**:
+  - [[switching-forces]] — directly applicable to `vedge_landing` copy. The four forces for African healthcare facility switching from paper/fragmented systems to Vedge are mapped in the [[switching-forces#Mapping the four forces (a worked example for [[wiki/projects/vedge|Vedge]])|switching-forces page]] (Push: scattered notes, slow NHIS reimbursement; Pull: integrated platform with NHIS-aware billing; Habit: 30 years of paper; Anxiety: PHI security, training cost, migration risk). Pull-only landing copy will under-convert.
+  - [[ai-seo]] — `vedge_landing` should expose `/llms.txt`, `/pricing.md`, and structured FAQ blocks if Vedge wants to be cited when AI agents compare African EHR options. Especially relevant given the buyer profile (clinic owners doing late-night research via ChatGPT or Perplexity).
+  - [[landing-page-patterns]] — the 11 unicorn patterns are aspirational for `vedge_landing`; pattern 5 (social proof through scale) and pattern 8 (free CTA) are the lowest-hanging.
+  - *(Other candidates to seed later: `multi-tenant-ehr`, `modular-monolith`, `flyway-migration-safety`, `expert-led-implementation-protocol`.)*
+- **Entities**:
+  - [[wiki/entities/marketingskills-repo]] — directly usable for `vedge_landing`: drop the repo into `~/.claude/skills`, fill out a Vedge-specific `product-marketing-context.md` (ICP = small/medium African healthcare facility owner; pain = NHIS reimbursement delays; quotes pulled from real clinic-owner interviews; proof = first 3 case studies), then invoke skills like CRO 7-question audit, switching-forces mapping, programmatic SEO playbooks (esp. Locations / Comparisons / Glossary).
+  - *(Other candidates: Spring Boot, Flyway, Flutter, Riverpod, Paystack, Flutterwave, Kivora, Railway.)*
 - **Sources**: *(none yet — the project's `CLAUDE.md` is the closest equivalent and is referenced under External links.)*
 - **Other projects**: *(this is the first project page in the wiki.)*
 

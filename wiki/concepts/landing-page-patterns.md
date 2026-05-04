@@ -2,7 +2,7 @@
 type: concept
 title: Landing Page Patterns
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 aliases: [unicorn landing patterns, conversion landing pages]
 tags: [design, conversion, landing-pages, marketing]
 ---
@@ -24,6 +24,7 @@ For anyone building a product landing page, these patterns are a first-pass chec
 ## Treatment across sources
 
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] — canonical wiki source. Analyzes landing pages of [[wiki/entities/stripe|Stripe]], [[wiki/entities/airbnb|Airbnb]], [[wiki/entities/coinbase|Coinbase]], [[wiki/entities/instacart|Instacart]], [[wiki/entities/doordash|DoorDash]], [[wiki/entities/dropbox|Dropbox]], [[wiki/entities/gitlab|GitLab]], [[wiki/entities/gusto|Gusto]] (combined ~$280B market cap) and extracts 11 patterns.
+- [[wiki/sources/noisyb0y1-marketingskills-repo]] — the **evaluation companion** to clear_graphics's observation. Where clear_graphics catalogs *what unicorn pages do*, the [[wiki/entities/marketingskills-repo|marketingskills repo]]'s **CRO 7-question framework** is the diagnostic for *why a given page does or doesn't convert* — questions covering the 5-second test, primary CTA visibility, first-screen objection-handling, scroll-depth proof points, FAQ specificity, social-proof concreteness, and reading-difficulty grade level. Composes naturally with patterns: each pattern can be tested with the 7 questions. *The repo also frames CRO as **"a page is a sequence of arguments, not a collection of blocks"** — orthogonal to the patterns but useful as a copy-mental-model.* Adds [[switching-forces]] mapping: each unicorn pattern can be classified by which switching force it addresses (e.g. pattern 5 = anxiety-killer; pattern 8 = anxiety-killer; pattern 7 = push-acknowledger).
 
 ## The 11 patterns
 
@@ -100,6 +101,8 @@ Identical design language site-wide. Result of rigorous design systems maintaine
 
 - [[design-md]] — adjacent: per-brand visual tokens.
 - [[markdown-as-agent-contract]] — adjacent: a landing page is a kind of human-facing contract.
+- [[switching-forces]] — each pattern can be classified by which of the four forces (push/pull/habit/anxiety) it addresses; the patterns are *what* to do, switching forces explain *why*.
+- [[ai-seo]] — pattern 4 (product in hero), pattern 5 (social proof), and well-structured FAQ blocks are the same artifacts that get cited by AI overviews; patterns naturally compose with AI SEO structural blocks.
 
 ## Related entities
 
@@ -115,7 +118,10 @@ The eight YC unicorns analyzed:
 
 Plus:
 - [[wiki/entities/clear_graphics]] — author.
+- [[wiki/entities/marketingskills-repo]] — provides the CRO 7-question evaluation companion.
+- [[wiki/entities/corey-haines]] — author of the CRO 7-question framework.
 
 ## Mentioned in
 
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]]
+- [[wiki/sources/noisyb0y1-marketingskills-repo]]

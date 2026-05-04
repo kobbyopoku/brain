@@ -2,7 +2,7 @@
 type: concept
 title: Claude Code Skills
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 aliases: [skills, claude skills, skill plugins]
 tags: [claude-code, mechanism, agent-config]
 ---
@@ -29,6 +29,7 @@ This concept is **distinct from the file format** captured in [[skill-md]]. SKIL
 - [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]] — architectural framing: a skill is a packaged capability combining *guidance + context + execution*. Names [[progressive-disclosure]] as the conceptual unlock (metadata first, content on demand) and [[reasoning-execution-split]] as why skills with embedded code are reliable in a way pure-prompt skills aren't. Also flags the security risk surface: skills add power, which means they add risk.
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational skill-authoring playbook: six-step framework (name+trigger / one-sentence goal / step-by-step process / reference files / rules+guardrails / improvement loop), three-level loading model (front matter → skill.md → reference files), keep skill.md under 500 lines, project-level vs `~/.claude/skills/` global distinction, hardcode stable values into skill.md instead of querying via MCP every time.
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — the cost counterpoint: skill loading on irrelevant tasks is the 5th-largest [[claude-code-overhead-patterns|overhead pattern]] (~7% of total tokens). Author had 11 active skills loading "just in case"; cut to 4 and saved 9,000+ tokens per task on average. Auto-invocation is conservative (when in doubt, load), so unused skills cost on every task.
+- [[wiki/sources/noisyb0y1-marketingskills-repo]] — the **most substantive non-design skill-pack example yet ingested**. Surfaces [[wiki/entities/marketingskills-repo|coreyhaines31/marketingskills]] — a free, open-source skill-pack containing 139 growth tactics, 12 programmatic-SEO playbooks, frameworks for copywriting / CRO / A/B testing / pricing / [[ai-seo|AI SEO]], and a tool registry (GA4, GSC, Mixpanel, [[wiki/entities/posthog|PostHog]], [[wiki/entities/stripe|Stripe]], etc.) with API/MCP/CLI availability noted per tool. Architectural pattern: **every skill begins by reading `product-marketing-context.md`** ([[context-file]] applied to product-marketing) before any other action — no [[context-file]], no useful output. Claims to replace a $10K/mo marketing agency. Sibling to [[wiki/entities/refero|Refero]] (design-tokens-as-skills): same shape, different domain.
 
 ## Sub-claims and details
 
@@ -73,8 +74,15 @@ This concept is **distinct from the file format** captured in [[skill-md]]. SKIL
 - [[wiki/entities/trail-of-bits-claude-code-skills]] — security skill collection.
 - [[wiki/entities/tdd-guard]] — TDD-enforcement skill.
 - [[wiki/entities/anthropic]] — maintainer of Claude Code and the official skill collection.
+- [[wiki/entities/marketingskills-repo]] — substantive marketing-domain skill-pack (139 tactics + 12 SEO playbooks + tool registry).
+- [[wiki/entities/refero]] — substantive design-domain skill-pack (20-brand DESIGN.md collection).
 
 ## Mentioned in
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]]
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
+- [[wiki/sources/HeyZaraKhan-anthropic-skills-announcement]]
+- [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]]
+- [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
+- [[wiki/sources/noisyb0y1-marketingskills-repo]]

@@ -2,7 +2,7 @@
 type: concept
 title: AI Automation Services
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 aliases: [AI automation business, automation services]
 tags: [services-business, ai-automation, monetization]
 ---
@@ -28,6 +28,7 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — names "AI services for businesses" as model #10 in a 10-model 2026 catalog. *"If you can build AI workflows, automations, and little apps for businesses that are lagging behind, you can charge premium prices."* Pricing range cited: $5K-$20K per project. The shorter treatment than the other two but useful as a third independent source confirming the market thesis.
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — *implicitly relevant*: every primitive regent0x_ teaches (CLAUDE.md, skills, hooks, subagents, orchestration) is a billable component in a services package. The personal-use source is also a *de facto* training ground for the services builder.
 - [[wiki/sources/saraev-agentic-workflows-2026]] — the **architectural** companion. Where Khairallah/Vacca/Moran cover the business model, Saraev covers the *how* in 5h+ of structured course material: the [[do-framework]] (Directives + Executions) for deterministic workflows, the [[reliability-decay-math]] argument for why it's needed, and the [[horizontal-leverage]] thesis for why the wealth concentrates in this niche. **The fourth major source on this concept**; the wiki now has both economic (Khairallah / Vacca / Moran) and technical (Saraev) coverage.
+- [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]] — **5th source**; functionally a derivative of Khairallah's playbook with the same 6-phase structure, the same niches, the same pricing math ($13,750/mo target), and the same 18-month-window argument. Adds: **law firms** as an 8th niche, **[[wiki/entities/cowork|Cowork]]** as a Claude Code alternative, a specific stack (Cal.com / Stripe / Loom / Notion-or-Obsidian), and explicit **three-trap framing** (perfectionism on the toolkit, pricing too low <$3,000, no niche). The cross-source repetition strengthens canon: when 5 independent authors converge on the same pricing math, niche list, and time-window claim, the model is robust enough to act on. *Worth eventually filing as a synthesis comparing all 5 sources.*
 
 ## Sub-claims and details
 
@@ -66,3 +67,7 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 ## Mentioned in
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
+- [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
+- [[wiki/sources/realbrianmoran-making-money-online-2026]]
+- [[wiki/sources/saraev-agentic-workflows-2026]]
+- [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]]
