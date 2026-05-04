@@ -2,7 +2,7 @@
 type: source
 title: Titan Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/964b9215-396b-492c-abec-7bd778d7b1c9
 source_type: design-md
 author: Refero

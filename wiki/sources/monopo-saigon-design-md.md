@@ -2,7 +2,7 @@
 type: source
 title: monopo saigon Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/3e52dd36-6ab1-48c6-bc40-47ef6d33abc2
 source_type: design-md
 author: Refero

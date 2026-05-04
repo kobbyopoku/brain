@@ -2,7 +2,7 @@
 type: source
 title: General Intelligence Company Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/34baa524-5d5b-4165-bbab-d01f05e6d6b9
 source_type: design-md
 author: Refero

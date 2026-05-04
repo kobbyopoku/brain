@@ -2,7 +2,7 @@
 type: source
 title: Dia Browser Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/b458ca1a-70f0-4f85-b745-f879a4d08457
 source_type: design-md
 author: Refero

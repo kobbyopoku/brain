@@ -2,7 +2,7 @@
 type: source
 title: Anthropic Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/d469cba4-c448-4a43-a033-883f8bfcdc42
 source_type: design-md
 author: Refero

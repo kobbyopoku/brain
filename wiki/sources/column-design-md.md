@@ -2,7 +2,7 @@
 type: source
 title: Column Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/a76ec6ba-20b3-495c-9d89-1e58281e79e7
 source_type: design-md
 author: Refero

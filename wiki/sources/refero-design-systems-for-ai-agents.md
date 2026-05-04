@@ -2,7 +2,7 @@
 type: source
 title: Design Systems for AI Agents — Refero
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/
 source_type: webpage
 author: Refero
@@ -52,9 +52,11 @@ Refero is a curated catalog of design references — colors, typography, spacing
 
 - [[wiki/entities/refero]] — the service publishing this catalog.
 
-### Featured brands in the catalog (stubs)
+### Featured brands in the catalog
 
-The landing page features the following brands as cataloged design references. Each has a stub entity page; substantive content will arrive when a primary source about that brand is ingested.
+As of 2026-05-04 the wiki has ingested **32 brands** with 33 DESIGN.md surfaces (Apple has two: MacBook Neo + alternate). The original landing page (2026-05-02) listed 20 brands. The 12 added 2026-05-04 came via direct DESIGN.md downloads from Refero.
+
+Initial 20 (landing-page features):
 
 - [[wiki/entities/acctual]] — "Architectural blueprint on white…"
 - [[wiki/entities/anthropic]] — "Research journal printed on warm…"
@@ -76,6 +78,21 @@ The landing page features the following brands as cataloged design references. E
 - [[wiki/entities/stripe]] — "Architectural blueprint on white…"
 - [[wiki/entities/superhuman]] — "Cinematic cockpit behind warm…"
 - [[wiki/entities/titan]] — "monochrome financial ledger"
+
+12 added 2026-05-04:
+
+- [[wiki/entities/airbnb]] — "Vacation photos pinned to a white corkboard"
+- [[wiki/entities/all-in-one-salon]] — "Crisp digital ledger, with neon highlights"
+- [[wiki/entities/augen-pro]] — "Architectural Blueprint on White Marble" (third "blueprint" brand)
+- [[wiki/entities/authkit]] — "Midnight Command Center" (frosted-glass dashboard)
+- [[wiki/entities/contractbook]] — "Playful professionalism, high-contrast clarity"
+- [[wiki/entities/customer-io]] — "Architectural Blueprint on Frosted Glass"
+- [[wiki/entities/gleap]] — "Crisp canvas, magenta highlight"
+- [[wiki/entities/hyer-aviation]] — "monochromatic luxury, sharp contrast"
+- [[wiki/entities/openai]] — "Blank page before the first word"
+- [[wiki/entities/perplexity-ai]] — "Ivory Desk, Graphite Tools"
+- [[wiki/entities/ui]] — "Monochromatic architectural blueprint"
+- [[wiki/entities/virtual]] — "Minimalist digital console"
 
 ## Related concepts
 

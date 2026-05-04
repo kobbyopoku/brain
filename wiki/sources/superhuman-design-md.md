@@ -2,7 +2,7 @@
 type: source
 title: Superhuman Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/418b374a-be64-44f0-b17e-1d45308c7e62
 source_type: design-md
 author: Refero

@@ -2,7 +2,7 @@
 type: source
 title: Stripe Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/48e5de76-05d5-4c4e-a269-c7c245b291ec
 source_type: design-md
 author: Refero
@@ -68,7 +68,7 @@ This sentence resolves every token-level decision: the cool-temperature neutrals
 
 ## Notes
 
-- **The full extent of the original Refero `Copy.md` may be slightly larger** than what's captured here. The page is JavaScript-rendered with a clipboard-driven Copy.md button; the WebFetch agent extracted what was visible in the rendered HTML payload, but the official Copy.md export may include additional fields (icon definitions, motion tokens, additional component variants) that didn't surface. Treat this as the *substantive core* of the DESIGN.md, not a guaranteed exhaustive copy.
+- **Source provenance** *(as of 2026-05-04)*: the raw file is now the official Refero Copy.md export (replacing the earlier WebFetch extraction). The substantive summary on this page reflects the original ingest; the new raw file is approximately 4× richer in tokens and component specs and remains internally consistent with this summary.
 - **This is the first concrete instance of [[design-md]] in the brain.** Up until now, the [[design-md]] concept page was abstract — describing the format without showing one. This source closes that gap. Future DESIGN.md ingests should follow this shape.
 - **Cross-cuts with [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]]**: clear_graphics analyzed Stripe's landing-page *structure* (category-defining headline, product-in-the-hero, footer-as-sitemap); this source captures Stripe's *visual tokens* (colors, typography, spacing). Two complementary axes of "what makes Stripe look like Stripe." Together they describe the whole.
 - **Deep Violet `#533afd` is recognizably Stripe.** The brand has owned this color for years; an agent generating a payment UI with this hex code will produce something that reads as "Stripe-like" to a designer at twenty paces.

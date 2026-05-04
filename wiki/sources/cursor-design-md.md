@@ -2,7 +2,7 @@
 type: source
 title: Cursor Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/4e3b4717-84c8-4599-baaf-a343c3d619b6
 source_type: design-md
 author: Refero

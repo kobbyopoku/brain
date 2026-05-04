@@ -2,7 +2,7 @@
 type: source
 title: Base44 Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/e869e214-f672-4ac3-bfc2-bd25de7b003b
 source_type: design-md
 author: Refero

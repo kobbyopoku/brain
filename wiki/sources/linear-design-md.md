@@ -2,7 +2,7 @@
 type: source
 title: Linear Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/90ce5883-bb24-4466-93f7-801cd617b0d1
 source_type: design-md
 author: Refero

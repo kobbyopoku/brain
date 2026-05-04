@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 39 sources · 97 entities · 39 concepts · 1 project · 0 syntheses · last updated 2026-05-04
+**Stats**: 52 sources · 108 entities · 39 concepts · 1 project · 0 syntheses · last updated 2026-05-04
 
 ---
 
@@ -45,13 +45,15 @@ The content-oriented index of this wiki. Read this first when answering a query,
 
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — surfaces [[wiki/entities/marketingskills-repo|coreyhaines31/marketingskills]]: a free Claude Code skill-pack with 139 growth tactics, 12 SEO playbooks, CRO/A/B/pricing/AI-SEO frameworks, and a 16-tool tool registry.
 
-#### DESIGN.md ingests (all 20 Refero brands, 2026-05-02)
+#### DESIGN.md ingests (32 brands, 33 surfaces — initial 20 ingested 2026-05-02; +12 brands and Apple alt added 2026-05-04)
+
+Initial 20:
 
 - [[wiki/sources/stripe-design-md]] — *"Architectural blueprint on white marble."*
 - [[wiki/sources/acctual-design-md]] — multi-typeface pill-everything system.
 - [[wiki/sources/anthropic-design-md]] — *"Research journal printed on warm stone."*
 - [[wiki/sources/antimetal-design-md]] — two-mode dark/light bridged by chartreuse.
-- [[wiki/sources/apple-design-md]] — *"Gallery wall at natural light."* 28px card radius signature.
+- [[wiki/sources/apple-design-md]] — *"Gallery wall at natural light."* 28px card radius signature (MacBook Neo).
 - [[wiki/sources/base44-design-md]] — pastel gradients on Canvas Pearl.
 - [[wiki/sources/column-design-md]] — same-philosophy as Stripe, different execution.
 - [[wiki/sources/cursor-design-md]] — *"Warm ivory software studio."*
@@ -67,6 +69,22 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/sources/raycast-design-md]] — deepest dark; glass via backdrop-blur.
 - [[wiki/sources/superhuman-design-md]] — Aubergine + Iris brand pair; Super Sans VF.
 - [[wiki/sources/titan-design-md]] — 160px button radius; largest specific pill.
+
+Added 2026-05-04 (12 new brands + Apple alt surface):
+
+- [[wiki/sources/airbnb-design-md]] — *"Vacation photos pinned to a white corkboard."* Single coral `#ff385c` brand color.
+- [[wiki/sources/all-in-one-salon-design-md]] — GlossGenius beauty-software; *"Crisp digital ledger, with neon highlights."*
+- [[wiki/sources/apple-design-md-alt]] — alternate Apple presentation surface; adds Sky Teal + Royal Violet accents.
+- [[wiki/sources/augen-pro-design-md]] — third *"blueprint on white marble"* brand; ultra-light 350/400 weights.
+- [[wiki/sources/authkit-design-md]] — *"Midnight Command Center"* frosted-glass dashboard; three custom typefaces.
+- [[wiki/sources/contractbook-design-md]] — *"Playful professionalism"*; vibrant yellow + strong blue dual primaries.
+- [[wiki/sources/customer-io-design-md]] — *"Architectural Blueprint on Frosted Glass."* Custom 475 weight.
+- [[wiki/sources/gleap-design-md]] — *"Crisp canvas, magenta highlight."* Editorial PP New + functional Switzer.
+- [[wiki/sources/hyer-aviation-design-md]] — *"Monochromatic luxury."* 187px display sizes.
+- [[wiki/sources/openai-design-md]] — *"Blank page before the first word."* OpenAI Sans only.
+- [[wiki/sources/perplexity-ai-design-md]] — *"Ivory Desk, Graphite Tools."* Smallest type scale (3 sizes).
+- [[wiki/sources/ui-design-md]] — *"Monochromatic architectural blueprint."* Geist + Geist Mono.
+- [[wiki/sources/virtual-design-md]] — *"Minimalist digital console."* Single weight (500) only.
 
 ## Entities
 
@@ -179,7 +197,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 
 ### YC unicorns analyzed (landing-page patterns)
 
-- [[wiki/entities/airbnb]]
+- [[wiki/entities/airbnb]] — also has DESIGN.md ingest (graduated 2026-05-04).
 - [[wiki/entities/coinbase]]
 - [[wiki/entities/doordash]]
 - [[wiki/entities/dropbox]]
@@ -188,13 +206,13 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/instacart]]
 - [[wiki/entities/stripe]] — also in Refero catalog; first cross-source-cited entity.
 
-### Brands in Refero catalog (stubs)
+### Brands in Refero catalog (design-md-ingested)
 
-Stub pages awaiting substantive primary sources. Their only current content is a backlink to [[wiki/sources/refero-design-systems-for-ai-agents]] and Refero's mood descriptor. *(Stripe and Anthropic, originally here, have been promoted to other categories.)*
+20 brands with substantive DESIGN.md ingests from the original 2026-05-02 batch (raw files refreshed with official Copy.md exports 2026-05-04):
 
 - [[wiki/entities/acctual]]
 - [[wiki/entities/antimetal]]
-- [[wiki/entities/apple]]
+- [[wiki/entities/apple]] — two surfaces (MacBook Neo + alt).
 - [[wiki/entities/base44]]
 - [[wiki/entities/column]]
 - [[wiki/entities/dia-browser]]
@@ -209,6 +227,20 @@ Stub pages awaiting substantive primary sources. Their only current content is a
 - [[wiki/entities/raycast]]
 - [[wiki/entities/superhuman]]
 - [[wiki/entities/titan]]
+
+11 new brands added 2026-05-04 (Airbnb listed above under YC unicorns also has a DESIGN.md ingest):
+
+- [[wiki/entities/all-in-one-salon]] — GlossGenius beauty-software.
+- [[wiki/entities/augen-pro]] — *(stub)* third "blueprint on white marble" brand.
+- [[wiki/entities/authkit]] — WorkOS hosted-auth UI; dark frosted-glass.
+- [[wiki/entities/contractbook]] — contract management; vibrant yellow + blue.
+- [[wiki/entities/customer-io]] — lifecycle-marketing platform.
+- [[wiki/entities/gleap]] — customer feedback / live chat tooling.
+- [[wiki/entities/hyer-aviation]] — private aviation booking; 187px display sizes.
+- [[wiki/entities/openai]] — AI products; *"Blank page before the first word."*
+- [[wiki/entities/perplexity-ai]] — AI answer engine; smallest type scale.
+- [[wiki/entities/ui]] — *(stub)* uncertain identity; Geist family.
+- [[wiki/entities/virtual]] — *(stub)* uncertain identity; minimalist console.
 
 ## Concepts
 

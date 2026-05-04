@@ -2,7 +2,7 @@
 type: source
 title: ElevenLabs Design System (DESIGN.md from Refero)
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 source_url: https://styles.refero.design/style/031056ff-7af1-46db-8daa-115f731c5d26
 source_type: design-md
 author: Refero

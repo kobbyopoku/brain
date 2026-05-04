@@ -2,7 +2,7 @@
 type: concept
 title: DESIGN.md
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-04
 aliases: [design.md, DESIGN markdown]
 tags: [design-systems, ai-agents, markdown, agent-config]
 ---
@@ -25,11 +25,12 @@ For a knowledge worker building UIs with AI assistance, a curated DESIGN.md libr
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — names DESIGN.md as the unit of output for Refero's catalog. Asserts the contents are colors, typography, spacing, and component patterns, but does not include an actual DESIGN.md to inspect.
 - [[wiki/sources/stripe-design-md]] — **first concrete DESIGN.md ingested into the brain** (2026-05-02). Validates the format with content: 18 named colors organized brand/gradients/neutrals, a 7-step type scale on `sohne-var`, 4px-base spacing system, 5-radius / 4-shadow vocabulary, 5 token-referenced components (3 buttons + 2 cards), and a one-paragraph design philosophy ("architectural blueprint on white marble").
-- **The remaining 19 Refero brands** (acctual / anthropic / antimetal / apple / base44 / column / cursor / dia-browser / elevenlabs / family / general-intelligence-company / hyperstudio / linear / mercury / minimalissimo / monopo-saigon / raycast / superhuman / titan) — each ingested as its own `<brand>-design-md.md` source 2026-05-02. With all 20 brands ingested, the brain can now make cross-brand observations about the format itself (see Cross-brand patterns below).
+- **The remaining 19 Refero brands** (acctual / anthropic / antimetal / apple / base44 / column / cursor / dia-browser / elevenlabs / family / general-intelligence-company / hyperstudio / linear / mercury / minimalissimo / monopo-saigon / raycast / superhuman / titan) — each ingested as its own `<brand>-design-md.md` source 2026-05-02. Refreshed with the official Refero Copy.md export 2026-05-04.
+- **12 additional brands ingested 2026-05-04** (airbnb / all-in-one-salon / augen-pro / authkit / contractbook / customer-io / gleap / hyer-aviation / openai / perplexity-ai / ui / virtual) — plus the alternate Apple surface ([[wiki/sources/apple-design-md-alt]]). Catalog total: 32 brands, 33 DESIGN.md surfaces. With this much coverage the brain can now make stronger cross-brand observations (see Cross-brand patterns below; observations were drawn from the original 20 and remain broadly applicable, with deltas noted where the new brands extend or contradict them).
 
-## Cross-brand patterns (across 20 ingested DESIGN.md files)
+## Cross-brand patterns (across 32 ingested DESIGN.md files)
 
-Now that every Refero brand's DESIGN.md is in the brain, real comparative observations become possible:
+With every Refero brand's DESIGN.md in the brain, real comparative observations become possible:
 
 ### Common patterns
 - **Most brands use 4px base unit.** Exceptions: Dia Browser and Raycast use 8px (more spacious feel).
@@ -73,6 +74,17 @@ The 20 brands cluster into recognizable archetypes — useful as reference categ
 
 Each archetype answers different design problems; an agent generating "a brand-distinct landing page" can reach for the archetype that matches the desired tone.
 
+### Deltas from the 12 brands added 2026-05-04
+
+The new brands extend several existing observations:
+
+- **"Architectural blueprint on white marble" archetype is now triple-cited** — Stripe + Column + [[wiki/sources/augen-pro-design-md|Augen Pro]] all use the exact philosophy phrase but execute it differently (violet/single-typeface vs plum-orange/four-typeface vs blue/single-typeface-ultra-light).
+- **AI-products converge on minimalist white**: [[wiki/sources/openai-design-md|OpenAI]] (pure white + OpenAI Sans), [[wiki/sources/perplexity-ai-design-md|Perplexity]] (off-white + pplxSans), and [[wiki/sources/anthropic-design-md|Anthropic]] (warm cream + Tiempos Headline) all share *typography-first restraint with near-zero chromatic chrome*. AI-product-restraint is becoming a category move.
+- **Single-color-brand-identity** observation strengthens with new brands: [[wiki/sources/airbnb-design-md|Airbnb]]'s coral `#ff385c`, [[wiki/sources/gleap-design-md|Gleap]]'s magenta-purple, [[wiki/sources/contractbook-design-md|Contractbook]]'s dual-primary (yellow + blue) — most catalog brands continue the pattern.
+- **Type-scale extremes**: [[wiki/sources/hyer-aviation-design-md|Hyer Aviation]] joins [[wiki/sources/monopo-saigon-design-md|monopo saigon]] at the giant-display end (131-187px), while [[wiki/sources/perplexity-ai-design-md|Perplexity]] and [[wiki/sources/virtual-design-md|Virtual]] sit at the minimal end (3 sizes only).
+- **Unusual weights surface**: [[wiki/sources/customer-io-design-md|customer.io]]'s 475 weight and [[wiki/sources/augen-pro-design-md|Augen Pro]]'s 350 weight are non-standard increments — suggests both run custom variable fonts with weight granularity beyond the standard 100-step ladder.
+- **Console / dashboard archetype** now has more entries: [[wiki/sources/authkit-design-md|AuthKit]] (frosted-glass dashboard) + [[wiki/sources/virtual-design-md|Virtual]] (minimalist console) join Linear / Mercury / Raycast / Hyperstudio in the dark-mode-tooling cluster.
+
 ## Sub-claims and details
 
 ### What's actually in a Refero DESIGN.md (per [[wiki/sources/stripe-design-md]])
@@ -96,10 +108,11 @@ The shape is consistent enough that an agent reading any Refero DESIGN.md can ex
 
 ## Open questions and contradictions
 
-- **Refero shape is consistent across all 20 ingested brands**: same section order (color palette → typography → spacing/shape → components → philosophy), same field shapes (named colors with hex, type scale with size/weight/line-height/tracking, spacing with named tokens). Resolves the earlier "is the shape consistent?" question — for Refero specifically, yes.
+- **Refero shape is consistent across all 32 ingested brands**: same section order (color palette → typography → spacing/shape → components → philosophy), same field shapes (named colors with hex, type scale with size/weight/line-height/tracking, spacing with named tokens). Resolved across the catalog — for Refero specifically, yes.
+- **A brand can have multiple DESIGN.md surfaces**: the wiki now has **two Apple DESIGN.md ingests** ([[wiki/sources/apple-design-md|MacBook Neo product page]] + [[wiki/sources/apple-design-md-alt|alternate Apple surface]]) that share core identity but diverge on accent palette and type scale. A future-design-md ingest for another large brand may reveal the same.
 - **Is DESIGN.md a Refero-specific name or a general convention?** Likely the latter (analogous to AGENTS.md, CLAUDE.md, README.md), but unconfirmed from current sources outside Refero. A non-Refero DESIGN.md ingest would test this.
 - **Relation to design-token standards** (W3C Design Tokens, Style Dictionary): DESIGN.md is plainer-text and seemingly not aimed at toolchain interop — it's aimed at LLMs reading prose. The Refero page mentions Tailwind v4, CSS Variables, and Design Tokens as alternate export formats — so the markdown is the human-readable surface and the structured exports are the toolchain surface.
-- **Provenance limitation**: all 20 ingests were captured via WebFetch from the rendered HTML (the official "Copy.md" button is clipboard-driven, not directly fetchable). Content may not be 100% identical to the official Copy.md export — some advanced fields (motion tokens, icon specs, breakpoint definitions) may be missing.
+- **Provenance** *(updated 2026-05-04)*: 32 of 33 raw files are now the official Refero Copy.md export (replacing earlier WebFetch extractions). The remaining 1 (Acctual) still uses the older WebFetch-extracted format. The 2026-05-04 batch upgrade resolved the prior "WebFetch may miss advanced fields" caveat — current raw files are 3-5× richer than the prior versions and contain full token specs, component specs, and philosophy text.
 
 ## Related concepts
 
@@ -109,9 +122,9 @@ The shape is consistent enough that an agent reading any Refero DESIGN.md can ex
 ## Related entities
 
 - [[wiki/entities/refero]] — primary publisher of DESIGN.md files.
-- All 20 Refero brands have ingested DESIGN.md pages now: [[wiki/entities/acctual]], [[wiki/entities/anthropic]], [[wiki/entities/antimetal]], [[wiki/entities/apple]], [[wiki/entities/base44]], [[wiki/entities/column]], [[wiki/entities/cursor]], [[wiki/entities/dia-browser]], [[wiki/entities/elevenlabs]], [[wiki/entities/family]], [[wiki/entities/general-intelligence-company]], [[wiki/entities/hyperstudio]], [[wiki/entities/linear]], [[wiki/entities/mercury]], [[wiki/entities/minimalissimo]], [[wiki/entities/monopo-saigon]], [[wiki/entities/raycast]], [[wiki/entities/stripe]], [[wiki/entities/superhuman]], [[wiki/entities/titan]].
+- **32 brands have ingested DESIGN.md pages** (as of 2026-05-04). Original 20: [[wiki/entities/acctual]], [[wiki/entities/anthropic]], [[wiki/entities/antimetal]], [[wiki/entities/apple]], [[wiki/entities/base44]], [[wiki/entities/column]], [[wiki/entities/cursor]], [[wiki/entities/dia-browser]], [[wiki/entities/elevenlabs]], [[wiki/entities/family]], [[wiki/entities/general-intelligence-company]], [[wiki/entities/hyperstudio]], [[wiki/entities/linear]], [[wiki/entities/mercury]], [[wiki/entities/minimalissimo]], [[wiki/entities/monopo-saigon]], [[wiki/entities/raycast]], [[wiki/entities/stripe]], [[wiki/entities/superhuman]], [[wiki/entities/titan]]. Added 2026-05-04: [[wiki/entities/airbnb]], [[wiki/entities/all-in-one-salon]], [[wiki/entities/augen-pro]], [[wiki/entities/authkit]], [[wiki/entities/contractbook]], [[wiki/entities/customer-io]], [[wiki/entities/gleap]], [[wiki/entities/hyer-aviation]], [[wiki/entities/openai]], [[wiki/entities/perplexity-ai]], [[wiki/entities/ui]], [[wiki/entities/virtual]]. Plus the alternate Apple surface ([[wiki/sources/apple-design-md-alt]]).
 
 ## Mentioned in
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]]
-- [[wiki/sources/stripe-design-md]] and 19 other `<brand>-design-md` source pages.
+- [[wiki/sources/stripe-design-md]] and 32 other `<brand>-design-md` source pages (Apple has two: MacBook Neo + alternate surface).
