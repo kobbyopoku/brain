@@ -164,6 +164,12 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/slack]] — communications MCP integration.
 - [[wiki/entities/tavily]] — web search MCP server.
 
+### Agentic workflow tools (referenced)
+
+Tools named in [[wiki/sources/saraev-agentic-workflows-2026]] as workflow-integration examples.
+
+- [[wiki/entities/anymailfinder]] — email-enrichment tool used in Saraev's lead-scraping DO-framework demo.
+
 ### YC unicorns analyzed (landing-page patterns)
 
 - [[wiki/entities/airbnb]]
