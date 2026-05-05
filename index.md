@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 53 sources · 121 entities · 44 concepts · 1 project · 0 syntheses · last updated 2026-05-05
+**Stats**: 53 sources · 121 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
 
 ---
 
@@ -360,7 +360,7 @@ _(none yet)_
 
 ## Syntheses
 
-_(none yet — file substantive query answers here as `wiki/syntheses/<slug>.md`)_
+- [[wiki/syntheses/refero-open-design-claude-design-comparison]] — three strategic bets in AI design tooling: Refero (curated SaaS catalog) vs Open Design (open-source full-stack platform) vs Claude Design (proprietary Anthropic surface). Includes adoption-fit decision matrix and Vedge-specific recommendation.
 
 ---
 
