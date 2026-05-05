@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 52 sources · 108 entities · 39 concepts · 1 project · 0 syntheses · last updated 2026-05-04
+**Stats**: 53 sources · 121 entities · 44 concepts · 1 project · 0 syntheses · last updated 2026-05-05
 
 ---
 
@@ -44,6 +44,10 @@ The content-oriented index of this wiki. Read this first when answering a query,
 ### Marketing / CRO / SEO
 
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — surfaces [[wiki/entities/marketingskills-repo|coreyhaines31/marketingskills]]: a free Claude Code skill-pack with 139 growth tactics, 12 SEO playbooks, CRO/A/B/pricing/AI-SEO frameworks, and a 16-tool tool registry.
+
+### AI design tooling (open-source platforms)
+
+- [[wiki/sources/nexu-io-open-design]] — Apache-2.0 open-source alternative to Anthropic's [[wiki/entities/claude-design|Claude Design]]. 138 design systems with a 9-section schema, 64 SKILL.md bundles, 15 auto-detected agent CLIs, BYOK proxy, sandboxed preview, MCP server. The most architecturally substantive design-tooling source in the wiki.
 
 #### DESIGN.md ingests (32 brands, 33 surfaces — initial 20 ingested 2026-05-02; +12 brands and Apple alt added 2026-05-04)
 
@@ -132,6 +136,10 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 ### Open-source skill-packs
 
 - [[wiki/entities/marketingskills-repo]] — coreyhaines31/marketingskills: 139 growth tactics + 12 SEO playbooks + CRO/A/B/pricing/AI-SEO frameworks + 16-tool tool registry. Marketing-domain analogue to Refero.
+- [[wiki/entities/open-design]] — nexu-io/open-design: Apache-2.0 design platform with 64 SKILL.md bundles + 138 DESIGN.md systems + 15 agent-CLI runtime + BYOK proxy + MCP server. Largest skill-pack in the wiki.
+- [[wiki/entities/nexu-io]] — *(stub)* maintainer org of Open Design.
+- [[wiki/entities/claude-design]] — Anthropic's proprietary design-tooling product (artifact-first workflow); the antecedent Open Design replicates.
+- [[wiki/entities/huashu-design]], [[wiki/entities/guizang-ppt-skill]], [[wiki/entities/open-codesign]], [[wiki/entities/multica]] — *(4 stubs)* lineage projects credited by Open Design.
 
 ### Claude Code ecosystem
 
@@ -169,9 +177,15 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 
 - [[wiki/entities/aider]] — terminal pair programmer (mid-level dev replacement per heynavtoor).
 - [[wiki/entities/cline]] — VS Code autonomous agent.
+- [[wiki/entities/codex-cli]] — *(stub)* OpenAI's coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/cowork]] — *(stub)* Claude Code alternative named by heynavtoor.
 - [[wiki/entities/cursor]] — AI-assisted code editor.
+- [[wiki/entities/deepseek-cli]] — *(stub)* DeepSeek's coding-agent CLI; auto-detected by Open Design.
+- [[wiki/entities/devin]] — *(stub)* Cognition Labs autonomous SWE agent; auto-detected by Open Design.
+- [[wiki/entities/gemini-cli]] — *(stub)* Google's coding-agent CLI; auto-detected by Open Design.
+- [[wiki/entities/opencode-cli]] — *(stub)* SST's open-source coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/openhands]] — autonomous SWE agent (junior dev replacement per heynavtoor).
+- [[wiki/entities/qwen-cli]] — *(stub)* Alibaba Qwen-Coder CLI; auto-detected by Open Design.
 - [[wiki/entities/replit]] — browser dev environment with AI coding.
 
 ### Agent frameworks
@@ -312,6 +326,14 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/concepts/ai-seo]] — optimizing for AI citation rather than keyword ranking; three pillars (Structure / Authority / Presence) + machine-readable endpoints (`/llms.txt`, `/pricing.md`).
 - [[wiki/concepts/switching-forces]] — push/pull/habit/anxiety: the four forces that explain why customers switch and why they don't. Worked example mapped for Vedge.
 
+### AI design tooling architecture
+
+- [[wiki/concepts/anti-ai-slop-machinery]] — five-mechanism stack (brand-spec extraction protocol + 5-dim self-critique + P0/P1/P2 + blacklist + honest placeholders) for preventing AI-generated design slop. Generalizes to PRDs, marketing copy, runbooks.
+- [[wiki/concepts/artifact-first-workflow]] — single-`<artifact>`-HTML emission rendered in sandboxed `srcdoc` iframe; exports flow from there. Originated in Claude Design.
+- [[wiki/concepts/byok-proxy]] — multi-provider LLM proxy with SSE chunk normalization + SSRF blocking. BYOK trust model.
+- [[wiki/concepts/question-form-first]] — Turn-1 mandatory structured-intake form (locks surface/audience/tone/brand/scale) preventing 80% of design redirects.
+- [[wiki/concepts/visual-directions]] — small set of deterministic OKLch palette + font-stack presets (Editorial Monocle / Modern Minimal / Tech Utility / Brutalist / Soft Warm) for "no improvisation" generation.
+
 ### Personal productivity / prompts
 
 - [[wiki/concepts/personal-claude-prompts]] — curated personal prompt libraries as a productivity multiplier.
@@ -361,3 +383,5 @@ A few suggested entry points into the wiki:
 - **"What makes a great landing page?"** → [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] → [[wiki/concepts/landing-page-patterns]].
 - **"Why isn't my landing page converting?"** → [[wiki/concepts/switching-forces]] (push/pull/habit/anxiety) → [[wiki/concepts/landing-page-patterns]] (the 11 patterns) → [[wiki/entities/marketingskills-repo]] (CRO 7-question audit + skill-pack).
 - **"How do I show up in AI overview answers?"** → [[wiki/concepts/ai-seo]] → [[wiki/entities/marketingskills-repo]] → [[wiki/sources/noisyb0y1-marketingskills-repo]].
+- **"What's the open-source alternative to Claude Design?"** → [[wiki/sources/nexu-io-open-design]] → [[wiki/entities/open-design]] → architecture deep-dives: [[wiki/concepts/anti-ai-slop-machinery]] / [[wiki/concepts/artifact-first-workflow]] / [[wiki/concepts/question-form-first]] / [[wiki/concepts/byok-proxy]] / [[wiki/concepts/visual-directions]].
+- **"How do I prevent AI design slop?"** → [[wiki/concepts/anti-ai-slop-machinery]] (the five mechanisms) → [[wiki/concepts/visual-directions]] (deterministic presets) → [[wiki/concepts/question-form-first]] (Turn-1 intake).

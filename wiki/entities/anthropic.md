@@ -3,7 +3,7 @@ type: entity
 title: Anthropic
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 website: https://anthropic.com
 aliases: []
 tags: [ai-research, claude-code-ecosystem, refero-catalog, design-md-ingested]
@@ -48,14 +48,17 @@ From [[wiki/sources/anthropic-design-md]]: *"Research journal printed on warm st
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — implicit Claude Code maintainer.
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — featured brand in the Refero catalog.
 - [[wiki/sources/anthropic-design-md]] — full DESIGN.md ingested 2026-05-02.
+- [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. References Anthropic's [[wiki/entities/claude-design|Claude Design]] product as the proprietary antecedent that Open Design replicates as Apache-2.0.
 
 ## Related entities
 
 - [[wiki/entities/claude-code]] — Anthropic's coding-agent product.
+- [[wiki/entities/claude-design]] — Anthropic's design-tooling product (artifact-first workflow).
 - [[wiki/entities/anthropic-skills]] — Anthropic's official skill collection.
 - [[wiki/entities/superpowers]] — third-party plugin distributed via the Anthropic plugin marketplace.
 - [[wiki/entities/trail-of-bits-claude-code-skills]] — third-party skill collection complementing Anthropic's official one.
 - [[wiki/entities/refero]] — design-reference catalog Anthropic appears in.
+- [[wiki/entities/open-design]] — open-source alternative to Anthropic's Claude Design.
 
 ## Related concepts
 

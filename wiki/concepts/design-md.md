@@ -2,7 +2,7 @@
 type: concept
 title: DESIGN.md
 created: 2026-05-02
-updated: 2026-05-04
+updated: 2026-05-05
 aliases: [design.md, DESIGN markdown]
 tags: [design-systems, ai-agents, markdown, agent-config]
 ---
@@ -21,12 +21,45 @@ This concept is one concrete instance of [[markdown-as-agent-contract]] — the 
 
 For a knowledge worker building UIs with AI assistance, a curated DESIGN.md library (like [[wiki/entities/refero|Refero]]'s) is a way to skip the "describe what you want it to look like" step and instead say "build this in the style of Linear" or "Stripe" or "Anthropic" — pointing the agent at a DESIGN.md that already encodes the relevant choices.
 
+## Schema variants
+
+DESIGN.md is **not a single schema** — there are at least two meaningful variants in the wiki as of 2026-05-05:
+
+### Refero 5-section schema (33 ingests, 2026-05-02 / 2026-05-04)
+
+Refero's published DESIGN.md files use a 5-section structure:
+
+1. Color palette (brand / gradients / neutrals)
+2. Typography (family + scale)
+3. Spacing & shapes (base unit + radius + shadows)
+4. Components (token-referenced specs)
+5. Design philosophy (one-paragraph mood)
+
+### Open Design 9-section schema (138 ingests-available, 2026-05-05)
+
+[[wiki/entities/open-design|Open Design]]'s DESIGN.md format extends Refero's with four additional sections:
+
+1. Visual Theme & Atmosphere (narrative philosophy)
+2. Color Palette & Roles (full token tables with semantic role per color)
+3. Typography Rules (full size/weight/line-height/tracking tables, often 20+ rows)
+4. Component Stylings (concrete buttons/cards/inputs/badges/navigation specs)
+5. Layout Principles (spacing, grid, container, whitespace, radius scale)
+6. **Depth & Elevation** *(new)* — multi-level treatment with shadow philosophy
+7. **Do's and Don'ts** *(new)* — explicit Do/Don't rules
+8. **Responsive Behavior** *(new)* — breakpoints, touch targets, collapsing
+9. **Agent Prompt Guide** *(new)* — quick color reference + example prompts + iteration guide
+
+The Open Design schema is **substantially richer**: a comparable brand DESIGN.md is ~2.5× the line count of the Refero version (Refero's Linear ~144 lines vs Open Design's Linear ~370 lines). For agents wanting maximum fidelity on overlapping brands (airbnb, apple, cursor, elevenlabs, linear, openai, raycast, stripe, superhuman), Open Design's version is preferred.
+
+Sections 6-9 are the substantive contribution: explicit elevation philosophy, do/don't rules, responsive behavior, and a self-contained agent-prompt guide section meaning the DESIGN.md *is itself* an agent-readable spec without requiring external prompt engineering.
+
 ## Treatment across sources
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — names DESIGN.md as the unit of output for Refero's catalog. Asserts the contents are colors, typography, spacing, and component patterns, but does not include an actual DESIGN.md to inspect.
 - [[wiki/sources/stripe-design-md]] — **first concrete DESIGN.md ingested into the brain** (2026-05-02). Validates the format with content: 18 named colors organized brand/gradients/neutrals, a 7-step type scale on `sohne-var`, 4px-base spacing system, 5-radius / 4-shadow vocabulary, 5 token-referenced components (3 buttons + 2 cards), and a one-paragraph design philosophy ("architectural blueprint on white marble").
 - **The remaining 19 Refero brands** (acctual / anthropic / antimetal / apple / base44 / column / cursor / dia-browser / elevenlabs / family / general-intelligence-company / hyperstudio / linear / mercury / minimalissimo / monopo-saigon / raycast / superhuman / titan) — each ingested as its own `<brand>-design-md.md` source 2026-05-02. Refreshed with the official Refero Copy.md export 2026-05-04.
 - **12 additional brands ingested 2026-05-04** (airbnb / all-in-one-salon / augen-pro / authkit / contractbook / customer-io / gleap / hyer-aviation / openai / perplexity-ai / ui / virtual) — plus the alternate Apple surface ([[wiki/sources/apple-design-md-alt]]). Catalog total: 32 brands, 33 DESIGN.md surfaces. With this much coverage the brain can now make stronger cross-brand observations (see Cross-brand patterns below; observations were drawn from the original 20 and remain broadly applicable, with deltas noted where the new brands extend or contradict them).
+- [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. The most architecturally substantive design-systems source in the wiki. Surfaces **138 alternate DESIGN.md files** in [[wiki/entities/open-design|Open Design]]'s catalog, using a **richer 9-section schema** (adds Depth/Elevation + Do/Don't + Responsive + Agent-Prompt-Guide sections to Refero's 5-section schema). 10 brands overlap with the brain's 33 Refero ingests; the remaining 128 are not currently in the wiki. Significantly upgrades the wiki's understanding of what a "complete" DESIGN.md looks like — see Schema variants section above.
 
 ## Cross-brand patterns (across 32 ingested DESIGN.md files)
 
@@ -128,3 +161,4 @@ The shape is consistent enough that an agent reading any Refero DESIGN.md can ex
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]]
 - [[wiki/sources/stripe-design-md]] and 32 other `<brand>-design-md` source pages (Apple has two: MacBook Neo + alternate surface).
+- [[wiki/sources/nexu-io-open-design]] — surfaces 138 alternate DESIGN.md files in Open Design's catalog using a richer 9-section schema.

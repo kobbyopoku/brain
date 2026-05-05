@@ -2,7 +2,7 @@
 type: project
 title: Vedge
 created: 2026-05-02
-updated: 2026-05-04
+updated: 2026-05-05
 status: active
 repo: multi-repo (github.com/kobbyopoku/vedge_backend, vedge_frontend, vedge_patient, vedge_staff, vedge_landing, vedge_emails, vedge_agent)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/vedge
@@ -81,6 +81,7 @@ Seeded from `tasks/lessons.md` and auto-memory. Will be promoted to `wiki/concep
   - *(Other candidates to seed later: `multi-tenant-ehr`, `modular-monolith`, `flyway-migration-safety`, `expert-led-implementation-protocol`.)*
 - **Entities**:
   - [[wiki/entities/marketingskills-repo]] — directly usable for `vedge_landing`: drop the repo into `~/.claude/skills`, fill out a Vedge-specific `product-marketing-context.md` (ICP = small/medium African healthcare facility owner; pain = NHIS reimbursement delays; quotes pulled from real clinic-owner interviews; proof = first 3 case studies), then invoke skills like CRO 7-question audit, switching-forces mapping, programmatic SEO playbooks (esp. Locations / Comparisons / Glossary).
+  - [[wiki/entities/open-design]] — *added 2026-05-05*. Apache-2.0 design-tooling platform with 64 SKILL.md bundles + 138 DESIGN.md systems + BYOK proxy + sandboxed preview. **Direct fit for `vedge_landing`**: pick the `saas-landing` skill + an appropriate DESIGN.md (Linear or Stripe for clean SaaS feel; Notion for warm-clinical) + a Vedge-specific brand context. Local-first + BYOK = no Refero subscription dependency. The `pm-spec` and `eng-runbook` skills also apply to internal Vedge documentation. The `pricing-page` skill addresses the [[wiki/concepts/ai-seo|AI SEO]] recommendation directly. Daemon dependency is the tradeoff — Open Design adds a Node 24 + pnpm runtime to the dev environment vs just dropping markdown into `~/.claude/skills`.
   - *(Other candidates: Spring Boot, Flyway, Flutter, Riverpod, Paystack, Flutterwave, Kivora, Railway.)*
 - **Sources**: *(none yet — the project's `CLAUDE.md` is the closest equivalent and is referenced under External links.)*
 - **Other projects**: *(this is the first project page in the wiki.)*

@@ -3,7 +3,7 @@ type: entity
 title: Refero
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 aliases: [Refero MCP]
 website: https://styles.refero.design/
 tags: [design-systems, mcp, ai-tooling, design-md]
@@ -31,9 +31,16 @@ Refero publishes a searchable catalog of "design styles" — each scraped from a
 - **AI coding agents can have "design taste" if they're given the right reference data.** Implicit thesis: aesthetic decisions made by top product teams are the right reference data, and a curated library beats letting an agent reason from first principles. Cited in [[wiki/sources/refero-design-systems-for-ai-agents]].
 - **Markdown is the right format for that reference data.** Refero ships DESIGN.md, not JSON, not Figma. This is consistent with the broader claim in [[markdown-as-agent-contract]] — markdown is becoming the lingua franca between humans and agents.
 
+## Open-source alternative
+
+As of 2026-05-05, the wiki contains an explicit open-source alternative to Refero: [[wiki/entities/open-design|nexu-io/open-design]] (Apache-2.0). Open Design is more architecturally substantial — full application stack (Next.js + Express daemon + multi-agent runtime + media generation) vs Refero's catalog + MCP server. Open Design's DESIGN.md format extends Refero's 5-section schema to **9 sections** (adds Depth/Elevation, Do/Don't, Responsive Behavior, Agent Prompt Guide). Open Design also publishes 138 design systems vs Refero's 32 (in our wiki).
+
+For an end-to-end OSS workflow: Open Design + an open-source coding-agent CLI ([[wiki/entities/opencode-cli|OpenCode]] or [[wiki/entities/qwen-cli|Qwen]]) with [[wiki/entities/open-design|Open Design]]'s BYOK proxy fully replaces the Refero + Claude/Cursor stack. The tradeoff: Open Design adds a daemon dependency to the dev environment.
+
 ## Mentioned in
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — landing page that introduces the service and lists featured brands.
+- [[wiki/sources/nexu-io-open-design]] — names Refero implicitly as the closest sibling positioning (curated catalog with MCP server) that Open Design supersedes via local-first OSS.
 
 ## Featured brands in catalog
 
@@ -62,7 +69,9 @@ Brands appearing on the Refero landing page captured in [[wiki/sources/refero-de
 
 ## Related entities
 
-_(no non-catalog entities yet — when sources unrelated to Refero ingest entities that also appear in this catalog, link them here.)_
+- [[wiki/entities/open-design]] — open-source alternative (Apache-2.0); 138 design systems with the richer 9-section DESIGN.md schema.
+- [[wiki/entities/claude-design]] — the proprietary Anthropic product that introduced the artifact-first workflow Refero and Open Design both build around.
+- [[wiki/entities/anthropic]] — featured brand in catalog + maintainer of Claude Design.
 
 ## Related concepts
 

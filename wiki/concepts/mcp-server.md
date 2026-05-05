@@ -2,7 +2,7 @@
 type: concept
 title: MCP Server
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 aliases: [MCP, Model Context Protocol server]
 tags: [claude-code, integration, infrastructure, tool-use]
 ---
@@ -27,6 +27,7 @@ For [[ai-automation-services]] specifically, MCP is the layer where the *value* 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — uses MCP implicitly throughout (GitHub interactions in `/fix-issue`, deploy pipelines in `/deploy staging`, security scanning in pre-push hooks) but does not theorize the layer.
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — the **cost counterpoint**. MCP tool definitions are the 6th-largest [[claude-code-overhead-patterns|overhead pattern]] (~6% of tokens). Each connected MCP ships its tool schema to every request regardless of whether the task involves it. Author had 12 MCPs × ~600 avg tokens = 7,200 tokens of tool defs per request; cut to 3 always-on, saved 6,000 tokens per request. PostgreSQL MCP alone is ~1,200 tokens.
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — **operational alternative**: prefer API endpoints saved as markdown over MCPs. *"MCPs load every endpoint and every function whether you need it or not. That eats tokens. Tell Claude: research the docs once, save them as a markdown reference, pull from that file when you need an endpoint. Markdown is cheap to read; API docs are expensive to crawl every time."* Same insight as Mnilax's cost analysis from a different starting point.
+- [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. [[wiki/entities/open-design|Open Design]] **exposes** an MCP server (rather than just consuming them) — the daemon ships `search_files`, `get_file`, `get_artifact` as MCP tools so coding agents in *other* repositories can query Open Design projects directly without export/import loops. This is "design system as MCP-queryable knowledge" — a sibling pattern to Refero MCP but local-first. Notable architectural inversion: most wiki sources treat MCP as the *consumer* layer for an agent; Open Design treats it as the *provider* layer for cross-repo agent integration.
 
 ## Sub-claims and details
 
@@ -61,7 +62,13 @@ For [[ai-automation-services]] specifically, MCP is the layer where the *value* 
 - [[wiki/entities/gmail]] — email MCP.
 - [[wiki/entities/slack]] — communications MCP.
 
+- [[wiki/entities/refero]] — ships an MCP server (Refero MCP) for AI coding tools.
+- [[wiki/entities/open-design]] — exposes an MCP server with `search_files` / `get_file` / `get_artifact`.
+
 ## Mentioned in
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
 - [[wiki/sources/regent0x-claude-code-247-dev-team]]
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
+- [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/nexu-io-open-design]]

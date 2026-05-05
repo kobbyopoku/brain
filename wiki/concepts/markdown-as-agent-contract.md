@@ -2,7 +2,7 @@
 type: concept
 title: Markdown as Agent Contract
 created: 2026-05-02
-updated: 2026-05-04
+updated: 2026-05-05
 aliases: [markdown as agent config, agent-readable markdown]
 tags: [meta-pattern, ai-agents, markdown, agent-config, foundational]
 ---
@@ -45,6 +45,7 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational layered version: the AI OS uses claude.md (master prompt, updated 2× a day) + skills (`.claude/skills/<name>/skill.md`) + reference files (in `References/`) + contexts (in `Contexts/`) all as agent contracts at different scopes. Adds a strong cost discipline: *"Markdown is cheap to read; API docs are expensive to crawl every time"* — the *cost* of a contract file matters too, not just its content. Cross-cuts with [[claude-code-overhead-patterns]].
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — **the cost discipline made literal**: CLAUDE.md bloat is the largest single overhead pattern (~14% of all tokens). Every word in an agent-contract file is paid for on every turn of every session. The pattern's value depends on its size discipline; the source's target is combined user + project CLAUDE.md under 1,500 tokens.
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — the pattern applied to **operations** rather than agents: ColdIQ documents repeatable client tasks as workflow files in markdown ("Written for someone who started Monday with zero context"). Same shape; different consumer (humans + agents both).
+- [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. Instantiates the meta-pattern at **seven layers simultaneously**: SKILL.md (64 bundles), DESIGN.md (138 systems with the richer 9-section schema), CLAUDE.md (project instructions per agent), per-CLI agent contracts, question-form structured intake outputs, `<artifact>` HTML emissions, and MCP `get_file` responses. The most multi-layered single instance of the pattern in the wiki. Each layer is markdown a human wrote that an agent acts on. *Particularly worth noting*: Open Design extends the meta-pattern with explicit **anti-AI-slop machinery** ([[anti-ai-slop-machinery]]) — pre-emit gates, P0/P1/P2 checklists, blacklists — which is the most explicit "agent output discipline" articulation yet ingested.
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — the pattern applied to **public-web buying-agent surfaces**: machine-readable endpoints like `/llms.txt`, `/pricing.md`, `/changelog.md` that expose product information directly to AI buying agents in a format they can consume. *"If pricing is hidden behind JavaScript or 'contact sales' an AI agent may simply exclude your product from a comparison."* The marketingskills repo itself is also an instance — a [[claude-code-skills|skill-pack]] in markdown — and its mandatory `product-marketing-context.md` is yet another instance ([[context-file]] applied to product-marketing). Three layers of the same meta-pattern visible in one source: the skill-pack (agent contract), the context file (agent contract), and the public web endpoints (buying-agent contract).
 
 ## Sub-claims and details
@@ -79,6 +80,7 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/entities/andrej-karpathy]] — strongest articulator of the pattern in the wiki so far (via the LLM Wiki gist).
 
 - [[wiki/entities/marketingskills-repo]] — instantiates the pattern at three layers (skill-pack + context file + public endpoints).
+- [[wiki/entities/open-design]] — instantiates the pattern at **seven layers** (SKILL.md / DESIGN.md / CLAUDE.md / per-CLI contracts / question-form / `<artifact>` HTML / MCP `get_file`).
 
 ## Mentioned in
 
@@ -90,3 +92,4 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
 - [[wiki/sources/noisyb0y1-marketingskills-repo]]
+- [[wiki/sources/nexu-io-open-design]]
