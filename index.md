@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 53 sources · 121 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
+**Stats**: 54 sources · 124 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
 
 ---
 
@@ -48,6 +48,10 @@ The content-oriented index of this wiki. Read this first when answering a query,
 ### AI design tooling (open-source platforms)
 
 - [[wiki/sources/nexu-io-open-design]] — Apache-2.0 open-source alternative to Anthropic's [[wiki/entities/claude-design|Claude Design]]. 138 design systems with a 9-section schema, 64 SKILL.md bundles, 15 auto-detected agent CLIs, BYOK proxy, sandboxed preview, MCP server. The most architecturally substantive design-tooling source in the wiki.
+
+### Open-source autonomous agents
+
+- [[wiki/sources/nousresearch-hermes-agent]] — MIT-licensed self-improving multi-platform AI agent by [[wiki/entities/nous-research|Nous Research]]. Built-in learning loop (creates skills from experience, persists across sessions, builds user model). Multi-platform messaging gateway (Telegram + Discord + Slack + WhatsApp + Signal + Email + CLI). Model-agnostic (200+ models via [[wiki/entities/openrouter|OpenRouter]] + Nous Portal + AWS Bedrock + others). 23k+ stars.
 
 #### DESIGN.md ingests (32 brands, 33 surfaces — initial 20 ingested 2026-05-02; +12 brands and Apple alt added 2026-05-04)
 
@@ -123,6 +127,7 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/agora]] — billion-dollar yearly-newsletter publishing empire (model #3 exemplar).
 - [[wiki/entities/anthropic]] — AI research company; maintainer of Claude and Claude Code.
 - [[wiki/entities/coldiq]] — Alex Vacca's $7M ARR services-as-software agency.
+- [[wiki/entities/nous-research]] — open-weight AI research collective; publisher of Hermes-series models and [[wiki/entities/hermes-agent|Hermes Agent]].
 - [[wiki/entities/samcart]] — Brian Moran's checkout/e-commerce platform; data source for the 2026 catalog.
 - [[wiki/entities/trail-of-bits]] — security firm publishing claude-code-skills.
 - [[wiki/entities/worldcoin]] — Sam Altman's iris-scanning identity company.
@@ -183,6 +188,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/deepseek-cli]] — *(stub)* DeepSeek's coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/devin]] — *(stub)* Cognition Labs autonomous SWE agent; auto-detected by Open Design.
 - [[wiki/entities/gemini-cli]] — *(stub)* Google's coding-agent CLI; auto-detected by Open Design.
+- [[wiki/entities/hermes-agent]] — Nous Research's MIT-licensed self-improving multi-platform agent; persistent memory + 200+ providers + 15+ messaging surfaces. Substantive entity.
 - [[wiki/entities/opencode-cli]] — *(stub)* SST's open-source coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/openhands]] — autonomous SWE agent (junior dev replacement per heynavtoor).
 - [[wiki/entities/qwen-cli]] — *(stub)* Alibaba Qwen-Coder CLI; auto-detected by Open Design.
@@ -208,6 +214,10 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/google-drive]] — file-storage MCP integration.
 - [[wiki/entities/slack]] — communications MCP integration.
 - [[wiki/entities/tavily]] — web search MCP server.
+
+### Multi-provider LLM aggregators
+
+- [[wiki/entities/openrouter]] — *(stub)* multi-provider LLM API aggregator; single endpoint fronts 200+ models. Used by [[wiki/entities/hermes-agent|Hermes Agent]].
 
 ### YC unicorns analyzed (landing-page patterns)
 
@@ -385,3 +395,4 @@ A few suggested entry points into the wiki:
 - **"How do I show up in AI overview answers?"** → [[wiki/concepts/ai-seo]] → [[wiki/entities/marketingskills-repo]] → [[wiki/sources/noisyb0y1-marketingskills-repo]].
 - **"What's the open-source alternative to Claude Design?"** → [[wiki/sources/nexu-io-open-design]] → [[wiki/entities/open-design]] → architecture deep-dives: [[wiki/concepts/anti-ai-slop-machinery]] / [[wiki/concepts/artifact-first-workflow]] / [[wiki/concepts/question-form-first]] / [[wiki/concepts/byok-proxy]] / [[wiki/concepts/visual-directions]].
 - **"How do I prevent AI design slop?"** → [[wiki/concepts/anti-ai-slop-machinery]] (the five mechanisms) → [[wiki/concepts/visual-directions]] (deterministic presets) → [[wiki/concepts/question-form-first]] (Turn-1 intake).
+- **"What's the agent equivalent of an LLM Wiki?"** → [[wiki/concepts/llm-wiki-pattern]] (external-markdown approach) → [[wiki/concepts/hot-cache]] (extension) → [[wiki/sources/nousresearch-hermes-agent]] (agent-internal alternative — same goal, different mechanism).

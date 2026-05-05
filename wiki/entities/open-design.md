@@ -95,5 +95,5 @@ This is **substantially richer than Refero's 5-section schema**. Sections 6-9 (d
 - [[wiki/entities/anthropic]] — publisher of Claude Design.
 - [[wiki/entities/nexu-io]] — maintainer.
 - **Lineage**: [[wiki/entities/huashu-design]], [[wiki/entities/guizang-ppt-skill]], [[wiki/entities/open-codesign]], [[wiki/entities/multica]].
-- **Agent CLIs**: [[wiki/entities/claude-code]], [[wiki/entities/cursor]], [[wiki/entities/codex-cli]], [[wiki/entities/gemini-cli]], [[wiki/entities/opencode-cli]], [[wiki/entities/devin]], [[wiki/entities/qwen-cli]], [[wiki/entities/deepseek-cli]].
+- **Agent CLIs**: [[wiki/entities/claude-code]], [[wiki/entities/cursor]], [[wiki/entities/codex-cli]], [[wiki/entities/gemini-cli]], [[wiki/entities/opencode-cli]], [[wiki/entities/devin]], [[wiki/entities/qwen-cli]], [[wiki/entities/deepseek-cli]], [[wiki/entities/hermes-agent]].
 - **Sibling skill-packs**: [[wiki/entities/marketingskills-repo]] (marketing tactics), Refero (design tokens). Open Design is the third substantive non-Anthropic skill-pack in the wiki — and the largest.

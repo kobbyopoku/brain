@@ -2,7 +2,7 @@
 type: concept
 title: Scheduled Automation
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 aliases: [/schedule, scheduled tasks, cron automation, recurring agents]
 tags: [claude-code, automation, mechanism]
 ---
@@ -65,8 +65,10 @@ Scheduled automations also make the [[lint]] operation in this wiki concrete —
 ## Related entities
 
 - [[wiki/entities/claude-code]] — the platform.
+- [[wiki/entities/hermes-agent]] — ships native cron scheduler with SQLite-backed durable jobs (3-min hard interrupts) + atomic-task-claiming kanban for multi-agent work queues. The most architecturally complete scheduled-automation primitive in the wiki.
 
 ## Mentioned in
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
 - [[wiki/sources/regent0x-claude-code-247-dev-team]]
+- [[wiki/sources/nousresearch-hermes-agent]] — Hermes ships native cron + kanban as durable-by-default primitives.

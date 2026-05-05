@@ -2,7 +2,7 @@
 type: concept
 title: Hot Cache
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 aliases: [_hot.md, active-state cache]
 tags: [llm-wiki, optimization, claude-code]
 ---
@@ -28,6 +28,7 @@ The pattern composes naturally with [[progressive-disclosure]]: hot cache is L0 
 ## Treatment across sources
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — canonical wiki source for the pattern. Author describes a `_hot.md` file at the top of his Karpathy-style wiki: *"a 500-token cache of what was most recently active"*. Calls it *"the move I'd missed"* until adoption. Cites a 95% token-usage reduction from a third party (unverified).
+- [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. The **agent-internal alternative** to the external-`_hot.md` pattern: [[wiki/entities/hermes-agent|Hermes Agent]] builds active state into the agent itself rather than as an external markdown file. Self-improving learning loop creates and refines skills from experience, persists knowledge across sessions, searches its own past conversations, builds a deepening user model. Both approaches solve the same problem (persistent agent state across sessions) via different mechanisms (passive markdown read by agent vs active state managed by agent). Worth comparing when designing a new agent setup: external markdown is simpler to inspect and version; agent-internal is more autonomous but less observable.
 
 ## Sub-claims and details
 
@@ -98,7 +99,9 @@ Worth implementing as a follow-up. The maintenance discipline is the question �
 - [[wiki/entities/nateherk]] — author of the canonical source.
 - [[wiki/entities/andrej-karpathy]] — author of the LLM Wiki pattern this concept extends.
 - [[wiki/entities/obsidian]] — typical viewer for this kind of file.
+- [[wiki/entities/hermes-agent]] — agent-internal alternative implementation; same goal, different mechanism.
 
 ## Mentioned in
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/nousresearch-hermes-agent]]

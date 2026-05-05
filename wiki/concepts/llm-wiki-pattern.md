@@ -2,7 +2,7 @@
 type: concept
 title: LLM Wiki Pattern
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 aliases: [LLM Wiki, Karpathy wiki pattern]
 tags: [pattern, knowledge-management, foundational, agent-config]
 ---
@@ -26,6 +26,7 @@ This is also a workable answer to a problem [[memex]] left open in 1945: *who do
 - [[wiki/sources/llm-wiki-pattern-karpathy]] — original framing of the pattern. Lays out the three-layer architecture (raw / wiki / schema), the three core operations (ingest / query / lint), and the index-vs-log distinction. Frames the human as curator and the LLM as bookkeeper.
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — first secondary citation in the wild. Treats Karpathy's LLM Wiki as the conceptual basis for a Claude Code persistent-memory layer, instantiated as a structured Obsidian vault with `/decisions`, `/errors`, `/patterns`, `/sessions`, `/stack` directories plus `Memory.md` and `index.md`. Combines the wiki with [[wiki/entities/claude-mem]] (session-end compression) and [[wiki/entities/claude-subconscious]] (continuous background memory). The source slightly mis-cites the LLM Wiki location (links to a `github.com/karpathy/llm-wiki` URL rather than the gist this wiki uses); content claim is faithful, URL claim is not.
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — second wild secondary citation. nateherk runs two LLM Wikis in production (a YouTube transcripts vault with 36+ ingested videos, and a personal "Herk Brain" with meeting notes / decisions / priorities). Cites Karpathy's pattern directly: *"No fancy RAG. No embeddings. No vector DB. Just a folder with markdown files, an index file, and a log file."* Adds one operational extension to the pattern: the [[hot-cache]] (`_hot.md`) — a 500-token file capturing what's most recently active, loaded first on read-mode queries. Cites an X user who reduced query token usage by 95% by introducing this layer (unverified upper bound). Two independent secondary citations is a strong signal the pattern is propagating in the wild.
+- [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. The **agent-internal alternative** to the external-markdown LLM Wiki pattern. [[wiki/entities/hermes-agent|Hermes Agent]] builds the same persistent-state-across-sessions goal directly into the agent (self-improving learning loop, FTS5-indexed conversation search, accumulated user model) rather than as an external markdown wiki the agent reads. This is the **first wiki source proposing an alternative architecture** for the underlying problem the LLM Wiki solves. Tradeoffs: external markdown is human-inspectable, version-controllable, portable across agents; agent-internal state is more autonomous but less observable and harder to migrate. Both approaches converge on the same goal — *"the agent gets smarter about you over time"* — via opposite implementation choices.
 
 ## Sub-claims and details
 
@@ -68,3 +69,6 @@ This is also a workable answer to a problem [[memex]] left open in 1945: *who do
 ## Mentioned in
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]]
+- [[wiki/sources/regent0x-claude-code-247-dev-team]]
+- [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/nousresearch-hermes-agent]]

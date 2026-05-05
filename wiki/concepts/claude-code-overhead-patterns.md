@@ -2,7 +2,7 @@
 type: concept
 title: Claude Code Overhead Patterns
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-05
 aliases: [claude code waste, the 9 overhead patterns, claude code optimization]
 tags: [claude-code, optimization, cost-analysis, foundational]
 ---
@@ -100,3 +100,4 @@ Anthropic acknowledged the broader usage-limit problem in late March 2026: Max 5
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
 - [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]]
+- [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. [[wiki/entities/hermes-agent|Hermes Agent]]'s AGENTS.md elevates **prompt-cache preservation** to an architectural rule — state-changing commands default to *deferred* invalidation with explicit `--now` opt-in, rather than the naive "every change invalidates immediately" default. This is the structural answer to Mnilax's measured cache-invalidation cost pattern: rather than asking users to be careful, encode the discipline in command semantics.
