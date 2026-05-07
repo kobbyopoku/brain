@@ -35,202 +35,202 @@ The richer alternative to the [[wiki/sources/refero-design-systems-for-ai-agents
 
 ### AI & LLM (14 brands)
 
-- **claude** — Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.
-- **cohere** — Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.
-- **elevenlabs** — AI voice platform. Dark cinematic UI, audio-waveform aesthetics.
-- **huggingface** — ML community hub. Sunny yellow accent, monospace identity, cheerful and dense.
-- **minimax** — AI model provider. Bold dark interface with neon accents.
-- **mistral-ai** — Open-weight LLM provider. French-engineered minimalism, purple-toned.
-- **ollama** — Run LLMs locally. Terminal-first, monochrome simplicity.
-- **openai** — Calm, near-monochrome system anchored in deep teal-black with generous white space and editorial typography.
-- **opencode-ai** — AI coding platform. Developer-centric dark theme.
-- **replicate** — Run ML models via API. Clean white canvas, code-forward.
-- **runwayml** — AI video generation. Cinematic dark UI, media-rich layout.
-- **together-ai** — Open-source AI infrastructure. Technical, blueprint-style design.
-- **voltagent** — AI agent framework. Void-black canvas, emerald accent, terminal-native.
-- **x-ai** — Elon Musk's AI lab. Stark monochrome, futuristic minimalism.
+- [[wiki/entities/anthropic|claude]] — Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.
+- [[wiki/entities/cohere|cohere]] — Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.
+- [[wiki/entities/elevenlabs|elevenlabs]] — AI voice platform. Dark cinematic UI, audio-waveform aesthetics.
+- [[wiki/entities/huggingface|huggingface]] — ML community hub. Sunny yellow accent, monospace identity, cheerful and dense.
+- [[wiki/entities/minimax|minimax]] — AI model provider. Bold dark interface with neon accents.
+- [[wiki/entities/mistral-ai|mistral-ai]] — Open-weight LLM provider. French-engineered minimalism, purple-toned.
+- [[wiki/entities/ollama|ollama]] — Run LLMs locally. Terminal-first, monochrome simplicity.
+- [[wiki/entities/openai|openai]] — Calm, near-monochrome system anchored in deep teal-black with generous white space and editorial typography.
+- [[wiki/entities/opencode-ai|opencode-ai]] — AI coding platform. Developer-centric dark theme.
+- [[wiki/entities/replicate|replicate]] — Run ML models via API. Clean white canvas, code-forward.
+- [[wiki/entities/runwayml|runwayml]] — AI video generation. Cinematic dark UI, media-rich layout.
+- [[wiki/entities/together-ai|together-ai]] — Open-source AI infrastructure. Technical, blueprint-style design.
+- [[wiki/entities/voltagent|voltagent]] — AI agent framework. Void-black canvas, emerald accent, terminal-native.
+- [[wiki/entities/x-ai|x-ai]] — Elon Musk's AI lab. Stark monochrome, futuristic minimalism.
 
 ### Productivity & SaaS (10)
 
-- **arc** — *"The browser that browses for you."* Translucent surfaces, gradient warmth, sidebar-first layout.
-- **cal** — Open-source scheduling. Clean neutral UI, developer-oriented simplicity.
-- **discord** — Voice / chat platform. Deep blurple, dark-first surfaces, playful accent moments.
-- **duolingo** — Language-learning platform. Bright owl green, chunky shadows, gamified joy.
-- **intercom** — Customer messaging. Friendly blue palette, conversational UI patterns.
-- **linear-app** — Project management. Ultra-minimal, precise, purple accent. *(Sample DESIGN.md confirmed 9-section schema, ~370 lines.)*
-- **mintlify** — Documentation platform. Clean, green-accented, reading-optimized.
-- **notion** — All-in-one workspace. Warm minimalism, serif headings, soft surfaces.
-- **resend** — Email API. Minimal dark theme, monospace accents.
-- **zapier** — Automation platform. Warm orange, friendly illustration-driven.
+- [[wiki/entities/arc|arc]] — *"The browser that browses for you."* Translucent surfaces, gradient warmth, sidebar-first layout.
+- [[wiki/entities/cal|cal]] — Open-source scheduling. Clean neutral UI, developer-oriented simplicity.
+- [[wiki/entities/discord|discord]] — Voice / chat platform. Deep blurple, dark-first surfaces, playful accent moments.
+- [[wiki/entities/duolingo|duolingo]] — Language-learning platform. Bright owl green, chunky shadows, gamified joy.
+- [[wiki/entities/intercom|intercom]] — Customer messaging. Friendly blue palette, conversational UI patterns.
+- [[wiki/entities/linear|linear-app]] — Project management. Ultra-minimal, precise, purple accent. *(Sample DESIGN.md confirmed 9-section schema, ~370 lines.)*
+- [[wiki/entities/mintlify|mintlify]] — Documentation platform. Clean, green-accented, reading-optimized.
+- [[wiki/entities/notion|notion]] — All-in-one workspace. Warm minimalism, serif headings, soft surfaces.
+- [[wiki/entities/resend|resend]] — Email API. Minimal dark theme, monospace accents.
+- [[wiki/entities/zapier|zapier]] — Automation platform. Warm orange, friendly illustration-driven.
 
 ### Developer Tools (8)
 
-- **cursor** — AI-first code editor. Sleek dark interface, gradient accents.
-- **expo** — React Native platform. Dark theme, tight letter-spacing, code-centric.
-- **github** — Code-forward platform. Functional density, blue-on-white precision, Primer foundations.
-- **lovable** — AI full-stack builder. Playful gradients, friendly dev aesthetic.
-- **raycast** — Productivity launcher. Sleek dark chrome, vibrant gradient accents.
-- **superhuman** — Fast email client. Premium dark UI, keyboard-first, purple glow.
-- **vercel** — Frontend deployment. Black and white precision, Geist font.
-- **warp** — Modern terminal. Dark IDE-like interface, block-based command UI.
+- [[wiki/entities/cursor|cursor]] — AI-first code editor. Sleek dark interface, gradient accents.
+- [[wiki/entities/expo|expo]] — React Native platform. Dark theme, tight letter-spacing, code-centric.
+- [[wiki/entities/github|github]] — Code-forward platform. Functional density, blue-on-white precision, Primer foundations.
+- [[wiki/entities/lovable|lovable]] — AI full-stack builder. Playful gradients, friendly dev aesthetic.
+- [[wiki/entities/raycast|raycast]] — Productivity launcher. Sleek dark chrome, vibrant gradient accents.
+- [[wiki/entities/superhuman|superhuman]] — Fast email client. Premium dark UI, keyboard-first, purple glow.
+- [[wiki/entities/vercel|vercel]] — Frontend deployment. Black and white precision, Geist font.
+- [[wiki/entities/warp|warp]] — Modern terminal. Dark IDE-like interface, block-based command UI.
 
 ### Backend & Data (8)
 
-- **clickhouse** — Fast analytics database. Yellow-accented, technical documentation style.
-- **composio** — Tool integration platform. Modern dark with colorful integration icons.
-- **hashicorp** — Infrastructure automation. Enterprise-clean, black and white.
-- **mongodb** — Document database. Green leaf branding, developer documentation focus.
-- **posthog** — Product analytics. Playful hedgehog branding, developer-friendly dark UI.
-- **sanity** — Headless CMS. Red accent, content-first editorial layout.
-- **sentry** — Error monitoring. Dark dashboard, data-dense, pink-purple accent.
-- **supabase** — Open-source Firebase alternative. Dark emerald theme, code-first.
+- [[wiki/entities/clickhouse|clickhouse]] — Fast analytics database. Yellow-accented, technical documentation style.
+- [[wiki/entities/composio|composio]] — Tool integration platform. Modern dark with colorful integration icons.
+- [[wiki/entities/hashicorp|hashicorp]] — Infrastructure automation. Enterprise-clean, black and white.
+- [[wiki/entities/mongodb|mongodb]] — Document database. Green leaf branding, developer documentation focus.
+- [[wiki/entities/posthog|posthog]] — Product analytics. Playful hedgehog branding, developer-friendly dark UI.
+- [[wiki/entities/sanity|sanity]] — Headless CMS. Red accent, content-first editorial layout.
+- [[wiki/entities/sentry|sentry]] — Error monitoring. Dark dashboard, data-dense, pink-purple accent.
+- [[wiki/entities/supabase|supabase]] — Open-source Firebase alternative. Dark emerald theme, code-first.
 
 ### Fintech & Crypto (7)
 
-- **binance** — Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.
-- **coinbase** — Crypto exchange. Clean blue identity, trust-focused, institutional feel.
-- **kraken** — Crypto trading. Purple-accented dark UI, data-dense dashboards.
-- **mastercard** — Global payments network. Warm cream canvas, orbital pill shapes, editorial warmth.
-- **revolut** — Digital banking. Sleek dark interface, gradient cards, fintech precision.
-- **stripe** — Payment infrastructure. Signature purple gradients, weight-300 elegance.
-- **wise** — Money transfer. Bright green accent, friendly and clear.
+- [[wiki/entities/binance|binance]] — Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.
+- [[wiki/entities/coinbase|coinbase]] — Crypto exchange. Clean blue identity, trust-focused, institutional feel.
+- [[wiki/entities/kraken|kraken]] — Crypto trading. Purple-accented dark UI, data-dense dashboards.
+- [[wiki/entities/mastercard|mastercard]] — Global payments network. Warm cream canvas, orbital pill shapes, editorial warmth.
+- [[wiki/entities/revolut|revolut]] — Digital banking. Sleek dark interface, gradient cards, fintech precision.
+- [[wiki/entities/stripe|stripe]] — Payment infrastructure. Signature purple gradients, weight-300 elegance.
+- [[wiki/entities/wise|wise]] — Money transfer. Bright green accent, friendly and clear.
 
 ### Media & Consumer (12)
 
-- **apple** — Consumer electronics. Premium white space, SF Pro, cinematic imagery.
-- **ibm** — Enterprise technology. Carbon design system, structured blue palette.
-- **nvidia** — GPU computing. Green-black energy, technical power aesthetic.
-- **pinterest** — Visual discovery. Red accent, masonry grid, image-first.
-- **playstation** — Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale.
-- **spacex** — Space technology. Stark black and white, full-bleed imagery, futuristic.
-- **spotify** — Music streaming. Vibrant green on dark, bold type, album-art-driven.
-- **theverge** — Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles.
-- **uber** — Mobility platform. Bold black and white, tight type, urban energy.
-- **vodafone** — Global telecom brand. Monumental uppercase display, Vodafone Red chapter bands.
-- **wired** — Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links.
-- **xiaohongshu** — Lifestyle UGC social platform. Singular brand red, generous radius, content-first.
+- [[wiki/entities/apple|apple]] — Consumer electronics. Premium white space, SF Pro, cinematic imagery.
+- [[wiki/entities/ibm|ibm]] — Enterprise technology. Carbon design system, structured blue palette.
+- [[wiki/entities/nvidia|nvidia]] — GPU computing. Green-black energy, technical power aesthetic.
+- [[wiki/entities/pinterest|pinterest]] — Visual discovery. Red accent, masonry grid, image-first.
+- [[wiki/entities/playstation|playstation]] — Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale.
+- [[wiki/entities/spacex|spacex]] — Space technology. Stark black and white, full-bleed imagery, futuristic.
+- [[wiki/entities/spotify|spotify]] — Music streaming. Vibrant green on dark, bold type, album-art-driven.
+- [[wiki/entities/theverge|theverge]] — Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles.
+- [[wiki/entities/uber|uber]] — Mobility platform. Bold black and white, tight type, urban energy.
+- [[wiki/entities/vodafone|vodafone]] — Global telecom brand. Monumental uppercase display, Vodafone Red chapter bands.
+- [[wiki/entities/wired|wired]] — Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links.
+- [[wiki/entities/xiaohongshu|xiaohongshu]] — Lifestyle UGC social platform. Singular brand red, generous radius, content-first.
 
 ### E-Commerce & Retail (5)
 
-- **airbnb** — Travel marketplace. Warm coral accent, photography-driven, rounded UI.
-- **meta** — Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs.
-- **nike** — Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.
-- **shopify** — E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type.
-- **starbucks** — Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.
+- [[wiki/entities/airbnb|airbnb]] — Travel marketplace. Warm coral accent, photography-driven, rounded UI.
+- [[wiki/entities/meta|meta]] — Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs.
+- [[wiki/entities/nike|nike]] — Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.
+- [[wiki/entities/shopify|shopify]] — E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type.
+- [[wiki/entities/starbucks|starbucks]] — Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.
 
 ### Automotive (6)
 
-- **bmw** — Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.
-- **bugatti** — Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type.
-- **ferrari** — Luxury automotive. Chiaroscuro editorial, Ferrari Red accents, cinematic black.
-- **lamborghini** — Supercar brand. True black surfaces, gold accents, dramatic uppercase typography.
-- **renault** — French automotive. Vibrant aurora gradients, NouvelR typography, bold energy.
-- **tesla** — Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.
+- [[wiki/entities/bmw|bmw]] — Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.
+- [[wiki/entities/bugatti|bugatti]] — Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type.
+- [[wiki/entities/ferrari|ferrari]] — Luxury automotive. Chiaroscuro editorial, Ferrari Red accents, cinematic black.
+- [[wiki/entities/lamborghini|lamborghini]] — Supercar brand. True black surfaces, gold accents, dramatic uppercase typography.
+- [[wiki/entities/renault|renault]] — French automotive. Vibrant aurora gradients, NouvelR typography, bold energy.
+- [[wiki/entities/tesla|tesla]] — Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.
 
 ### Design & Creative (7)
 
-- **airtable** — Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.
-- **canva** — Visual creation platform. Vivid purple-blue gradient, generous spacing, friendly geometry.
-- **clay** — Creative agency. Organic shapes, soft gradients, art-directed layout.
-- **figma** — Collaborative design tool. Vibrant multi-color, playful yet professional.
-- **framer** — Website builder. Bold black and blue, motion-first, design-forward.
-- **miro** — Visual collaboration. Bright yellow accent, infinite canvas aesthetic.
-- **webflow** — Visual web builder. Blue-accented, polished marketing site aesthetic.
+- [[wiki/entities/airtable|airtable]] — Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.
+- [[wiki/entities/canva|canva]] — Visual creation platform. Vivid purple-blue gradient, generous spacing, friendly geometry.
+- [[wiki/entities/clay|clay]] — Creative agency. Organic shapes, soft gradients, art-directed layout.
+- [[wiki/entities/figma|figma]] — Collaborative design tool. Vibrant multi-color, playful yet professional.
+- [[wiki/entities/framer|framer]] — Website builder. Bold black and blue, motion-first, design-forward.
+- [[wiki/entities/miro|miro]] — Visual collaboration. Bright yellow accent, infinite canvas aesthetic.
+- [[wiki/entities/webflow|webflow]] — Visual web builder. Blue-accented, polished marketing site aesthetic.
 
 ### Editorial & Print (1)
 
-- **kami** — Editorial paper system: warm parchment canvas, ink-blue accent, serif-led hierarchy. Built for resumes, one-pagers, white papers, portfolios, slide decks — anything that should feel like high-quality print rather than UI. Multilingual by design (EN · zh-CN · ja).
+- [[wiki/entities/kami|kami]] — Editorial paper system: warm parchment canvas, ink-blue accent, serif-led hierarchy. Built for resumes, one-pagers, white papers, portfolios, slide decks — anything that should feel like high-quality print rather than UI. Multilingual by design (EN · zh-CN · ja).
 
 ### Editorial · Studio (1)
 
-- **atelier-zero** — A magazine-grade, collage-driven visual system: warm paper canvas, surreal compositions, editorial-grade typography.
+- [[wiki/entities/atelier-zero|atelier-zero]] — A magazine-grade, collage-driven visual system: warm paper canvas, surreal compositions, editorial-grade typography.
 
 ### Modern & Minimal (10)
 
-- **clean** — Simplicity-focused; ample whitespace, legible typography, limited palette.
-- **contemporary** — Current-era minimalist design with bento grids, dark mode, accessible layouts.
-- **flat** — 2D minimalist style with vibrant colors, no 3D effects, fast and user-friendly.
-- **minimal** — Stripped-back design emphasizing whitespace and restrained color.
-- **modern** — Contemporary editorial style with serif typography and clean layouts.
-- **mono** — Monospace-driven, matrix-inspired design with high contrast and compact density.
-- **refined** — Carefully curated modern minimal with elegant serif typography.
-- **shadcn** — Shadcn/ui-inspired with monochrome palette and utility-first patterns.
-- **simple** — Straightforward, no-frills with clean typography and neutral colors.
-- **sleek** — Modern minimalist with clean lines and intentional color palette.
+- [[wiki/entities/clean|clean]] — Simplicity-focused; ample whitespace, legible typography, limited palette.
+- [[wiki/entities/contemporary|contemporary]] — Current-era minimalist design with bento grids, dark mode, accessible layouts.
+- [[wiki/entities/flat|flat]] — 2D minimalist style with vibrant colors, no 3D effects, fast and user-friendly.
+- [[wiki/entities/minimal|minimal]] — Stripped-back design emphasizing whitespace and restrained color.
+- [[wiki/entities/modern|modern]] — Contemporary editorial style with serif typography and clean layouts.
+- [[wiki/entities/mono|mono]] — Monospace-driven, matrix-inspired design with high contrast and compact density.
+- [[wiki/entities/refined|refined]] — Carefully curated modern minimal with elegant serif typography.
+- [[wiki/entities/shadcn|shadcn]] — Shadcn/ui-inspired with monochrome palette and utility-first patterns.
+- [[wiki/entities/simple|simple]] — Straightforward, no-frills with clean typography and neutral colors.
+- [[wiki/entities/sleek|sleek]] — Modern minimalist with clean lines and intentional color palette.
 
 ### Bold & Expressive (8)
 
-- **bold** — Heavyweight typography, high-contrast colors, commanding layouts.
-- **brutalism** — Raw, anti-design aesthetic with concrete-architecture inspiration.
-- **colorful** — Vibrant high-contrast palettes and gradients.
-- **dramatic** — High-contrast theatrical design with bold immersive layouts.
-- **energetic** — Dynamic, vibrant; thick borders, geometric shapes, high-contrast.
-- **expressive** — Personality-driven; bold colors, playful graphics, dynamic layouts.
-- **neobrutalism** — Modern brutalism: bold borders, vivid accents, raw layouts on warm surfaces.
-- **vibrant** — Lively colorful design with bold playful typography.
+- [[wiki/entities/bold|bold]] — Heavyweight typography, high-contrast colors, commanding layouts.
+- [[wiki/entities/brutalism|brutalism]] — Raw, anti-design aesthetic with concrete-architecture inspiration.
+- [[wiki/entities/colorful|colorful]] — Vibrant high-contrast palettes and gradients.
+- [[wiki/entities/dramatic|dramatic]] — High-contrast theatrical design with bold immersive layouts.
+- [[wiki/entities/energetic|energetic]] — Dynamic, vibrant; thick borders, geometric shapes, high-contrast.
+- [[wiki/entities/expressive|expressive]] — Personality-driven; bold colors, playful graphics, dynamic layouts.
+- [[wiki/entities/neobrutalism|neobrutalism]] — Modern brutalism: bold borders, vivid accents, raw layouts on warm surfaces.
+- [[wiki/entities/vibrant|vibrant]] — Lively colorful design with bold playful typography.
 
 ### Creative & Artistic (11)
 
-- **artistic** — High-contrast expressive style with creative typography.
-- **cafe** — Cozy cafe-inspired with warm tones and soft typography.
-- **cosmic** — Futuristic sci-fi with dark themes and vibrant neon accents.
-- **creative** — Playful, character-driven with expressive typography and bold graphics.
-- **doodle** — Hand-drawn, sketch-like with handwritten fonts and imperfect lines.
-- **editorial** — Magazine-inspired with refined serif typography and structured grids.
-- **fantasy** — Game-inspired fantasy with bold premium visuals.
-- **friendly** — Approachable; rounded elements, soft pastels, ample whitespace.
-- **lingo** — Playful minimal with bright colors, rounded shapes, tactile 3D borders.
-- **publication** — Print-inspired language for books, magazines, reports.
-- **storytelling** — Narrative-driven; visuals, copy, interaction guide the user.
+- [[wiki/entities/artistic|artistic]] — High-contrast expressive style with creative typography.
+- [[wiki/entities/cafe|cafe]] — Cozy cafe-inspired with warm tones and soft typography.
+- [[wiki/entities/cosmic|cosmic]] — Futuristic sci-fi with dark themes and vibrant neon accents.
+- [[wiki/entities/creative|creative]] — Playful, character-driven with expressive typography and bold graphics.
+- [[wiki/entities/doodle|doodle]] — Hand-drawn, sketch-like with handwritten fonts and imperfect lines.
+- [[wiki/entities/editorial|editorial]] — Magazine-inspired with refined serif typography and structured grids.
+- [[wiki/entities/fantasy|fantasy]] — Game-inspired fantasy with bold premium visuals.
+- [[wiki/entities/friendly|friendly]] — Approachable; rounded elements, soft pastels, ample whitespace.
+- [[wiki/entities/lingo|lingo]] — Playful minimal with bright colors, rounded shapes, tactile 3D borders.
+- [[wiki/entities/publication|publication]] — Print-inspired language for books, magazines, reports.
+- [[wiki/entities/storytelling|storytelling]] — Narrative-driven; visuals, copy, interaction guide the user.
 
 ### Professional & Corporate (10)
 
-- **ant** — Structured enterprise design system; clarity, consistency, efficiency for data-dense apps.
-- **application** — App dashboard with purple-themed aesthetic, top-bar nav, card-based.
-- **corporate** — Professional brand-aligned with structured grids and minimalist layouts.
-- **dashboard** — Dark-themed cloud-platform; modular grids, glass-like panels, strong data hierarchy.
-- **elegant** — Graceful refined; delicate typography, minimal palette, polished layouts.
-- **enterprise** — Clean high-contrast for data-driven workflows; intuitive drag-and-drop.
-- **luxury** — High-end dark with bold headings, monochromatic palette, premium feel.
-- **material** — Google's Material Design with layered surfaces and dynamic theming.
-- **premium** — Apple-inspired premium with precise spacing and modern typography.
-- **professional** — Polished business-ready with modern typography and structured layouts.
+- [[wiki/entities/ant|ant]] — Structured enterprise design system; clarity, consistency, efficiency for data-dense apps.
+- [[wiki/entities/application|application]] — App dashboard with purple-themed aesthetic, top-bar nav, card-based.
+- [[wiki/entities/corporate|corporate]] — Professional brand-aligned with structured grids and minimalist layouts.
+- [[wiki/entities/dashboard|dashboard]] — Dark-themed cloud-platform; modular grids, glass-like panels, strong data hierarchy.
+- [[wiki/entities/elegant|elegant]] — Graceful refined; delicate typography, minimal palette, polished layouts.
+- [[wiki/entities/enterprise|enterprise]] — Clean high-contrast for data-driven workflows; intuitive drag-and-drop.
+- [[wiki/entities/luxury|luxury]] — High-end dark with bold headings, monochromatic palette, premium feel.
+- [[wiki/entities/material|material]] — Google's Material Design with layered surfaces and dynamic theming.
+- [[wiki/entities/premium|premium]] — Apple-inspired premium with precise spacing and modern typography.
+- [[wiki/entities/professional|professional]] — Polished business-ready with modern typography and structured layouts.
 
 ### Layout & Structure (4)
 
-- **bento** — Modular grid layout with card-like blocks and clear hierarchy.
-- **levels** — Conversion-focused; removes friction, guides toward action.
-- **perspective** — Spatial depth with isometric views and 3D-like realism.
-- **spacious** — Generous whitespace, consistent padding, grid-based.
+- [[wiki/entities/bento|bento]] — Modular grid layout with card-like blocks and clear hierarchy.
+- [[wiki/entities/levels|levels]] — Conversion-focused; removes friction, guides toward action.
+- [[wiki/entities/perspective|perspective]] — Spatial depth with isometric views and 3D-like realism.
+- [[wiki/entities/spacious|spacious]] — Generous whitespace, consistent padding, grid-based.
 
 ### Morphism & Effects (6)
 
-- **claymorphism** — Soft rounded 3D-like shapes mimicking malleable clay.
-- **glassmorphism** — Frosted glass with translucent layers and subtle blur.
-- **gradient** — Smooth color transitions and gradient-rich surfaces.
-- **neon** — Electric neon glow with high-contrast color pairings.
-- **neumorphism** — Soft extruded UI elements with inner/outer shadows on monochrome.
-- **skeumorphism** — Real-world mimicry with textured surfaces and 3D effects.
+- [[wiki/entities/claymorphism|claymorphism]] — Soft rounded 3D-like shapes mimicking malleable clay.
+- [[wiki/entities/glassmorphism|glassmorphism]] — Frosted glass with translucent layers and subtle blur.
+- [[wiki/entities/gradient|gradient]] — Smooth color transitions and gradient-rich surfaces.
+- [[wiki/entities/neon|neon]] — Electric neon glow with high-contrast color pairings.
+- [[wiki/entities/neumorphism|neumorphism]] — Soft extruded UI elements with inner/outer shadows on monochrome.
+- [[wiki/entities/skeumorphism|skeumorphism]] — Real-world mimicry with textured surfaces and 3D effects.
 
 ### Retro & Nostalgic (4)
 
-- **dithered** — Dot-pattern rendering simulating shades with limited palette.
-- **paper** — Paper-textured, print-inspired with minimal colors.
-- **retro** — Throwback design with vintage typography and high-contrast retro palettes.
-- **vintage** — 1950s-1990s nostalgia with skeuomorphic touches and grainy textures.
+- [[wiki/entities/dithered|dithered]] — Dot-pattern rendering simulating shades with limited palette.
+- [[wiki/entities/paper|paper]] — Paper-textured, print-inspired with minimal colors.
+- [[wiki/entities/retro|retro]] — Throwback design with vintage typography and high-contrast retro palettes.
+- [[wiki/entities/vintage|vintage]] — 1950s-1990s nostalgia with skeuomorphic touches and grainy textures.
 
 ### Themed & Unique (5)
 
-- **agentic** — Conversational AI-first interface with minimal controls and delegated task flows.
-- **futuristic** — Forward-looking design with tech-inspired typography.
-- **pacman** — Retro arcade with pixel fonts, dotted borders, 8-bit aesthetics.
-- **tetris** — Classic block-game inspired with playful colors and bold display fonts.
-- **totality-festival** — Web — festival-experience aesthetic.
+- [[wiki/entities/agentic|agentic]] — Conversational AI-first interface with minimal controls and delegated task flows.
+- [[wiki/entities/futuristic|futuristic]] — Forward-looking design with tech-inspired typography.
+- [[wiki/entities/pacman|pacman]] — Retro arcade with pixel fonts, dotted borders, 8-bit aesthetics.
+- [[wiki/entities/tetris|tetris]] — Classic block-game inspired with playful colors and bold display fonts.
+- [[wiki/entities/totality-festival|totality-festival]] — Web — festival-experience aesthetic.
 
 ### Starter (2)
 
-- **default** — A clean, product-oriented default. Use when the brief doesn't call for a specific brand.
-- **warm-editorial** — A serif-led magazine aesthetic. Terracotta accent on warm off-white paper.
+- [[wiki/entities/default|default]] — A clean, product-oriented default. Use when the brief doesn't call for a specific brand.
+- [[wiki/entities/warm-editorial|warm-editorial]] — A serif-led magazine aesthetic. Terracotta accent on warm off-white paper.
 
 ### Overlap with [[wiki/sources/refero-design-systems-for-ai-agents|Refero catalog]] (10 brands)
 
@@ -268,7 +268,7 @@ Each skill is a `SKILL.md` file with YAML frontmatter (`name`, `description`, `t
 - **hatch-pet** — Pet/companion-app prototype.
 - **saas-landing** — Single-page SaaS landing (hero/features/proof/pricing/CTA).
 - **kanban-board** — Kanban work-queue UI.
-- **dashboard** — Admin/analytics dashboard.
+- [[wiki/entities/dashboard|dashboard]] — Admin/analytics dashboard.
 - **pricing-page** — Pricing page surface.
 - **kami-landing** — Kami-flavored editorial landing.
 - **open-design-landing** — Open Design's own marketing surface.
