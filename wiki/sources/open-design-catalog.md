@@ -31,7 +31,7 @@ The architectural source page covers *what Open Design is*; this page covers *wh
 
 ## Design systems (139 brands across 20 categories)
 
-The richer alternative to the [[wiki/sources/refero-design-systems-for-ai-agents|Refero catalog]]. Each entry uses the **9-section schema** documented in [[design-md]] (atmosphere → palette → typography → components → layout → depth → do/don't → responsive → agent-prompt-guide). Raw at `raw/open-design/design-systems/<brand>-design-md.md`.
+The richer alternative to the [[wiki/sources/refero-design-systems-for-ai-agents|Refero catalog]]. Each entry uses the **9-section schema** documented in [[design-md]] (atmosphere → palette → typography → components → layout → depth → do/don't → responsive → agent-prompt-guide). Raw at `raw/open-design/design-systems/<brand>/DESIGN.md`.
 
 ### AI & LLM (14 brands)
 
@@ -238,16 +238,16 @@ The wiki has both Refero AND Open Design DESIGN.md for these brands:
 
 | Brand | Refero raw | Open Design raw |
 |---|---|---|
-| airbnb | `raw/airbnb-design-md.md` | `raw/open-design/design-systems/airbnb-design-md.md` |
-| apple | `raw/apple-design-md.md` (+ `apple-design-md-alt.md`) | `raw/open-design/design-systems/apple-design-md.md` |
-| cursor | `raw/cursor-design-md.md` | `raw/open-design/design-systems/cursor-design-md.md` |
-| elevenlabs | `raw/elevenlabs-design-md.md` | `raw/open-design/design-systems/elevenlabs-design-md.md` |
-| linear (linear-app) | `raw/linear-design-md.md` | `raw/open-design/design-systems/linear-app-design-md.md` |
-| openai | `raw/openai-design-md.md` | `raw/open-design/design-systems/openai-design-md.md` |
-| raycast | `raw/raycast-design-md.md` | `raw/open-design/design-systems/raycast-design-md.md` |
-| stripe | `raw/stripe-design-md.md` | `raw/open-design/design-systems/stripe-design-md.md` |
-| superhuman | `raw/superhuman-design-md.md` | `raw/open-design/design-systems/superhuman-design-md.md` |
-| anthropic / claude | `raw/anthropic-design-md.md` | `raw/open-design/design-systems/claude-design-md.md` |
+| airbnb | `raw/airbnb/DESIGN.md` | `raw/open-design/design-systems/airbnb/DESIGN.md` |
+| apple | `raw/apple/DESIGN.md` (+ `raw/apple-alt/DESIGN.md`) | `raw/open-design/design-systems/apple/DESIGN.md` |
+| cursor | `raw/cursor/DESIGN.md` | `raw/open-design/design-systems/cursor/DESIGN.md` |
+| elevenlabs | `raw/elevenlabs/DESIGN.md` | `raw/open-design/design-systems/elevenlabs/DESIGN.md` |
+| linear (linear-app) | `raw/linear/DESIGN.md` | `raw/open-design/design-systems/linear-app/DESIGN.md` |
+| openai | `raw/openai/DESIGN.md` | `raw/open-design/design-systems/openai/DESIGN.md` |
+| raycast | `raw/raycast/DESIGN.md` | `raw/open-design/design-systems/raycast/DESIGN.md` |
+| stripe | `raw/stripe/DESIGN.md` | `raw/open-design/design-systems/stripe/DESIGN.md` |
+| superhuman | `raw/superhuman/DESIGN.md` | `raw/open-design/design-systems/superhuman/DESIGN.md` |
+| anthropic / claude | `raw/anthropic/DESIGN.md` | `raw/open-design/design-systems/claude/DESIGN.md` |
 
 For these brands, prefer the Open Design version when maximum-fidelity is needed (richer 9-section schema, ~2.5× the line count). The Refero versions remain authoritative as the *catalog snapshot* used in cross-brand pattern observations on [[design-md]].
 

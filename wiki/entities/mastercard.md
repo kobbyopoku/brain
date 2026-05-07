@@ -16,7 +16,7 @@ tags: [fintech, payments-network, design-md-available, open-design-catalog, stub
 ## Key facts
 
 - **Website**: https://mastercard.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/mastercard-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/mastercard/DESIGN.md`
 - **Brand mark**: two interlocking circles (red + yellow) — the orbital-pill aesthetic Open Design highlights.
 
 ## Mentioned in

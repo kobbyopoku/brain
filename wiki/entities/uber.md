@@ -16,7 +16,7 @@ tags: [media, mobility, ride-sharing, design-md-available, open-design-catalog, 
 ## Key facts
 
 - **Website**: https://uber.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/uber-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/uber/DESIGN.md`
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]

@@ -21,7 +21,7 @@ This page is a **stub**. Vercel appears via the Open Design catalog and tangenti
 
 - **Website**: https://vercel.com
 - **Category** (per Open Design): Developer Tools.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/vercel-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/vercel/DESIGN.md`.
 - **Role**: edge-deployed frontend hosting (Next.js, SvelteKit, Nuxt, etc.) + AI Gateway + AI SDK + Marketplace integrations + observability.
 - **Notable**: publisher of **Geist** (sans + mono), an open-source typeface family adopted by other minimalist design systems.
 

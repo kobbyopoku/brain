@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/airbnb
 source_type: design-md
 author: Refero
 source_date: 2026-05-04
-raw_path: raw/airbnb-design-md.md
+raw_path: raw/airbnb/DESIGN.md
 tags: [design-md, design-tokens, airbnb, refero]
 ---
 

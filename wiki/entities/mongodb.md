@@ -16,7 +16,7 @@ tags: [database, nosql, document-db, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://mongodb.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/mongodb-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/mongodb/DESIGN.md`
 
 ## Mentioned in
 

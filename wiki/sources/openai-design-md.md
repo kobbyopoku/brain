@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/openai
 source_type: design-md
 author: Refero
 source_date: 2026-05-04
-raw_path: raw/openai-design-md.md
+raw_path: raw/openai/DESIGN.md
 tags: [design-md, design-tokens, openai, refero, ai-products]
 ---
 

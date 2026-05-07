@@ -16,7 +16,7 @@ tags: [media, music-streaming, design-md-available, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://spotify.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/spotify-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/spotify/DESIGN.md`
 - **Brand color**: Spotify Green (#1DB954).
 
 ## Mentioned in

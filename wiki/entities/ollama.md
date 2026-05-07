@@ -21,7 +21,7 @@ This page is a **stub**. Ollama appears via the Open Design catalog. The product
 
 - **Website**: https://ollama.com
 - **Category** (per Open Design): AI & LLM.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/ollama-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/ollama/DESIGN.md`.
 - **Role**: local model runtime + REST API; backbone of many local-first AI workflows.
 - **Adjacency**: serves as a model-provider endpoint for any agent CLI that accepts a custom OpenAI-compatible base URL — including [[wiki/entities/hermes-agent|Hermes Agent]] and [[wiki/entities/open-design|Open Design]]'s BYOK proxy.
 

@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/4e3b4717-84c8-4599-baaf-a343c3d61
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/cursor-design-md.md
+raw_path: raw/cursor/DESIGN.md
 tags: [design-md, design-tokens, cursor, refero, claude-code-ecosystem]
 ---
 

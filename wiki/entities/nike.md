@@ -16,7 +16,7 @@ tags: [retail, athletic-brand, design-md-available, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://nike.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/nike-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/nike/DESIGN.md`
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]

@@ -16,7 +16,7 @@ tags: [fintech, neobank, design-md-available, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://revolut.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/revolut-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/revolut/DESIGN.md`
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]

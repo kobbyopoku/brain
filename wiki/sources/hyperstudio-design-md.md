@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/8eb9c53e-d69c-497a-b640-610856cf3
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/hyperstudio-design-md.md
+raw_path: raw/hyperstudio/DESIGN.md
 tags: [design-md, design-tokens, hyperstudio, refero]
 ---
 

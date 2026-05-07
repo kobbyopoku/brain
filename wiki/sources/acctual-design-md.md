@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/aeefc294-a8f7-443d-b76a-538dddc29
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/acctual-design-md.md
+raw_path: raw/acctual/DESIGN.md
 tags: [design-md, design-tokens, acctual, refero]
 ---
 

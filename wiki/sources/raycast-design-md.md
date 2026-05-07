@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/3b6a17f0-3bdf-418c-a95e-0b89e5a8b
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/raycast-design-md.md
+raw_path: raw/raycast/DESIGN.md
 tags: [design-md, design-tokens, raycast, refero, claude-code-ecosystem]
 ---
 

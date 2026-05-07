@@ -21,7 +21,7 @@ This page is a **stub**. Hugging Face appears in the wiki primarily via the Open
 
 - **Website**: https://huggingface.co
 - **Category** (per Open Design): AI & LLM.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/huggingface-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/huggingface/DESIGN.md`.
 - **Role**: model registry / datasets platform / Transformers + Diffusers libraries / Spaces (gradio/streamlit hosting). The de facto open-weight ML ecosystem.
 - **Provider integration**: listed as a model-source for [[wiki/entities/hermes-agent|Hermes Agent]].
 

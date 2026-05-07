@@ -16,7 +16,7 @@ tags: [design-tool, website-builder, motion-design, design-md-available, open-de
 ## Key facts
 
 - **Website**: https://framer.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/framer-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/framer/DESIGN.md`
 - **Distinct from**: Framer Motion (the React animation library spun out of the same team).
 
 ## Mentioned in

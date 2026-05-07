@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/3e52dd36-6ab1-48c6-bc40-47ef6d33a
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/monopo-saigon-design-md.md
+raw_path: raw/monopo-saigon/DESIGN.md
 tags: [design-md, design-tokens, monopo-saigon, refero]
 ---
 

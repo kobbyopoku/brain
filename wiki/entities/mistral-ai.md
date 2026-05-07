@@ -21,7 +21,7 @@ This page is a **stub**. Mistral AI appears via the Open Design catalog and indi
 
 - **Website**: https://mistral.ai
 - **Category** (per Open Design): AI & LLM.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/mistral-ai-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/mistral-ai/DESIGN.md`.
 - **Role**: open-weight model publisher (Mistral 7B, Mixtral 8x7B, Codestral, Mistral Large) + hosted API.
 - **Adjacency**: provides one of [[wiki/entities/hermes-agent|Hermes Agent]]'s 11 supported model providers ("Mistral Vibe" appears in Open Design's 15 auto-detected agent CLIs list).
 

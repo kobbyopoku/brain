@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/031056ff-7af1-46db-8daa-115f731c5
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/elevenlabs-design-md.md
+raw_path: raw/elevenlabs/DESIGN.md
 tags: [design-md, design-tokens, elevenlabs, refero]
 ---
 

@@ -2,7 +2,9 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 55 sources · 151 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
+**Stats**: 56 sources · 151 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
+
+**Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
 ---
 
@@ -49,6 +51,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 
 - [[wiki/sources/nexu-io-open-design]] — Apache-2.0 open-source alternative to Anthropic's [[wiki/entities/claude-design|Claude Design]]. 138 design systems with a 9-section schema, 64 SKILL.md bundles, 15 auto-detected agent CLIs, BYOK proxy, sandboxed preview, MCP server. The most architecturally substantive design-tooling source in the wiki.
 - [[wiki/sources/open-design-catalog]] — companion catalog source. Full inventory of all 139 design systems (live count) across 20 categories + 71 skills + 9 craft discipline docs. All raw content (227 markdown files, 2.5MB) fetched into `raw/open-design/`.
+- [[wiki/sources/design-systems-master-index]] — canonical lookup table for **all 172 DESIGN.md files** in the brain (33 Refero + 139 Open Design). One row per brand with absolute path. Use this to find any specific brand's design tokens.
 
 ### Open-source autonomous agents
 

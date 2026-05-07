@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/d469cba4-c448-4a43-a033-883f8bfcd
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/anthropic-design-md.md
+raw_path: raw/anthropic/DESIGN.md
 tags: [design-md, design-tokens, anthropic, refero]
 ---
 

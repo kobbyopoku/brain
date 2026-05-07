@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/35ff063b-1fcc-48a2-83b3-56da01e23
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/minimalissimo-design-md.md
+raw_path: raw/minimalissimo/DESIGN.md
 tags: [design-md, design-tokens, minimalissimo, refero]
 ---
 

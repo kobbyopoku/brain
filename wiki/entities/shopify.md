@@ -16,7 +16,7 @@ tags: [e-commerce, saas, retail-platform, design-md-available, open-design-catal
 ## Key facts
 
 - **Website**: https://shopify.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/shopify-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/shopify/DESIGN.md`
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]

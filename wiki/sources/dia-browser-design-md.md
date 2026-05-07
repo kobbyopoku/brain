@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/b458ca1a-70f0-4f85-b745-f879a4d08
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/dia-browser-design-md.md
+raw_path: raw/dia-browser/DESIGN.md
 tags: [design-md, design-tokens, dia-browser, refero]
 ---
 

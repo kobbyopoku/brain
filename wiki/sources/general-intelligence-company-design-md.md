@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/34baa524-5d5b-4165-bbab-d01f05e6d
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/general-intelligence-company-design-md.md
+raw_path: raw/general-intelligence-company/DESIGN.md
 tags: [design-md, design-tokens, general-intelligence-company, refero]
 ---
 

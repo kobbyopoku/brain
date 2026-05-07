@@ -16,7 +16,7 @@ tags: [browser, productivity, design-md-available, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://arc.net
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/arc-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/arc/DESIGN.md`
 - **Distinctive**: sidebar-first layout (vs the conventional top-tabs); "Spaces" for grouped browsing contexts; recently pivoted toward AI-augmented browsing.
 
 ## Mentioned in

@@ -21,7 +21,7 @@ This page is a **stub**. Cohere appears in the wiki only via the Open Design cat
 
 - **Website**: https://cohere.com
 - **Category** (per Open Design): AI & LLM.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/cohere-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/cohere/DESIGN.md`.
 - **Positioning**: enterprise-focused AI platform; competitor to OpenAI/Anthropic in the API-served LLM space, with a strong enterprise-customization slant.
 
 ## Mentioned in

@@ -16,7 +16,7 @@ tags: [productivity, communication, chat-platform, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://discord.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/discord-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/discord/DESIGN.md`
 - **Brand color**: Discord Blurple (#5865F2).
 
 ## Mentioned in

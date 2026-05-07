@@ -16,7 +16,7 @@ tags: [automation, integration-platform, no-code, design-md-available, open-desi
 ## Key facts
 
 - **Website**: https://zapier.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/zapier-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/zapier/DESIGN.md`
 - **Adjacent to**: [[wiki/concepts/ai-automation-services|AI automation services]] — Zapier-style integration but with LLMs in the loop.
 
 ## Mentioned in

@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/c9cabb96-32fa-4896-837a-f2497ce1c
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/apple-design-md.md
+raw_path: raw/apple/DESIGN.md
 tags: [design-md, design-tokens, apple, refero]
 ---
 

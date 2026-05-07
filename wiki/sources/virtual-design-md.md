@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/virtual
 source_type: design-md
 author: Refero
 source_date: 2026-05-04
-raw_path: raw/virtual-design-md.md
+raw_path: raw/virtual/DESIGN.md
 tags: [design-md, design-tokens, virtual, refero, dark-mode]
 ---
 

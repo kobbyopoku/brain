@@ -16,7 +16,7 @@ tags: [observability, error-monitoring, devtools, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://sentry.io
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/sentry-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/sentry/DESIGN.md`
 
 ## Mentioned in
 

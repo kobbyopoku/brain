@@ -21,7 +21,7 @@ This page is a **stub**. GitHub appears in the wiki indirectly throughout (the b
 
 - **Website**: https://github.com
 - **Category** (per Open Design): Developer Tools.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/github-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/github/DESIGN.md`.
 - **Design system**: **Primer** — GitHub's open-source design system at primer.style. The Open Design DESIGN.md is "Primer foundations."
 - **Adjacent**: hosts the brain repo, [[wiki/entities/open-design|Open Design]], [[wiki/entities/hermes-agent|Hermes Agent]], [[wiki/entities/marketingskills-repo|marketingskills]], etc.
 

@@ -21,7 +21,7 @@ This page is a **stub**. Supabase appears via the Open Design catalog. Worth not
 
 - **Website**: https://supabase.com
 - **Category** (per Open Design): Backend & Data.
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/supabase-design-md.md`.
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/supabase/DESIGN.md`.
 - **Stack**: PostgreSQL + PostgREST + Realtime (WebSocket subscriptions to DB changes) + GoTrue (auth) + Storage + Edge Functions (Deno).
 - **License**: Apache-2.0; self-hostable.
 

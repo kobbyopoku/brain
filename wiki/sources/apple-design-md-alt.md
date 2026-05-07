@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/apple-alt
 source_type: design-md
 author: Refero
 source_date: 2026-05-04
-raw_path: raw/apple-design-md-alt.md
+raw_path: raw/apple-alt/DESIGN.md
 tags: [design-md, design-tokens, apple, refero, alt-surface]
 ---
 

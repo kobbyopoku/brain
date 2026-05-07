@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/3172cd4d-118a-4a16-a259-6b634d323
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/mercury-design-md.md
+raw_path: raw/mercury/DESIGN.md
 tags: [design-md, design-tokens, mercury, refero]
 ---
 

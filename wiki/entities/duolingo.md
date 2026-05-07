@@ -16,7 +16,7 @@ tags: [education, gamification, mobile-first, design-md-available, open-design-c
 ## Key facts
 
 - **Website**: https://duolingo.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/duolingo-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/duolingo/DESIGN.md`
 - **Notable**: their distinctive friendly/chunky aesthetic is tightly identifiable; "duolingo-style" is shorthand for playful-gamified UX.
 
 ## Mentioned in

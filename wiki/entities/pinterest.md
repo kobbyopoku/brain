@@ -16,7 +16,7 @@ tags: [media, visual-discovery, design-md-available, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://pinterest.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/pinterest-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/pinterest/DESIGN.md`
 - **Notable**: the masonry layout pattern Pinterest popularized is now widely copied.
 
 ## Mentioned in

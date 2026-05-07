@@ -16,7 +16,7 @@ tags: [automotive, electric-vehicles, design-md-available, open-design-catalog, 
 ## Key facts
 
 - **Website**: https://tesla.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/tesla-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/tesla/DESIGN.md`
 - **Notable**: tesla.com is among the most chromatically restrained automotive sites — full-bleed photo + minimal nav + simple CTA. Worth referencing when an agent needs "near-zero UI" as an aesthetic anchor.
 
 ## Mentioned in

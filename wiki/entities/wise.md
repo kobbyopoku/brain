@@ -16,7 +16,7 @@ tags: [fintech, money-transfer, design-md-available, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://wise.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/wise-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/wise/DESIGN.md`
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]

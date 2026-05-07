@@ -16,7 +16,7 @@ tags: [hardware, gpu, ai-infrastructure, design-md-available, open-design-catalo
 ## Key facts
 
 - **Website**: https://nvidia.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/nvidia-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/nvidia/DESIGN.md`
 - **AI products**: NVIDIA NIM (containerized inference) is one of [[wiki/entities/hermes-agent|Hermes Agent]]'s supported model providers (Nemotron family).
 
 ## Mentioned in

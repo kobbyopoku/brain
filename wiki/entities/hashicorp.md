@@ -16,7 +16,7 @@ tags: [infrastructure, devops, enterprise, open-design-catalog, stub]
 ## Key facts
 
 - **Website**: https://hashicorp.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/hashicorp-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/hashicorp/DESIGN.md`
 
 ## Mentioned in
 

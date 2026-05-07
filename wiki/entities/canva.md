@@ -16,7 +16,7 @@ tags: [design-tool, consumer-design, design-md-available, open-design-catalog, s
 ## Key facts
 
 - **Website**: https://canva.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/canva-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/canva/DESIGN.md`
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]

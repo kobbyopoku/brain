@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/48e5de76-05d5-4c4e-a269-c7c245b29
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/stripe-design-md.md
+raw_path: raw/stripe/DESIGN.md
 tags: [design-md, design-tokens, stripe, refero, foundational-example]
 ---
 

@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/418b374a-be64-44f0-b17e-1d45308c7
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/superhuman-design-md.md
+raw_path: raw/superhuman/DESIGN.md
 tags: [design-md, design-tokens, superhuman, refero]
 ---
 

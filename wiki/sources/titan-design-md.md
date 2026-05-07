@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/964b9215-396b-492c-abec-7bd778d7b
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/titan-design-md.md
+raw_path: raw/titan/DESIGN.md
 tags: [design-md, design-tokens, titan, refero]
 ---
 

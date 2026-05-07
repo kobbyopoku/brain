@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/all-in-one-salon
 source_type: design-md
 author: Refero
 source_date: 2026-05-04
-raw_path: raw/all-in-one-salon-design-md.md
+raw_path: raw/all-in-one-salon/DESIGN.md
 tags: [design-md, design-tokens, glossgenius, refero, beauty-industry]
 ---
 

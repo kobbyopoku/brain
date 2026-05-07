@@ -19,7 +19,7 @@ Stripe is a payments infrastructure company. In this wiki it is the most substan
 
 ## Design system summary
 
-Per [[wiki/sources/stripe-design-md]] (full content in `raw/stripe-design-md.md`):
+Per [[wiki/sources/stripe-design-md]] (full content in `raw/stripe/DESIGN.md`):
 
 - **Identity color**: Deep Violet `#533afd`. The single load-bearing brand color.
 - **Neutrals are blue-tinted, not gray** — Midnight Ink `#061b31`, Slate Blue `#50617a`, Powder Blue `#e5edf5`, Porcelain White `#f8fafd`.

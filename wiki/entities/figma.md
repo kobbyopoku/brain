@@ -16,7 +16,7 @@ tags: [design-tool, collaborative-design, design-md-available, open-design-catal
 ## Key facts
 
 - **Website**: https://figma.com
-- **Open Design DESIGN.md**: `raw/open-design/design-systems/figma-design-md.md`
+- **Open Design DESIGN.md**: `raw/open-design/design-systems/figma/DESIGN.md`
 - **MCP support**: Figma ships an MCP integration (referenced in this wiki via the figma-* skill family).
 
 ## Mentioned in

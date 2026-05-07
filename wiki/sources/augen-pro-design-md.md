@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/augen-pro
 source_type: design-md
 author: Refero
 source_date: 2026-05-04
-raw_path: raw/augen-pro-design-md.md
+raw_path: raw/augen-pro/DESIGN.md
 tags: [design-md, design-tokens, augen-pro, refero]
 ---
 

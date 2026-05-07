@@ -7,7 +7,7 @@ source_url: https://styles.refero.design/style/9f9a4a4f-1a27-47ca-a65b-68b9850a8
 source_type: design-md
 author: Refero
 source_date: 2026-05-02
-raw_path: raw/antimetal-design-md.md
+raw_path: raw/antimetal/DESIGN.md
 tags: [design-md, design-tokens, antimetal, refero]
 ---
 
