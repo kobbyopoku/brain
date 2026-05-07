@@ -3,6 +3,7 @@ type: concept
 title: Anti-AI-Slop Machinery
 created: 2026-05-05
 updated: 2026-05-05
+catalog_lineage_clarification: 2026-05-05
 aliases: [anti-slop, design-discipline-machinery, ai-slop-prevention]
 tags: [ai-design, output-discipline, agent-contract, quality-gates]
 ---
@@ -35,8 +36,41 @@ The machinery is interesting beyond design because:
 
 ## Treatment across sources
 
-- [[wiki/sources/nexu-io-open-design]] — canonical wiki source. Codifies all five mechanisms in the Open Design platform.
-- *Adjacent treatments not yet ingested*: traditional brand-style-guide enforcement; Anthropic's published guidance on Claude system prompts; design-critique frameworks like Steve Krug's "Don't Make Me Think." Future ingests should connect this concept to those lineages.
+- [[wiki/sources/nexu-io-open-design]] — architectural overview source. Codifies the five mechanisms in the Open Design platform.
+- [[wiki/sources/open-design-catalog]] — *2026-05-05*. Surfaced the **canonical document at `craft/anti-ai-slop.md`** which clarified the lineage. Open Design's anti-slop discipline was *"adapted from [refero_skill](https://github.com/referodesign/refero_skill) (MIT), tightened to match Open Design's lint surface."* **Refero originated the discipline; Open Design productionized it with a daemon-level linter** (`apps/daemon/src/lint-artifact.ts`, ships `AI_DEFAULT_INDIGO` blacklist). Updates the canonical machinery from the architectural-source-page summary to the actual rules-with-hex-codes:
+
+### Seven cardinal sins (P0 — auto-blocked by linter)
+
+The actual production blacklist Open Design enforces:
+
+1. **Default Tailwind indigo as accent** — exactly `#6366f1`, `#4f46e5`, `#4338ca`, `#3730a3`, `#8b5cf6`, `#7c3aed`, `#a855f7`. *"Indigo is the textbook AI tell."*
+2. **Two-stop "trust" gradient on the hero** — purple→blue, blue→cyan, indigo→pink. *"A flat surface + intentional type beats this every time."*
+3. **Emoji as feature icons** — `✨`, `🚀`, `🎯`, `⚡`, `🔥`, `💡` inside `<h*>`, `<button>`, `<li>`, or `class*="icon"`. *"Use 1.6–1.8px-stroke monoline SVG with `currentColor`."*
+4. **Sans-serif on display text when the seed binds a serif** — h1/h2 must use `var(--font-display)`, not a hardcoded Inter / Roboto / `system-ui`.
+5. **Rounded card with a colored left-border accent** — the canonical AI-dashboard-tile shape. Drop either the radius or the left border.
+6. **Invented metrics** — *"10× faster"*, *"99.9% uptime"*, *"3× more productive"*. Either pull from a real source or use a labelled placeholder.
+7. **Filler copy** — `lorem ipsum`, `feature one / two / three`, `placeholder text`, `sample content`. *"An empty section is a design problem to solve with composition, not by inventing words."*
+
+### Soft tells (P1 — should fix)
+
+- **Standard "Hero → Features → Pricing → FAQ → CTA" sequence with no variation** — introduce at least one unconventional section.
+- **External placeholder image CDNs** (`unsplash.com`, `placehold.co`, `placekitten.com`, `picsum.photos`).
+- **More than ~12 raw hex values outside `:root`** — tokens not honored.
+- **`var(--accent)` used 6+ times in the rendered body** — cap at 2 visible uses per screen.
+
+### Polish tells (P2 — nice to fix)
+
+- **Sections without `data-od-id`** — comment mode can't target them.
+- **Decorative blob / wave SVG backgrounds** — meaningless geometry.
+- **Perfect symmetric layout with no visual tension** — alternating density reads as intentional.
+
+### "Soul" target (positive direction, not negative blacklist)
+
+> *"Aim for ~80% proven patterns + ~20% distinctive choice. The 20% should live in: one bold visual move — a typography choice, a single color decision, an unexpected proportion. Voice and microcopy — a button that says 'Start tracking' beats 'Get started'. One micro-interaction the user will remember. One detail that could only have been put there by someone who used the product."*
+>
+> *"If a reviewer screenshots the artifact and someone outside the project can identify which product it's from — you have soul. If not, you shipped a template."*
+
+This positive direction is the *complement* to the blacklist. The blacklist tells you what to avoid; this tells you what to aim for. Both are needed — pure-blacklist enforcement produces compliant-but-soulless output.
 
 ## Sub-claims and details
 

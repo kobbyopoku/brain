@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 54 sources · 124 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
+**Stats**: 55 sources · 151 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
 
 ---
 
@@ -48,6 +48,7 @@ The content-oriented index of this wiki. Read this first when answering a query,
 ### AI design tooling (open-source platforms)
 
 - [[wiki/sources/nexu-io-open-design]] — Apache-2.0 open-source alternative to Anthropic's [[wiki/entities/claude-design|Claude Design]]. 138 design systems with a 9-section schema, 64 SKILL.md bundles, 15 auto-detected agent CLIs, BYOK proxy, sandboxed preview, MCP server. The most architecturally substantive design-tooling source in the wiki.
+- [[wiki/sources/open-design-catalog]] — companion catalog source. Full inventory of all 139 design systems (live count) across 20 categories + 71 skills + 9 craft discipline docs. All raw content (227 markdown files, 2.5MB) fetched into `raw/open-design/`.
 
 ### Open-source autonomous agents
 
@@ -265,6 +266,30 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/perplexity-ai]] — AI answer engine; smallest type scale.
 - [[wiki/entities/ui]] — *(stub)* uncertain identity; Geist family.
 - [[wiki/entities/virtual]] — *(stub)* uncertain identity; minimalist console.
+
+### Brands in Open Design catalog (added 2026-05-05)
+
+27 new brand entity stubs created from the [[wiki/sources/open-design-catalog|Open Design catalog]] ingest. 29 brands already existed in the wiki from prior Refero ingests (overlap with Open Design's catalog). All Open Design DESIGN.md raw files are at `raw/open-design/design-systems/`.
+
+**AI & LLM** — [[wiki/entities/cohere]], [[wiki/entities/huggingface]], [[wiki/entities/mistral-ai]], [[wiki/entities/ollama]] *(stubs; 4)*
+
+**Developer tools / hosting** — [[wiki/entities/vercel]], [[wiki/entities/github]], [[wiki/entities/supabase]] *(3)*
+
+**Productivity & SaaS** — [[wiki/entities/discord]], [[wiki/entities/duolingo]], [[wiki/entities/zapier]], [[wiki/entities/arc]] *(4)*
+
+**Backend & data** — [[wiki/entities/mongodb]], [[wiki/entities/sentry]], [[wiki/entities/hashicorp]] *(3)*
+
+**Fintech & crypto** — [[wiki/entities/mastercard]], [[wiki/entities/revolut]], [[wiki/entities/wise]] *(3)*
+
+**Media & consumer** — [[wiki/entities/nvidia]], [[wiki/entities/spotify]], [[wiki/entities/uber]], [[wiki/entities/pinterest]] *(4)*
+
+**Design tools** — [[wiki/entities/figma]], [[wiki/entities/canva]], [[wiki/entities/framer]] *(3)*
+
+**E-commerce / retail** — [[wiki/entities/nike]], [[wiki/entities/shopify]] *(2)*
+
+**Automotive** — [[wiki/entities/tesla]] *(1)*
+
+The remaining 113 Open Design brands (mostly named-aesthetic styles like brutalism / claymorphism / doodle / retro and smaller real brands) are NOT individually stubbed — they exist as raw DESIGN.md files in `raw/open-design/design-systems/` and are enumerated in [[wiki/sources/open-design-catalog]]. They can be graduated to entity stubs on-demand when projects need them.
 
 ## Concepts
 
