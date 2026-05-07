@@ -95,6 +95,19 @@ tags: [tag-one, tag-two]
 
 Always update `updated:` when you modify a page.
 
+### Entity types
+
+Entity pages carry an additional `entity_type:` frontmatter field describing what kind of thing the entity is. Recognized values:
+
+- **`person`** — individual humans (authors, founders, named persons referenced in sources).
+- **`organization`** — companies, research labs, foundations, government bodies, agencies.
+- **`product`** — software products, SaaS platforms, APIs, libraries, frameworks, devices, named tools.
+- **`place`** — geographies, jurisdictions, named physical locations.
+- **`work`** — published creative works (books, papers, films, songs, posts) when they're the subject of an ingest.
+- **`aesthetic-style`** — *(added 2026-05-05)* named design archetypes / aesthetic categories that aren't products or organizations but are catalogued as standalone styles. Examples: `brutalism`, `claymorphism`, `neon`, `glassmorphism`, `retro`, `editorial`, `minimal`. These typically come from design-system catalogs (e.g. [[wiki/sources/open-design-catalog|Open Design]]) that mix real product brands with named-aesthetic entries. The `aesthetic-style` value lets Dataview queries distinguish *"give me design archetypes"* from *"give me real products"*.
+
+When the right value is genuinely ambiguous (e.g. *"is shadcn/ui a product or an aesthetic?"*), pick the closer fit and tag-extend if needed; the schema isn't strictly enforced, but consistency helps queries.
+
 ### Filenames
 
 - All lowercase, kebab-case: `andrej-karpathy.md`, `llm-wiki-pattern.md`.
