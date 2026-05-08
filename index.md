@@ -461,6 +461,7 @@ All 139 Open Design brands are now reachable as wiki entities. The 27 most-cross
 
 ### Patterns and meta-patterns
 
+- [[wiki/concepts/dual-write-rollout]] — additive parallel-write migration pattern: new path runs next to legacy, failures swallowed, observed for a window, then ownership flips. Worked example: Kivora's 2026-05-08 Finding-schema migration.
 - [[wiki/concepts/llm-wiki-pattern]] — persistent, LLM-maintained markdown wiki built on top of curated raw sources.
 - [[wiki/concepts/markdown-as-agent-contract]] — meta-pattern: markdown files as the contract layer between humans and AI agents.
 - [[wiki/concepts/memex]] — Vannevar Bush's 1945 vision of a personal, associative knowledge store.
@@ -533,7 +534,7 @@ Add a project from inside its directory with `/brain-add-project` in any Claude 
 
 ### Active
 
-- [[wiki/projects/kivora]] — AI-powered multi-tenant SaaS GRC platform (product name **ROAM GRC**); 13-module Spring Boot backend + React/Vite frontend + FastAPI Claude agent with pgvector RAG; named as Vedge's GRC of record.
+- [[wiki/projects/kivora]] — AI-powered multi-tenant SaaS GRC platform (product name **ROAM GRC**); 13-module Spring Boot backend + React/Vite frontend + FastAPI Claude agent with pgvector RAG; named as Vedge's GRC of record. **Tier 1 of the Finding-schema migration** shipped end of 2026-05-08, dual-writing in production behind a toggle pending 2-week observation; worked example of [[wiki/concepts/dual-write-rollout]].
 - [[wiki/projects/vedge]] — multi-tenant healthcare OS for African hospitals, clinics, labs, pharmacies; modular-monolith Spring Boot backend + Next.js web + Flutter mobile (patient + staff).
 
 ### Paused
