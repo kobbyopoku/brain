@@ -39,6 +39,8 @@ Most coding-agent CLIs are **stateless across sessions** — Claude Code reads `
 
 This is the closest agent in the wiki to the [[hot-cache]] + [[llm-wiki-pattern]] vision, but **built into the agent itself rather than an external markdown file the agent reads**. The wiki's existing concepts about "agent contract markdown" become a *passive* alternative to Hermes's *active* self-update.
 
+**Sibling pattern in the wiki**: Saraev's [[self-annealing]] (the system-level property of [[doe-framework|DOE-framework]] workflows) achieves the same goal — *"systems that improve themselves over time without ongoing human intervention"* — via a different mechanism. Self-annealing encodes fixes into **directive markdown files** (durable, version-controlled, model-portable). Hermes encodes fixes into **agent-internal state** (autonomous, but bound to Hermes-as-runtime, less observable, harder to migrate). Both are valid; they make different trade-offs on the where-does-the-improvement-live axis.
+
 ### Plugin-first architecture (extension surface > core modification)
 
 Per the AGENTS.md, the codebase explicitly warns developers to **prefer the plugin surface** (`~/.hermes/plugins/`) over modifying core files. Plugin systems exist for:
@@ -191,6 +193,7 @@ The presence of named anti-patterns in the agent contract is itself an instance 
 ## Related concepts
 
 - [[hot-cache]] — Hermes's built-in self-update is the active version of the external `_hot.md` pattern.
+- [[self-annealing]] — Saraev's directive-encoded self-improvement; sibling mechanism to Hermes's agent-internal state. Same goal, different where-does-improvement-live trade-off.
 - [[llm-wiki-pattern]] — Hermes is the agent-internal version of Karpathy's external-wiki pattern.
 - [[claude-code-skills]] — Hermes uses agentskills.io-compatible skills (different format from Claude Code's SKILL.md).
 - [[byok-proxy]] — Hermes's model-agnostic design IS a BYOK proxy at the agent layer.

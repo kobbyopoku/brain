@@ -13,7 +13,7 @@ tags: [agentic-workflows, ai-automation, do-framework, horizontal-leverage, vide
 
 # AGENTIC WORKFLOWS: Build & Sell AI Automations (2026) — Nick Saraev
 
-> A 5h 41min definitive course on agentic workflows for business. Coins the **[[do-framework|DO framework]]** (Directives + Executions) as a deterministic architecture for AI workflows. Argues agentic workflows are *"one of the largest wealth transfers in human history"* enabled by **[[horizontal-leverage]]**. Provides the mathematical case (**[[reliability-decay-math]]**) for why raw LLMs fail at multi-step business processes.
+> A 5h 41min definitive course on agentic workflows for business. Coins the **[[doe-framework|DO framework]]** (originally Directives + Executions; Saraev's later content evolved this to the 3-layer **DOE Framework** = Directive + Orchestration + Execution — see [[wiki/sources/prakash-bhandari-doe-framework]] and [[wiki/sources/bob-mwathu-doe-framework-linkedin]]) as a deterministic architecture for AI workflows. Argues agentic workflows are *"one of the largest wealth transfers in human history"* enabled by **[[horizontal-leverage]]**. Provides the mathematical case (**[[reliability-decay-math]]**) for why raw LLMs fail at multi-step business processes. Implicitly demonstrates **[[self-annealing]]** (the term isn't named in this original course but the 4-step error-recovery loop is the mechanism).
 
 ## TL;DR
 
@@ -32,7 +32,7 @@ Saraev makes a structured economic + technical case that LLM-driven agentic work
 - **Stochasticity / drift**: models pulled into long autonomous runs accumulate small deviations until they're solving a different problem than the one given.
 - **LLMs are bad at deterministic operations.** Math, sorting, parsing, structured extraction — *"that's something you could build a Python script to do in 0.1 seconds."* See [[reasoning-execution-split]] for the wiki's existing concept on this.
 
-### The DO framework (the headline contribution)
+### The DO framework (now publicly framed as DOE — the headline contribution)
 - **Directives** — declarative markdown files in `directives/`, one per workflow or capability (`scrape_leads.md`, `send_onboarding_email.md`). YAML frontmatter for metadata; markdown body for the *what*.
 - **Executions** — Python scripts in `executions/`, deterministic and modular. The *how*. The programming language is incidental — what matters is determinism.
 - **The LLM orchestrates between them.** Reads the directive, calls the right execution scripts, handles outputs, retries on errors.

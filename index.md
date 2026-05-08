@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 56 sources · 250 entities · 44 concepts · 1 project · 1 synthesis · last updated 2026-05-05
+**Stats**: 58 sources · 252 entities · 45 concepts · 1 project · 1 synthesis · last updated 2026-05-05
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -30,7 +30,9 @@ The content-oriented index of this wiki. Read this first when answering a query,
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — six-phase early-stage playbook for selling AI automations at $3-15k per build.
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — scaled $7M ARR services-as-software agency playbook with explicit churn-at-scale math.
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — 10 online business models that work in 2026 + 1 that's collapsing.
-- [[wiki/sources/saraev-agentic-workflows-2026]] — 5h+ definitive course; coins the DO framework, horizontal-leverage thesis, reliability-decay-math. The architectural companion to the three economic playbooks above.
+- [[wiki/sources/saraev-agentic-workflows-2026]] — 5h+ definitive course; coins the DO framework (now DOE in later content), horizontal-leverage thesis, reliability-decay-math. The architectural companion to the three economic playbooks above.
+- [[wiki/sources/prakash-bhandari-doe-framework]] — cleanest 3-layer DOE framing (Directive + Orchestration + Execution); adds the *Act → Observe → Think → Act* runtime loop.
+- [[wiki/sources/bob-mwathu-doe-framework-linkedin]] — derivative LinkedIn post that surfaced DOE for this wiki; introduces the term *self-annealing*.
 - [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]] — 5th source on the AI automation services model; functionally a derivative of Khairallah with new niche (law firms), Cowork as Claude Code alternative, three-trap framing.
 
 ### Prompts and prompt-engineering
@@ -105,6 +107,7 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/anatoli-kopadze]] — author of the 20 Claude Prompts catalog.
 - [[wiki/entities/andrej-karpathy]] — author of the LLM Wiki pattern.
 - [[wiki/entities/alex-vacca]] — author of the services-as-software $7M agency playbook.
+- [[wiki/entities/bob-mwathu]] — *(stub)* LinkedIn creator who surfaced Saraev's DOE framing for the wiki; introduces the term *self-annealing*.
 - [[wiki/entities/brian-moran]] — author of the 10 online business models for 2026.
 - [[wiki/entities/clear_graphics]] — author of the YC unicorn landing-pages analysis.
 - [[wiki/entities/corey-haines]] — *(stub)* maintainer of the marketingskills Claude Code skill-pack.
@@ -116,8 +119,9 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/mnilax]] — author of the 430-hours instrumented Claude Code study.
 - [[wiki/entities/nainsi-dwiv]] — author of the Agent Skills architectural deep-dive.
 - [[wiki/entities/nateherk]] — author of the AI OS playbook; runs a $3M/yr business on Claude Code.
-- [[wiki/entities/nick-saraev]] — author of the 5h+ Agentic Workflows course; coined the DO framework.
+- [[wiki/entities/nick-saraev]] — author of the 5h+ Agentic Workflows course; coined the DO framework (now publicly framed as DOE).
 - [[wiki/entities/noisyb0y1]] — *(stub)* author who surfaced the marketingskills skill-pack.
+- [[wiki/entities/prakash-bhandari]] — *(stub)* author of the cleanest DOE framework expository.
 - [[wiki/entities/regent0x]] — author of the Claude Code 24/7 dev team stack.
 
 ### People — referenced
@@ -475,7 +479,8 @@ All 139 Open Design brands are now reachable as wiki entities. The 27 most-cross
 ### Agent architecture
 
 - [[wiki/concepts/ai-os-pattern]] — Three Ms + Four Cs framework for treating Claude Code as an OS.
-- [[wiki/concepts/do-framework]] — Saraev's Directives + Executions architecture for deterministic agentic workflows.
+- [[wiki/concepts/do-framework]] — Saraev's DOE framework (Directive + Orchestration + Execution; previously framed as 2-layer DO). The deterministic-agentic-workflow architecture.
+- [[wiki/concepts/self-annealing]] — system-level property of DOE workflows: directives accumulate fixes via the orchestrator's error-recovery loop, getting more reliable with use.
 - [[wiki/concepts/hot-cache]] — `_hot.md`: 500-token active-state file extending the LLM Wiki pattern.
 - [[wiki/concepts/progressive-disclosure]] — load metadata first, content on demand.
 - [[wiki/concepts/reasoning-execution-split]] — LLM reasons; deterministic code executes.
