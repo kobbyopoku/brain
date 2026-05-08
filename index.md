@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 58 sources · 252 entities · 45 concepts · 2 projects · 1 synthesis · last updated 2026-05-08
+**Stats**: 58 sources · 252 entities · 45 concepts · 2 projects · 2 syntheses · last updated 2026-05-08
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -550,6 +550,7 @@ _(none yet)_
 
 ## Syntheses
 
+- [[wiki/syntheses/agent-review-framework]] — reusable five-lens framework for auditing LLM agent codebases against architectural first principles (agentic-loop, augmented-llm, reasoning-execution-split, agent-workflow-patterns, retrieval-augmented-generation). Worked example: 2026-05-08 review of [[wiki/projects/kivora|Kivora]]'s Python agent.
 - [[wiki/syntheses/refero-open-design-claude-design-comparison]] — three strategic bets in AI design tooling: Refero (curated SaaS catalog) vs Open Design (open-source full-stack platform) vs Claude Design (proprietary Anthropic surface). Includes adoption-fit decision matrix and Vedge-specific recommendation.
 
 ---
