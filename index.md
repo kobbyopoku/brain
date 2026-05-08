@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 58 sources · 252 entities · 45 concepts · 1 project · 1 synthesis · last updated 2026-05-05
+**Stats**: 58 sources · 252 entities · 45 concepts · 2 projects · 1 synthesis · last updated 2026-05-08
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -533,6 +533,7 @@ Add a project from inside its directory with `/brain-add-project` in any Claude 
 
 ### Active
 
+- [[wiki/projects/kivora]] — AI-powered multi-tenant SaaS GRC platform (product name **ROAM GRC**); 13-module Spring Boot backend + React/Vite frontend + FastAPI Claude agent with pgvector RAG; named as Vedge's GRC of record.
 - [[wiki/projects/vedge]] — multi-tenant healthcare OS for African hospitals, clinics, labs, pharmacies; modular-monolith Spring Boot backend + Next.js web + Flutter mobile (patient + staff).
 
 ### Paused
