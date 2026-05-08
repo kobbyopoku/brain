@@ -4,7 +4,7 @@ title: Kivora
 created: 2026-05-08
 updated: 2026-05-08
 status: active
-repo: not git-initialized (local only)
+repo: multi-repo (github.com/usekivora/{agent, backend, frontend, landing})
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/Kivora
 stack: [java-21, spring-boot, postgres, pgvector, flyway, json-schema, react, typescript, vite, tailwind, fastapi, python, anthropic-claude, minio, cloudflare-r2, railway, vercel, docker, github-actions]
 started: 2026-02-11
@@ -31,7 +31,7 @@ Kivora (product name **ROAM GRC**) addresses the lack of a single, AI-aware plat
 - **Deploy**: Docker + Railway (backend, agent), Vercel (frontend, landing).
 - **AI models**: `claude-sonnet-4-5-20250929` (reasoning + tool use), `claude-haiku-4-5-20251001` (titles + compaction), `all-MiniLM-L6-v2` (embeddings).
 - **CI**: GitHub Actions wired for both `backend/` and `frontend/` repos as of 2026-05-08 (Phase 0 of the Finding-schema migration). Backend runs JDK 21 Corretto + Postgres 16 service + `mvn verify`; frontend runs Node 22 + `tsc --noEmit` + `vitest run --passWithNoTests` + `npm run build` + lint warn-only.
-- **Repos**: `backend/` and `frontend/` are now separate git repos at `git@usekivora:usekivora/{backend,frontend}.git` (PR-based merges; PRs #14 and #15 already in main). The outer workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/` itself remains git-uninitialized.
+- **Repos**: polyrepo under `usekivora` GitHub org — `usekivora/{agent, backend, frontend, landing}.git`. Verified 2026-05-08: each subdir is its own git repo with independent branches (most on `staging`, landing on `main`). PR-based merges. The outer workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/` is *not* a git repo — it's a polyrepo container, same pattern as [[wiki/projects/vedge|Vedge]]. Items at the workspace root (`tasks/`, `CLAUDE.md`, `ARCHITECTURE.md`, `Requirements Doc.md`, the `kivora/` and `agents/` subdirs) remain unversioned scratch space.
 
 ## Current focus
 
@@ -41,7 +41,7 @@ Week of 2026-05-08:
 - **Feature-gating cleanup** (per auto-memory `project_feature_gating_audit.md`, dated 2026-04-07): 11 of 26 features lack backend `requireFeature()` gates. Frontend shows all nav items/routes to all tiers. This is unfinished and load-bearing.
 - **GRC PRD review cadence** — Systems Inventory PRD reviewed 2026-05-08. Phase 3 Systems Inventory module is on the roadmap.
 
-**Recently shipped (2026-05-08):** Agent-review wave landed 10 of 12 findings — see [`tasks/agent-review-2026-05-08.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/Kivora/tasks/agent-review-2026-05-08.md). Highlights: HITL safety promoted from prompt to code with state-machine-enforced remediation lifecycle; agent-layer RBAC with capability matrix; tool consolidation (21 → 20); parallel tool execution; sanitized error events; tool-result transparency. 93 tests passing across new + existing suites. Framework: [[wiki/syntheses/agent-review-framework]].
+**Recently shipped (2026-05-08):** Agent-review wave landed 10 of 12 findings — see [`tasks/agent-review-2026-05-08.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/Kivora/tasks/agent-review-2026-05-08.md). Highlights: HITL safety promoted from prompt to code with state-machine-enforced remediation lifecycle; agent-layer RBAC with capability matrix; tool consolidation (21 → 20); parallel tool execution; sanitized error events; tool-result transparency. 93 tests passing across new + existing suites. Framework: [[wiki/syntheses/agent-review-framework]]. **Deployed to staging** via three commits — agent `8731131`, backend RBAC one-liner `6d071c2`, plus a follow-up slowapi-0.1.9 compatibility fix `3ecf151` (latent bug with `request: ChatRequest` parameter shadowing slowapi's expected `Request` type — surfaced by the new build, fixed by reordering parameters). **Staging verification 3/4 confirmed** — slowapi fix works, sanitized error envelope confirmed in flight, RBAC plumbing end-to-end (agent log shows `roles ['PLATFORM_ADMIN']` from forwarded JWT). The CRITICAL safety-gate fire-test through Claude is **blocked by Anthropic credit exhaustion on the staging account** — to be re-run after top-up. Code is live; unit-level verification (12 tests in `test_remediation_safety.py`) covers the gate logic itself.
 
 **Also shipped end of 2026-05-08:** **Tier 1 of the Finding-schema migration**, all 8 phases (0–7), live in production behind a toggle. New canonical `finding-v1.0.0.json` data contract, multi-tenant findings/evaluations tables (V096–V098), two-tier retention model (`FindingsRetentionJob` daily 03:00 UTC), `FindingIngestionService` with idempotent dual-write, `SyntheticFindingsConnector` smoke harness, `ComposioFindingsBridge` parallel emission, CI-enforced `FindingSchemaConformanceTest`, and a frontend "Not Checked" amber tile that surfaces the new INCONCLUSIVE status to customers. Pilot tenant in production: **Brolly Africa** (`c00de349-12a5-433d-92b8-39b0782a8450`). Verified 5/5 manual triggers wrote conformant Findings (3× `composio-github`, 2× `composio-slack`). Currently in Gate 0 / Step 6 — 2-week observation period before Tier 2A cutover work. Plan: [`tasks/finding-schema-tier1-plan.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/Kivora/tasks/finding-schema-tier1-plan.md). Connector-author guide: [`backend/docs/architecture/findings-contract.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/Kivora/backend/docs/architecture/findings-contract.md). ADR: [`backend/docs/adr/0001-finding-schema.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/Kivora/backend/docs/adr/0001-finding-schema.md).
 
@@ -66,7 +66,7 @@ Week of 2026-05-08:
 
 ## Open questions
 
-- **Workspace not under version control.** *(Partially resolved 2026-05-08)* `backend/` and `frontend/` are now separate git repos at `git@usekivora:usekivora/{backend,frontend}.git` with PR-based merges (PRs #14 and #15 already merged into `main`). The outer workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/` itself remains git-uninitialized — a remaining risk for things stored at the workspace root (`tasks/`, `CLAUDE.md`, `ARCHITECTURE.md`, `Requirements Doc.md`, the `agent/` Python service).
+- **Workspace root version control.** *(Resolved 2026-05-08 — original concern was a category error.)* The `agent/`, `backend/`, `frontend/`, and `landing/` subdirs are each their own git repo on the `usekivora` GitHub org with PR-based merges. The outer workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/` is intentionally *not* a single repo — same polyrepo pattern as [[wiki/projects/vedge|Vedge]]. The remaining unversioned items (`tasks/`, `CLAUDE.md`, `ARCHITECTURE.md`, `Requirements Doc.md`, `kivora/`, `agents/`) are scratch space; if any of them become load-bearing they should move into one of the subrepos or get their own.
 - **Feature-gating gaps** — 11 features (autopilot, risk_bank, risk_import, questionnaire_bank, trust_center, integrations, scim_provisioning, multi_workspace, csv_export, webhook_notifications, audit/api/analytics) have no `requireFeature()` enforcement. Most pages are visible to all tiers regardless of plan. Active risk for tier-bypass abuse.
 - **Composio migration** *(superseded 2026-05-08)* — `tasks/composio-migration-plan.md` now carries a successor-model note pointing at the Finding contract. The output shape for every connector (Composio-routed and direct alike) is now the canonical Finding. Removing `FetchedDataItem` is explicitly deferred to Phase 8+ (15+ live callers across the fetcher fleet).
 - **Systems Inventory PRD (Phase 3)** — open questions per the PRD reviewed 2026-05-08 (configurable enums? soft-delete? scoping uniqueness? bulk import in v1?). Decisions pending.
@@ -125,7 +125,7 @@ Distilled from `tasks/lessons.md` and Kivora's auto-memory. Promote to `wiki/con
 
 ## External links
 
-- **Repos**: `git@usekivora:usekivora/backend.git`, `git@usekivora:usekivora/frontend.git` *(workspace root remains git-uninitialized — `tasks/`, `CLAUDE.md`, `ARCHITECTURE.md`, `Requirements Doc.md`, `agent/` Python service still local-only)*
+- **Repos** *(verified 2026-05-08)*: `git@usekivora:usekivora/agent.git` (Python FastAPI agent), `git@usekivora:usekivora/backend.git` (Java Spring Boot modular monolith), `git@usekivora:usekivora/frontend.git` (React/Vite app), `git@usekivora:usekivora/landing.git` (marketing site). Polyrepo, same pattern as [[wiki/projects/vedge|Vedge]]. Workspace root itself is intentionally uncovered — `tasks/`, `CLAUDE.md`, `ARCHITECTURE.md`, `Requirements Doc.md` are scratch.
 - **Project's CLAUDE.md**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/CLAUDE.md` *(now includes "Adding a monitoring connector" section pointing at the Finding contract)*
 - **Architecture doc**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/ARCHITECTURE.md` (50KB, last updated Feb 2026)
 - **Findings contract guide**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/backend/docs/architecture/findings-contract.md` — the connector-author 5-step path with reference links.
@@ -133,7 +133,7 @@ Distilled from `tasks/lessons.md` and Kivora's auto-memory. Promote to `wiki/con
 - **Requirements doc**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/Requirements Doc.md` (56KB)
 - **Risk template implementation notes**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/RISK_TEMPLATE_IMPLEMENTATION.md`
 - **Tasks**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/tasks/` (todo.md, lessons.md, qa-report.md, gtm-strategy.md, composio-migration-plan.md, **finding-schema-tier1-plan.md**, agent-review-2026-05-08.md)
-- **Agent review backup**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/agent.backup-2026-05-08/` — pre-fix snapshot of the agent directory (730MB, includes venv). Roll-back path while the project remains git-uninitialized.
+- **Agent review backup**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/agent.backup-2026-05-08/` — pre-fix snapshot of the `agent/` git working directory (730MB, includes venv). Created before the wave changes were committed; now redundant since the changes are in `usekivora/agent.git@staging` history. **Safe to delete** (`rm -rf agent.backup-2026-05-08`) once Anthropic credits are topped up and the safety-gate fire-test confirms the code path works end-to-end. Until then it's the fastest local rollback if the staging deploy reveals an unexpected regression.
 - **Auto-memory**: `~/.claude/projects/-Users-kobbyopoku-ROAM-CascadeProjects-Kivora/memory/MEMORY.md`
 - **Project memory dir**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/.remember/`
 - **Agent README**: `/Users/kobbyopoku/ROAM/CascadeProjects/Kivora/agent/README.md`
