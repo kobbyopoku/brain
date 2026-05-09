@@ -242,16 +242,13 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 | 7 | **Notification channels** | ✅ **Email-first** for the 7AM Morning Briefing + 5PM End-of-Day Wrap-up. **Slack DM** for high-priority alerts (Week 4 enhancement). Telegram deferred. |
 | 8 | **Scheduled-task runtime** | ✅ **APScheduler in-process** (matches [[wiki/projects/clarvyn|Clarvyn]]'s pattern). Upgrade to Railway cron if reliability concerns surface in production. |
 
+## Resolved decisions (additional, 2026-05-09)
+
+- **Q5 Voice profiles**: ✅ **Starter drafts complete** at [[wiki/syntheses/helm-voice-profiles]]. Four profiles extracted from existing landing-site copy via [[wiki/sources/shannholmberg-content-os|Shann's brand-foundation-extraction methodology]]: **Vedge** (high confidence — distinctive editorial voice), **Kivora / ROAM GRC** (high — consistent B2B SaaS voice), **Clarvyn** (medium — Startup landing extracted; Enterprise landing different voice not yet extracted), **ROAM Labs corp** (low — voice currently unsettled per [[wiki/projects/roamlabs]]; flagged as draft-only, do not auto-send corporate content until brand stabilizes). Refine when curated samples available; migrate from `wiki/syntheses/` to `helm-repo/voice-profiles/` when Helm repo exists.
+
 ## Open questions
 
-The single remaining open question:
-
-- **Voice profile sources (Q5)**: which 20 best pieces per product?
-  - **[[wiki/projects/vedge|Vedge]]**: landing-site copy + sales-deck copy + walkthrough scripts? *(TBD — Godwin to pull.)*
-  - **[[wiki/projects/kivora|Kivora]] / ROAM GRC**: product surfaces + landing copy + customer-facing docs? *(TBD — Godwin to pull.)*
-  - **[[wiki/projects/clarvyn|Clarvyn]]**: portal copy + landing copy + email templates? *(TBD — Godwin to pull.)*
-  - **ROAM Labs corp / [[wiki/projects/roamlabs|_roamlabs]]**: voice currently unsettled per the project's "visual direction in flux" note. May be the *first* product to need voice extraction so the brand stabilizes.
-  - **Helm-blocking impact**: Marketing agent is Week 3. If voice profiles aren't pulled by Week 2, Marketing agent ships with placeholder voice profiles and gets refined Week 3-4. Not a Week-1-blocker.
+*(All resolved as of 2026-05-09. Project is in build-ready state.)*
 
 ## Lessons learned
 
