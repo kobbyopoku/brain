@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 80 sources · 272 entities · 47 concepts · 6 projects · 2 syntheses · last updated 2026-05-09
+**Stats**: 80 sources · 272 entities · 47 concepts · 7 projects · 2 syntheses · last updated 2026-05-09
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -597,6 +597,7 @@ Add a project from inside its directory with `/brain-add-project` in any Claude 
 
 ### Active
 
+- [[wiki/projects/asanti-brokers]] — marketing website for *Asanti Brokers Limited*, a Ghana NIC-registered insurance brokerage; Next.js 16 App Router + React 19 + Tailwind v4 static-shaped site with one route per product line (motor / property / business-liability / fire & perils / marine cargo / travel / personal accident / group employee benefits); WhatsApp CTA + cookie consent + NIC trust badge; deployed at `asanti.insure` on Vercel.
 - [[wiki/projects/coffee-break-with-big-sis]] — multi-tenant networking + mentorship SaaS for institutions (universities, alumni chapters, professional bodies); schema-per-tenant Spring Boot 3.4 / Java 17 backend + React 19 / Vite 7 / Tailwind v4 frontend; weighted-Jaccard mentor↔mentee matching across 6 dimensions. Editorial Café Zine redesign of landing + 3 auth pages shipped 2026-04-11.
 - [[wiki/projects/cpc-rtbvd]] — bid-stage React 19 + Tailwind v4 dashboard prototype + full QCBS bid package for the **Cocoa Processing Company Plc** "Real-Time Business Visibility" tender (RFP CPC/PRO/CS/1/26, deadline 8 Apr 2026); GHS 2.98M firm 12-week build for SoftTech Solutions; no VAT, no maintenance, no training scope (handover model); 4 named Key Experts (Godwin/Lilian/Richmond/Christian); bid finalized 2026-05-09 awaiting CPC award.
 - [[wiki/projects/kivora]] — AI-powered multi-tenant SaaS GRC platform (product name **ROAM GRC**); 13-module Spring Boot backend + React/Vite frontend + FastAPI Claude agent with pgvector RAG; named as Vedge's GRC of record. **Tier 1 of the Finding-schema migration** shipped end of 2026-05-08, dual-writing in production behind a toggle pending 2-week observation; worked example of [[wiki/concepts/dual-write-rollout]].
