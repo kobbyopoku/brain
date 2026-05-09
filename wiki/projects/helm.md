@@ -4,13 +4,13 @@ title: Helm
 created: 2026-05-09
 updated: 2026-05-09
 status: active
-repo: TBD
-local_path: TBD (proposed: /Users/kobbyopoku/ROAM/CascadeProjects/helm)
+repo: TBD — to be created in new ROAM-Labs/ GitHub org
+local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm (to be created)
 stack: [hermes-agent, python-3.11, fastapi, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel]
 started: 2026-05-09
 owner_org: roam-labs
 affiliation: roam-labs-internal
-working_name: Helm (placeholder; alternates: ROAM OS, Mosaic, Atlas, Mesh)
+name_confirmed: 2026-05-09
 aliases: [roam-helm, roam-ops-platform]
 tags: [project, multi-agent, internal-tool, hermes-agent, ops-automation, lead-management, marketing, sales, project-management, single-user]
 ---
@@ -228,16 +228,30 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 | 8 | Analytics agent system-prompt rewrites stay in review mode permanently | Auto-applying agent prompts to other agents is unsafe; manual approval gate is the safety boundary | Constraint engineering from CyrilXBT's Communication-agent precedent |
 | 9 | Single-user JWT auth, no RBAC, no multi-tenant scoping | Q5 + Q6 → cut polish | Q5, Q6 (a) |
 
+## Resolved decisions (2026-05-09)
+
+Six of the seven open questions resolved per Godwin's "proceed" with recommended defaults. Recorded here so future read-mode sessions don't re-ask:
+
+| # | Question | Resolution |
+|---|---|---|
+| 1 | **Working name** | ✅ **Helm** (confirmed 2026-05-09). |
+| 2 | **Repo location** | ✅ **New `ROAM-Labs/` GitHub org**. Cleaner separation from personal repos and from Brolly-Africa. Org to be created when Godwin starts Week 1 build. |
+| 3 | **Hermes Agent fork vs upstream** | ✅ **Upstream**. Pick up improvements without merge cost. Fork only if a specific feature is missing. |
+| 4 | **CRM choice for Week 1** | ✅ **Notion-as-CRM** for Weeks 1-3. Cheap, fast to set up, no MCP needed (Hermes can hit Notion via REST). Migrate to self-hosted Postgres-backed by Week 4 once schema stabilizes. |
+| 6 | **Brain-wiki MCP build effort** | ✅ **1-day read-only file-system MCP** serving `~/brain/wiki/`. Build the simple version Week 5; upgrade to pgvector-indexed semantic search later if/when query latency becomes a felt cost. |
+| 7 | **Notification channels** | ✅ **Email-first** for the 7AM Morning Briefing + 5PM End-of-Day Wrap-up. **Slack DM** for high-priority alerts (Week 4 enhancement). Telegram deferred. |
+| 8 | **Scheduled-task runtime** | ✅ **APScheduler in-process** (matches [[wiki/projects/clarvyn|Clarvyn]]'s pattern). Upgrade to Railway cron if reliability concerns surface in production. |
+
 ## Open questions
 
-- **Working name**: Helm vs ROAM OS vs Mosaic vs Atlas vs Mesh? *(Helm is the placeholder; Godwin to pick.)*
-- **Repo location**: Private GitHub under `kobbyopoku/`? Under `Brolly-Africa/`? Under a new `ROAM-Labs/` org? Recommend: new `ROAM-Labs/` GitHub org for cleaner separation between owned products and personal repos.
-- **Hermes Agent fork vs upstream**: default upstream; fork only if a specific feature is missing.
-- **CRM choice for Week 1**: Notion-as-CRM (Postgres-syncable; cheap; no MCP yet) vs HubSpot Free (full MCP; lower flexibility) vs self-hosted Postgres-backed (most control; most build effort)? Recommend Notion for Week 1 → migrate to self-hosted by Week 4.
-- **Voice profile collection**: which 20 best pieces per product? Vedge has [[wiki/projects/vedge|landing-site]] copy; Kivora has [[wiki/projects/kivora|product surfaces]]; Clarvyn has [[wiki/projects/clarvyn|portal copy]]. ROAM Labs corp voice unsettled per [[wiki/projects/roamlabs|_roamlabs]].
-- **Brain-wiki MCP build effort**: 1 day for read-only file-system MCP serving `~/brain/wiki/`; 3 days if we want semantic search via pgvector indexing. Recommend Day-1 simple version; upgrade later.
-- **Notification channels**: morning briefing arrives via email + Slack DM? Just email? Just Slack? Telegram for higher signal? Recommend email-first, Slack-DM as Week 4 enhancement.
-- **Scheduled-task runtime**: Railway cron jobs vs APScheduler in the FastAPI process vs separate scheduler service? Recommend APScheduler initially (matches Clarvyn's pattern); upgrade to Railway cron if reliability concerns surface.
+The single remaining open question:
+
+- **Voice profile sources (Q5)**: which 20 best pieces per product?
+  - **[[wiki/projects/vedge|Vedge]]**: landing-site copy + sales-deck copy + walkthrough scripts? *(TBD — Godwin to pull.)*
+  - **[[wiki/projects/kivora|Kivora]] / ROAM GRC**: product surfaces + landing copy + customer-facing docs? *(TBD — Godwin to pull.)*
+  - **[[wiki/projects/clarvyn|Clarvyn]]**: portal copy + landing copy + email templates? *(TBD — Godwin to pull.)*
+  - **ROAM Labs corp / [[wiki/projects/roamlabs|_roamlabs]]**: voice currently unsettled per the project's "visual direction in flux" note. May be the *first* product to need voice extraction so the brand stabilizes.
+  - **Helm-blocking impact**: Marketing agent is Week 3. If voice profiles aren't pulled by Week 2, Marketing agent ships with placeholder voice profiles and gets refined Week 3-4. Not a Week-1-blocker.
 
 ## Lessons learned
 

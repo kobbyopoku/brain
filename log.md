@@ -538,3 +538,19 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
   - **Hermes Agent runtime over hand-rolled stack** (Q4 (c)) — first ROAM Labs project that *isn't* on the Spring Boot + FastAPI Claude + pgvector signature. Trade: ship-speed > stack-reuse-elegance. Compounds on a different axis (Hermes's built-in skills + memory + 200-provider routing).
 - 7 open questions captured in the project page for Godwin's resolution: working name choice, repo location (recommend new ROAM-Labs/ GitHub org), Hermes fork-or-upstream, CRM choice for Week 1 (recommend Notion → migrate to self-hosted by Week 4), voice-profile collection sources, brain-wiki MCP build effort (1 day simple / 3 days semantic), notification channels (recommend email-first, Slack DM as Week 4 enhancement), scheduled-task runtime (recommend APScheduler in-process initially).
 - notes: **Helm is the most direct application of the 2026-05 ingest cluster** — every major source ingested in the past two weeks feeds into one of its 6 agents. The brain is finally being consumed by a system designed against it. The blueprint synthesis crystallizes the pattern at a level that's reusable for the next multi-agent platform (the [[wiki/projects/vedge|vedge_agent]] repo currently scaffolding-only is a candidate adopter). **Brolly Africa entity still pending** — the new affiliation value `brolly-africa-product` is recognized in CLAUDE.md, but the Brolly Africa organization entity itself remains for Godwin to file. **Stub watch**: 221 → still 221 (the new project + synthesis don't introduce new stub entities).
+
+## [2026-05-09] update-project | Helm — name confirmed; 6 of 7 open questions resolved
+- User confirmed: *"helm sounds good. proceed"* — locking the working name and accepting the recommended defaults across the open questions.
+- pages updated:
+  - [[wiki/projects/helm]] — frontmatter `working_name` field replaced with `name_confirmed: 2026-05-09` (no longer a placeholder). `repo:` updated to *"to be created in new ROAM-Labs/ GitHub org"*. `local_path:` set to proposed `/Users/kobbyopoku/ROAM/CascadeProjects/helm` (to be created when Godwin starts Week 1). New "Resolved decisions" section captures Q1-Q4, Q6, Q7, Q8 with explicit resolutions; "Open questions" section reduced to the single remaining Q5 (voice profile sources per product).
+- Resolutions captured:
+  - **Q1 Name**: Helm.
+  - **Q2 Repo location**: new `ROAM-Labs/` GitHub org. Godwin to create when Week 1 build starts.
+  - **Q3 Hermes Agent**: upstream by default; fork only if needed.
+  - **Q4 CRM Week 1**: Notion-as-CRM Weeks 1-3 → migrate to self-hosted Postgres-backed by Week 4.
+  - **Q6 Brain-wiki MCP**: 1-day simple file-system MCP version Week 5; semantic upgrade later if needed.
+  - **Q7 Notification channels**: email-first for daily briefings; Slack DM for high-priority alerts (Week 4); Telegram deferred.
+  - **Q8 Scheduler**: APScheduler in-process (matches Clarvyn pattern); upgrade to Railway cron if reliability issues surface.
+- still open:
+  - **Q5 Voice profile sources**: which 20 best pieces per product (Vedge / Kivora / Clarvyn / ROAM Labs corp). Marketing agent is Week 3 build — if voice profiles aren't pulled by Week 2, Marketing ships with placeholders and gets refined Week 3-4. **Not a Week-1 blocker.**
+- notes: This is a tiny update-project pass; the main schema change is the `name_confirmed:` frontmatter field replacing `working_name:`. The "Resolved decisions" + "Open questions" split is worth absorbing as a wiki convention — when a project pages opens with N questions and the user resolves M, the N-M format keeps the unresolved ones surfaced without losing the resolution log.
