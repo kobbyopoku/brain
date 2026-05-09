@@ -1,0 +1,297 @@
+---
+type: project
+title: Helm
+created: 2026-05-09
+updated: 2026-05-09
+status: active
+repo: TBD
+local_path: TBD (proposed: /Users/kobbyopoku/ROAM/CascadeProjects/helm)
+stack: [hermes-agent, python-3.11, fastapi, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel]
+started: 2026-05-09
+owner_org: roam-labs
+affiliation: roam-labs-internal
+working_name: Helm (placeholder; alternates: ROAM OS, Mosaic, Atlas, Mesh)
+aliases: [roam-helm, roam-ops-platform]
+tags: [project, multi-agent, internal-tool, hermes-agent, ops-automation, lead-management, marketing, sales, project-management, single-user]
+---
+
+> **Lineage**: internal multi-agent operations platform for [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder + sole user). **Internal-only**, not commercial — but architecturally informed by the wiki's strongest multi-agent blueprints (CyrilXBT 5-agent / Khairallah three-session / Saraev DOE / NainsiDwiv tool-calling reliability).
+
+# Helm
+
+> Multi-agent platform that automates ROAM Labs' GTM + business operations across all owned products (Vedge / Kivora / Clarvyn) and client engagements. Single user (Godwin), [[wiki/entities/hermes-agent|Hermes Agent]] runtime, FastAPI orchestrator on Railway, Next.js supervision UI on Vercel, PostgreSQL + pgvector for shared knowledge layer. **6-week sequential build order** modeled directly on [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT's 5-agent system]], with Lead Management as the Week 1 MVP for immediate revenue impact.
+
+## What and why
+
+ROAM Labs has 3 owned products, 2 client engagements, 1 government subcontract, and 1 corporate marketing site — 9 active projects competing for one human's attention. Engineering work is already heavily automated via Claude Code. **The bottleneck is now GTM + business operations**: lead identification, sales follow-through, marketing across 3 distinct product voices, invoicing/collections, vendor management, and cross-project visibility. Helm is the agent stack that closes that bottleneck.
+
+**Why a single shared agent stack** (vs per-product): leads for Vedge (healthcare facilities), Kivora (compliance teams), and Clarvyn (startup founders) are different markets, but the *qualification logic*, *outreach mechanics*, and *pipeline structure* are the same. One Lead Management agent that knows about all 3 products can cross-sell ("this prospect is a 50-person clinic — pitch Vedge primary, mention Clarvyn for their HR pain"). Same for Marketing (one agent, three voice profiles), Sales, Operations, and PM.
+
+**Why internal-only**: Godwin is the only user. No multi-tenant data scoping, no RBAC, no productization polish. Single JWT or session auth. Cuts ~30% of the build surface; saves ~6 weeks vs an extractable-product version. If Helm becomes commercial later, the architecture absorbs that — the [[wiki/projects/clarvyn|Clarvyn]] portal pattern (single-tenant-scope-able) is the upgrade path.
+
+**Why Hermes Agent runtime** (vs reusing Clarvyn's FastAPI + Spring Boot agent service stack): Hermes ships built-in skills, persistent memory, deepening user model, multi-platform messaging gateway (Telegram + Discord + Slack + WhatsApp + Signal + Email + CLI), and 200+ model routing via OpenRouter. The trade is *ship-speed > stack-reuse-elegance*. For an internal tool where the goal is "Godwin gets time back," Hermes's built-in machinery beats hand-rolling another agent service.
+
+## Stack and infrastructure
+
+### Layer 1 — Agent runtime: Hermes Agent
+- Open-source, MIT-licensed, by [[wiki/entities/nous-research|Nous Research]] / [[wiki/entities/hermes-agent|Hermes Agent]] entity in the wiki.
+- Self-improving learning loop creates skills from experience.
+- Persistent memory (FTS5-indexed conversation search).
+- 200+ model providers via [[wiki/entities/openrouter|OpenRouter]].
+- Multi-platform messaging out-of-box (Helm uses CLI + email + Slack initially; Telegram for proactive notifications later).
+- Open question: fork or use upstream? Default *upstream* — pick up improvements without merge cost.
+
+### Layer 2 — Orchestrator: FastAPI on Railway
+- Wraps Hermes Agent in HTTP for the frontend to consume.
+- Routes requests to specific agents (Lead / Sales / Marketing / Ops / PM / Analytics).
+- Holds the *master CLAUDE.md* (the system context governing all agents — see `master-claude-md.md` template below).
+- Schedules cron-style triggers for the daily 7AM briefing + 5PM wrap-up (Khairallah pattern).
+
+### Layer 3 — Database: PostgreSQL + pgvector on Railway
+- **Shared knowledge layer** — every agent can read/write here.
+- Tables: `leads`, `deals`, `customers`, `invoices`, `expenses`, `content_drafts`, `voice_profiles`, `project_status`, `agent_logs`, `agent_optimizations`.
+- pgvector for: voice-profile embeddings (per product), lead-similarity matching, content-archive semantic search, product-knowledge RAG.
+- Same database choice as [[wiki/projects/kivora|Kivora]] and [[wiki/projects/clarvyn|Clarvyn]] — Godwin's signature for vector data.
+
+### Layer 4 — Frontend: Next.js on Vercel
+- Single-user supervision UI. No multi-tenant complexity.
+- Pages:
+  - **Dashboard** — agent status, today's pipeline, alerts, decisions-needed inbox.
+  - **Leads** — pipeline by stage, signal-score sorted, per-row drill-into.
+  - **Deals** — sales-stage Kanban, close-rate analytics.
+  - **Marketing** — content-object run folders (Shann Holmberg pattern), voice-profile editor per product.
+  - **Operations** — invoices/expenses/vendors/hiring-pipeline; weekly business reports.
+  - **Projects** — 9-row table reading from BRAIN.md drops in each project repo.
+  - **Agents** — per-agent system-prompt editor, system-prompt change history, monthly Analytics-agent recommendations.
+  - **Logs** — agent execution logs, errors, costs.
+
+### Layer 5 — Specialized agents (5 + 1 meta-orchestrator)
+
+Six agents, scoped to GTM + business ops only (engineering is out of scope per Q1):
+
+| # | Agent | Job | Wiki blueprint |
+|---|---|---|---|
+| 1 | **Lead Management** *(Week 1 MVP)* | Prospect identification (Google Maps + LinkedIn signals), qualification scoring, outreach drafting, follow-up sequencing | [[wiki/sources/exploraX_-google-maps-leadgen]] |
+| 2 | **Sales** *(Week 2)* | Pipeline management, deal-stage tracking, proposal drafting, close-rate analytics, contract follow-through | [[wiki/sources/ig_claims-x-meta-retargeting]] (Conviction Gap Model for proposal copy) |
+| 3 | **Marketing** *(Week 3)* | Content production across 3 product voices, social posting, AI-SEO optimization | [[wiki/sources/shannholmberg-content-os]] + [[wiki/sources/bloggersarvesh-20-seo-prompts]] |
+| 4 | **Operations** *(Week 4)* | Invoicing, collections, expense tracking, hiring pipeline, vendor management, weekly reports | [[wiki/sources/cyrilxbt-x-2052570518667378918]] (Operations Agent prompt) |
+| 5 | **Project Management** *(Week 5)* | Cross-project visibility (9 active), milestone tracking, status reports, risk flags | reads BRAIN.md drops; pulls from this wiki via brain-MCP |
+| 6 | **Analytics** *(Week 6 — meta-orchestrator)* | Identifies performance patterns across the other 5, generates monthly system-prompt updates for each | [[wiki/concepts/self-annealing]] codified |
+
+**The Analytics agent is the most architecturally important one** — it rewrites the system prompts of the other 5 agents based on monthly performance data. CyrilXBT's pattern. Without it, Helm runs the same way in week 52 as in week 6; with it, every agent gets monthly optimization for the compound effect.
+
+## Reference architecture (pulled from the wiki)
+
+### Master CLAUDE.md template (governs all 6 agents)
+
+Per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT's]] verbatim master template, adapted to ROAM Labs:
+
+```
+# Master System Context
+
+## Business Overview
+ROAM Labs is an AI products + services company founded by Godwin Opoku Duah.
+Three commercial products (Vedge / Kivora / Clarvyn), two client engagements
+(Coffee Break / StaceSprouts), one government subcontract (CPC RTBVD via SoftTech).
+See ~/brain/wiki/entities/roam-labs.md for canonical reference.
+
+## Agent Roster
+- Lead Management: prospect identification + qualification + outreach drafting
+- Sales: pipeline management + deal tracking + proposal drafting
+- Marketing: content production + social posting + AI-SEO across 3 product voices
+- Operations: invoicing + collections + expenses + reports + vendor mgmt
+- Project Management: cross-project visibility + milestones + risk flags
+- Analytics: monthly performance review + system-prompt rewrites for the other 5
+
+## Shared Standards
+- Reasoning vs execution: agents reason; tools execute. (See reasoning-execution-split.)
+- Cite or omit: every claim links to a verifiable source.
+- Cost discipline: Sonnet 80%, Opus for complex reasoning, Haiku for simple tasks.
+- Output format: structured (no rambling prose; lists/tables/JSON where appropriate).
+
+## Current Focus
+[Updated weekly by Godwin: e.g. "Week of 2026-05-09: Q3 lead generation push;
+CPC award decision pending; Clarvyn Wave 7 prep."]
+
+## Hard Rules That Apply to All Agents
+- NEVER promise anything Godwin hasn't authorized.
+- NEVER reference competitors by name in client-facing copy.
+- NEVER discuss Helm's existence externally — it is internal infrastructure.
+- When uncertain about scope or pricing: ESCALATE to Godwin via the supervision UI.
+- All scheduled communications go through "review mode" for 14 days before automated send.
+```
+
+### Daily scheduling (Khairallah three-session pattern)
+
+| Time | Trigger | Agent | Output |
+|---|---|---|---|
+| 7AM | Cron | Lead Management + Operations | Morning briefing markdown file: pipeline stage summary, urgent decisions, top 3 priorities |
+| Manual (1-3pm) | Godwin | Whichever | Production block — bulk drafts, pipeline updates, content production |
+| 5PM | Cron | All 5 | End-of-day wrap-up + carry-forward into tomorrow's briefing |
+| 1st of month | Cron | Analytics | Monthly performance review + system-prompt change recommendations for the other 5 |
+
+### Tool-calling reliability rubric (NainsiDwiv 7-step)
+
+Every MCP integration must satisfy:
+
+1. **Protocol** — MCP wire format ✅ (Hermes natively supports)
+2. **Tool definitions as contracts** — name + description + arg schema as durable interfaces
+3. **Error handling** — every tool failure surfaced to the agent for recovery
+4. **Parallelization** — explicit conflict-free vs serial-required tool annotations
+5. **Catalog size** — trim aggressively; per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] each MCP server costs 600-18,000 tokens per turn
+6. **Security** — auth scope minimization, credential isolation per agent
+7. **Evaluation** — tool-call success rates, latency, cost tracked per call in `agent_logs`
+
+### MCP catalog (initial + planned)
+
+**Built-in (Hermes ships these)**: web search, file ops, calendar, email.
+
+**Custom MCPs to build** (in build-order priority):
+- **Stripe MCP** — invoicing, subscriptions, payment status (Week 2 for Sales agent)
+- **Google Workspace MCP** — Gmail + Calendar + Drive (Week 1; Hermes built-in may suffice)
+- **GitHub MCP** — read PR status, issue counts, deploy status (Week 5 for PM agent)
+- **Brain-wiki MCP** — read this brain (`~/brain/wiki/`); query syntheses + project pages (Week 5 for PM agent)
+- **Postiz MCP** — social-media scheduling (Week 3 for Marketing; from [[wiki/entities/postiz|Postiz]])
+- **Accounting MCP** — QuickBooks or Xero (Week 4 for Operations agent)
+- **Slack MCP** — internal notifications (Week 4)
+- **CRM MCP** — TBD; Notion or HubSpot or self-hosted Postgres-backed (Week 1, blocking)
+
+## Build order (6 weeks)
+
+Per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT's]] sequential pattern:
+
+### Week 1 — Lead Management Agent (MVP)
+- Hermes Agent runtime stood up on Railway.
+- FastAPI shell with one endpoint: `/lead/qualify` and `/lead/outreach`.
+- Next.js Vercel shell: Dashboard page + Leads page (read-only initially).
+- Postgres schema: `leads` table with signal scoring fields.
+- **Direct application of [[wiki/sources/exploraX_-google-maps-leadgen|m0h's playbook]]**: 4 prospect signals + Instant Data Scraper output → Hermes filters and writes outreach.
+- **Goal**: end of Week 1, Helm produces a daily list of 20 qualified prospects with personalized outreach drafts. Godwin manually approves before send.
+
+### Week 2 — Sales Agent
+- `deals` schema with stage Kanban.
+- Stripe MCP integration (basic invoicing on close).
+- Conviction Gap Model proposal copy (per [[wiki/sources/ig_claims-x-meta-retargeting]]).
+- **Goal**: end of Week 2, Lead → Sales handoff is automated.
+
+### Week 3 — Marketing Agent
+- `voice_profiles` table (one per product: Vedge / Kivora / Clarvyn / ROAM Labs corp).
+- Voice-profile extraction methodology: feed Hermes 20 best pieces per product, extract patterns, store as voice profile (per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT]] + [[wiki/sources/shannholmberg-content-os|Shann]] convergence).
+- Postiz MCP integration for cross-channel posting.
+- AI-SEO prompts adapted from [[wiki/sources/bloggersarvesh-20-seo-prompts]].
+- Master avoid-slop document loaded per agent (per [[wiki/concepts/anti-ai-slop-machinery]]).
+- **Goal**: end of Week 3, Helm produces a week's worth of content across 3 product voices, queued in Postiz, awaiting Godwin's review pass.
+
+### Week 4 — Operations Agent
+- Accounting MCP (QuickBooks or Xero).
+- Stripe + accounting reconciliation.
+- 7AM Morning Briefing + 5PM End-of-Day Wrap-up cron jobs (Khairallah pattern).
+- 4-tier email urgency triage (per Khairallah).
+- **Goal**: end of Week 4, Godwin's morning starts with a one-page briefing in his Inbox + Slack DM.
+
+### Week 5 — Project Management Agent
+- Brain-wiki MCP (read-only access to `~/brain/wiki/`).
+- GitHub MCP (PR + commit + deploy status across 9 active projects).
+- BRAIN.md drop integration — agent reads `~/Projects/*/BRAIN.md`, follows pointer to brain page.
+- **Goal**: end of Week 5, the Projects page in Helm shows live status across Vedge / Kivora / Clarvyn / Brolly / CBwBS / StaceSprouts / Asanti / CPC RTBVD / _roamlabs.
+
+### Week 6 — Analytics Agent (meta-orchestrator)
+- Monthly cron job that reads `agent_logs` for the previous 30 days.
+- Identifies patterns: which Lead-Mgmt prompts produced highest-converting outreach? Which Marketing voice-profile elements correlate with engagement?
+- Generates `agent_optimizations` records: specific system-prompt diffs to apply to the other 5.
+- **Critical safety constraint**: Analytics agent's prompt rewrites do NOT auto-apply. Godwin reviews and approves each one in the Helm UI. (Per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT]]'s constraint engineering — Communication agent ran in review mode for 2 weeks before auto-send; Analytics agent stays review-mode permanently for system-prompt changes.)
+- **Goal**: end of Week 6, Helm has a closed-loop self-annealing mechanism with human-approval gates.
+
+## Cost discipline (from day 1)
+
+Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/zodchiii-x-claude-code-settings|zodchii]]:
+
+- **Master CLAUDE.md cap**: ~1,500 tokens combined. (Helm's master + per-agent specifics ≤ 1,500 each.)
+- **MCP catalog discipline**: only connect MCPs an agent actively uses. Lead Management agent doesn't load Stripe MCP; Marketing agent doesn't load GitHub MCP.
+- **Model routing**: Sonnet for 80%, Opus for Analytics agent's monthly review only, Haiku for simple categorizations and the morning-briefing email triage.
+- **Budget caps per agent run**: `--max-budget-usd` style caps to prevent runaway loops in scheduled jobs.
+- **Hermes Agent's OpenRouter integration** lets us experiment with cheaper providers (Claude Haiku 3.5, GPT-4o-mini, DeepSeek) for non-critical agent tasks.
+
+**Target operating cost**: <$300/mo total Claude/OpenRouter spend (vs CyrilXBT's $700-900/mo for the equivalent 5-agent system — Helm should be cheaper because single-user usage is lower volume than CyrilXBT's content business).
+
+## Architecture decisions
+
+| # | Decision | Rationale | Source |
+|---|---|---|---|
+| 1 | Hermes Agent as runtime | Built-in skills + memory + 200-provider routing > hand-rolling | Q4 (c) per [[wiki/entities/hermes-agent]] |
+| 2 | FastAPI orchestrator (not Spring Boot) | Hermes is Python; same-language saves 1-2 weeks | Q4 (c) consequence |
+| 3 | PostgreSQL + pgvector (single DB) | Reuse from Kivora/Clarvyn; vector layer for voice profiles + lead similarity | [[wiki/entities/godwin-opoku-duah]] signature stack |
+| 4 | Next.js + Vercel frontend | User stated; matches _roamlabs and Asanti patterns | Q-prerequisite |
+| 5 | Single shared agent stack across all products | Cross-sell context compounds; simpler than per-product stacks | Q2 (a) |
+| 6 | Lead Management as Week 1 MVP | Immediate revenue impact; m0h playbook gives a 90-min path to working agent | Q3 (c) |
+| 7 | 6-week sequential build (one agent per week) | CyrilXBT's documented order; debugging in isolation; learning failure modes one at a time | [[wiki/sources/cyrilxbt-x-2052570518667378918]] |
+| 8 | Analytics agent system-prompt rewrites stay in review mode permanently | Auto-applying agent prompts to other agents is unsafe; manual approval gate is the safety boundary | Constraint engineering from CyrilXBT's Communication-agent precedent |
+| 9 | Single-user JWT auth, no RBAC, no multi-tenant scoping | Q5 + Q6 → cut polish | Q5, Q6 (a) |
+
+## Open questions
+
+- **Working name**: Helm vs ROAM OS vs Mosaic vs Atlas vs Mesh? *(Helm is the placeholder; Godwin to pick.)*
+- **Repo location**: Private GitHub under `kobbyopoku/`? Under `Brolly-Africa/`? Under a new `ROAM-Labs/` org? Recommend: new `ROAM-Labs/` GitHub org for cleaner separation between owned products and personal repos.
+- **Hermes Agent fork vs upstream**: default upstream; fork only if a specific feature is missing.
+- **CRM choice for Week 1**: Notion-as-CRM (Postgres-syncable; cheap; no MCP yet) vs HubSpot Free (full MCP; lower flexibility) vs self-hosted Postgres-backed (most control; most build effort)? Recommend Notion for Week 1 → migrate to self-hosted by Week 4.
+- **Voice profile collection**: which 20 best pieces per product? Vedge has [[wiki/projects/vedge|landing-site]] copy; Kivora has [[wiki/projects/kivora|product surfaces]]; Clarvyn has [[wiki/projects/clarvyn|portal copy]]. ROAM Labs corp voice unsettled per [[wiki/projects/roamlabs|_roamlabs]].
+- **Brain-wiki MCP build effort**: 1 day for read-only file-system MCP serving `~/brain/wiki/`; 3 days if we want semantic search via pgvector indexing. Recommend Day-1 simple version; upgrade later.
+- **Notification channels**: morning briefing arrives via email + Slack DM? Just email? Just Slack? Telegram for higher signal? Recommend email-first, Slack-DM as Week 4 enhancement.
+- **Scheduled-task runtime**: Railway cron jobs vs APScheduler in the FastAPI process vs separate scheduler service? Recommend APScheduler initially (matches Clarvyn's pattern); upgrade to Railway cron if reliability concerns surface.
+
+## Lessons learned
+
+*(none yet — project is at the brief-and-design stage)*
+
+## Risks
+
+- **Hermes Agent maturity**: 23k+ stars but a relatively new project. If a critical bug surfaces, Godwin may need to fork and patch — adding maintenance burden.
+- **Analytics agent prompt-rewrite quality**: bad rewrites could degrade the other 5 agents. Mitigation: review-mode permanent + system-prompt change history with rollback.
+- **Single-user assumption**: if Godwin hires a team, Helm's no-RBAC architecture becomes a refactor liability. Mitigation: design data model with `user_id` columns from day 1 (just don't surface UI for them yet).
+- **Cross-product context bleed**: a Lead Management agent that pitches Vedge to a clinic might also accidentally cross-sell Clarvyn (HR for clinic owners?) — could be feature, could be confusion. Mitigation: per-prospect *primary product* tag; agent leads with primary, mentions secondary only if signals support.
+- **Hermes Agent's self-improving loop**: it creates skills from experience. Without supervision, it might create skills that don't match Godwin's preferences. Mitigation: skill-creation review queue in Helm UI.
+
+## Composition with the brain
+
+Helm is the **most direct application of the wiki's 2026-05 ingest cluster** — every major source from the last week feeds into one of its 5 specialized agents:
+
+- [[wiki/sources/exploraX_-google-maps-leadgen]] → Lead Management agent
+- [[wiki/sources/ig_claims-x-meta-retargeting]] → Sales agent's Conviction Gap proposals
+- [[wiki/sources/shannholmberg-content-os]] + [[wiki/sources/bloggersarvesh-20-seo-prompts]] → Marketing agent
+- [[wiki/sources/cyrilxbt-x-2052570518667378918]] → master CLAUDE.md template + Operations agent + Analytics agent
+- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] → daily scheduling pattern (7AM / midday / 5PM)
+- [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] → MCP integration discipline
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]] + [[wiki/sources/zodchiii-x-claude-code-settings]] → cost discipline
+- [[wiki/sources/Shruti_0810-self-improving-obsidian]] + [[wiki/sources/llm-wiki-pattern-karpathy]] → Brain-wiki MCP for the PM agent
+
+**The brain is finally being consumed by an agent stack that was designed against it.**
+
+## Related projects
+
+- [[wiki/projects/clarvyn]] — same Hermes-style agent design at startup-HR scope; the architectural sibling.
+- [[wiki/projects/vedge]] — `vedge_agent` repo is currently scaffolding-only; Helm's Hermes-runtime pattern is a candidate for adoption there.
+- [[wiki/projects/kivora]] — Spring Boot + FastAPI Claude variant of the same idea; Helm chose Hermes instead.
+
+## Related concepts
+
+- [[multi-agent-orchestration]] — primary concept this project instantiates.
+- [[reasoning-execution-split]] — architectural foundation.
+- [[doe-framework]] — every agent is a DOE cycle.
+- [[self-annealing]] — Analytics agent codifies the pattern.
+- [[hot-cache]] — daily morning briefing pattern.
+- [[scheduled-automation]] — 7AM / 5PM cron triggers.
+- [[markdown-as-agent-contract]] — master CLAUDE.md + per-agent SKILL.md.
+- [[mcp-server]] — 7-step reliability rubric applied per integration.
+- [[anti-ai-slop-machinery]] — Marketing agent loads master avoid-slop document.
+- [[claude-code-overhead-patterns]] — cost discipline from day 1.
+- [[reliability-decay-math]] — 6 agents × 95% per-step = 73% end-to-end; motivates aggressive error handling + reasoning-execution split.
+
+## Related entities
+
+- [[wiki/entities/godwin-opoku-duah]] — sole user; primary identity.
+- [[wiki/entities/roam-labs]] — owner; Helm automates ROAM Labs operations.
+- [[wiki/entities/hermes-agent]] — runtime.
+- [[wiki/entities/nous-research]] — Hermes Agent maintainer.
+- [[wiki/entities/openrouter]] — multi-provider LLM routing.
+- [[wiki/entities/anthropic]] — Claude (primary model).
+- [[wiki/entities/postiz]] — social publish layer (Marketing agent).

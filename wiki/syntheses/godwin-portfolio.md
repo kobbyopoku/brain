@@ -7,6 +7,8 @@ aliases: [roam-portfolio, kobby-portfolio, godwin-projects]
 tags: [synthesis, portfolio, roam-labs, brolly-africa, project-landscape, wiki-owner]
 ---
 
+> **Refresh log**: 2026-05-09 — added Bucket 5 (ROAM Labs internal tools) for [[wiki/projects/helm|Helm]]. Brolly project still pending its Brolly Africa entity.
+
 # Godwin Opoku Duah — Portfolio Landscape
 
 > **One-page map** of every project [[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]] owns or delivers, organized by *who owns the IP* and *who holds the client relationship*. Filed 2026-05-09 after the user explicitly briefed the brain on his organizational landscape. Updates when Brolly Africa is entified separately.
@@ -83,6 +85,24 @@ The `/Users/kobbyopoku/Brolly/asanti-brokers` filesystem path reflects the Broll
 | [[wiki/projects/cpc-rtbvd]] | [[wiki/entities/softtech-solutions]] | Cocoa Processing Company Plc (CPC) | Bid submitted 2026-05-09; GHS 2,980,000 firm all-inclusive lump sum; 12-week build proposed; awaiting award decision |
 
 [[wiki/entities/softtech-solutions|SoftTech Solutions]] holds the prime contract with CPC; ROAM Labs is the subcontracted technical-delivery partner. Godwin is named **PM/CTO Key Expert** in the QCBS bid response (CPC/PRO/CS/1/26).
+
+## Bucket 5 — ROAM Labs internal tools (added 2026-05-09)
+
+Tools ROAM Labs builds for its own internal use. Not commercial; not client work; not corporate-self marketing — they're operational infrastructure for the org itself.
+
+| Project | Purpose | Status |
+|---|---|---|
+| [[wiki/projects/helm]] | Multi-agent ops platform automating GTM + business operations across all ROAM products + client work | Just-started 2026-05-09 — design phase complete, Week 1 build (Lead Management agent MVP) imminent. Single user (Godwin), Hermes Agent runtime ([[wiki/entities/hermes-agent]]), FastAPI on Railway, Next.js on Vercel, PostgreSQL + pgvector. 6-week sequential build modeled on CyrilXBT's 5-agent pattern (per [[wiki/sources/cyrilxbt-x-2052570518667378918]]). See [[wiki/syntheses/multi-agent-ops-platform-blueprint]] for the reusable blueprint Helm instantiates. |
+
+This bucket may grow over time as Helm patterns prove out — candidate future internal tools include a centralized brain-MCP server (Week 5 of Helm), a bid-templating tool extracted from the CPC RTBVD `docs/build_*.py` scripts, and possibly a cross-product analytics dashboard layered on Helm's `agent_logs` table.
+
+## Bucket 6 — Brolly Africa owned platform (added by Godwin 2026-05-09)
+
+The Brolly Africa side of the portfolio also has an owned platform alongside the Asanti client work:
+
+| Project | Domain | Status |
+|---|---|---|
+| [[wiki/projects/brolly]] | African insurtech / digital-insurance platform with vehicle-insurance roots in the Bolt-driver market; multi-repo workspace at `~/Brolly` | Active |
 
 ## Cross-cutting observations
 

@@ -20,7 +20,9 @@ Project pages carry `owner_org:` and `affiliation:` frontmatter so Dataview quer
 
 - `roam-labs-product` — ROAM Labs owns the IP and the commercial brand. (Vedge / Kivora / Clarvyn.)
 - `roam-labs-self` — ROAM Labs as its own marketing surface. (_roamlabs.)
+- `roam-labs-internal` — ROAM Labs builds for ROAM Labs's own use; not commercial, not client work. ([[wiki/projects/helm|Helm]].)
 - `roam-labs-client-work` — ROAM Labs delivers, the client owns the IP. (Coffee Break With Big Sis / StaceSprouts.)
+- `brolly-africa-product` — Brolly Africa owned platform. (Brolly itself.)
 - `brolly-africa-client-work` — Brolly Africa delivers, the client owns the IP. (Asanti Brokers.)
 - `softtech-subcontract` — SoftTech is prime, ROAM Labs subcontracts the build. (CPC RTBVD.)
 

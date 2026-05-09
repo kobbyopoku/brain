@@ -41,6 +41,12 @@ The "ROAM" umbrella covers product sub-brands:
 | [[wiki/projects/kivora]] | **ROAM GRC** | Multi-tenant SaaS GRC | Active — Tier 1 Finding-schema migration shipped 2026-05-08 |
 | [[wiki/projects/clarvyn]] | Clarvyn | AI-first HR for startup founders | Active — Wave 6 shipped (proactive conversations, MCP layer, Slack/Jira/GCal integrations) |
 
+### Internal tools (built for ROAM Labs's own use)
+
+| Project | Domain | Status |
+|---|---|---|
+| [[wiki/projects/helm]] | Multi-agent ops platform automating GTM + business operations across all ROAM products + client work | Just-started 2026-05-09 — design phase complete, week 1 build (Lead Management agent MVP) about to begin. Hermes Agent + FastAPI on Railway + Next.js on Vercel + PostgreSQL + pgvector. |
+
 ### Services / client work
 
 | Project | Client | Domain | Status |
