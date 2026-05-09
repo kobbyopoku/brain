@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 75 sources · 264 entities · 46 concepts · 2 projects · 2 syntheses · last updated 2026-05-08
+**Stats**: 75 sources · 266 entities · 47 concepts · 2 projects · 2 syntheses · last updated 2026-05-08
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -225,6 +225,8 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 
 - [[wiki/entities/aider]] — terminal pair programmer (mid-level dev replacement per heynavtoor).
 - [[wiki/entities/browserbase]] — *(stub)* managed-browser infrastructure for AI agents; the "AWS for headless browsers."
+- [[wiki/entities/ecc]] — *(stub)* hackathon-winning Claude Code automation tool (38 agents / 156 skills / 72 commands + AgentShield security audit). Surfaced via noisyb0y1.
+- [[wiki/entities/teamly]] — *(stub)* managed-AI-team platform with Pixel Department visual monitoring. Surfaced via darkzodchi (content-marketing flag).
 - [[wiki/entities/cline]] — VS Code autonomous agent.
 - [[wiki/entities/codex-cli]] — *(stub)* OpenAI's coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/cowork]] — *(stub)* Claude Code alternative named by heynavtoor.
@@ -516,6 +518,7 @@ All 139 Open Design brands are now reachable as wiki entities. The 27 most-cross
 ### Agent architecture
 
 - [[wiki/concepts/ai-os-pattern]] — Three Ms + Four Cs framework for treating Claude Code as an OS.
+- [[wiki/concepts/cognitive-debt]] — Rohit's framing: *"AI before independent thinking builds debt; AI after independent thinking amplifies."* Failure mode where AI-augmented work erodes underlying competence over time.
 - [[wiki/concepts/do-framework]] — Saraev's DOE framework (Directive + Orchestration + Execution; previously framed as 2-layer DO). The deterministic-agentic-workflow architecture.
 - [[wiki/concepts/self-annealing]] — system-level property of DOE workflows: directives accumulate fixes via the orchestrator's error-recovery loop, getting more reliable with use.
 - [[wiki/concepts/hot-cache]] — `_hot.md`: 500-token active-state file extending the LLM Wiki pattern.

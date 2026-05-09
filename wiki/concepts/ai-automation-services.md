@@ -71,3 +71,7 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 - [[wiki/sources/realbrianmoran-making-money-online-2026]]
 - [[wiki/sources/saraev-agentic-workflows-2026]]
 - [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]]
+- [[wiki/sources/cyrilxbt-x-2052570518667378918]] — *2026-05-08*. Concrete 5-agent cost-arithmetic ($105/mo + $700-$900 API ≈ $1K/mo total to replace 5 employees costing $350K/yr). Strengthens existing canon — sixth independent practitioner converging on the model.
+- [[wiki/sources/zodchiii-x-2052368125480354000]] — *2026-05-08*. Same cost-arithmetic from a different angle ($89 + $700-$900 API per AI team replacing $2K-$4.5K/month role); content-marketing flag for Teamly platform recommendation.
+- [[wiki/sources/itsalexvacca-x-2052740083820958072]] — *2026-05-08*. Vacca's tactical follow-up: 3 specific ColdIQ workflows (list-building / copywriting / campaign deployment) with 3-4× per-employee throughput compression.
+- [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — *2026-05-08*. Sarvesh's domain-specific instantiation: Claude Cowork as $10K/mo SEO agency replacement.
