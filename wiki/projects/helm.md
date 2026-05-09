@@ -15,7 +15,7 @@ aliases: [roam-helm, roam-ops-platform]
 tags: [project, multi-agent, internal-tool, hermes-agent, ops-automation, lead-management, marketing, sales, project-management, single-user]
 ---
 
-> **Lineage**: internal multi-agent operations platform for [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder + sole user). **Internal-only**, not commercial — but architecturally informed by the wiki's strongest multi-agent blueprints (CyrilXBT 5-agent / Khairallah three-session / Saraev DOE / NainsiDwiv tool-calling reliability).
+> **Lineage**: internal multi-agent operations platform for [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder + sole user). **Internal-only for v1** (decision recorded 2026-05-09; see [[wiki/syntheses/helm-commercialization-paths]] for the 3 shapes considered + re-evaluation trigger). Architecturally informed by the wiki's strongest multi-agent blueprints (CyrilXBT 5-agent / Khairallah three-session / Saraev DOE / NainsiDwiv tool-calling reliability).
 
 # Helm
 
@@ -245,6 +245,8 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 ## Resolved decisions (additional, 2026-05-09)
 
 - **Q5 Voice profiles**: ✅ **Starter drafts complete** at [[wiki/syntheses/helm-voice-profiles]]. Four profiles extracted from existing landing-site copy via [[wiki/sources/shannholmberg-content-os|Shann's brand-foundation-extraction methodology]]: **Vedge** (high confidence — distinctive editorial voice), **Kivora / ROAM GRC** (high — consistent B2B SaaS voice), **Clarvyn** (medium — Startup landing extracted; Enterprise landing different voice not yet extracted), **ROAM Labs corp** (low — voice currently unsettled per [[wiki/projects/roamlabs]]; flagged as draft-only, do not auto-send corporate content until brand stabilizes). Refine when curated samples available; migrate from `wiki/syntheses/` to `helm-repo/voice-profiles/` when Helm repo exists.
+
+- **Strategic shape (commercialization)**: ✅ **Internal-only for v1**. The "agent marketplace" shape (multi-tenant productized SaaS) was considered and **explicitly deferred**. Re-evaluate after 3-5 paying customers operating real volumes through Helm via the services-as-software path. Full decision record + 3 shapes considered + wiki evidence + re-evaluation trigger documented at [[wiki/syntheses/helm-commercialization-paths]]. **One architectural carry-over**: data model includes `tenant_id` columns from day 1 (UI doesn't surface them) — costs ~10% upfront, saves ~6 months later if multi-tenant pivot happens.
 
 ## Open questions
 
