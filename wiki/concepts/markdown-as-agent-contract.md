@@ -2,7 +2,7 @@
 type: concept
 title: Markdown as Agent Contract
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-05-09
 aliases: [markdown as agent config, agent-readable markdown]
 tags: [meta-pattern, ai-agents, markdown, agent-config, foundational]
 ---
@@ -47,6 +47,10 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — the pattern applied to **operations** rather than agents: ColdIQ documents repeatable client tasks as workflow files in markdown ("Written for someone who started Monday with zero context"). Same shape; different consumer (humans + agents both).
 - [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. Instantiates the meta-pattern at **seven layers simultaneously**: SKILL.md (64 bundles), DESIGN.md (138 systems with the richer 9-section schema), CLAUDE.md (project instructions per agent), per-CLI agent contracts, question-form structured intake outputs, `<artifact>` HTML emissions, and MCP `get_file` responses. The most multi-layered single instance of the pattern in the wiki. Each layer is markdown a human wrote that an agent acts on. *Particularly worth noting*: Open Design extends the meta-pattern with explicit **anti-AI-slop machinery** ([[anti-ai-slop-machinery]]) — pre-emit gates, P0/P1/P2 checklists, blacklists — which is the most explicit "agent output discipline" articulation yet ingested.
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — the pattern applied to **public-web buying-agent surfaces**: machine-readable endpoints like `/llms.txt`, `/pricing.md`, `/changelog.md` that expose product information directly to AI buying agents in a format they can consume. *"If pricing is hidden behind JavaScript or 'contact sales' an AI agent may simply exclude your product from a comparison."* The marketingskills repo itself is also an instance — a [[claude-code-skills|skill-pack]] in markdown — and its mandatory `product-marketing-context.md` is yet another instance ([[context-file]] applied to product-marketing). Three layers of the same meta-pattern visible in one source: the skill-pack (agent contract), the context file (agent contract), and the public web endpoints (buying-agent contract).
+- [[wiki/sources/TheAIWorld22-x-claude-md-21-instructions]] — *2026-05-08*. **The pattern extended to non-developer audiences.** TheAIWorld22 enumerates 21 specific CLAUDE.md instructions across 5 parts (how Claude talks / behaves / context / memory / for developers), positioning CLAUDE.md as a configuration-for-anyone, not a developer-only artifact. Closes with Karpathy's viral 4 rules and a third-party "65→94% coding accuracy" claim. Cumulatively the strongest checklist-style articulation of the pattern in the wiki — a complement to the *theory* of the pattern (Karpathy) with *concrete prescription* for what to actually put in the file.
+- [[wiki/sources/heygurisingh-x-cowork-setup]] — *2026-05-08*. The pattern applied to a **workspace-folder-level contract** for [[cowork|Claude Cowork]]. Guri prescribes paste-ready Global Instructions (a per-user master agent contract) and three folder-level conventions (`ABOUT ME/`, `PROJECTS/`, `TEMPLATES/`, `CLAUDE OUTPUTS/`) — folders themselves become a contract, with the agent expected to read context from `ABOUT ME/` and write output to `CLAUDE OUTPUTS/`. **Folder-as-contract** is a sub-pattern worth tracking — the directory structure encodes input/output expectations the same way markdown encodes them.
+- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — *2026-05-08*. The pattern applied to **task templates** in Khairallah's three-session Cowork architecture. Each template specifies input source, processing steps, output format, and save location — a contract between the human's intent ("produce a weekly report") and the agent's execution. The pattern crosses scope again: from project (CLAUDE) → folder (Cowork) → individual task (Khairallah's templates).
+- [[wiki/sources/akshay_pachaar-x-rag-wrong]] — *2026-05-08*. **An attack on chunks as the unit of agent input** that strengthens the meta-pattern. Akshay argues against unstructured chunks of text in a RAG pipeline, in favor of typed Q-A packets ("IdeaBlocks") with governance fields. CLAUDE.md is *narrative-prose* contract; IdeaBlock is *atomic-typed* contract — both are markdown-shaped artifacts a human writes that an agent acts on, distinguished by structural granularity. Worth tracking: as the meta-pattern matures, the unit gets smaller and more typed.
 
 ## Sub-claims and details
 
@@ -100,3 +104,7 @@ This wiki page should not be cited to claim markdown is always the right agent f
 - [[wiki/sources/noisyb0y1-marketingskills-repo]]
 - [[wiki/sources/nexu-io-open-design]]
 - [[wiki/sources/trq212-x-html-effectiveness]] — input-vs-output asymmetry caveat.
+- [[wiki/sources/TheAIWorld22-x-claude-md-21-instructions]] — concrete checklist of 21 CLAUDE.md instructions extending the pattern to non-developer audiences.
+- [[wiki/sources/heygurisingh-x-cowork-setup]] — folder-as-contract sub-pattern + paste-ready Global Instructions.
+- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — task-template-as-contract at the production-block scope.
+- [[wiki/sources/akshay_pachaar-x-rag-wrong]] — chunks vs typed Q-A packets as the unit of agent input.

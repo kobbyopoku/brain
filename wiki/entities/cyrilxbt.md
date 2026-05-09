@@ -3,7 +3,7 @@ type: entity
 title: CyrilXBT
 entity_type: person
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 website: https://x.com/cyrilxbt
 aliases: [cyrilxbt, cyrilXBT]
 tags: [author, x-creator, llm-wiki-pattern, ai-automation-services, knowledge-vault]
@@ -43,7 +43,7 @@ Both posts share an underlying architecture (Obsidian vault as durable substrate
 ## Mentioned in
 
 - [[wiki/sources/cyrilxbt-x-2052235121416188114]] — Obsidian + Claude knowledge vault (3K likes; 3rd wild citation of LLM Wiki pattern).
-- [[wiki/sources/cyrilxbt-x-2052570518667378918]] — 5-agents-replace-5-employees (377 likes; concrete cost arithmetic).
+- [[wiki/sources/cyrilxbt-x-2052570518667378918]] — 5-agents-replace-5-employees (377 likes; concrete cost arithmetic). **Full Web-Clipper body now in `raw/` (verbatim system prompts + master CLAUDE.md + cost breakdown + build order).**
 - [[wiki/sources/cyrilxbt-x-2052923836090167526]] — 205 likes; thread not retrievable (deleted or invalid).
 
 ## Related entities

@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 75 sources · 266 entities · 47 concepts · 2 projects · 2 syntheses · last updated 2026-05-08
+**Stats**: 80 sources · 272 entities · 47 concepts · 2 projects · 2 syntheses · last updated 2026-05-09
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -68,7 +68,7 @@ Mobile-share clipping produces URL-only stubs (X.com returns HTTP 402 to bot fet
 - [[wiki/sources/_avichawla-x-2052326975034048754]], [[wiki/sources/_avichawla-x-2053049489963811135]] — two Avi Chawla threads (DS/ML educator at Daily Dose of DS).
 - [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — Sarvesh Shrivastava on Claude Cowork for SEO ($10K/mo agency replacement).
 - [[wiki/sources/kylejeong-x-2052103973377867913]] — Kyle Jeong on Browserbase web-agent infrastructure.
-- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — Khairallah's recent Claude-Code curation post (existing-author follow-up).
+- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — Khairallah's three-session Cowork daily architecture (Morning Briefing 7AM / Midday Production / End-of-Day Wrap-up 5PM). **Body upgraded 2026-05-09 from Web Clipper.**
 
 **URL-only stubs (12)**:
 - [[wiki/sources/itsalexvacca-x-2052740083820958072]] — Alex Vacca (existing-author follow-up)
@@ -82,6 +82,21 @@ Mobile-share clipping produces URL-only stubs (X.com returns HTTP 402 to bot fet
 - [[wiki/sources/ashwingop-x-2052777467732283817]] — Ashwin Gopinath 361 likes
 - [[wiki/sources/creatorpascal-x-2053034511726756159]] — Pascal (creatorpascal) 134 likes
 - [[wiki/sources/neil_xbt-x-2052733885906051118]] — NeilXbt 79 likes
+
+### Web-Clipper batch ingest (2026-05-09 — 7 substantive bodies; 5 new + 2 upgrades)
+
+Full Web-Clipper desktop captures with verbatim bodies (vs the URL-only mobile-share stubs from 2026-05-08). Each is 10-22KB of substantive content.
+
+**New (5)**:
+- [[wiki/sources/akshay_pachaar-x-rag-wrong]] — *"You're doing RAG wrong."* The chunk is the structural bug, not retrieval algorithm tuning. IdeaBlock alternative: question + validated answer + typed governance fields. Blockify benchmark: 2.29× retrieval-distance reduction, 13.55% vector-accuracy improvement after dedup, 40× corpus compression. Major refresh to [[retrieval-augmented-generation]].
+- [[wiki/sources/TheAIWorld22-x-claude-md-21-instructions]] — 21 specific CLAUDE.md instructions across 5 parts (how Claude talks / behaves / context / memory / for developers); closes with Karpathy's viral 4 rules + 65→94% coding-accuracy claim. Strongest checklist articulation of the [[markdown-as-agent-contract]] meta-pattern.
+- [[wiki/sources/heygurisingh-x-cowork-setup]] — Guri Singh's Cowork onboarding guide. Folder structure (`ABOUT ME/` + `PROJECTS/` + `TEMPLATES/` + `CLAUDE OUTPUTS/`). Paste-ready Global Instructions. AskUserQuestion as most-transformative feature. 11 official Anthropic plugins. Substantial upgrade to [[cowork]].
+- [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] — 7-step tool-calling reliability roadmap: Protocol / Tool definitions / Error handling / Parallelization / Catalog size / Security / Evaluation. *"Reliable agents treat the model as a reasoning engine — not an execution engine."* Strongest tool-layer reliability articulation in the wiki.
+- [[wiki/sources/ig_claims-x-meta-retargeting]] — Zack's 5-stage conviction-layered Meta retargeting funnel for service businesses. Conviction Gap Model (10/100 → 85-90/100). Specific metrics: $43 cold CPL → $12 retargeting CPC; 4.2× conversion rate.
+
+**Body upgrades (2)**:
+- [[wiki/sources/cyrilxbt-x-2052570518667378918]] — 5-agents-replace-5-employees. **Now verbatim** with full system prompts for all 5 agents (Research / Content / Communication / Operations / Analytics), master CLAUDE.md template, cost breakdown ($105/mo = Claude Max $100 + N8N $5 + Supabase free + Obsidian free), and 6-week build order.
+- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — three-session Cowork daily architecture. **Rewrite** of earlier author-context-only stub now that the verbatim body is captured. 7AM Morning Briefing + Midday Production Block + 5PM End-of-Day Wrap-up; 4-tier email urgency system; 15-min Friday refinement loop; 1-3 hours/day saved.
 
 #### DESIGN.md ingests (32 brands, 33 surfaces — initial 20 ingested 2026-05-02; +12 brands and Apple alt added 2026-05-04)
 
@@ -128,6 +143,7 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 
 ### People — authors
 
+- [[wiki/entities/akshay_pachaar]] — author of *"You're doing RAG wrong"*; chunk-as-unit-is-the-bug thesis.
 - [[wiki/entities/anatoli-kopadze]] — author of the 20 Claude Prompts catalog.
 - [[wiki/entities/andrej-karpathy]] — author of the LLM Wiki pattern.
 - [[wiki/entities/alex-vacca]] — author of the services-as-software $7M agency playbook.
@@ -139,23 +155,26 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/clear_graphics]] — author of the YC unicorn landing-pages analysis.
 - [[wiki/entities/corey-haines]] — *(stub)* maintainer of the marketingskills Claude Code skill-pack.
 - [[wiki/entities/creatorpascal]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
-- [[wiki/entities/cyrilxbt]] — *(stub)* X creator; 3 URL-only posts queued in 2026-05-08 batch.
-- [[wiki/entities/eng-khairallah]] — author of the AI Automations early-stage services playbook.
+- [[wiki/entities/cyrilxbt]] — X creator; agentic-AI + personal-knowledge-vault content; 3 batch posts (2 substantive, 1 unretrievable).
+- [[wiki/entities/eng-khairallah]] — author of the AI Automations $10K/mo playbook + three-session Cowork daily architecture.
 - [[wiki/entities/godofprompt]] — author of the Paul Graham startup-eval prompts.
+- [[wiki/entities/heygurisingh]] — Guri Singh; Cowork onboarding specialist; folder-as-contract sub-pattern.
 - [[wiki/entities/HeyZaraKhan]] — author of two Claude-ecosystem posts (Skills, Certified Architect).
 - [[wiki/entities/heynavtoor]] — author of the 10-repos-replace-eng-team thesis.
 - [[wiki/entities/hooeem]] — author of the build-an-AI-agent-today course.
+- [[wiki/entities/ig_claims]] — Zack; paid-acquisition specialist; 5-stage Meta retargeting funnel + Conviction Gap Model.
 - [[wiki/entities/jaynitx]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch (2K likes).
 - [[wiki/entities/kylejeong]] — Browserbase growth engineer; web-agent infrastructure focus.
 - [[wiki/entities/mnilax]] — author of the 430-hours instrumented Claude Code study.
-- [[wiki/entities/nainsi-dwiv]] — author of the Agent Skills architectural deep-dive.
+- [[wiki/entities/nainsi-dwiv]] — author of two production-AI architecture deep-dives (Agent Skills + tool-calling reliability).
 - [[wiki/entities/nateherk]] — author of the AI OS playbook; runs a $3M/yr business on Claude Code.
 - [[wiki/entities/neil_xbt]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
 - [[wiki/entities/nick-saraev]] — author of the 5h+ Agentic Workflows course; coined the DO framework (now publicly framed as DOE).
 - [[wiki/entities/noisyb0y1]] — *(stub)* author who surfaced the marketingskills skill-pack.
 - [[wiki/entities/prakash-bhandari]] — *(stub)* author of the cleanest DOE framework expository.
 - [[wiki/entities/regent0x]] — author of the Claude Code 24/7 dev team stack.
-- [[wiki/entities/rohit4verse]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
+- [[wiki/entities/rohit4verse]] — coiner of [[cognitive-debt]]; X creator with order-of-use AI thesis.
+- [[wiki/entities/theaiworld22]] — author of the 21 CLAUDE.md instructions checklist (5 parts).
 - [[wiki/entities/trq212]] — Thariq Shihipar (Claude Code lead at Anthropic); HTML-as-output thesis; substantive 2026-05-08 batch ingest.
 - [[wiki/entities/zodchiii]] — *(stub)* darkzodchi; X creator; URL-only post queued in 2026-05-08 batch.
 
@@ -170,6 +189,7 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/agora]] — billion-dollar yearly-newsletter publishing empire (model #3 exemplar).
 - [[wiki/entities/anthropic]] — AI research company; maintainer of Claude and Claude Code.
 - [[wiki/entities/coldiq]] — Alex Vacca's $7M ARR services-as-software agency.
+- [[wiki/entities/iternal-technologies]] — *(stub)* maintainer of [[wiki/entities/blockify|Blockify]]; enterprise RAG preprocessing focus.
 - [[wiki/entities/nous-research]] — open-weight AI research collective; publisher of Hermes-series models and [[wiki/entities/hermes-agent|Hermes Agent]].
 - [[wiki/entities/samcart]] — Brian Moran's checkout/e-commerce platform; data source for the 2026 catalog.
 - [[wiki/entities/trail-of-bits]] — security firm publishing claude-code-skills.
@@ -229,7 +249,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/teamly]] — *(stub)* managed-AI-team platform with Pixel Department visual monitoring. Surfaced via darkzodchi (content-marketing flag).
 - [[wiki/entities/cline]] — VS Code autonomous agent.
 - [[wiki/entities/codex-cli]] — *(stub)* OpenAI's coding-agent CLI; auto-detected by Open Design.
-- [[wiki/entities/cowork]] — *(stub)* Claude Code alternative named by heynavtoor.
+- [[wiki/entities/cowork]] — Anthropic's Claude Code mode for non-developer automation infrastructure; substantial coverage from Guri Singh (setup) + Khairallah (three-session daily architecture).
 - [[wiki/entities/cursor]] — AI-assisted code editor.
 - [[wiki/entities/deepseek-cli]] — *(stub)* DeepSeek's coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/devin]] — *(stub)* Cognition Labs autonomous SWE agent; auto-detected by Open Design.
@@ -264,6 +284,10 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 ### Multi-provider LLM aggregators
 
 - [[wiki/entities/openrouter]] — *(stub)* multi-provider LLM API aggregator; single endpoint fronts 200+ models. Used by [[wiki/entities/hermes-agent|Hermes Agent]].
+
+### RAG / retrieval infrastructure
+
+- [[wiki/entities/blockify]] — Iternal Technologies' open-source preprocessing layer that sits between document parser and vector store. Implements IdeaBlocks (typed Q-A packets with governance fields). 7-stage pipeline; 2.29× retrieval-distance reduction; 13.55% vector-accuracy improvement after dedup.
 
 ### YC unicorns analyzed (landing-page patterns)
 
@@ -503,7 +527,7 @@ All 139 Open Design brands are now reachable as wiki entities. The 27 most-cross
 - [[wiki/concepts/llm-wiki-pattern]] — persistent, LLM-maintained markdown wiki built on top of curated raw sources.
 - [[wiki/concepts/markdown-as-agent-contract]] — meta-pattern: markdown files as the contract layer between humans and AI agents.
 - [[wiki/concepts/memex]] — Vannevar Bush's 1945 vision of a personal, associative knowledge store.
-- [[wiki/concepts/retrieval-augmented-generation]] — per-query retrieval over raw documents; contrast case.
+- [[wiki/concepts/retrieval-augmented-generation]] — per-query retrieval over raw documents; contrast case + chunk-as-unit-is-the-bug critique (Akshay/Blockify, 2026-05-08).
 
 ### Claude Code mechanisms
 
