@@ -4,8 +4,8 @@ title: Helm
 created: 2026-05-09
 updated: 2026-05-09
 status: active
-repo: multi-repo (proposed: github.com/ROAM-Labs/{helm-backend, helm-portal, helm-mcp}; outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no remote)
-local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm (wrapper to be created)
+repo: multi-repo (local .git in each of helm-backend, helm-portal, helm-mcp as of 2026-05-09; outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; remotes pending github.com/ROAM-Labs/{helm-backend,helm-portal,helm-mcp} org creation per Q2)
+local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm
 stack: [hermes-agent, python-3.11, fastapi, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel]
 started: 2026-05-09
 owner_org: roam-labs
@@ -31,6 +31,22 @@ ROAM Labs has 3 owned products, 2 client engagements, 1 government subcontract, 
 **Why internal-only**: Godwin is the only user. No multi-tenant data scoping, no RBAC, no productization polish. Single JWT or session auth. Cuts ~30% of the build surface; saves ~6 weeks vs an extractable-product version. If Helm becomes commercial later, the architecture absorbs that — the [[wiki/projects/clarvyn|Clarvyn]] portal pattern (single-tenant-scope-able) is the upgrade path.
 
 **Why Hermes Agent runtime** (vs reusing Clarvyn's FastAPI + Spring Boot agent service stack): Hermes ships built-in skills, persistent memory, deepening user model, multi-platform messaging gateway (Telegram + Discord + Slack + WhatsApp + Signal + Email + CLI), and 200+ model routing via OpenRouter. The trade is *ship-speed > stack-reuse-elegance*. For an internal tool where the goal is "Godwin gets time back," Hermes's built-in machinery beats hand-rolling another agent service.
+
+## Current focus
+
+> _Updated as Godwin progresses through the build order._
+
+**2026-05-09 — Multi-repo scaffold materialized.** All three sub-repos exist at `/Users/kobbyopoku/ROAM/CascadeProjects/helm/`:
+
+- **`helm-backend/`** (28 tracked files; local `.git` initialized) — FastAPI shell with Lead Management agent's HTTP routes (`/lead/qualify`, `/lead/outreach`), system prompt, and `leads` schema (includes `tenant_id` per Layer 3 spec + 5-value `primary_product` ENUM). Hermes Agent invocation body raises `NotImplementedError` and is the active build target.
+- **`helm-portal/`** (14 tracked files; local `.git` initialized) — Next.js 16 + React 19 + Tailwind 4 supervision UI; Dashboard + Leads pages (read-only); `vercel.ts` config.
+- **`helm-mcp/`** (8 tracked files; local `.git` initialized) — placeholder `README.md` per MCP subdir (`stripe-mcp/`, `postiz-mcp/`, `accounting-mcp/`, `crm-mcp/`, `brain-wiki-mcp/`); empty until Weeks 2-5.
+
+Wrapper has no `.git`. Each sub-repo has its own `BRAIN.md` (gitignored) plus a wrapper-level un-ignored `BRAIN.md`. Master system context lives at `helm-backend/master-claude.md`. Voice-profile stubs sit at `helm-backend/voice-profiles/` awaiting migration of full pattern docs from [[wiki/syntheses/helm-voice-profiles]].
+
+**Immediate execution blockers**:
+1. Hermes Agent pypi package name not yet pinned in `helm-backend/pyproject.toml` (TODO comment placeholder).
+2. `ROAM-Labs/` GitHub org not created; sub-repos have no remotes.
 
 ## Repo topology — multi-repo wrapper
 
@@ -324,6 +340,8 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 | 7 | 6-week sequential build (one agent per week) | CyrilXBT's documented order; debugging in isolation; learning failure modes one at a time | [[wiki/sources/cyrilxbt-x-2052570518667378918]] |
 | 8 | Analytics agent system-prompt rewrites stay in review mode permanently | Auto-applying agent prompts to other agents is unsafe; manual approval gate is the safety boundary | Constraint engineering from CyrilXBT's Communication-agent precedent |
 | 9 | Single-user JWT auth, no RBAC, no multi-tenant scoping | Q5 + Q6 → cut polish | Q5, Q6 (a) |
+| 10 | **Tailwind 4 CSS-first config (helm-portal)** — no `tailwind.config.ts`; theme tokens declared in `app/globals.css` via `@theme` | Tailwind 4 default; theme lives next to the CSS that uses it; one fewer config file | Scaffold 2026-05-09 |
+| 11 | **`vercel.ts` over `vercel.json` (helm-portal)** | Vercel 2026 platform default; full TypeScript with `@vercel/config`, IntelliSense, env access in config | Scaffold 2026-05-09 |
 
 ## Resolved decisions (2026-05-09)
 
