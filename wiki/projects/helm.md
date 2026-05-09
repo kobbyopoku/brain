@@ -4,15 +4,16 @@ title: Helm
 created: 2026-05-09
 updated: 2026-05-09
 status: active
-repo: TBD — to be created in new ROAM-Labs/ GitHub org
-local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm (to be created)
+repo: multi-repo (proposed: github.com/ROAM-Labs/{helm-backend, helm-portal, helm-mcp}; outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no remote)
+local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm (wrapper to be created)
 stack: [hermes-agent, python-3.11, fastapi, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel]
 started: 2026-05-09
 owner_org: roam-labs
 affiliation: roam-labs-internal
 name_confirmed: 2026-05-09
+repo_topology: multi-repo-wrapper
 aliases: [roam-helm, roam-ops-platform]
-tags: [project, multi-agent, internal-tool, hermes-agent, ops-automation, lead-management, marketing, sales, project-management, single-user]
+tags: [project, multi-agent, internal-tool, hermes-agent, ops-automation, lead-management, marketing, sales, project-management, single-user, multi-repo]
 ---
 
 > **Lineage**: internal multi-agent operations platform for [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder + sole user). **Internal-only for v1** (decision recorded 2026-05-09; see [[wiki/syntheses/helm-commercialization-paths]] for the 3 shapes considered + re-evaluation trigger). Architecturally informed by the wiki's strongest multi-agent blueprints (CyrilXBT 5-agent / Khairallah three-session / Saraev DOE / NainsiDwiv tool-calling reliability).
@@ -30,6 +31,62 @@ ROAM Labs has 3 owned products, 2 client engagements, 1 government subcontract, 
 **Why internal-only**: Godwin is the only user. No multi-tenant data scoping, no RBAC, no productization polish. Single JWT or session auth. Cuts ~30% of the build surface; saves ~6 weeks vs an extractable-product version. If Helm becomes commercial later, the architecture absorbs that — the [[wiki/projects/clarvyn|Clarvyn]] portal pattern (single-tenant-scope-able) is the upgrade path.
 
 **Why Hermes Agent runtime** (vs reusing Clarvyn's FastAPI + Spring Boot agent service stack): Hermes ships built-in skills, persistent memory, deepening user model, multi-platform messaging gateway (Telegram + Discord + Slack + WhatsApp + Signal + Email + CLI), and 200+ model routing via OpenRouter. The trade is *ship-speed > stack-reuse-elegance*. For an internal tool where the goal is "Godwin gets time back," Hermes's built-in machinery beats hand-rolling another agent service.
+
+## Repo topology — multi-repo wrapper
+
+Helm follows the **multi-repo wrapper pattern** consistent with the rest of Godwin's portfolio (see [[wiki/projects/clarvyn|Clarvyn]] 5-repo / [[wiki/projects/kivora|Kivora]] 4-repo / [[wiki/projects/coffee-break-with-big-sis|Coffee Break]] 2-repo / [[wiki/projects/stacesprouts|StaceSprouts]] 2-repo / [[wiki/projects/brolly|Brolly]] multi-repo / [[wiki/projects/vedge|Vedge]] 7-repo). Outer wrapper is a regular directory (no `.git`); each service repo has its own remote.
+
+### Proposed split (3 repos + wrapper)
+
+```
+~/ROAM/CascadeProjects/helm/         (wrapper — no .git)
+├── BRAIN.md                          (pointer to ~/brain/wiki/projects/helm.md)
+├── helm-backend/                     (FastAPI + Hermes Agent — Python on Railway)
+│   ├── BRAIN.md
+│   ├── api/                           (FastAPI routes per agent + auth)
+│   ├── agents/                        (per-agent skill configs + system prompts)
+│   ├── runtime/                       (Hermes Agent integration)
+│   ├── scheduler/                     (APScheduler — 7AM briefing / 5PM wrap-up / monthly Analytics)
+│   ├── db/                            (PostgreSQL + pgvector schema + migrations)
+│   ├── voice-profiles/                (4 voice profiles loaded from wiki sync; per-product agent config)
+│   └── master-claude.md               (master system context for all 6 agents)
+├── helm-portal/                      (Next.js — TypeScript on Vercel)
+│   ├── BRAIN.md
+│   ├── app/                           (Next.js 14 App Router)
+│   ├── components/                    (shadcn-style supervision UI primitives)
+│   └── lib/                           (custom fetch ApiClient — Clarvyn portal pattern)
+└── helm-mcp/                         (custom MCP servers — Python or TypeScript)
+    ├── BRAIN.md
+    ├── brain-wiki-mcp/                (read-only ~/brain/wiki/ access; Week 5 dependency for PM agent)
+    ├── stripe-mcp/                    (Week 2 — Sales agent invoicing)
+    ├── notion-crm-mcp/                (Week 1 — Notion-as-CRM bridge)
+    ├── postiz-mcp/                    (Week 3 — Marketing agent publish layer)
+    └── accounting-mcp/                (Week 4 — Operations agent QuickBooks/Xero)
+```
+
+### Why 3 repos (not 2 or 5)
+
+| Split option | Trade-off | Decision |
+|---|---|---|
+| **2 repos** (backend + portal) | Simpler. Fold MCPs into backend. Matches Coffee Break / StaceSprouts shape. | ❌ MCP servers want independent versioning + deployability + reusability across other ROAM products (Vedge / Kivora / Clarvyn could reuse Helm's brain-wiki-mcp). |
+| **3 repos** (backend + portal + mcp) ✅ | MCPs are first-class artifacts; backend stays focused on orchestration; portal stays front-end-pure. | ✅ **Chosen**. Aligns with the [[mcp-server]] concept page's *MCPs as durable contracts* discipline. |
+| **5 repos** (separate agents + runtime + landing + ...) | Maximum isolation. Matches Clarvyn shape. | ❌ Overkill for a single-user internal tool. Helm doesn't need a landing page (no marketing surface). Hermes Agent is a dependency, not a built-by-us repo. |
+
+### BRAIN.md drops in each sub-repo
+
+Per [[wiki/projects/clarvyn|Clarvyn's]] 2026-05-09 multi-repo BRAIN.md convention: drop `BRAIN.md` in **each sub-repo** (helm-backend, helm-portal, helm-mcp) plus the wrapper. Each `BRAIN.md` identifies which service it sits in and points at the same `~/brain/wiki/projects/helm.md` page. Add `BRAIN.md` to each sub-repo's `.gitignore`. The wrapper's BRAIN.md is unignored (wrapper has no `.git`).
+
+This convention exists because *an agent might open just `helm-backend/`* in a Cursor / Claude Code session and not see the wrapper-level BRAIN.md. Per-repo drops ensure the brain pointer is always one path-level away.
+
+### GitHub org
+
+All 3 repos sit under the new **`ROAM-Labs/`** GitHub org (per Q2 resolution 2026-05-09). Org to be created when Week 1 build starts. Naming convention: `ROAM-Labs/helm-<service>` for clarity within the org alongside other future ROAM-Labs/ repos.
+
+### What each repo deploys to
+
+- **`helm-backend`** → Railway (Python service + PostgreSQL with pgvector add-on + APScheduler in-process)
+- **`helm-portal`** → Vercel (Next.js 14 App Router; auto-deploy from `main` branch)
+- **`helm-mcp`** → Railway (each custom MCP runs as a small Python or Node process; orchestrated alongside `helm-backend`)
 
 ## Stack and infrastructure
 
