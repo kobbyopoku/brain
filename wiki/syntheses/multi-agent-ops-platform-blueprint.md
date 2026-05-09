@@ -174,15 +174,24 @@ Per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT]]:
 
 > *"Do not build all five agents simultaneously."*
 
-The order matters because each agent's outputs become inputs for the next:
+The order matters because each agent's outputs become inputs for the next.
 
-- **Week 1**: Agent 1 (the MVP / fastest revenue-impact). Run it for a week. Verify output is useful before connecting it to anything.
-- **Week 2**: Agent 2. Connect to Agent 1's output. Verify the handoff.
+**5-agent variant** (CyrilXBT shape — Research / Content / Communication / Operations / Analytics):
+
+- **Week 1**: Agent 1 (the MVP / fastest revenue-impact).
+- **Week 2**: Agent 2. Connect to Agent 1's output. Verify handoff.
 - **Week 3**: Agent 3. Connect. Verify.
 - **Week 4**: Agent 4. Run in *review mode* (no automated send) for 2 weeks before going automated. Customer-facing agents especially.
-- **Week 6** (skip Week 5 if 5 agents; use Week 5 for buffer): Agent 5 (Analytics meta-orchestrator). By now the other 4 have generated enough data to actually analyze.
+- **Week 5**: buffer / refinement.
+- **Week 6**: Agent 5 (Analytics meta-orchestrator). By now the other 4 have generated enough data to actually analyze.
 
-Total build time: **6 weeks of evenings + weekends**. Daily operating time post-build: **30-60 minutes** reviewing outputs + approving communications + decisions only the human can make.
+**6-agent variant** (Helm shape — Lead Mgmt / Sales / Marketing / Operations / PM / Analytics):
+
+- **Weeks 1-4**: Agents 1-4 (same cadence as above).
+- **Week 5**: Agent 5 (the 5th specialized agent — e.g. Project Management for Helm). No buffer; the meta-orchestrator slides to Week 6.
+- **Week 6**: Agent 6 / Analytics meta-orchestrator.
+
+Total build time: **6 weeks of evenings + weekends** in either variant. Daily operating time post-build: **30-60 minutes** reviewing outputs + approving communications + decisions only the human can make.
 
 ## The Analytics agent — most architecturally important
 
@@ -202,7 +211,7 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 4. **Budget caps per agent run**: `--max-budget-usd` style caps to prevent runaway loops in scheduled jobs.
 5. **Use [[wiki/entities/openrouter|OpenRouter]]** if Layer 1 supports it — lets you experiment with cheaper providers (Haiku 3.5, GPT-4o-mini, DeepSeek) for non-critical agent tasks.
 
-**Target operating cost** for a small business: **$100-300/mo total LLM spend** (CyrilXBT reports $700-900/mo for content-business volume; lower-volume internal use should land cheaper).
+**Target operating cost** for a small business: **$100-300/mo total LLM spend**. Comparison anchor (per [[wiki/sources/cyrilxbt-x-2052570518667378918]]): CyrilXBT's equivalent 5-agent system reports **~$89 hosting + $700-900 API spend = $800-1,000/mo total** at production volume, *or* ~$105/mo at minimum config (Claude Max + N8N self-hosted + free Supabase + free Obsidian). Lower-volume internal use should land closer to the minimum-config end.
 
 ## The 7-step tool-calling reliability rubric (per integration)
 

@@ -208,7 +208,7 @@ When the human says "add this project to the brain" or runs the user-level `/bra
 2. **Survey the project** — read `README.md`, `CLAUDE.md` (if any), the stack manifest(s), `git remote -v`, recent `git log`, top-level structure (don't read source code line-by-line; understand shape). Sample any `.memory/` directory if present.
 3. **Discuss the draft profile with the human** before writing — proposed status, current focus, key decisions, open questions. Wait for explicit confirmation.
 4. **Write the project page** at `wiki/projects/<slug>.md` using `templates/project.md`. Slug is kebab-case ASCII.
-5. **Update `index.md`** under the `## Projects` section, grouped by status (active / paused / exploring / completed / archived).
+5. **Update `index.md`** under the `## Projects` section, grouped by status (active / paused / exploring / shipped-v1 / completed / archived).
 6. **Append `log.md`**: `## [YYYY-MM-DD] add-project | <Project name>` with page created and a one-line summary.
 7. **Drop a `BRAIN.md` reference at the project root** (a one-line file pointing at `~/brain/wiki/projects/<slug>.md`). Add `BRAIN.md` to the project's `.gitignore` so it stays personal to this clone.
 8. **Commit and push the brain.**
@@ -263,7 +263,15 @@ Exit code is 1 if any issues are found, 0 if clean. The script honors inline-cod
 - **Sources** — every page in `wiki/sources/`, with one-line summary.
 - **Entities** — grouped by entity_type (people, orgs, products, places, works).
 - **Concepts** — alphabetical, with one-line summary.
-- **Projects** — grouped by status (active, paused, exploring, completed, archived).
+- **Projects** — grouped by status (active, paused, exploring, shipped-v1, completed, archived).
+
+  **Status semantics**:
+  - `active` — work in progress (build, ship, iterate).
+  - `paused` — work suspended; intent to resume.
+  - `exploring` — pre-build; design / discovery / spike.
+  - `shipped-v1` — first major version shipped + operating; not yet "completed" (more versions intended). Useful intermediate state when v2/v3 is on the roadmap.
+  - `completed` — work concluded; no further versions planned.
+  - `archived` — no longer active; kept for reference.
 - **Syntheses** — derived analyses and filed-back queries.
 
 Each line: `- [[link]] — one-line summary`

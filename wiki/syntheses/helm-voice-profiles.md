@@ -78,7 +78,7 @@ tags: [synthesis, voice-profile, helm, marketing-agent, configuration, starter-d
 - **Numerical specificity**: percentages (94%), control counts (142/148), ratios. *Every claim has a number where one exists.*
 - **AI presented as concrete actor**: not *"AI-powered automation"* but *"Kivora AI understands your compliance context. It maps controls, suggests remediation, ..."* — verb-leading.
 - **Pricing transparency upfront**: *"Starting at $299/mo"* is in the hero. No "contact sales" gating for entry tier.
-- **Frequent phrases**: *"on autopilot"*, *"under control"*, *"unified in one platform"*, *"AI-native"* (as adjective; preferred over *"AI-powered"*), *"compliance posture"*.
+- **Frequent phrases**: *"on autopilot"*, *"under control"*, *"unified in one platform"*, *"AI-powered"* (current hero adjective for the platform), *"compliance posture"*.
 - **Anti-marketing inversions**: *"AI that actually helps. Not just a chatbot."* — explicit category-distancing.
 - **Sentence rhythm**: *outcome → mechanism → proof*. Outcome stated, mechanism explained, proof quantified.
 
@@ -88,12 +88,13 @@ tags: [synthesis, voice-profile, helm, marketing-agent, configuration, starter-d
 - No exclamation marks.
 - No emoji in marketing copy.
 - No competitor names directly.
-- No *"AI-powered"* — say *"AI-native"* or describe the specific AI capability.
 - No fear-mongering: *"avoid massive fines!"*, *"don't get breached"*.
 - No customer-success-y language: *"delight"*, *"wow"*, *"thrilled to..."*.
 - No filler superlatives: *"most advanced"*, *"world-class"*, *"cutting-edge"*.
 - No claim without a number when a number is available.
 - No throat-clearing: *"in today's compliance landscape"*, *"as organizations face..."*.
+
+> **Note on "AI-powered" vs "AI-native"**: the current Kivora landing hero uses *"AI-powered governance, risk, compliance..."* (cited below as a reference sample). Earlier drafts of this voice profile banned *"AI-powered"* in favor of *"AI-native"* — that was prescriptive (what we wished it sounded like), not descriptive (what it actually sounds like). **The voice profile is descriptive**: it captures Kivora's voice as it currently is, not a future-state aspiration. If Godwin decides to migrate Kivora copy to *"AI-native"*, that's a separate **voice migration** action — file it as a refresh of this profile, not as a banned-pattern in the descriptive extraction.
 
 ### Reference samples (the voice at its sharpest)
 

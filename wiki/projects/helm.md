@@ -150,7 +150,7 @@ All 3 repos sit under the new **`ROAM-Labs/`** GitHub org (per Q2 resolution 202
   - **Agents** — per-agent system-prompt editor, system-prompt change history, monthly Analytics-agent recommendations.
   - **Logs** — agent execution logs, errors, costs.
 
-### Layer 5 — Specialized agents (5 + 1 meta-orchestrator)
+### Layer 5 — Specialized agents (6 total: 5 inline-chained + 1 meta-orchestrator)
 
 Six agents, scoped to GTM + business ops only (engineering is out of scope per Q1):
 
@@ -212,14 +212,14 @@ CPC award decision pending; Clarvyn Wave 7 prep."]
 |---|---|---|---|
 | 7AM | Cron | Lead Management + Operations | Morning briefing markdown file: pipeline stage summary, urgent decisions, top 3 priorities |
 | Manual (1-3pm) | Godwin | Whichever | Production block — bulk drafts, pipeline updates, content production |
-| 5PM | Cron | All 5 | End-of-day wrap-up + carry-forward into tomorrow's briefing |
+| 5PM | Cron | All 5 inline-chained (Lead Mgmt + Sales + Marketing + Ops + PM) | End-of-day wrap-up + carry-forward into tomorrow's briefing |
 | 1st of month | Cron | Analytics | Monthly performance review + system-prompt change recommendations for the other 5 |
 
 ### Tool-calling reliability rubric (NainsiDwiv 7-step)
 
 Every MCP integration must satisfy:
 
-1. **Protocol** — MCP wire format ✅ (Hermes natively supports)
+1. **Protocol** — MCP wire format. ⚠️ *Hermes Agent's native MCP support is unverified in the wiki; the [[wiki/entities/hermes-agent]] entity page lists OpenRouter routing + multi-platform messaging gateway but doesn't confirm MCP-protocol support specifically. **Verify against the upstream Hermes repo before Week 1**; if Hermes lacks native MCP, add an MCP-to-Hermes adapter layer (~3-5 days of additional work).*
 2. **Tool definitions as contracts** — name + description + arg schema as durable interfaces
 3. **Error handling** — every tool failure surfaced to the agent for recovery
 4. **Parallelization** — explicit conflict-free vs serial-required tool annotations

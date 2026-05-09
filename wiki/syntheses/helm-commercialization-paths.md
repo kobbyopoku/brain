@@ -84,9 +84,9 @@ Adding "productized multi-tenant agent marketplace" to that list before Helm v1 
 
 Revisit the Shape A vs B vs C question when **all three** are true:
 
-1. **3-5 paying customers** are operating real volumes through Helm via the services-as-software path (= ~$30K-$60K MRR existing customer base).
+1. **3-5 paying customers** are operating real volumes through Helm via the services-as-software path (= ~$15K-$30K MRR realistic — 3-5 retainers at $750-$2K/mo per [[wiki/sources/itsalexvacca-services-as-software-7m-agency|Vacca's]] range + ~1 build/mo at $5-15K per [[wiki/sources/khairallah-ai-automations-10k-month|Khairallah's]] range. The higher end requires premium retainers + steady build cadence, not all customers will be at the top of the range).
 2. **Concrete evidence on churn / implementation / distribution** has been collected:
-   - Churn rate (per Vacca, the agency model dies at 5-7%/mo without the accelerator)
+   - Churn rate (per Vacca, ColdIQ runs at **10% monthly churn** — *"70 clients × 10% monthly churn = 7 replacements/month, a full-time closer's quota"*. The agency model dies at this rate without the software-margin accelerator layer.)
    - Implementation cost per customer in hours (per Khairallah's framework)
    - Distribution leverage (which channels are actually working for new customer acquisition?)
 3. **A specific Shape B or C opportunity** surfaces — not a hypothetical "we should be a marketplace" but a concrete catalyst (e.g. a customer asking to white-label Helm for their own customers; or a partnership channel proposing distribution; or a Series-A-able demand signal).
