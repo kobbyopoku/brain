@@ -6,7 +6,7 @@ updated: 2026-05-09
 status: active
 repo: multi-repo (local .git in each of helm-backend, helm-portal, helm-mcp as of 2026-05-09; outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; remotes pending github.com/ROAM-Labs/{helm-backend,helm-portal,helm-mcp} org creation per Q2)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm
-stack: [hermes-agent, python-3.11, fastapi, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel]
+stack: [hermes-agent, python-3.11, fastapi, alembic, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel, docker-compose]
 started: 2026-05-09
 owner_org: roam-labs
 affiliation: roam-labs-internal
@@ -36,17 +36,26 @@ ROAM Labs has 3 owned products, 2 client engagements, 1 government subcontract, 
 
 > _Updated as Godwin progresses through the build order._
 
-**2026-05-09 — Multi-repo scaffold materialized.** All three sub-repos exist at `/Users/kobbyopoku/ROAM/CascadeProjects/helm/`:
+**2026-05-09 — Multi-repo scaffold materialized.** All three sub-repos exist at `/Users/kobbyopoku/ROAM/CascadeProjects/helm/`. Each has `.git` initialized but **no commits yet** — everything sits as untracked working-tree state awaiting first commits + remote creation:
 
-- **`helm-backend/`** (28 tracked files; local `.git` initialized) — FastAPI shell with Lead Management agent's HTTP routes (`/lead/qualify`, `/lead/outreach`), system prompt, and `leads` schema (includes `tenant_id` per Layer 3 spec + 5-value `primary_product` ENUM). Hermes Agent invocation body raises `NotImplementedError` and is the active build target.
-- **`helm-portal/`** (14 tracked files; local `.git` initialized) — Next.js 16 + React 19 + Tailwind 4 supervision UI; Dashboard + Leads pages (read-only); `vercel.ts` config.
-- **`helm-mcp/`** (8 tracked files; local `.git` initialized) — placeholder `README.md` per MCP subdir (`stripe-mcp/`, `postiz-mcp/`, `accounting-mcp/`, `crm-mcp/`, `brain-wiki-mcp/`); empty until Weeks 2-5.
+- **`helm-backend/`** — FastAPI shell with Lead Management agent's HTTP routes (`/lead/qualify`, `/lead/outreach`), system prompt, `master-claude.md`, and `leads` schema (includes `tenant_id` per Layer 3 spec + 5-value `primary_product` ENUM). Hermes Agent invocation body raises `NotImplementedError` and is the active build target.
+- **`helm-portal/`** — Next.js 16 + React 19 + Tailwind 4 supervision UI; Dashboard + Leads pages (read-only); `vercel.ts` config.
+- **`helm-mcp/`** — placeholder `README.md` per MCP subdir (`stripe-mcp/`, `postiz-mcp/`, `accounting-mcp/`, `crm-mcp/`, `brain-wiki-mcp/`); empty until Weeks 2-5.
 
 Wrapper has no `.git`. Each sub-repo has its own `BRAIN.md` (gitignored) plus a wrapper-level un-ignored `BRAIN.md`. Master system context lives at `helm-backend/master-claude.md`. Voice-profile stubs sit at `helm-backend/voice-profiles/` awaiting migration of full pattern docs from [[wiki/syntheses/helm-voice-profiles]].
 
+**2026-05-09 — Local dev infrastructure (added intra-day after initial scaffold).**
+
+- **Wrapper-root `docker-compose.yml`** — `pgvector/pgvector:pg16` for local Postgres; bind-mounts `helm-backend/db/schema.sql` as `/docker-entrypoint-initdb.d/` init script so `docker compose up -d` reproducibly stands up the schema. Local-dev parity with Railway-managed Postgres in production.
+- **Wrapper-root `README.md`** — developer quickstart (compose up + per-repo `pip install -e ".[dev]"` / `pnpm install`).
+- **`helm-backend/db/schema.sql`** committed — `leads` table with `tenant_id` (default `'roam-labs'`), 5-value `primary_product` CHECK, and 7-stage workflow CHECK (`new` → `qualified` → `outreach_drafted` → `outreach_sent` → `replied` → `handed_off` → `rejected`). Future tables added per Layer 3 spec as agents come online.
+- **`helm-backend/railway.json`** — NIXPACKS builder, `uvicorn app.main:app` start command, `/health` healthcheck, `ON_FAILURE` restart with 10 retries.
+- **`helm-backend/tests/test_health.py`** — pytest scaffold (one passing health-endpoint test); `[tool.pytest.ini_options] asyncio_mode = "auto"` configured.
+- **Backend deps**: `alembic` (migrations), `structlog`, `pydantic-settings`, `sqlalchemy[asyncio]`, `asyncpg`, `httpx` pinned in `pyproject.toml`. Hermes Agent dep still placeholder pending pypi name resolution.
+
 **Immediate execution blockers**:
 1. Hermes Agent pypi package name not yet pinned in `helm-backend/pyproject.toml` (TODO comment placeholder).
-2. `ROAM-Labs/` GitHub org not created; sub-repos have no remotes.
+2. `ROAM-Labs/` GitHub org not created; sub-repos have no remotes (and no first commits yet).
 
 ## Repo topology — multi-repo wrapper
 
@@ -68,7 +77,7 @@ Helm follows the **multi-repo wrapper pattern** consistent with the rest of Godw
 │   └── master-claude.md               (master system context for all 6 agents)
 ├── helm-portal/                      (Next.js — TypeScript on Vercel)
 │   ├── BRAIN.md
-│   ├── app/                           (Next.js 14 App Router)
+│   ├── app/                           (Next.js 16 App Router)
 │   ├── components/                    (shadcn-style supervision UI primitives)
 │   └── lib/                           (custom fetch ApiClient — Clarvyn portal pattern)
 └── helm-mcp/                         (custom MCP servers — Python or TypeScript)
@@ -103,7 +112,7 @@ All 3 repos sit under the new **`ROAM-Labs/`** GitHub org (per Q2 resolution 202
 ### What each repo deploys to
 
 - **`helm-backend`** → Railway (Python service + PostgreSQL with pgvector add-on + APScheduler in-process)
-- **`helm-portal`** → Vercel (Next.js 14 App Router; auto-deploy from `main` branch)
+- **`helm-portal`** → Vercel (Next.js 16 App Router; auto-deploy from `main` branch)
 - **`helm-mcp`** → Railway (each custom MCP runs as a small Python or Node process; orchestrated alongside `helm-backend`)
 
 ## Stack and infrastructure
@@ -342,6 +351,7 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 | 9 | Single-user JWT auth, no RBAC, no multi-tenant scoping | Q5 + Q6 → cut polish | Q5, Q6 (a) |
 | 10 | **Tailwind 4 CSS-first config (helm-portal)** — no `tailwind.config.ts`; theme tokens declared in `app/globals.css` via `@theme` | Tailwind 4 default; theme lives next to the CSS that uses it; one fewer config file | Scaffold 2026-05-09 |
 | 11 | **`vercel.ts` over `vercel.json` (helm-portal)** | Vercel 2026 platform default; full TypeScript with `@vercel/config`, IntelliSense, env access in config | Scaffold 2026-05-09 |
+| 12 | **docker-compose at wrapper for local Postgres + pgvector** | Local-dev parity with Railway-managed Postgres; bind-mounting `helm-backend/db/schema.sql` as init script makes `docker compose up -d` reproducibly stand up the schema; faster iteration than tunneling to Railway during development | Scaffold 2026-05-09 (intra-day) |
 
 ## Resolved decisions (2026-05-09)
 
