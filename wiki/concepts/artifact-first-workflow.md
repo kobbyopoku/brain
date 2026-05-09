@@ -37,6 +37,7 @@ The pattern is also **architecturally clean** for tools like Open Design: one in
 
 - [[wiki/sources/nexu-io-open-design]] — canonical wiki source. Open Design's workflow centers on artifact emission and sandboxed rendering. Open Design's `import/claude-design` ZIP endpoint also confirms Claude Design uses the same pattern with portable artifacts.
 - [[wiki/entities/claude-design]] — the proprietary Anthropic product that originated the pattern. No primary source from Anthropic is yet ingested directly; observations are inferred.
+- [[wiki/sources/trq212-x-html-effectiveness]] — *2026-05-08*. **Strongest first-party Anthropic argument for the pattern yet ingested.** [[wiki/entities/trq212|Thariq Shihipar]] (Claude Code lead at Anthropic) makes the substantive case: *"if an output is meant to be reviewed, clicked, compared, edited, or shared, HTML is often closer to the real workspace."* Distinguishes the artifact-first pattern from Markdown-as-default and provides 20 worked examples at [thariqs.github.io/html-effectiveness](https://thariqs.github.io/html-effectiveness). Validates Open Design's architectural bet from inside Anthropic.
 - *Adjacent treatments not yet ingested*: Vercel v0 (similar pattern: AI generates Next.js components, renders in sandboxed preview); Figma Make (different format but similar pattern); HTML-PDF tooling like Puppeteer / Playwright.
 
 ## Sub-claims and details
@@ -129,7 +130,9 @@ The artifact-first model has a useful property: **every turn's artifact is share
 - [[wiki/entities/open-design]] — the open-source replication.
 - [[wiki/entities/anthropic]] — publisher of the original pattern.
 - [[wiki/entities/open-codesign]] — lineage credit for streaming-artifact-rendering primitives.
+- [[wiki/entities/trq212]] — Thariq Shihipar, Claude Code lead at Anthropic; published the strongest first-party argument for the pattern.
 
 ## Mentioned in
 
 - [[wiki/sources/nexu-io-open-design]]
+- [[wiki/sources/trq212-x-html-effectiveness]]

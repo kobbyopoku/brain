@@ -82,6 +82,12 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/entities/marketingskills-repo]] — instantiates the pattern at three layers (skill-pack + context file + public endpoints).
 - [[wiki/entities/open-design]] — instantiates the pattern at **seven layers** (SKILL.md / DESIGN.md / CLAUDE.md / per-CLI contracts / question-form / `<artifact>` HTML / MCP `get_file`).
 
+## Important asymmetry: input-format vs output-format
+
+This concept addresses **markdown as the agent INPUT format** (the contract / SOPs / instructions the human gives the agent — CLAUDE.md, AGENTS.md, SKILL.md, DESIGN.md, README.md, context files). It does **not** assert markdown is the right format for agent OUTPUT. [[wiki/sources/trq212-x-html-effectiveness|Thariq Shihipar's 2026-05-08 argument]] is that **HTML beats Markdown for agent output** when the output is meant for human review. The two layers compose cleanly: humans write markdown contracts → agents act → agents emit HTML artifacts. See [[artifact-first-workflow]] for the output-side concept.
+
+This wiki page should not be cited to claim markdown is always the right agent format — only that markdown is the right *contract* format.
+
 ## Mentioned in
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]]
@@ -93,3 +99,4 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
 - [[wiki/sources/noisyb0y1-marketingskills-repo]]
 - [[wiki/sources/nexu-io-open-design]]
+- [[wiki/sources/trq212-x-html-effectiveness]] — input-vs-output asymmetry caveat.

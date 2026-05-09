@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 58 sources · 252 entities · 45 concepts · 2 projects · 2 syntheses · last updated 2026-05-08
+**Stats**: 75 sources · 264 entities · 46 concepts · 2 projects · 2 syntheses · last updated 2026-05-08
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -59,6 +59,30 @@ The content-oriented index of this wiki. Read this first when answering a query,
 
 - [[wiki/sources/nousresearch-hermes-agent]] — MIT-licensed self-improving multi-platform AI agent by [[wiki/entities/nous-research|Nous Research]]. Built-in learning loop (creates skills from experience, persists across sessions, builds user model). Multi-platform messaging gateway (Telegram + Discord + Slack + WhatsApp + Signal + Email + CLI). Model-agnostic (200+ models via [[wiki/entities/openrouter|OpenRouter]] + Nous Portal + AWS Bedrock + others). 23k+ stars.
 
+### X-thread batch ingest (2026-05-08 — 17 posts queued from mobile share; 5 substantive + 12 URL-only stubs)
+
+Mobile-share clipping produces URL-only stubs (X.com returns HTTP 402 to bot fetches). Substantive ingest possible only where aggregator coverage exists (Simon Willison, blog posts, prior author content). Re-clip via Obsidian Web Clipper desktop to recover bodies for the URL-only stubs.
+
+**Substantive (5)**:
+- [[wiki/sources/trq212-x-html-effectiveness]] — Thariq Shihipar (Anthropic Claude Code lead): *"The Unreasonable Effectiveness of HTML"* — HTML beats Markdown as agent output format. Reconstructed via Simon Willison's blog. Strongest first-party Anthropic argument for [[artifact-first-workflow]] yet ingested.
+- [[wiki/sources/_avichawla-x-2052326975034048754]], [[wiki/sources/_avichawla-x-2053049489963811135]] — two Avi Chawla threads (DS/ML educator at Daily Dose of DS).
+- [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — Sarvesh Shrivastava on Claude Cowork for SEO ($10K/mo agency replacement).
+- [[wiki/sources/kylejeong-x-2052103973377867913]] — Kyle Jeong on Browserbase web-agent infrastructure.
+- [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — Khairallah's recent Claude-Code curation post (existing-author follow-up).
+
+**URL-only stubs (12)**:
+- [[wiki/sources/itsalexvacca-x-2052740083820958072]] — Alex Vacca (existing-author follow-up)
+- [[wiki/sources/noisyb0y1-x-2044692412061425748]] — noisyb0y1 (existing-author earlier post)
+- [[wiki/sources/cyrilxbt-x-2052235121416188114]] — CyrilXBT 3K likes (highest-engagement of 3 queued)
+- [[wiki/sources/cyrilxbt-x-2052570518667378918]] — CyrilXBT 377 likes
+- [[wiki/sources/cyrilxbt-x-2052923836090167526]] — CyrilXBT 205 likes
+- [[wiki/sources/jaynitx-x-2052734499319091384]] — Jaynit 2K likes
+- [[wiki/sources/zodchiii-x-2052368125480354000]] — darkzodchi 1K likes
+- [[wiki/sources/rohit4verse-x-2050968031493550202]] — Rohit 555 likes
+- [[wiki/sources/ashwingop-x-2052777467732283817]] — Ashwin Gopinath 361 likes
+- [[wiki/sources/creatorpascal-x-2053034511726756159]] — Pascal (creatorpascal) 134 likes
+- [[wiki/sources/neil_xbt-x-2052733885906051118]] — NeilXbt 79 likes
+
 #### DESIGN.md ingests (32 brands, 33 surfaces — initial 20 ingested 2026-05-02; +12 brands and Apple alt added 2026-05-04)
 
 Initial 20:
@@ -107,22 +131,33 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/anatoli-kopadze]] — author of the 20 Claude Prompts catalog.
 - [[wiki/entities/andrej-karpathy]] — author of the LLM Wiki pattern.
 - [[wiki/entities/alex-vacca]] — author of the services-as-software $7M agency playbook.
-- [[wiki/entities/bob-mwathu]] — *(stub)* LinkedIn creator who surfaced Saraev's DOE framing for the wiki; introduces the term *self-annealing*.
+- [[wiki/entities/ashwingop]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
+- [[wiki/entities/avi-chawla]] — DS/ML educator; author of Daily Dose of DS newsletter; substantive 2026-05-08 batch ingest.
+- [[wiki/entities/bloggersarvesh]] — Sarvesh Shrivastava; SEO consultant; *Claude Cowork for SEO* niche.
+- [[wiki/entities/bob-mwathu]] — *(stub)* LinkedIn creator who surfaced Saraev's DOE framing; introduces *self-annealing*.
 - [[wiki/entities/brian-moran]] — author of the 10 online business models for 2026.
 - [[wiki/entities/clear_graphics]] — author of the YC unicorn landing-pages analysis.
 - [[wiki/entities/corey-haines]] — *(stub)* maintainer of the marketingskills Claude Code skill-pack.
+- [[wiki/entities/creatorpascal]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
+- [[wiki/entities/cyrilxbt]] — *(stub)* X creator; 3 URL-only posts queued in 2026-05-08 batch.
 - [[wiki/entities/eng-khairallah]] — author of the AI Automations early-stage services playbook.
 - [[wiki/entities/godofprompt]] — author of the Paul Graham startup-eval prompts.
 - [[wiki/entities/HeyZaraKhan]] — author of two Claude-ecosystem posts (Skills, Certified Architect).
 - [[wiki/entities/heynavtoor]] — author of the 10-repos-replace-eng-team thesis.
 - [[wiki/entities/hooeem]] — author of the build-an-AI-agent-today course.
+- [[wiki/entities/jaynitx]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch (2K likes).
+- [[wiki/entities/kylejeong]] — Browserbase growth engineer; web-agent infrastructure focus.
 - [[wiki/entities/mnilax]] — author of the 430-hours instrumented Claude Code study.
 - [[wiki/entities/nainsi-dwiv]] — author of the Agent Skills architectural deep-dive.
 - [[wiki/entities/nateherk]] — author of the AI OS playbook; runs a $3M/yr business on Claude Code.
+- [[wiki/entities/neil_xbt]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
 - [[wiki/entities/nick-saraev]] — author of the 5h+ Agentic Workflows course; coined the DO framework (now publicly framed as DOE).
 - [[wiki/entities/noisyb0y1]] — *(stub)* author who surfaced the marketingskills skill-pack.
 - [[wiki/entities/prakash-bhandari]] — *(stub)* author of the cleanest DOE framework expository.
 - [[wiki/entities/regent0x]] — author of the Claude Code 24/7 dev team stack.
+- [[wiki/entities/rohit4verse]] — *(stub)* X creator; URL-only post queued in 2026-05-08 batch.
+- [[wiki/entities/trq212]] — Thariq Shihipar (Claude Code lead at Anthropic); HTML-as-output thesis; substantive 2026-05-08 batch ingest.
+- [[wiki/entities/zodchiii]] — *(stub)* darkzodchi; X creator; URL-only post queued in 2026-05-08 batch.
 
 ### People — referenced
 
@@ -189,6 +224,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 ### AI coding tools (other)
 
 - [[wiki/entities/aider]] — terminal pair programmer (mid-level dev replacement per heynavtoor).
+- [[wiki/entities/browserbase]] — *(stub)* managed-browser infrastructure for AI agents; the "AWS for headless browsers."
 - [[wiki/entities/cline]] — VS Code autonomous agent.
 - [[wiki/entities/codex-cli]] — *(stub)* OpenAI's coding-agent CLI; auto-detected by Open Design.
 - [[wiki/entities/cowork]] — *(stub)* Claude Code alternative named by heynavtoor.
