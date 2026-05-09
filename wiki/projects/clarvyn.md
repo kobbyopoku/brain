@@ -30,6 +30,7 @@ Clarvyn replaces "HR software for HR people" with "an HR department that happens
 - **Database**: `ankane/pgvector:latest` on host port 5433. Four agent-specific tables (`conversations`, `conversation_messages`, `document_chunks`, `scheduled_tasks`) on top of the HRIS schema.
 - **Infra**: Docker Compose (`docker-compose.yml` + `docker-compose.monitoring.yml`), `clarvyn-network` (172.25.0.0/16), `start.sh` / `stop.sh`. GitHub Actions CI/CD. Prometheus + Grafana monitoring stack.
 - **Outer wrapper**: `/Users/kobbyopoku/ROAM/CascadeProjects/clarvyn` is *not* a git repo — it's a working directory holding the five service repos. Same topology as [[wiki/projects/stacesprouts|StaceSprouts]] and [[wiki/projects/coffee-break-with-big-sis|Coffee Break With Big Sis]].
+- **Brain pointer drops**: this multi-repo project carries `BRAIN.md` in **six** locations — the wrapper plus each of the five service repos (`backend/`, `agent/`, `portal/`, `landing/`, `app/`) — so any agent session opened in any service finds the brain page immediately. `BRAIN.md` is in each service's `.gitignore` (lines 6 / 80 / 27 / 27 / 28 respectively as of 2026-05-09); the wrapper's `.gitignore` ignores it as well (no-op for git since the wrapper isn't a repo, but respected by ripgrep/find). All six pointer files reference the same brain page.
 
 ## Current focus
 
