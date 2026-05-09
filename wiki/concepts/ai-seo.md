@@ -2,7 +2,7 @@
 type: concept
 title: AI SEO
 created: 2026-05-04
-updated: 2026-05-04
+updated: 2026-05-09
 aliases: [generative engine optimization, GEO, AI search optimization, citation SEO]
 tags: [seo, ai-search, content, marketing]
 ---
@@ -32,6 +32,12 @@ For the wiki itself, AI SEO is also an interesting reflexive case: the wiki *is*
 ## Treatment across sources
 
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — canonical wiki source. *"Traditional SEO gets you ranked. AI SEO gets you cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and Copilot. AI systems can cite a well-structured page even if it's not in position 1 because they evaluate quality, structure and relevance of individual passages."*
+- [[wiki/sources/bloggersarvesh-20-seo-prompts]] — *2026-05-09*. **Strongest prompt-pack source.** 20 detailed Claude prompts across 4 parts (GBP / Website / Backlinks+Authority / Content+Tracking) with 12-week roll-out plan. Adds four sub-patterns the wiki was missing:
+  - **Entity optimization** (Prompt 18) — Google ranks *entities*, not just websites. Schema.org LocalBusiness JSON-LD + Wikidata + brand mentions strengthen the entity. *"This is the SEO work that compounds for years and almost no local business is doing it."*
+  - **Page 2 keyword goldmine** (Prompt 12) — every keyword ranking position 11-20 with ≥100 impressions/month is one optimization push from page 1. The wiki's clearest *prioritization-by-existing-signal* methodology.
+  - **Review sentiment analysis** (Prompt 13) — reverse-engineer competitor reviews to extract the **emotional language customers use**, then rewrite GBP/website copy in that customer voice. Voice-profile extension at the *customer* level (vs creator-voice).
+  - **4-stage buyer-journey keyword mapping** (Prompt 16) — categorize every keyword into Problem-unaware / Problem-aware / Solution-aware / Ready-to-hire. *"Stage 4 keywords have lower volume but they convert at 5-10× the rate."*
+- [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — *thesis* sibling: $10K/mo SEO agency replacement using Cowork. Compose with the prompt-pack source as *thesis* + *arsenal*.
 
 ## Sub-claims and details
 
@@ -96,3 +102,6 @@ The right framing: **AI SEO is additive to traditional SEO**, not a replacement.
 ## Mentioned in
 
 - [[wiki/sources/noisyb0y1-marketingskills-repo]]
+- [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — Cowork-for-SEO agency replacement thesis.
+- [[wiki/sources/bloggersarvesh-20-seo-prompts]] — 20-prompt arsenal across GBP / Website / Backlinks / Content+Tracking.
+- [[wiki/sources/exploraX_-google-maps-leadgen]] — adjacent (review automation as one of 3 productized small-business offers).

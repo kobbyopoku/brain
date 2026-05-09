@@ -448,3 +448,42 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - BRAIN.md now lives in all 6 places: the wrapper (`/Users/kobbyopoku/ROAM/CascadeProjects/clarvyn/BRAIN.md`) + each of the 5 service repos (`backend/`, `agent/`, `portal/`, `landing/`, `app/`). Each service-repo BRAIN.md identifies which service it sits in and points at the same `~/brain/wiki/projects/clarvyn.md` page.
 - `BRAIN.md` appended to each service `.gitignore` (verified via `git check-ignore` — all 5 ignored). User flagged that single-drop missed the "agent opens just `backend/`" case; option A from offered menu (drop in all 5 service repos + ignore in each) chosen and applied.
 - notes: This is the brain's first multi-repo project that's been treated this way — [[wiki/projects/stacesprouts|StaceSprouts]] and [[wiki/projects/coffee-break-with-big-sis|Coffee Break With Big Sis]] only carry BRAIN.md at the wrapper. Convention candidate: any project listed as `multi-repo` in frontmatter `repo:` should drop BRAIN.md in each sub-repo. Schema not yet updated; flagged for next schema-update pass if the convention proves out.
+
+## [2026-05-09] ingest | Web-Clipper batch #2 (10 substantive sources; new attractor-engineering concept; 4th wild LLM-Wiki citation)
+- Source: 10 additional Web-Clipper desktop captures spanning 4 domains — theoretical (1) / personal-knowledge architecture (1) / technical Claude Code (1, plus 1 already from batch #1) / business-model + lead-gen (4) / prompt-arsenal (2 existing-author follow-ups + 1 new) / image-only stub (1).
+- pages created (10 new sources):
+  - [[wiki/sources/iroha1203-attractor-engineering]] — Hiroyuki Nakahata's *Attractor Engineering*: codebase-as-field, PR-as-force, CI/CD-as-dissipative-system, ArchSig-as-observer. 47KB dev.to article + Lean formalization (AAT). **Strongest theoretical anchor for AI-era software architecture in the wiki.**
+  - [[wiki/sources/Shruti_0810-self-improving-obsidian]] — **4th wild secondary citation of [[llm-wiki-pattern]]** (regent0x_ → nateherk → CyrilXBT → Shruti). 4-layer Obsidian + AI vault with 5-folder structure + 6AM Daily AI Briefing. *"Externalized cognition"* framing.
+  - [[wiki/sources/zodchiii-x-claude-code-settings]] — 15 Claude Code settings tour. Load-bearing claim: *"Anthropic silently lowered Claude Code's thinking effort from high to medium in March 2026"* (Boris Cherny on HN; unverified). One-minute setup.
+  - [[wiki/sources/exploraX_-google-maps-leadgen]] — m0h's 5-step Google Maps + Instant Data Scraper + Claude Code lead-gen playbook. **Fills the wiki's biggest gap** in [[ai-automation-services]] coverage (how to find first 20 paying clients).
+  - [[wiki/sources/Ai_here202-mcp-opportunity]] — MCP-server-builds as $5K-$15K business opportunity. *"USB for AI"* analogy. App-Store-2009 framing. 3-capability framing (Tools / Resources / Prompts).
+  - [[wiki/sources/rubenhassid-claude-certifications]] — exactly 3 free Anthropic-issued Claude certs at `anthropic.skilljar.com` (most marketed certs are scams). Stanford 2025 AI Index 78%/55% adoption + PwC 56%/25% wage premium data.
+  - [[wiki/sources/shannholmberg-content-os]] — Content OS framework (5M impressions in 2 weeks; 11M / 100K bookmarks in 2 months). 6-folder workspace + 4 routes + 12-point bookmarkability rubric + 4 verbatim prompts + Hermes-Agent / Claude-Code-on-VPS runtime + Postiz publish layer.
+  - [[wiki/sources/bloggersarvesh-20-seo-prompts]] — Sarvesh's 20 detailed Claude prompts for local SEO across 4 parts with 12-week roll-out. **Strongest [[ai-seo]] prompt-pack source in the wiki.**
+  - [[wiki/sources/e_opore-system-design-roadmap]] — 12-phase AI-era system design career roadmap (promotional weight; Dhanian ebook landing).
+  - [[wiki/sources/wizofecom-x-2045182674130837681]] — image-only stub (3 Twitter media URLs not OCR'd).
+- pages created (1 new concept):
+  - [[wiki/concepts/attractor-engineering]] — Hiroyuki Nakahata's design theory for AI-era software development. 5 core terms (Field / PR / Attractor / Basin / Dissipative system / ArchSig). 6 trajectory shapes. Composes with [[markdown-as-agent-contract]] + [[anti-ai-slop-machinery]] + [[dual-write-rollout]].
+- pages created (8 new author entities):
+  - [[wiki/entities/iroha1203]], [[wiki/entities/Shruti_0810]], [[wiki/entities/exploraX_]], [[wiki/entities/rubenhassid]], [[wiki/entities/shannholmberg]], [[wiki/entities/wizofecom]], [[wiki/entities/e_opore]], [[wiki/entities/Ai_here202]].
+- pages created (17 thin stubs to close lint):
+  - **Organizations**: [[wiki/entities/lunar-strategy]] (Shann's agency), [[wiki/entities/alventra-marketing]] (Sarvesh's agency).
+  - **Tooling**: [[wiki/entities/postiz]] (publish layer), [[wiki/entities/instant-data-scraper]], [[wiki/entities/google-maps]], [[wiki/entities/google-business-profile]], [[wiki/entities/google-search-console]], [[wiki/entities/semrush]], [[wiki/entities/ahrefs]], [[wiki/entities/readwise]].
+  - **Anthropic ecosystem**: [[wiki/entities/skilljar]] (cert delivery), [[wiki/entities/claude101-com]] (Hassid's free guides), [[wiki/entities/model-context-protocol]] (the protocol vs server distinction).
+  - **Theoretical**: [[wiki/entities/algebraic-architecture-theory]] (iroha1203's Lean library).
+  - **Upcoming/referenced**: [[wiki/entities/bookmarkable-io]] (Shann's product), [[wiki/entities/dhanian]] (ebook author), [[wiki/entities/boris-cherny]] (Anthropic engineer cited as HN source).
+- pages updated (existing entity refreshes):
+  - [[wiki/entities/zodchiii]] — promoted from stub to substantive (now has 2 posts: Teamly content-marketing flag + 15 Claude Code settings tutorial).
+  - [[wiki/entities/bloggersarvesh]] — added 2nd-post note (20 SEO prompts) + Alventra Marketing operations section.
+- pages updated (concept refreshes):
+  - [[wiki/concepts/llm-wiki-pattern]] — **4th wild citation noted**. Pattern is now stable convention with multiple operational variants (regent0x_ engineering / nateherk operational-scale / CyrilXBT 4-layer / Shruti minimal-5-folder).
+  - [[wiki/concepts/mcp-server]] — added USB-for-AI analogy + 3-capability framing (Tools / Resources / Prompts) as a new sub-section. Added Ai_here202 (business-opportunity view) + zodchiii (3rd token-cost data point: 18K+ per server).
+  - [[wiki/concepts/ai-seo]] — **strongest prompt-pack source absorbed.** Added entity optimization (Sarvesh prompt 18), page 2 keyword goldmine (prompt 12), review sentiment analysis (prompt 13), 4-stage buyer-journey keyword mapping (prompt 16) as new sub-patterns.
+  - [[wiki/concepts/ai-automation-services]] — added 5 new source treatments: CyrilXBT body upgrade / Khairallah body upgrade / exploraX_ lead-gen layer / Ai_here202 MCP-builds niche / bloggersarvesh prompt-pack.
+  - [[wiki/concepts/cognitive-debt]] — added 3 new corroborating sources (e_opore / rubenhassid wage-premium data / iroha1203 codebase-level analogue).
+- index updates:
+  - Stats: 80 → 90 sources / 272 → 297 entities / 47 → 48 concepts / 204 → 221 stubs.
+  - New "Web-Clipper batch ingest #2 (2026-05-09)" subsection grouping all 10 new sources by category.
+  - 8 new authors added to People-authors.
+  - 2 organizations + 7 SEO/lead-gen tools + 1 protocol + 1 theoretical-library + 1 upcoming-product added to relevant subsections.
+- notes: **The single highest-value addition is the [[attractor-engineering]] concept page** — it provides theoretical scaffolding under existing wiki concepts (markdown-as-agent-contract, anti-ai-slop-machinery, dual-write-rollout) that previously stood alone. The vocabulary (field / force / dissipative system / trajectory / ArchSig / observability expansion shock) names patterns the wiki already practices but didn't have labels for. **Second highest**: Shruti's 4th wild citation of LLM-Wiki + her *"externalized cognition"* framing closes the question of whether the pattern is real (4 independent practitioners is canon-strength). **Third highest**: exploraX_'s lead-gen playbook fills the wiki's biggest practical gap in AI-services coverage — the existing 5+ sources covered design and pricing but not customer acquisition. **Pattern observation**: 17 thin stubs is a lot, but the user's documented preference (per CLAUDE.md MEMORY) is completionist coverage, so they're created rather than de-linked. Worth tracking whether the stub count grows faster than substantive coverage; if so, the stub-creation policy may need re-evaluation.

@@ -2,7 +2,7 @@
 type: concept
 title: Cognitive Debt
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 aliases: [cognitive-debt, ai-cognitive-debt]
 tags: [ai-usage, individual-discipline, mental-models, founder-content]
 ---
@@ -101,4 +101,7 @@ How to tell whether you're building debt vs amplifying:
 
 ## Mentioned in
 
-- [[wiki/sources/rohit4verse-x-2050968031493550202]]
+- [[wiki/sources/rohit4verse-x-2050968031493550202]] — coining source.
+- [[wiki/sources/e_opore-system-design-roadmap]] — *2026-05-09*. **Practitioner-domain corroboration** in software engineering: *"Most developers will become overly dependent on AI-generated code. They will stop thinking deeply. They will stop learning fundamentals. And over time, they will become replaceable."* Same shape as Rohit's order-of-use thesis but localized to system design.
+- [[wiki/sources/rubenhassid-claude-certifications]] — *2026-05-09*. **Empirical face of the sharpener-hollower split.** PwC: AI-skill wage premium expanded from 25% to 56% YoY. Stanford 2025 AI Index: 78% of orgs used AI in 2024 (up from 55%). The premium is the market price of the *amplifier* outcome; debt-accumulators don't earn it.
+- [[wiki/sources/iroha1203-attractor-engineering]] — *2026-05-09*. Theoretical sibling at the codebase level: *"AI rapidly reproduces the local style already present in the field."* If the field has bad shortcuts, AI multiplies them — the codebase-level analogue of cognitive debt at the developer level.

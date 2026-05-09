@@ -29,8 +29,26 @@ For [[ai-automation-services]] specifically, MCP is the layer where the *value* 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — **operational alternative**: prefer API endpoints saved as markdown over MCPs. *"MCPs load every endpoint and every function whether you need it or not. That eats tokens. Tell Claude: research the docs once, save them as a markdown reference, pull from that file when you need an endpoint. Markdown is cheap to read; API docs are expensive to crawl every time."* Same insight as Mnilax's cost analysis from a different starting point.
 - [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. [[wiki/entities/open-design|Open Design]] **exposes** an MCP server (rather than just consuming them) — the daemon ships `search_files`, `get_file`, `get_artifact` as MCP tools so coding agents in *other* repositories can query Open Design projects directly without export/import loops. This is "design system as MCP-queryable knowledge" — a sibling pattern to Refero MCP but local-first. Notable architectural inversion: most wiki sources treat MCP as the *consumer* layer for an agent; Open Design treats it as the *provider* layer for cross-repo agent integration.
 - [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] — *2026-05-08*. **Strongest tool-layer reliability articulation in the wiki.** NainsiDwiv's 7-step roadmap — Protocol / Tool definitions as contracts / Error handling / Parallelization / Catalog size / Security / Evaluation — treats the tool surface (which MCP servers expose) as a discrete reliability discipline rather than a side-effect of agent design. Quote: *"Reliable agents treat the model as a reasoning engine — not an execution engine."* Worth absorbing into MCP design discipline: when a wiki source ingests a new MCP-exposing product, evaluate its tool surface against these 7 dimensions. Particularly relevant to step 5 (catalog size): aligns with [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]]'s 12-MCPs-becomes-7,200-tokens overhead finding — too many MCPs is a tool-catalog problem, not a model problem.
+- [[wiki/sources/Ai_here202-mcp-opportunity]] — *2026-05-09*. The **business-opportunity view** complementing NainsiDwiv's engineering-discipline view. Cleanest analogy in the wiki: *"MCP is USB for AI."* 3-capability framing: **Tools** (functions the AI can DO) / **Resources** (data the AI can REFERENCE) / **Prompts** (templates the AI should FOLLOW). Frames the ecosystem as *"the App Store in 2009"* with a ~2-year window before drag-and-drop builders + no-code + pre-built servers shrink the premium. **Pricing data**: freelance custom MCP builds $5K-$15K, productized $50-$200/mo or $500-$2K lifetime, enterprise $25K-$100K (consulting + customization + maintenance). Highest-margin verticals: industry-specific workflows (real estate / marketing / e-commerce).
+- [[wiki/sources/zodchiii-x-claude-code-settings]] — *2026-05-09*. Adds a *third* token-cost data point: *"MCP servers load 18K+ tokens per turn per server. 5+ servers = 90K tokens of overhead before your first prompt."* Higher than [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax's]] 600-token average; consistent with PostgreSQL-MCP-tier servers. Strengthens the trim-MCP-servers canon. Operational fix: `/mcp` command to inspect tool counts per connected server.
 
 ## Sub-claims and details
+
+### MCP as "USB for AI" (cleanest analogy)
+
+Per [[wiki/sources/Ai_here202-mcp-opportunity|Ai_here202]]: *"Before USB every device needed its own cable and its own port. USB standardized the connection so any device could plug into any computer. MCP does the exact same thing for AI tools."* Build one MCP server → it works with Claude Code + Claude Desktop + Cursor + Windsurf + every MCP-compatible client. **The standardization is what creates the market** — companies want servers they plug in, not bespoke per-vendor integrations.
+
+### Three things every MCP server can expose
+
+| Capability | Symbol | What | When to use |
+|---|---|---|---|
+| **Tools** | 🔧 | Functions the AI can call (search DB, send email, create record) | Highest value; "DO" actions |
+| **Resources** | 📄 | Data the AI can read (documents, DB records, API responses) | "REFERENCE" data |
+| **Prompts** | 📋 | Pre-built templates the AI follows (SOPs, frameworks) | "FOLLOW" consistency |
+
+Most MCP servers focus on Tools because that's where highest value is. The best servers combine all three.
+
+### Original sub-claims
 
 - **Protocol**: Model Context Protocol — open spec for advertising tools to LLM agents.
 - **Server topology**: each MCP server exposes a set of tools. An agent can connect to multiple servers simultaneously and call any tool from any server.
@@ -88,3 +106,5 @@ The first three are *design-time* properties; the last four are *operational* pr
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
 - [[wiki/sources/nexu-io-open-design]]
 - [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] — strongest tool-layer reliability articulation; 7-step checklist for MCP integration discipline.
+- [[wiki/sources/Ai_here202-mcp-opportunity]] — *2026-05-09*. Business-opportunity view; USB-for-AI analogy; 3-capability framing; App-Store-2009 market timing.
+- [[wiki/sources/zodchiii-x-claude-code-settings]] — *2026-05-09*. Third token-cost data point (18K+ per server / 90K with 5 servers).
