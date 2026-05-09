@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 80 sources · 272 entities · 47 concepts · 2 projects · 2 syntheses · last updated 2026-05-09
+**Stats**: 80 sources · 272 entities · 47 concepts · 3 projects · 2 syntheses · last updated 2026-05-09
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -598,6 +598,7 @@ Add a project from inside its directory with `/brain-add-project` in any Claude 
 ### Active
 
 - [[wiki/projects/kivora]] — AI-powered multi-tenant SaaS GRC platform (product name **ROAM GRC**); 13-module Spring Boot backend + React/Vite frontend + FastAPI Claude agent with pgvector RAG; named as Vedge's GRC of record. **Tier 1 of the Finding-schema migration** shipped end of 2026-05-08, dual-writing in production behind a toggle pending 2-week observation; worked example of [[wiki/concepts/dual-write-rollout]].
+- [[wiki/projects/stacesprouts]] — omni-channel commerce platform (storefront + admin + Flutter POS) for a Ghana baby/kids fashion retailer; Spring Boot + React 19 + Flutter; mirrors [[wiki/projects/vedge|Vedge]]'s `vedge_staff` Flutter architecture; Flutterwave + mnotify integrations; deployed on Vercel + Railway.
 - [[wiki/projects/vedge]] — multi-tenant healthcare OS for African hospitals, clinics, labs, pharmacies; modular-monolith Spring Boot backend + Next.js web + Flutter mobile (patient + staff).
 
 ### Paused

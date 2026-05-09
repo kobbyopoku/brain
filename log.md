@@ -393,3 +393,11 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
   - [[wiki/entities/iternal-technologies]] — created as a thin stub (org page; mention-only via Blockify).
 - pages updated: [[index]] — stats bump (272 entities) + Iternal Technologies added to Organizations subsection.
 - Final lint state: 0 broken wikilinks / 0 ambiguous / 0 orphans / 0 index drift / 0 frontmatter issues. Exit 0. **Stats**: 80 sources / 272 entities / 47 concepts / 2 projects / 2 syntheses / 204 stubs.
+
+## [2026-05-09] add-project | StaceSprouts
+- page created: [[wiki/projects/stacesprouts]]
+- status: active
+- repo: multi-repo (github.com/kobbyopoku/stacesprouts-app, stacesprouts-service); outer wrapper has no remote and tracks pos/
+- local_path: /Users/kobbyopoku/Projects/stacesprouts
+- notes: omni-channel commerce platform (storefront + admin + Flutter POS) for a Ghana baby/kids fashion retailer; mirrors [[wiki/projects/vedge|Vedge]]'s `vedge_staff` Flutter architecture (Riverpod + go_router + dio + flutter_secure_storage); Flutterwave (verify-not-webhooks; synthetic email for MoMo) + mnotify SMS; deployed on Vercel + Railway. Branding pass + SKU-as-canonical-identifier + storefront inventory enforcement shipped 2026-05-08/09 (V32 migration). 6 architecture decisions captured; 6 open questions surfaced; 6 project-specific lessons documented (PDF transparency on Samsung dark-mode, adaptive-icon background, record-overload pattern, gal MediaStore boundary, Flutterwave WebView interception).
+- index updates: stats bumped (2 → 3 projects); added to Projects → Active subsection between kivora and vedge.
