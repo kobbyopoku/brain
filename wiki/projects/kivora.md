@@ -2,15 +2,20 @@
 type: project
 title: Kivora
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 status: active
 repo: multi-repo (github.com/usekivora/{agent, backend, frontend, landing})
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/Kivora
 stack: [java-21, spring-boot, postgres, pgvector, flyway, json-schema, react, typescript, vite, tailwind, fastapi, python, anthropic-claude, minio, cloudflare-r2, railway, vercel, docker, github-actions]
 started: 2026-02-11
+owner_org: roam-labs
+affiliation: roam-labs-product
+product_brand: ROAM GRC
 aliases: [roam-grc, kivora-grc]
 tags: [project, grc, multi-tenant, saas, ai-agent]
 ---
+
+> **Lineage**: owned product of [[wiki/entities/roam-labs|ROAM Labs]] — commercial brand *ROAM GRC*. Founder: [[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]]. Commercial / IP-bearing.
 
 # Kivora
 

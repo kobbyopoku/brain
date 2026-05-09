@@ -9,9 +9,13 @@ local_path: /Users/kobbyopoku/Brolly/asanti-brokers
 stack: [nextjs, react, tailwind, typescript, vercel]
 started: 2026-03-11
 ended:
+owner_org: brolly-africa
+affiliation: brolly-africa-client-work
 aliases: [asanti, asanti-brokers-limited]
 tags: [project, marketing-site, insurance, ghana, nextjs]
 ---
+
+> **Lineage**: client work delivered through **Brolly Africa** ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], co-founder). The `/Users/kobbyopoku/Brolly/asanti-brokers` filesystem path reflects the Brolly umbrella. *Brolly Africa entity to be added separately by Godwin.*
 
 # Asanti Brokers
 

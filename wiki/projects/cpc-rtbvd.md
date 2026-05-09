@@ -8,9 +8,15 @@ repo: local-only (no remote, no commits — working directory at /Users/kobbyopo
 local_path: /Users/kobbyopoku/Projects/CPC_RTBVD
 stack: [react-19, typescript-5.9, vite-rolldown, tailwind-v4, recharts-3, react-router-7, lucide-react, java-24, spring-boot-3, postgresql-15, redis, kafka, azure-aks, python-docx, pymupdf]
 started: 2025-10-10
+owner_org: roam-labs
+prime_contractor: softtech-solutions
+end_client: Cocoa Processing Company Plc (CPC)
+affiliation: softtech-subcontract
 aliases: [cpc-dashboard, cocoapro-ghana, cpc-real-time-dashboard, cpc-rtbvd-bid]
 tags: [project, dashboard, bid, qcbs, ppa, ghana, cocoa, react-19, spring-boot, frontend-first, softtech-solutions]
 ---
+
+> **Lineage**: government engagement. **[[wiki/entities/softtech-solutions|SoftTech Solutions]] is the prime contractor** holding the relationship with the end client (Cocoa Processing Company Plc / CPC); **[[wiki/entities/roam-labs|ROAM Labs]] is the subcontractor** delivering the technical build. [[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]] is named PM/CTO Key Expert in the QCBS bid response (CPC/PRO/CS/1/26).
 
 # CPC RTBVD
 

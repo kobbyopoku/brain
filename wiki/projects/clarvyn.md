@@ -8,9 +8,13 @@ repo: multi-repo (github.com/clarvyn/backend, clarvyn/workspace [portal], clarvy
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/clarvyn
 stack: [java-21, spring-boot-3.3.5, python-3.11, fastapi, anthropic-claude, pgvector, postgres, react-19, vite-rolldown, typescript, tailwind, react-native, expo-54, zustand, tanstack-query, liquibase, docker-compose, prometheus, grafana]
 started: 2026-01-15
+owner_org: roam-labs
+affiliation: roam-labs-product
 aliases: [clarvyn-platform, clarvyn-hr]
 tags: [project, hr, hris, ai-agent, agentic, multi-tenant, saas, startups, claude]
 ---
+
+> **Lineage**: owned product of [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder). Commercial / IP-bearing — sister architecture to [[wiki/projects/kivora|Kivora]] (same Spring Boot + FastAPI Claude + pgvector RAG stack, different domain).
 
 # Clarvyn
 

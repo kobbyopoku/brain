@@ -8,9 +8,13 @@ repo: https://github.com/kobbyopoku/roamlabs
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/roam
 stack: [next.js, react-18, tailwind, framer-motion, lucide-react, javascript]
 started: 2026-01-14
+owner_org: roam-labs
+affiliation: roam-labs-self
 aliases: [roam-labs, roamlabs-website]
 tags: [project, marketing-site, agency-site, ai-agency, next-js]
 ---
+
+> **Lineage**: corporate marketing site for [[wiki/entities/roam-labs|ROAM Labs]] itself ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder). The agency's own surface — distinct from owned products (Vedge / Kivora / Clarvyn) and from client work.
 
 # _roamlabs
 

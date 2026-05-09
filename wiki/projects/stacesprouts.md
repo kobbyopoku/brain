@@ -8,9 +8,13 @@ repo: multi-repo (github.com/kobbyopoku/stacesprouts-app, stacesprouts-service; 
 local_path: /Users/kobbyopoku/Projects/stacesprouts
 stack: [java-21, spring-boot, postgres, redis, flyway, react-19, typescript, vite, tailwind-v4, zustand, tanstack-query, flutter, riverpod, dio]
 started: 2026-04-22
+owner_org: roam-labs
+affiliation: roam-labs-client-work
 aliases: [stacesprouts-pos, stace-sprouts, stacesprout-pos]
 tags: [project, ecommerce, retail, pos, ghana, baby-fashion, multi-channel]
 ---
+
+> **Lineage**: client work delivered through [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder). Services contract — IP is the client's (StaceSprouts retailer), not ROAM-owned product.
 
 # StaceSprouts
 

@@ -2,15 +2,19 @@
 type: project
 title: Vedge
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-05-09
 status: active
 repo: multi-repo (github.com/kobbyopoku/vedge_backend, vedge_frontend, vedge_patient, vedge_staff, vedge_landing, vedge_emails, vedge_agent)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/vedge
 stack: [java-21, spring-boot, postgres, flyway, redis, next.js, react, typescript, tailwind, flutter, riverpod, dio]
 started: 2026-04-05
+owner_org: roam-labs
+affiliation: roam-labs-product
 aliases: [vedge-platform, vedge-health]
 tags: [project, healthcare, ehr, africa, multi-tenant]
 ---
+
+> **Lineage**: owned product of [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder). Commercial / IP-bearing — not a client engagement.
 
 # Vedge
 

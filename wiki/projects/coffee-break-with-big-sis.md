@@ -8,9 +8,13 @@ repo: multi-repo (github.com/kobbyopoku/cbwbs-frontend, github.com/kobbyopoku/cb
 local_path: /Users/kobbyopoku/Projects/CoffeeWithBigSis
 stack: [java-17, spring-boot-3.4, postgres-15, redis-7, liquibase, jwt, react-19, typescript-5.9, vite-7, tailwind-v4, zustand-5, react-router-7, react-hook-form, zod, axios]
 started: 2026-02-20
+owner_org: roam-labs
+affiliation: roam-labs-client-work
 aliases: [cbwbs, coffee-with-big-sis]
 tags: [project, multi-tenant, mentorship, networking, alumni, saas]
 ---
+
+> **Lineage**: client work delivered through [[wiki/entities/roam-labs|ROAM Labs]] ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder). Services contract — IP is the client's, not ROAM-owned product.
 
 # Coffee Break With Big Sis
 

@@ -6,6 +6,28 @@ This file is the schema. It tells you how the wiki is organized, what convention
 
 ---
 
+## Wiki owner
+
+The brain belongs to **[[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]]** (informal: *"Kobby"* / *"Kobby Opoku"*; email: `gentlekobby@gmail.com`; filesystem root: `/Users/kobbyopoku`). When this file refers to *"the human"*, it means Godwin. When the wiki accumulates context, opinions, or decisions, they are *his* context, opinions, and decisions — curated from his perspective.
+
+Godwin is a software engineer working full-time on AI. He runs two organizations and is named PM/CTO Key Expert on a government contract:
+
+- **[[wiki/entities/roam-labs|ROAM Labs]]** — his AI products + services company. Houses three commercial products ([[wiki/projects/vedge|Vedge]] healthcare OS, [[wiki/projects/kivora|Kivora]] *(brand: ROAM GRC)*, [[wiki/projects/clarvyn|Clarvyn]] HR), takes on AI-services client work ([[wiki/projects/coffee-break-with-big-sis|Coffee Break With Big Sis]], [[wiki/projects/stacesprouts|StaceSprouts]]), and ships its own corporate marketing surface ([[wiki/projects/roamlabs|_roamlabs]]).
+- **Brolly Africa** *(entity to be added by Godwin separately)* — co-founded venture under which [[wiki/projects/asanti-brokers|Asanti Brokers]] sits.
+- **[[wiki/entities/softtech-solutions|SoftTech Solutions]]** subcontracts ROAM Labs for the [[wiki/projects/cpc-rtbvd|CPC RTBVD]] government engagement; Godwin delivers as PM/CTO Key Expert. SoftTech is the prime contractor; CPC (Cocoa Processing Company Plc) is the end client.
+
+Project pages carry `owner_org:` and `affiliation:` frontmatter so Dataview queries can group projects by org. Recognized `affiliation:` values:
+
+- `roam-labs-product` — ROAM Labs owns the IP and the commercial brand. (Vedge / Kivora / Clarvyn.)
+- `roam-labs-self` — ROAM Labs as its own marketing surface. (_roamlabs.)
+- `roam-labs-client-work` — ROAM Labs delivers, the client owns the IP. (Coffee Break With Big Sis / StaceSprouts.)
+- `brolly-africa-client-work` — Brolly Africa delivers, the client owns the IP. (Asanti Brokers.)
+- `softtech-subcontract` — SoftTech is prime, ROAM Labs subcontracts the build. (CPC RTBVD.)
+
+When ingesting future sources, keep in mind that *Godwin's interests cluster around* AI services + AI products, agentic architecture, multi-tenant SaaS, healthcare/GRC/HR domains, the African market, and small-business automation. Material outside these clusters is fine to ingest but warrants a brief framing note explaining why it earns wiki-shelf-space.
+
+---
+
 ## Architecture
 
 Three layers, strictly separated:
