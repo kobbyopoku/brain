@@ -401,3 +401,11 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - local_path: /Users/kobbyopoku/Projects/stacesprouts
 - notes: omni-channel commerce platform (storefront + admin + Flutter POS) for a Ghana baby/kids fashion retailer; mirrors [[wiki/projects/vedge|Vedge]]'s `vedge_staff` Flutter architecture (Riverpod + go_router + dio + flutter_secure_storage); Flutterwave (verify-not-webhooks; synthetic email for MoMo) + mnotify SMS; deployed on Vercel + Railway. Branding pass + SKU-as-canonical-identifier + storefront inventory enforcement shipped 2026-05-08/09 (V32 migration). 6 architecture decisions captured; 6 open questions surfaced; 6 project-specific lessons documented (PDF transparency on Samsung dark-mode, adaptive-icon background, record-overload pattern, gal MediaStore boundary, Flutterwave WebView interception).
 - index updates: stats bumped (2 → 3 projects); added to Projects → Active subsection between kivora and vedge.
+
+## [2026-05-09] add-project | _roamlabs
+- page created: [[wiki/projects/roamlabs]]
+- status: active
+- repo: https://github.com/kobbyopoku/roamlabs
+- local_path: /Users/kobbyopoku/ROAM/CascadeProjects/roam
+- notes: corporate marketing site for the **_roamlabs** AI agency (sister brand to ROAM GRC / Vedge under the **ROAM** umbrella). Single Next.js 14 App Router site with custom 780-line `<NeuralNetwork />` HTML5 canvas hero. Stack: Next.js 14 / React 18 / Tailwind 3.4 / Framer Motion 10 / lucide-react / JS (no TS). Three commits in main — initial scaffold (2026-01-14) plus two About-page tweaks. Visual direction unsettled: editorial-quarterly aesthetic (Instrument Serif + cream paper + oxblood) and mission-control aesthetic (Bricolage Grotesque + warm-black + lime) both prototyped end-to-end and reverted on 2026-05-09. Open questions captured: deployment target / hosting, next visual brief, whether the perf fixes (server components + dynamic imports + passive scroll + reduced-motion + lucide modularize) should be applied independently of any redesign.
+- index updates: stats bumped (3 → 4 projects); added to Projects → Active subsection alphabetically between kivora and stacesprouts.
