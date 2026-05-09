@@ -59,10 +59,12 @@ Helm follows the **multi-repo wrapper pattern** consistent with the rest of Godw
     ├── BRAIN.md
     ├── brain-wiki-mcp/                (read-only ~/brain/wiki/ access; Week 5 dependency for PM agent)
     ├── stripe-mcp/                    (Week 2 — Sales agent invoicing)
-    ├── notion-crm-mcp/                (Week 1 — Notion-as-CRM bridge)
     ├── postiz-mcp/                    (Week 3 — Marketing agent publish layer)
-    └── accounting-mcp/                (Week 4 — Operations agent QuickBooks/Xero)
+    ├── accounting-mcp/                (Week 4 — Operations agent QuickBooks/Xero)
+    └── crm-mcp/                       (Week 4 — wraps the self-hosted Postgres CRM after migration off Notion)
 ```
+
+> **Note**: Weeks 1-3 use Notion-as-CRM via REST through Hermes (per Q4 resolution — no custom MCP). The `crm-mcp/` folder above is added in Week 4 when the data migrates to self-hosted Postgres-backed and benefits from a typed MCP wrapper.
 
 ### Why 3 repos (not 2 or 5)
 
@@ -107,6 +109,7 @@ All 3 repos sit under the new **`ROAM-Labs/`** GitHub org (per Q2 resolution 202
 ### Layer 3 — Database: PostgreSQL + pgvector on Railway
 - **Shared knowledge layer** — every agent can read/write here.
 - Tables: `leads`, `deals`, `customers`, `invoices`, `expenses`, `content_drafts`, `voice_profiles`, `project_status`, `agent_logs`, `agent_optimizations`.
+- **Cross-cutting columns on every business-data row**: `tenant_id` (per multi-tenant pivot insurance — see [[wiki/syntheses/helm-commercialization-paths]]) + `primary_product` ENUM (`vedge` / `kivora` / `clarvyn` / `roam-labs` / `client-work` — mitigates the cross-product context-bleed risk; agent leads with primary, mentions secondary only if signals support).
 - pgvector for: voice-profile embeddings (per product), lead-similarity matching, content-archive semantic search, product-knowledge RAG.
 - Same database choice as [[wiki/projects/kivora|Kivora]] and [[wiki/projects/clarvyn|Clarvyn]] — Godwin's signature for vector data.
 
@@ -211,7 +214,7 @@ Every MCP integration must satisfy:
 - **Postiz MCP** — social-media scheduling (Week 3 for Marketing; from [[wiki/entities/postiz|Postiz]])
 - **Accounting MCP** — QuickBooks or Xero (Week 4 for Operations agent)
 - **Slack MCP** — internal notifications (Week 4)
-- **CRM MCP** — TBD; Notion or HubSpot or self-hosted Postgres-backed (Week 1, blocking)
+- **CRM MCP** — Week 4 only. Weeks 1-3 use Notion-as-CRM via REST through Hermes (per Q4 resolution; no MCP needed). Build the typed CRM MCP when the data migrates to self-hosted Postgres-backed in Week 4.
 
 ## Build order (6 weeks)
 
@@ -259,6 +262,43 @@ Per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT's]] sequential patter
 - **Critical safety constraint**: Analytics agent's prompt rewrites do NOT auto-apply. Godwin reviews and approves each one in the Helm UI. (Per [[wiki/sources/cyrilxbt-x-2052570518667378918|CyrilXBT]]'s constraint engineering — Communication agent ran in review mode for 2 weeks before auto-send; Analytics agent stays review-mode permanently for system-prompt changes.)
 - **Goal**: end of Week 6, Helm has a closed-loop self-annealing mechanism with human-approval gates.
 
+## Definition of done for v1
+
+Helm is **shipped** when *all five* are true:
+
+1. **All 6 agents are running in production** — Lead Mgmt + Sales + Marketing + Ops + PM + Analytics. Each has its own system prompt + per-agent MCP scope + budget cap.
+2. **30 consecutive days** of the daily 7AM Morning Briefing + 5PM End-of-Day Wrap-up scheduled jobs running without manual intervention. Carry-forward state passes correctly between days.
+3. **Lead Management agent has produced at least 100 qualified-prospect outputs** that Godwin manually approved and either called or emailed. Real outreach, not test data.
+4. **Analytics agent has run at least 1 monthly review cycle** end-to-end and proposed system-prompt changes for at least 2 of the other 5 agents (Godwin reviews and approves; doesn't need to accept).
+5. **Cost discipline holds**: 30-day rolling LLM spend ≤ $300/mo target.
+
+When all 5 are true, file an `update-project` log entry marking `status: shipped-v1` (new frontmatter value) and date the milestone. Then run the [[wiki/syntheses/helm-commercialization-paths|commercialization re-evaluation]] check after another 60-90 days of production.
+
+## Operations
+
+### Secret management
+
+API credentials (Anthropic, OpenRouter, Stripe, Postiz, Notion, GitHub, accounting MCP) live in **Railway environment variables** scoped per-service:
+
+- `helm-backend` → `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, `DATABASE_URL`, `REDIS_URL`
+- `helm-mcp` → per-MCP credentials scoped to the specific MCP server that needs them (e.g. `STRIPE_SECRET_KEY` only on stripe-mcp)
+- `helm-portal` → only public env vars (`NEXT_PUBLIC_API_URL`); no secrets in the Vercel build
+
+**Local dev**: `.env.local` per repo (gitignored). Pull from a single Bitwarden / 1Password vault as the source of truth; never commit. Match Clarvyn's pattern (per [[wiki/projects/clarvyn]] practice).
+
+### PostgreSQL backups
+
+Railway runs daily automated backups for managed PostgreSQL (7-day retention on the basic plan). For Helm v1 single-user scope this is sufficient. Recovery procedure: Railway dashboard → database → restore-from-snapshot. Not yet exercised; Week 1 should include one rehearsal restore against a staging branch to verify the procedure works.
+
+### Observability
+
+- **`agent_logs` table** captures per-call: agent name, model, input-tokens, output-tokens, duration, success/error, cost in USD. Mnilax + zodchii overhead-pattern discipline.
+- **Per-agent error rate** target: <5% per call (~95% per-call success matches the [[wiki/concepts/reliability-decay-math|reliability-decay-math]] inline assumption).
+- **Cost dashboard** in `helm-portal` Logs page: 30-day rolling LLM spend per agent + spike alerts.
+- **Cron job health**: APScheduler logs success/failure per scheduled run; missed-run alert fires after 2 consecutive misses.
+
+Production-grade observability (Prometheus / Grafana / OpenTelemetry traces) is **out of scope for v1**; revisit when Helm crosses 3+ users or 1000+ agent calls/day.
+
 ## Cost discipline (from day 1)
 
 Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/zodchiii-x-claude-code-settings|zodchii]]:
@@ -269,7 +309,7 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 - **Budget caps per agent run**: `--max-budget-usd` style caps to prevent runaway loops in scheduled jobs.
 - **Hermes Agent's OpenRouter integration** lets us experiment with cheaper providers (Claude Haiku 3.5, GPT-4o-mini, DeepSeek) for non-critical agent tasks.
 
-**Target operating cost**: <$300/mo total Claude/OpenRouter spend (vs CyrilXBT's $700-900/mo for the equivalent 5-agent system — Helm should be cheaper because single-user usage is lower volume than CyrilXBT's content business).
+**Target operating cost**: <$300/mo total Claude/OpenRouter spend. Comparison anchor (per [[wiki/sources/cyrilxbt-x-2052570518667378918]]): CyrilXBT's equivalent 5-agent system reports **~$89 hosting + $700-900 API spend = $800-1,000/mo total** at production volume, *or* ~$105/mo at minimum config (Claude Max + N8N self-hosted + free Supabase + free Obsidian). Helm targets the API-spend portion specifically and should land lower than CyrilXBT's because single-user volume is lower than a content business's daily output.
 
 ## Architecture decisions
 
@@ -280,7 +320,7 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 | 3 | PostgreSQL + pgvector (single DB) | Reuse from Kivora/Clarvyn; vector layer for voice profiles + lead similarity | [[wiki/entities/godwin-opoku-duah]] signature stack |
 | 4 | Next.js + Vercel frontend | User stated; matches _roamlabs and Asanti patterns | Q-prerequisite |
 | 5 | Single shared agent stack across all products | Cross-sell context compounds; simpler than per-product stacks | Q2 (a) |
-| 6 | Lead Management as Week 1 MVP | Immediate revenue impact; m0h playbook gives a 90-min path to working agent | Q3 (c) |
+| 6 | Lead Management as Week 1 MVP | Immediate revenue impact; m0h playbook documents *"whole flow runs in ~2 hours"* (filter + cold-call top 20 + email-fallback the rest) per [[wiki/sources/exploraX_-google-maps-leadgen]]. Working agent achievable in Week 1 with that as the operating-time target. | Q3 (c) |
 | 7 | 6-week sequential build (one agent per week) | CyrilXBT's documented order; debugging in isolation; learning failure modes one at a time | [[wiki/sources/cyrilxbt-x-2052570518667378918]] |
 | 8 | Analytics agent system-prompt rewrites stay in review mode permanently | Auto-applying agent prompts to other agents is unsafe; manual approval gate is the safety boundary | Constraint engineering from CyrilXBT's Communication-agent precedent |
 | 9 | Single-user JWT auth, no RBAC, no multi-tenant scoping | Q5 + Q6 → cut polish | Q5, Q6 (a) |
@@ -317,13 +357,13 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 
 - **Hermes Agent maturity**: 23k+ stars but a relatively new project. If a critical bug surfaces, Godwin may need to fork and patch — adding maintenance burden.
 - **Analytics agent prompt-rewrite quality**: bad rewrites could degrade the other 5 agents. Mitigation: review-mode permanent + system-prompt change history with rollback.
-- **Single-user assumption**: if Godwin hires a team, Helm's no-RBAC architecture becomes a refactor liability. Mitigation: design data model with `user_id` columns from day 1 (just don't surface UI for them yet).
-- **Cross-product context bleed**: a Lead Management agent that pitches Vedge to a clinic might also accidentally cross-sell Clarvyn (HR for clinic owners?) — could be feature, could be confusion. Mitigation: per-prospect *primary product* tag; agent leads with primary, mentions secondary only if signals support.
+- **Single-user assumption**: if Godwin hires a team, Helm's no-RBAC architecture becomes a refactor liability. Mitigation: data model carries `tenant_id` from day 1 (per the multi-tenant pivot insurance in [[wiki/syntheses/helm-commercialization-paths]]); a `user_id` column on per-tenant write rows is implied by the same scoping. UI surfaces neither in v1.
+- **Cross-product context bleed**: a Lead Management agent that pitches Vedge to a clinic might also accidentally cross-sell Clarvyn (HR for clinic owners?) — could be feature, could be confusion. Mitigation: `primary_product` ENUM column on every business-data row (see Layer 3 schema); agent system prompts explicitly include *"lead with `primary_product`; mention secondary products only if signals strongly support"*.
 - **Hermes Agent's self-improving loop**: it creates skills from experience. Without supervision, it might create skills that don't match Godwin's preferences. Mitigation: skill-creation review queue in Helm UI.
 
 ## Composition with the brain
 
-Helm is the **most direct application of the wiki's 2026-05 ingest cluster** — every major source from the last week feeds into one of its 5 specialized agents:
+Helm is the **most direct application of the wiki's 2026-05 ingest cluster** — every major source from the last week feeds into one of its 6 specialized agents (5 inline-chained + 1 meta-orchestrator):
 
 - [[wiki/sources/exploraX_-google-maps-leadgen]] → Lead Management agent
 - [[wiki/sources/ig_claims-x-meta-retargeting]] → Sales agent's Conviction Gap proposals
@@ -354,7 +394,7 @@ Helm is the **most direct application of the wiki's 2026-05 ingest cluster** —
 - [[mcp-server]] — 7-step reliability rubric applied per integration.
 - [[anti-ai-slop-machinery]] — Marketing agent loads master avoid-slop document.
 - [[claude-code-overhead-patterns]] — cost discipline from day 1.
-- [[reliability-decay-math]] — 6 agents × 95% per-step = 73% end-to-end; motivates aggressive error handling + reasoning-execution split.
+- [[reliability-decay-math]] — **5 inline-chained agents × 95% per-step = 77% end-to-end** (`0.95^5 ≈ 0.774`). Analytics is meta — runs monthly on logs, not in the inline pipeline, so it doesn't compound the chained-failure probability. Motivates aggressive error handling + reasoning-execution split for the inline 5.
 
 ## Related entities
 
