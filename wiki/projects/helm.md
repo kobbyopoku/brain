@@ -54,7 +54,7 @@ Wrapper has no `.git`. Each sub-repo has its own `BRAIN.md` (gitignored) plus a 
 - **Backend deps**: `alembic` (migrations), `structlog`, `pydantic-settings`, `sqlalchemy[asyncio]`, `asyncpg`, `httpx` pinned in `pyproject.toml`. Hermes Agent dep still placeholder pending pypi name resolution.
 
 **Immediate execution blockers**:
-1. Hermes Agent pypi package name not yet pinned in `helm-backend/pyproject.toml` (TODO comment placeholder).
+1. ~~Hermes Agent pypi package name not yet pinned in `helm-backend/pyproject.toml` (TODO comment placeholder).~~ **Resolved 2026-05-10**: Hermes is not on pypi (verified upstream); pinned via git tag — `"hermes-agent @ git+https://github.com/NousResearch/hermes-agent.git@v0.13.0"`. Programmatic-embedding path (`from agent import AIAgent`) preserves the in-process FastAPI integration assumption. See updated [[wiki/entities/hermes-agent]] for distribution details + heavy-dep footprint caveat.
 2. `ROAM-Labs/` GitHub org not created; sub-repos have no remotes (and no first commits yet).
 
 ## Repo topology — multi-repo wrapper

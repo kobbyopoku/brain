@@ -3,7 +3,7 @@ type: entity
 title: Hermes Agent
 entity_type: product
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-05-10
 website: https://hermes-agent.nousresearch.com
 aliases: [hermes, nousresearch-hermes-agent]
 tags: [agent-cli, autonomous-agent, self-improving, open-source, mit, nous-research, persistent-memory, multi-platform]
@@ -30,10 +30,19 @@ Plus: native cron scheduler, isolated subagents for parallel workstreams, durabl
 - **License**: MIT.
 - **Maintainer**: [[wiki/entities/nous-research|Nous Research]].
 - **Released**: February 2026.
-- **Latest version**: v0.11.0 (May 2026) — full React/Ink CLI rewrite, pluggable transport architecture, native AWS Bedrock support, GPT-5.5 via Codex OAuth.
+- **Latest version (verified 2026-05-10)**: **v0.13.0** "The Tenacity Release" (2026-05-07). Earlier wiki note of v0.11.0 was current at 2026-05-05 ingest; bumped 0.11 → 0.12 → 0.13 in the intervening days.
 - **Stars**: 23,000+ (May 2026).
-- **Stack**: Python, SQLite (cron / kanban / sessions), FTS5 (session search), Rich + prompt_toolkit (TUI), React/Ink (v0.11+ CLI).
+- **Stack**: Python ≥3.11, SQLite (cron / kanban / sessions), FTS5 (session search), Rich + prompt_toolkit (TUI), React/Ink (v0.11+ CLI).
 - **Platforms**: Linux, macOS, WSL2, Termux (Android). Windows requires WSL2.
+- **Distribution**: **Not on pypi.** Two install paths:
+  - **Curl install script** (intended end-user path): `curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash` (PowerShell variant for Windows).
+  - **Pip from git** (programmatic-embedding path, e.g. for [[wiki/projects/helm|Helm]]): `pip install "hermes-agent @ git+https://github.com/NousResearch/hermes-agent.git@vX.Y.Z"`. The repo's own `pyproject.toml` declares the project as `hermes-agent` so this works without a fork.
+- **Console scripts** (declared in repo `pyproject.toml`):
+  - `hermes` → `hermes_cli.main:main` (interactive TUI).
+  - `hermes-agent` → `run_agent:main` (non-interactive agent invocation).
+  - `hermes-acp` → `acp_adapter.entry:main` (ACP adapter).
+- **Top-level importable packages**: `agent`, `tools`, `hermes_cli`, `gateway`, `tui_gateway`, `cron`, `acp_adapter`, `plugins`, `providers`. Programmatic embedders import `agent.AIAgent` (or via `run_agent:main`).
+- **Notable runtime deps** (heavy footprint to be aware of when embedding): `openai`, `anthropic`, `rich`, `prompt_toolkit`, `pydantic`, `httpx[socks]`, `exa-py`, `firecrawl-py`, `parallel-web`, `fal-client`, `edge-tts`, `croniter`, `PyJWT[crypto]`, `tenacity`, `jinja2`, `pyyaml`, `ruamel.yaml`. Pulling Hermes into a server image carries the full TUI + tool surface even if only `agent.AIAgent` is used.
 - **Docs**: https://github.com/mudrii/hermes-agent-docs (community).
 - **Awesome list**: https://github.com/0xNyk/awesome-hermes-agent.
 
