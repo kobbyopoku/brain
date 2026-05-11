@@ -2,7 +2,7 @@
 type: project
 title: Helm
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-10
 status: active
 repo: multi-repo (local .git in each of helm-backend, helm-portal, helm-mcp as of 2026-05-09; outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; remotes pending github.com/ROAM-Labs/{helm-backend,helm-portal,helm-mcp} org creation per Q2)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm
