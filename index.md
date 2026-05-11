@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 90 sources · 300 entities · 48 concepts · 10 projects · 6 syntheses · last updated 2026-05-09
+**Stats**: 90 sources · 300 entities · 48 concepts · 11 projects · 6 syntheses · last updated 2026-05-11
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -690,7 +690,7 @@ _(none yet)_
 
 ### Exploring
 
-_(none yet)_
+- 🏢 [[wiki/projects/glydr]] — *(ROAM Labs owned product — exploring; PRD v0.2 + monorepo scaffold 2026-05-11; no commits yet; brand name "Glydr" working only)* peer-to-peer **intercity carpooling** for Ghana on the Accra ↔ Kumasi corridor; cost-sharing legal positioning (driver counts as occupant who pays own per-seat share, structurally not commercial transport); Flutter mobile (Android-first, iOS V1) + Spring Boot 3.5 / Java 21 backend + two Next.js 15 surfaces (`landing/` + `control-center/` operator console); planned integrations Flutterwave (payments) + [[wiki/projects/brolly|Brolly Africa]] (per-trip insurance — doubles as anti-leakage moat) + Smile Identity (KYC, V1) + Hubtel (SMS) + Google Maps; POC = 2-4 weeks solo, weekend trips, manual KYC, no commission; corporate structure (PRD §16 Q1) and design system (Q9) still open.
 
 ### Completed / archived
 
