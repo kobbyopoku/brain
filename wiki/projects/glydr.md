@@ -2,11 +2,11 @@
 type: project
 title: Glydr
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-15
 status: active
-repo: multi-repo (4 separate repos under github.com/kobbyopoku/ — glydr_backend / glydr_landing / glydr_cc / glydr_mobile). The local-cwd /Users/kobbyopoku/ROAM/CascadeProjects/glydr is an UNTRACKED workspace folder holding PRD + docs + infra + docker-compose, mirroring Helm and Brolly's wrapper pattern.
+repo: multi-repo (5 separate repos under github.com/kobbyopoku/ — glydr_backend / glydr_landing / glydr_cc / glydr_mobile / glydr_docs). The local-cwd /Users/kobbyopoku/ROAM/CascadeProjects/glydr is an UNTRACKED workspace folder; PRD + docker-compose + infra/ removed from the workspace root post-Phase-7 (PRD now lives in docs/, local Postgres no longer needed since Railway is provisioned).
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/glydr
-stack: [flutter, dart, java-21, spring-boot-3.5, maven, jjwt, aws-sdk-s3, h2-test, postgres, flyway, hibernate, hikari, nextjs-15, react, typescript, tailwindcss, turbopack, docker-compose, railway-planned, flutterwave-planned, smile-identity-planned, brolly-insurance-planned, mnotify-planned, resend-planned, google-maps-planned, firebase-cloud-messaging-planned, posthog-planned, sentry-planned]
+stack: [flutter, dart, java-21, spring-boot-3.5, maven, jjwt, aws-sdk-s3, h2-test, postgres, flyway, hibernate, hikari, nextjs-16, react-19, typescript, tailwindcss-v4, turbopack, railway, flutter-riverpod, go-router, dio, flutter-map, flutter-secure-storage, camera, image-picker, permission-handler, smile-id-unfit-on-ios, sentry-flutter, firebase-messaging, firebase-core, mnotify, resend, flutterwave-planned, brolly-insurance-planned, posthog-planned]
 started: 2026-05-11
 ended:
 owner_org: roam-labs
@@ -22,7 +22,7 @@ tags: [project, mobility, carpooling, ghana, marketplace, two-sided, mobile-firs
 
 > **Lineage**: ROAM Labs owned product ([[wiki/entities/godwin-opoku-duah|Godwin Opoku Duah]], founder + sole builder). Insurance underwriting via [[wiki/projects/brolly|Brolly Africa]] (Godwin co-founded). Brand name "Glydr" is a **working name**, not yet confirmed (PRD §16 Q7). Corporate structure (PRD §16 Q1) is still open — the `roam-labs-product` affiliation reflects current intent; subject to revision if Glydr is later spun out as a separate company or absorbed into Brolly.
 
-> **Repo topology**: workspace folder + 4 sibling repos. The cwd-as-workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/glydr` is **NOT** a git repo — it holds PRD + `docs/` + `infra/` + `docker-compose.yml` only on disk. Each of `mobile/`, `backend/`, `landing/`, `control-center/` has its own `.git` pointing at its own GitHub repo under `kobbyopoku/`. Same shape as [[wiki/projects/helm|Helm]] (proposed `ROAM-Labs/{helm-backend, helm-portal, helm-mcp}`) and [[wiki/projects/brolly|Brolly]] (`/Users/kobbyopoku/Brolly` workspace + `Brolly-Africa/{admin-portal, backend-service, ...}`).
+> **Repo topology** *(updated 2026-05-15)*: workspace folder + **5** sibling repos. The cwd-as-workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/glydr` is **NOT** a git repo — by Phase 7 it had collapsed to just `BRAIN.md` + the five sibling clones (PRD + docker-compose + infra/ moved into `docs/`, which is itself now a separate repo). Each of `mobile/`, `backend/`, `landing/`, `control-center/`, `docs/` has its own `.git` pointing at its own GitHub repo under `kobbyopoku/`. Same shape as [[wiki/projects/helm|Helm]] and [[wiki/projects/brolly|Brolly]].
 
 > **One-sentence framing**: Peer-to-peer Point-A-to-Point-B carpooling for Ghana, piloting two corridors at once (Accra ↔ Kumasi weekend trips + in-Accra commute), structurally positioned as cost-sharing rather than commercial transport.
 
@@ -59,35 +59,52 @@ Workspace folder + four sibling repos, each with its own toolchain.
   - Email: **Resend** transactional API. Wired via `ResendEmailNotifier`. Logs only when `RESEND_API_KEY` absent.
   - SMS: **mnotify** (Ghana SMS provider — replaces Hubtel from PRD). Wired via `MnotifySmsNotifier`. Same env-gated fail-soft pattern.
   - Both fire on KYC decision (driver) AND landing waitlist signup (operator alert).
-- **Brand identity**: **Quiet Corridor** — Corridor Green `#0e5c3a` primary, Sunrise Amber `#f2a71b` accent (decorative only), Bone `#f7f5ef` background, Plus Jakarta Sans + Inter + JetBrains Mono trio. Formalised as Open Design 9-section DESIGN.md at `landing/DESIGN.md` + `control-center/DESIGN.md` (inherits). Includes wordmark route mark (●━━●), eyebrow chips, no-shadows discipline. Mobile design direction still pending. See [[wiki/concepts/design-md]] + [[wiki/concepts/visual-directions]].
-- **Planned third-party integrations** (PRD §11.4):
-  - Payments: Flutterwave (Standard checkout for POC; inline SDK + escrow for V1) — *not yet wired*
-  - KYC: Smile Identity (Ghana Card, DL, liveness, OCR — V1) — *manual review at POC, working*
-  - Insurance: [[wiki/projects/brolly|Brolly Africa]] internal API for per-trip top-up issuance (V1) — *not yet wired*
-  - Maps: [[wiki/entities/google-maps|Google Maps Platform]] (Maps SDK / Places / Directions / Geocoding) — *not yet wired*
-  - Push: Firebase Cloud Messaging — *not yet wired*
+- **Brand identity** *(pivoted 2026-05-12)*: **Neon Carbon** — dark warm-black `#0A0807` background with neon-glow accents (lime `#D4FF3A` primary, orange glows), Hanken Grotesk for the wordmark + body. **Quiet Corridor was retired** when the visual system was unified across landing + mobile; previous Quiet-Corridor / Bone-background tokens are only kept on the control-center for now. See `[[brand_split]]` memory note. Mobile design lands on the same Neon Carbon system; the wordmark route mark (●━━●) stays.
+- **Third-party integrations** *(updated 2026-05-15)*:
+  - Payments: Flutterwave — *not yet wired*
+  - KYC: Smile Identity (Ghana Card, DL, liveness) — **iOS bridge UNFIT (vendor bug, see Lessons)**; manual photo upload now first-class on both platforms with live in-app camera preview (`package:camera`). Smile Job Status Poller backstop on backend.
+  - Insurance: [[wiki/projects/brolly|Brolly Africa]] per-trip top-up — *not yet wired*
+  - Maps: **`flutter_map` (OpenStreetMap)** — picked over Google Maps for v1 because zero-credential / zero-Cloud-Console / no API key; tile source CartoDB Dark Matter (CC-BY). Swappable for Google Maps later.
+  - Push: **Firebase Cloud Messaging** wired and live; covers BOOKING / TRIP / PAYOUT / PICKUP_CODE_ARMED / MESSAGE_RECEIVED / KYC_DECISION events. Mobile push handler invalidates the matching providers on receipt.
+  - Errors / observability: **Sentry** scaffolded inert (Flutter + Spring), activates when `SENTRY_DSN` / `GLYDR_SENTRY_DSN` is set. Backend Railway has a real DSN; mobile is still inert until DSN is dart-defined.
   - Analytics: PostHog — *not yet wired*
-  - Errors: Sentry — *not yet wired*
-- **Hosting target** (PRD §11.5): Railway Pro plan, three projects (`glydr-dev` / `glydr-staging` / `glydr-prod`) — *not yet provisioned*
+  - Real-time chat: **SSE** (Server-Sent Events) — picked over WebSockets / Firestore for v1; mobile auto-reconnects + 30s catch-up poll for silent drops. See [[wiki/projects/glydr|architecture decisions § 2026-05-13]].
+- **Hosting**: **Railway provisioned** (`glydr-staging` live, prod TBD). Backend deploys on push to main. Includes managed Postgres + R2 (Cloudflare) wired with proper env vars after a Phase 7r-6 footgun (R2_PUBLIC_URL is the SigV4 endpoint, not the public-read URL — see Lessons).
 - **Local-dev story**: `docker compose up -d postgres` + `cd backend && set -a; . ./.env; set +a && ./mvnw spring-boot:run` + `cd control-center && npm run dev -- --port 3001` + `cd landing && npm run dev`. Operator login: `ops@glydr.app` / `ChangeMe123!` (bootstrapped from env on first backend start).
 
 ## What's wired today (end-to-end working)
 
-1. **Backend KYC manual approval flow** — driver submits multipart KYC (POST `/v1/drivers/kyc`) → 10 documents land in R2/LocalFS → operator logs in (POST `/v1/admin/auth/login`) → fetches queue (GET `/v1/admin/kyc/queue`) → opens detail (GET `/v1/admin/kyc/{id}`) → approves/rejects with reason (POST `/v1/admin/kyc/{id}/decision`) → driver flips PENDING → ACTIVE → Resend + mnotify notifiers fire (or log if unconfigured). 14/14 backend tests passing.
-2. **Control-center operator console** — login + KYC queue + KYC detail (with all 10 docs proxied through `/api/document-proxy` for LocalFS or direct for R2 presigned URLs) + approve/reject form. Quiet Corridor design tokens. Verified end-to-end through the browser (Playwright).
-3. **Landing page** — full marketing site with hero, persona toggle (`?for=driver|passenger`), how-it-works, cost-share explainer (5/5/5 grid: in-Accra | "what that buys you" | intercity), trust strip, safety, comparisons, FAQ (`<details>`), waitlist form. Wired to backend POST `/v1/waitlist` (idempotent on phone+source). 3 hero/CTA copy options live in `docs/brand/landing-copy.md`.
-4. **Operator email alerts on every waitlist signup** — Resend wiring fires for both KYC decisions and waitlist signups via the same `EmailNotifier` interface.
+*Phase 2 list (KYC, control-center, landing, operator alerts) all still working. Phases 4-7 dramatically expanded the surface — summary below.*
 
-Not wired yet: real R2 bucket, real Resend API key, real mnotify API key, Railway provisioning, mobile app (Flutter scaffold only).
+1. **Backend KYC manual approval flow** — driver submits multipart KYC → docs land in R2 → operator logs in via control-center → approves / rejects → driver flips PENDING → ACTIVE → Resend + mnotify + **FCM push** notifiers fire (Phase 7r-6 added the push wake-up via `KYC_DECISION` event).
+2. **Control-center operator console** — login + KYC queue + KYC detail (10 docs via `/api/document-proxy`) + approve/reject form + **payout listing** (Phase 7b) + **token refresh** endpoint (Phase 7q backend support).
+3. **Landing page** — full marketing site, waitlist form posting to `/v1/waitlist`, Neon Carbon visual.
+4. **Mobile (Flutter, both Android + iOS)** — far past scaffold:
+   - **Auth**: phone-OTP via mnotify with auto-fill from incoming SMS (Phase 6f), local PIN + biometric unlock (Phase 6g), AuthInterceptor 1-shot retry on 401/403 with multipart skip (Phase 7q).
+   - **KYC**: manual photo upload end-to-end with live in-app camera preview inside the framing rectangle / face frame (Phase 7r-6); Smile Identity widget path attempted then abandoned on iOS (vendor bug). KYC submit lands directly on `/home`; standalone `/status` screen + "add vehicle" intermediate were removed.
+   - **Trips lifecycle (Phase 7a → 7m)**: live trip lifecycle, driver payouts ledger + cash-out + ops batching (7b), trip-start workflows + safety SMS (7c), in-trip dark map + routed polyline + pickup roster + SOS (7d), in-app messaging via SSE (7e), passenger ↔ driver ratings (7f), shared GlydrMapView + trip-status unification (7h), driver trip history feed (7i), pickup-code 4-digit verification handshake (7j), Track-driver chip + routed mini-map (7k), pickup polling + overlay clearance (7l), trip-detail + chat polish (7m).
+   - **Safety stack (Phase 7g)**: SOS fan-out + safe-arrival + ops alert.
+   - **Reliability (Phase 7n → 7q)**: SSE auto-reconnect + 30s catch-up poll for silent drops, parentNavigatorKey discipline across top-level pushed routes, Sentry scaffold (inert until DSN), pull-to-refresh sweep on Activities + Messages + Driver Home, AuthInterceptor cold-start retry.
+   - **UX**: ride/drive switcher rename, You-screen redesign, activities feed depth + smart bell, driver-side counterpart sheet, pickup global passenger OTP modal sheet (Phase 7r), splash flicker eliminated by preloading Hanken Grotesk (Phase 7r-6).
+5. **Backend trip-side endpoints** — payouts (7b), ratings (7f), SOS (7g), trip-status unification (7h), driver trip history feed (7i), pickup-code handshake (7j), pricing AC surcharge runtime-tunable per country (Phase 7g+), country lifecycle status + trip-create gate, admin token refresh (Phase 7q backend), Smile Job Status Poller backstop (Phase 7r — polls Smile REST `job_status` to cover the case where the SDK consumes the verdict synchronously and never fires the partner callback).
+6. **Cross-cutting integrations live**:
+   - R2 (Cloudflare) — staging endpoint + bucket configured; SigV4 auth working after a Phase 7r-6 env-var detour.
+   - FCM push — Android wired; iOS push gated on APNs + entitlement work (deferred).
+   - Resend + mnotify — both live in staging.
+   - `flutter_map` + `geolocator` + `geocoding` — live for the passenger map drop-pin flow + reverse-geocoding.
+
+Not wired yet: real Flutterwave (payments), real Brolly per-trip insurance, PostHog analytics, prod Railway environment, mobile Sentry DSN, iOS APNs (FCM iOS path is dormant).
 
 ## Current focus
 
-Week of 2026-05-11 — **Phase 2 wiring complete**. Moving to driver auth + mobile.
+*(updated 2026-05-15)* Week of 2026-05-15 — **Phase 7r-6 productionizing manual KYC end-to-end**, after a 4-day stretch (Phase 7e → 7r-6) that shipped trips lifecycle + safety stack + ratings + payouts + in-app messaging + pickup-code handshake.
 
-- **Next slice (recommended)**: **driver phone-OTP auth via mnotify**. Backend POST `/v1/drivers/auth/{request-otp,verify-otp}` + JWT for drivers + retire the tracking-token kludge. ~Half-day. Exercises the mnotify integration for real.
-- **After that**: mobile app onboarding flow (Flutter — phone OTP screen → KYC document capture → "submitted, awaiting approval" screen → status flips to ACTIVE when operator approves).
-- **Tactical / vendor hardening pending**: provision the three Railway environments per PRD §11.5; create real Cloudflare R2 bucket; verify a sender domain on Resend; set `MNOTIFY_API_KEY`. Half-day of clicking + config.
-- **PRD update pending**: landing diverges from PRD §3.3 / §6.3 on in-Accra scope; PRD v0.3 should absorb the broadened pilot.
+- **In flight today**: backend `KYC_DECISION` push wiring just merged on main (Railway redeploying); mobile changes (live camera preview + `/status` removal + KYC submit → `/home` + AuthInterceptor multipart skip + Ghana phone normalization) are **uncommitted on `feat/smile-id-activation`**, awaiting commit + push as the matching mobile slice.
+- **Next slice**: cross-device manual KYC retest on iPhone (devicectl install) + Samsung (USB) + Tecno; confirm operator approval triggers the new push and the dashboard unlocks without a refresh.
+- **Smile Identity verdict**: iOS bridge is **unfit** — two compounding vendor bugs (touch hijack + missing `didMove(toParent:)`) that block end-to-end KYC on iPhone. Manual upload is now the primary KYC path on iOS; Android works on either path. Defer Smile widget rework until Smile ships an iOS SDK fix.
+- **Backend cleanup queued**: rename `R2_PUBLIC_URL` → `R2_ENDPOINT_URL` (env var name footgun caused an afternoon of debugging — see Lessons); wire `R2Properties.resolvedEndpoint()` into `DocumentStoreConfig` (currently dead code); null-guard `fireOperatorSubmissionAlert()` for KYC submissions without vehicle (NPE path → silent 500).
+- **Mobile error coverage queued**: KYC emergency screen's error switch doesn't handle `HTTP_500` / `ALREADY_SUBMITTED` / `UPLOAD_FAILED` / `FILE_TOO_LARGE` — falls through to a generic snackbar.
+- **Vendor hardening pending**: real Flutterwave wiring, real Brolly per-trip insurance, PostHog activation, mobile Sentry DSN, iOS APNs entitlement.
 
 ## Architecture decisions
 
@@ -132,6 +149,20 @@ Week of 2026-05-11 — **Phase 2 wiring complete**. Moving to driver auth + mobi
 - **2026-05-11** — **Landing positioning broadened to "Point A to Point B"** with **dual pilot** (Accra↔Kumasi + in-Accra commute). Diverges from PRD §3.3 / §6.3 which list in-Accra commute as Year-1 non-goal. Decision noted; PRD v0.3 should absorb. Trade-offs (matching density, leakage on repeat pairs, Bolt as direct competitor for in-Accra) acknowledged.
 - **2026-05-11** — **Pricing example in landing**: Toyota Camry replaces PRD Appendix A's BMW X5 (more representative Ghanaian intercity vehicle). Two scenarios shown side-by-side: intercity (~GHS 62/seat) + intra-Accra commute (~GHS 5/seat).
 
+### Phase 7 (mobile + backend + reliability) — 2026-05-12 → 2026-05-15
+
+- **2026-05-12** — **Brand pivot Quiet Corridor → Neon Carbon**. The dark + neon-glow system unifies landing + mobile (control-center stays Quiet Corridor for now). Driven by mobile design needs — the bone background didn't scale to Driver Home / map overlays. Wordmark route mark (●━━●) preserved; Hanken Grotesk replaces the Plus Jakarta + Inter pair. See memory `[[brand_split]]`.
+- **2026-05-13** — **SSE for in-app chat** (Phase 7e). Picked over WebSockets and Firestore: SSE is one-direction (server→client), HTTP/1.1-friendly, plays with the existing Spring `WebMvc` stack, no extra connection layer to operate. Closes Q8 (real-time location transport) for the chat axis. Live-trip location uses the same SSE connection.
+- **2026-05-13** — **`flutter_map` (OpenStreetMap) over Google Maps** for v1. Tile source CartoDB Dark Matter — already dark, matches Neon Carbon, free with CC-BY attribution. Zero-credential / zero-Cloud-Console / no API key. Swappable for Google Maps / Mapbox later when richer styling matters.
+- **2026-05-14** — **`parentNavigatorKey` discipline** for every top-level pushed route. Without it, `system back` on Android pops the shell instead of the pushed route. Full sweep across `/kyc/*`, `/vehicle/add`, `/passenger/*`, etc. (Phase 7n).
+- **2026-05-14** — **Sentry observability scaffold** — Flutter (`sentry_flutter`) + Spring boot wired but **inert until a DSN is provided**. Mirrors the "scaffold inert until configured" pattern set by Smile Identity. Backend Railway has a real DSN; mobile is dart-defined per build.
+- **2026-05-14** — **SSE auto-reconnect + 30s catch-up poll**. Silent SSE drops were leaving chat threads stale; auto-reconnect re-establishes the stream and the catch-up poll closes any gap.
+- **2026-05-15** — **AuthInterceptor 1-shot retry on 401/403** (Phase 7q). Cold-start race between hydrated session and provider `ref.watch` was stranding the user on a blank screen. One-shot retry + skip multipart bodies (FormData is a one-shot stream) handles the race without infinite loops.
+- **2026-05-15** — **KYC in-app camera preview via `package:camera`** (Phase 7r-6). `image_picker` system-camera handoff left the framing rectangle / face-frame empty. New `EmbeddedCameraView` widget renders `CameraPreview()` inside the lime frame, `takePicture()` exposed via `GlobalKey<EmbeddedCameraViewState>`. Lifecycle handles iOS background pause-resume + Android `CameraDevice` auto-release.
+- **2026-05-15** — **Smile Identity iOS bridge UNFIT** — pre-built native framework has two bugs (touch hijack via SwiftUI hosting controller, missing `didMove(toParent:)` blocking the terminal Continue button). Both bugs sit in vendor code; can't be patched from Dart. Manual photo upload promoted to first-class on both platforms. Smile Job Status Poller backstop on backend covers the case where the SDK consumes the verdict synchronously and never fires the partner-callback URL. Defer Smile widget rework until vendor ships an iOS SDK fix.
+- **2026-05-15** — **`/status` screen + "Add your vehicle" intermediate REMOVED**. KYC submit lands the user directly on `/home`; an in-flight review is communicated by a soft "Listing opens once your KYC review completes" empty state on the dashboard widgets (which 403 until APPROVED). Killed two screens of forced navigation between submitting KYC and being a working driver.
+- **2026-05-15** — **`KYC_DECISION` push wired backend → mobile**. `KycService` injects `PushNotifier`, fires the push immediately after the email + SMS notifiers in `decideAuthenticated`. Mobile push handler invalidates `statusControllerProvider` + driver-trips providers; the dashboard re-renders unlocked. Push is augment-only — the canonical state always comes back through `/me`.
+
 ## Open questions
 
 From PRD §16 (canonical) plus session-state flags. **Resolved items kept with strikethrough so the historical record stands.**
@@ -143,22 +174,33 @@ From PRD §16 (canonical) plus session-state flags. **Resolved items kept with s
 5. **Legal counsel for cost-sharing review** before V1 launch (PRD §16 Q5).
 6. ~~**Java vs Kotlin** for backend (PRD §11.2).~~ → **Resolved 2026-05-11: Java 21.**
 7. ~~**Object storage vendor** for KYC + vehicle photos.~~ → **Resolved 2026-05-11: Cloudflare R2 + LocalFS dev fallback.**
-8. **Real-time location transport** for in-trip safety — Firestore sidecar vs WebSockets vs polling.
-9. ~~**Design system / visual direction**.~~ → **Resolved 2026-05-11: "Quiet Corridor" Open Design DESIGN.md for landing + control-center. Mobile direction still pending.**
+8. ~~**Real-time location transport** for in-trip safety — Firestore sidecar vs WebSockets vs polling.~~ → **Resolved 2026-05-13: SSE for chat + live-trip location.**
+9. ~~**Design system / visual direction**.~~ → **Resolved 2026-05-11: Quiet Corridor for landing + control-center.** *(updated 2026-05-12)* **Brand pivoted to Neon Carbon for landing + mobile**; control-center still Quiet Corridor for now.
 10. **Brand name + domain** — "Glydr" is working only; PRD §16 Q7. (`name_confirmed: false`.)
 11. **Investor capital after validation, or bootstrap from revenue** (PRD §16 Q10).
-12. **iOS-vs-Android-only for POC** (PRD §16 Q8) — leans Android-only; not yet formally confirmed.
-13. **Workspace shape** *(new 2026-05-11)* — keep root `/Users/kobbyopoku/ROAM/CascadeProjects/glydr` untracked (current state, mirrors Brolly), or promote to a wrapper repo (`glydr_workspace`) holding PRD + docs + infra + docker-compose? Untracked is fine while solo; wrapper helps when collaborators land.
-14. **PRD ↔ landing divergence** *(new 2026-05-11)* — landing now positions broader than PRD (Point A to Point B + in-Accra commute). PRD v0.3 should absorb the broadened scope, OR landing should be treated as the more recent source of truth and PRD frozen at v0.2 with a "see decision-log" pointer.
-15. **Driver auth shape for next slice** *(new 2026-05-11)* — phone-OTP via mnotify (decided in principle); confirm OTP TTL, replay protection, throttle policy before code.
+12. ~~**iOS-vs-Android-only for POC** (PRD §16 Q8).~~ → **Resolved 2026-05-15: both platforms targeted; Smile Identity widget path is iOS-blocked specifically (vendor bug). Manual KYC upload works on both.**
+13. **Workspace shape** *(new 2026-05-11)* — keep root untracked (current state) or promote to a wrapper repo? Workspace got SLIMMER over Phase 7 (PRD + docker-compose + infra/ moved into the `docs/` repo, only `BRAIN.md` + 5 sibling clones remain at the root). Still untracked.
+14. **PRD ↔ landing divergence** *(new 2026-05-11, still open)* — PRD v0.3 still pending; meanwhile the docs/ repo has 19 phase docs (7a → 7r-6) that effectively serve as the live source of truth for the current build.
+15. ~~**Driver auth shape for next slice** *(new 2026-05-11)* — phone-OTP via mnotify.~~ → **Resolved + shipped 2026-05-12: phone-OTP via mnotify with auto-fill from incoming SMS (Phase 6f), local PIN + biometric unlock (6g).**
+16. **Smile Identity iOS SDK fix timeline** *(new 2026-05-15)* — vendor needs to patch the SwiftUI hosting controller's touch hijack + add `didMove(toParent:)` for iOS 26 lifecycle. No ETA. Manual upload covers both platforms in the meantime; revisit Smile widget path when a patched `smile_id ^11.x` lands.
+17. **R2 env var rename** *(new 2026-05-15)* — `R2_PUBLIC_URL` is misleadingly named (it's actually the SigV4 endpoint). Rename to `R2_ENDPOINT_URL` + add a separate `R2_PUBLIC_BASE_URL` for actual public download links. Coordinate with Railway env var migration.
+18. **Backend NPE in `fireOperatorSubmissionAlert`** *(new 2026-05-15)* — `vehicle.getPlateNumber()` without a null check NPEs when KYC is submitted without vehicle fields, gets swallowed into a generic 500. Easy fix queued.
 
 ## Lessons learned
 
 Three patterns surfaced during the 2026-05-11 build session:
 
 1. **Marketing-vs-product design system split** — for any project with both a marketing surface and a product surface, hand-rolled Tailwind for marketing wins (visual control, no third-party aesthetic baggage), but adopt shadcn-or-equivalent at the product surface where component density is high. Worked examples: this project + [[wiki/projects/coffee-break-with-big-sis|Coffee Break]]. Could be promoted to a concept page once a third worked example lands.
-2. **Fail-soft env-gated notifier pattern** — single notifier impl serves dev (logs) and prod (calls vendor) based on env-var presence. Avoids `@Profile` bean overrides + `@ConditionalOnProperty` ceremony. Much easier reasoning at runtime: one log line at startup tells the operator whether the integration is hot. Worked examples: `ResendEmailNotifier` + `MnotifySmsNotifier`.
+2. **Fail-soft env-gated notifier pattern** — single notifier impl serves dev (logs) and prod (calls vendor) based on env-var presence. Avoids `@Profile` bean overrides + `@ConditionalOnProperty` ceremony. Much easier reasoning at runtime: one log line at startup tells the operator whether the integration is hot. Worked examples: `ResendEmailNotifier` + `MnotifySmsNotifier` (now also `PushNotifier` / `FcmPushNotifier`).
 3. **JPA `:param IS NULL` cursor-pagination Postgres footgun** — when a nullable JPQL parameter appears only in `:param IS NULL` context, Postgres can't infer its type and returns `ERROR: could not determine data type of parameter $N`. Hibernate doesn't help. Fix: split into two methods (cursor-present + cursor-absent) and route at the service layer. Cleaner than native query with explicit cast. Worth a concept page if it shows up on another project.
+
+Five more from the Phase 7 stretch (2026-05-12 → 2026-05-15):
+
+4. **Vendor SDKs that ship pre-built native frameworks can't be patched from Dart** — Smile Identity's iOS framework has two bugs (touch hijack + missing `didMove(toParent:)`) that block end-to-end KYC on iPhone. Both sit in vendor code; Dart can't reach them. Lesson: every vendor-SDK widget path needs a fallback path on day one (manual upload here). When the vendor SDK breaks on a platform, you don't want to be stuck shipping nothing for a week. Worth a concept page when a second example lands (Brolly insurance API will probably qualify).
+5. **Env var names are load-bearing documentation** — `R2_PUBLIC_URL` set on Railway was actually the SigV4 endpoint variable; the user pasted the actual public-read `pub-...r2.dev` URL into it (because that's what "public" suggests). Result: silent 401 on every PutObject for a full afternoon. The variable is being renamed to `R2_ENDPOINT_URL` to match what it actually does. Rule: an env var named X should mean X. If "public URL" can be either an auth endpoint or a download base, split into two vars with names that disambiguate.
+6. **iOS debug builds need `flutter run` attached forever** — debug-mode Flutter apps use a JIT-compiled VM that iOS only allows when the Dart debugger is actively attached (ptrace). Tap the app icon on the home screen → ptrace fails → black screen. For standalone home-screen launches during dev, build profile or release mode (AOT). Tripped me + the user across multiple sessions.
+7. **`flutter run` install-and-launch is unreliable on iOS 26.5** — "Timed out waiting for CONFIGURATION_BUILD_DIR to update." Apple's tightened automation security around Xcode keeps breaking flutter's tooling. Workaround: `flutter build ios --profile`, then install with `xcrun devicectl device install app --device <UUID> build/ios/iphoneos/Runner.app`. The build is fine; only the install-and-launch via flutter automation is flaky.
+8. **`go_router` parent route's `redirect` callback receives `state.matchedLocation` as the parent's own segment, NOT the full requested URL** — Phase 7r-5's "fix" of `state.matchedLocation == '/kyc' ? '/kyc/verify' : null` was true for every child path because `matchedLocation` at the `/kyc` redirect resolves to `/kyc`, not `/kyc/ghana-card-front`. `state.uri.path` is the full requested URL — use that for "only redirect on the parent itself" patterns. Cost: a half-day chasing why every KYC navigation bounced back.
 
 ## Related
 
@@ -183,16 +225,17 @@ Three patterns surfaced during the 2026-05-11 build session:
 
 ## External links
 
+*(updated 2026-05-15)*
+
 - **Repos** (all under `github.com/kobbyopoku/`):
   - https://github.com/kobbyopoku/glydr_backend
   - https://github.com/kobbyopoku/glydr_landing
   - https://github.com/kobbyopoku/glydr_cc
   - https://github.com/kobbyopoku/glydr_mobile
-- **Project's own CLAUDE.md**: _(none yet — `BRAIN.md` reference at workspace root)_
-- **Project memory dir**: _(none)_
-- **PRD**: [`PRD_Glydr_v0.2.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/PRD_Glydr_v0.2.md) (v0.2, 11 May 2026, "Draft for internal review"). v0.3 pending to absorb the Point-A-to-Point-B broadening.
-- **Brand brief**: [`docs/brand/brand-brief.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/docs/brand/brand-brief.md) — Quiet Corridor lineage.
-- **Landing DESIGN.md**: [`landing/DESIGN.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/landing/DESIGN.md) — Open Design 9-section schema, source of truth for visual system.
-- **Design system decision ADR**: [`docs/decisions/0001-design-system.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/docs/decisions/0001-design-system.md) — captures Quiet Corridor + perk.com structural borrows + Travelperk-file rejection lineage.
-- **Architecture docs scaffold**: [`docs/architecture/`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/docs/architecture) (system-context, data-model, trip-state-machine, payments, kyc, safety-stack, data-residency planned).
-- **Infra scaffold**: [`infra/railway/`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/infra/railway) (provisioning checklist).
+  - https://github.com/kobbyopoku/glydr_docs *(new — promoted from `docs/` inside the workspace to its own repo over Phase 7)*
+- **Project's own CLAUDE.md**: _(none — `BRAIN.md` at workspace root is the only top-level marker)_
+- **Project memory dir**: `~/.claude/projects/-Users-kobbyopoku-ROAM-CascadeProjects-glydr/memory/` — auto-memory accumulating cross-session facts (brand split, Smile iOS bugs, Sentry setup, agent worktree CWD pitfall, etc.).
+- **PRD**: ⚠️ **No longer at workspace root**. The PRD has been moved into the `docs/` repo (or pruned — needs reconciliation). v0.3 absorption is still pending. Phase docs in `glydr_docs/phases/2026-05-1*-phase-7*.md` are the de-facto live source of truth for the current build.
+- **Phase docs**: [`docs/phases/`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/docs/phases) — 19 dated docs covering Phase 7a → 7r-6 (live-trip, payouts, ratings, safety, messaging, pickup-code, reliability sweep, KYC productionization).
+- **Landing DESIGN.md**: [`landing/DESIGN.md`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/landing/DESIGN.md) — needs updating to Neon Carbon (was Quiet Corridor at 2026-05-11).
+- **Architecture docs scaffold**: [`docs/architecture/`](file:///Users/kobbyopoku/ROAM/CascadeProjects/glydr/docs/architecture) — partial; phase docs serve as the de-facto living architecture record.
