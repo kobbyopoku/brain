@@ -751,7 +751,7 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - notes: Largest single-stretch wave count in Kivora's recorded history (35 waves 7–41 in ~38 hours; ≈70 backend commits + 12 frontend commits between 2026-05-17 15:57 UTC and 2026-05-19 09:20 UTC). Tier 2A end-to-end-complete unlocks the 30-day soak window before ADR-0002 Wave 24 cleanup (delete `ControlInstanceStatusResolver`, drop diff-logging flag). Two engineering disciplines crystallized during the push: (a) "flag-audit cadence" — every 5-6 waves an explicit audit pass that catches latent P0/P1s within bounded time (W22 cache-eviction, W27 per-tenant arch gap → V106, W32 read-path undercount → W33), (b) "verify-claims" pattern — every claim of "all sites updated" is verifiable, and the audit that verifies it is itself a tracked artifact (W34 Flyway-replay harness caught W33 DashboardInsights partial-ship). Both could promote to concept pages if a second project shows the same pattern. ADR-0002 is the strongest "data-contract-evolution" worked example in the wiki; concept-page promotion is now a reasonable proposal — flagged in candidate list. No concept pages created in this update; user can opt in separately.
 
 ## [2026-05-30] add-project | AfriMart
-- page created: [[wiki/projects/afrimart]]
+- page created: [[wiki/projects/africart]] *(originally written as `wiki/projects/afrimart.md`; renamed within the same day — see next log entry)*
 - status: active
 - repo: not-yet (local-only workspace at `/Users/kobbyopoku/ROAM/CascadeProjects/africart`; monorepo planned at `github.com/kobbyopoku/afrimart`)
 - local_path: /Users/kobbyopoku/ROAM/CascadeProjects/africart
