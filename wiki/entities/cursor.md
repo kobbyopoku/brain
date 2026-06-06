@@ -3,7 +3,7 @@ type: entity
 title: Cursor
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://cursor.com
 aliases: []
 tags: [refero-catalog, ai-coding, build-your-own-app, design-md-ingested]
@@ -30,6 +30,7 @@ From [[wiki/sources/cursor-design-md]]: warm-ivory contra dark-mode positioning.
 ## Positions and claims
 
 - **AI-assisted editors let non-developers build functional apps** — [[wiki/sources/realbrianmoran-making-money-online-2026]] cites Cursor (alongside Claude Code and Replit) as the toolchain enabling model #5 (build-your-own-apps) in the 2026 online-business catalog.
+- **Recommended over user-friendly builders for MVP work** — in [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]], Cursor (alongside Claude Code) is recommended over user-friendly builders that lack granular control, which become painful later.
 
 ## Mentioned in
 
@@ -37,6 +38,9 @@ From [[wiki/sources/cursor-design-md]]: warm-ivory contra dark-mode positioning.
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — named as a build-your-own-app tool.
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — referenced ("Cursor-driven work" as a category in ops documentation).
 - [[wiki/sources/cursor-design-md]] — full DESIGN.md ingested 2026-05-02.
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — named as a Stage II editor/IDE option for AI engineering work.
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]] — recommended AI builder (alongside Claude Code) for building the MVP.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — one of three AI coding tools Shopify routes through its internal LLM proxy.
 
 ## Related entities
 

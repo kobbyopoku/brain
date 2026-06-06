@@ -3,7 +3,7 @@ type: entity
 title: Perplexity AI
 entity_type: product
 created: 2026-05-04
-updated: 2026-05-04
+updated: 2026-06-06
 website: https://www.perplexity.ai
 aliases: [perplexity]
 tags: [refero-catalog, design-md-ingested, ai-search, answer-engine, light-mode]
@@ -32,6 +32,9 @@ No primary source about Perplexity's product roadmap, business model, or researc
 
 - [[wiki/sources/perplexity-ai-design-md]] — DESIGN.md ingest.
 - [[wiki/concepts/ai-seo]] — named as one of the AI citation engines AI SEO targets.
+- [[wiki/sources/suyashkarn2-ai-trillion-dollar-blind-spot-static-website]] — named as an AI answer engine intercepting discovery before the homepage; grouped with ChatGPT and Google AI Overviews as absorbing the first mile of discovery.
+- [[wiki/sources/av1dlive-build-a-voice-agent-full-guide]] — named among the deep-research tools (with Claude and ChatGPT) the author used while writing the guide.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — cited (framing only) as one of four labs (with Anthropic, OpenAI, LangChain) "actually building" agent harnesses.
 
 ## Related concepts
 

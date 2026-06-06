@@ -43,7 +43,8 @@ Two-model split: **Opus 4.7 = writer (taste), GPT-5.5 = orchestrator (routing)**
 
 ## Mentioned in
 
-- [[wiki/sources/shannholmberg-content-os]] — sole substantive ingest.
+- [[wiki/sources/shannholmberg-content-os]] — Content OS framework + voice-profile methodology.
+- [[wiki/sources/shannholmberg-hermes-agent-operator]] — *2026-05-15*. **Hermes Agent operator playbook**: 4-level fleet model (one agent → direct specialists → orchestrator → automated team), agent-control-room pattern (`/root/vps-agents/` side control plane), prototype→production methodology, and the 5-layer SEO agent architecture Shann runs at Espressio. Public template: [github.com/shannhk/hermes-agent-control-room](https://github.com/shannhk/hermes-agent-control-room). Quotes Hermes at 150k GitHub stars / #1 on OpenRouter.
 
 ## Related concepts
 

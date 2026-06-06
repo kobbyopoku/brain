@@ -3,7 +3,7 @@ type: entity
 title: GitHub
 entity_type: organization
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://github.com
 aliases: []
 tags: [devtools, code-hosting, version-control, primer-design-system, microsoft, ai-coding, copilot, open-design-catalog]
@@ -70,6 +70,13 @@ Used implicitly throughout the wiki: CI/CD, scheduled jobs (the brain's weekly-l
 
 - [[wiki/sources/open-design-catalog]] — Open Design catalog entry.
 - [[wiki/sources/heynavtoor-10-repos-replace-eng-team]] — heynavtoor's "10 GitHub Repos to Replace an Engineering Team" thesis runs on GitHub.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — repo host targeted by GitHub MCP, which lets Claude understand entire repo structure rather than pasting files into chat.
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — Stage II core developer tool, named alongside Git for version control and saving checkpoints.
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] — host of the claimed open-source X algorithm repo at github.com/xai-org/x-algorithm (per source).
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — private repo the website project is pushed to before Vercel deployment; per the source, design systems seeded with a full GitHub repo eat far more tokens than ones seeded with just a logo + markdown spec.
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] — platform where the expanded CLAUDE.md file reportedly hit #1 on Trending with 82,000 stars and 7,800 forks (claim, uncited).
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] — named as one of six candidate Claude Connectors for Setup 4 (two-Connectors setup).
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — Day-1 environment install and portfolio surface; "in modern AI hiring, GitHub often matters more than résumés," with a Phase 2 deliverable to push at least one ML project to GitHub.
 
 ## Related entities
 

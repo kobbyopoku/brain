@@ -2,7 +2,7 @@
 type: concept
 title: Beginner Agent Types
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [5 agent types, common agent types]
 tags: [agents, taxonomy, beginner]
 ---
@@ -30,6 +30,7 @@ The types also map directly to [[agent-workflow-patterns]] — most workflow age
 ## Treatment across sources
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — canonical wiki source. Lists the five types with examples ("Research the best rehab exercises for ankle sprain", "Turn my notes into a newsletter", "Classify support tickets", "Answer using my PDFs only", "Run shell commands and help me debug code") and the minimal augmentation set each needs.
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] frames it as a worked example: its four named agents (Blueprint, Strategy Extractor, outlier analyzer, Auto-Post) map onto the research / content / workflow agent types.
 
 ## Sub-claims and details
 
@@ -39,6 +40,7 @@ The types also map directly to [[agent-workflow-patterns]] — most workflow age
 - **Workflow agents** map most naturally to [[claude-code-slash-commands]]: each repeatable business process can be a slash command + a small skill file.
 - **Content agents** are where [[personal-claude-prompts]] shine — many of [[wiki/sources/AnatoliKopadze-20-claude-prompts|Anatoli's 20 prompts]] are content-agent prompts.
 - **Research agents** can be the most expensive — they often need [[mcp-server|MCP-mediated]] web search plus retrieval plus generation.
+- **A four-agent content pipeline as a concrete instance** ([[wiki/sources/8xgrowth-100-days-to-10k-clipping]]): a Blueprint agent, a Strategy Extractor, an outlier analyzer, and an Auto-Post agent — distributing the work across research, content, and workflow types rather than building one all-purpose agent.
 
 ## Open questions and contradictions
 
@@ -64,3 +66,4 @@ The types also map directly to [[agent-workflow-patterns]] — most workflow age
 ## Mentioned in
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]]
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]]

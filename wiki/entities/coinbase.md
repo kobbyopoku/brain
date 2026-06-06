@@ -3,10 +3,10 @@ type: entity
 title: Coinbase
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://coinbase.com
 aliases: []
-tags: [yc-unicorn, crypto, landing-page-patterns, stub]
+tags: [yc-unicorn, crypto, landing-page-patterns, agent-payments, stub]
 ---
 
 # Coinbase
@@ -27,10 +27,13 @@ This page is a **stub**. Coinbase appears in this wiki only via [[wiki/sources/c
   - Audience personalization: individual vs. institutional.
   - Free CTA: "sign up".
   - Navigation: 6 items.
+- **x402 protocol**: Coinbase's stablecoin settlement rail offering sub-second, programmable, no-chargeback settlement (per [[wiki/sources/awrigh01-technical-stack-autonomous-agents]]).
+- **ERC-8004 co-author**: Coinbase is among the authors of the ERC-8004 standard (enterprise/crypto-spanning author list) (per [[wiki/sources/awrigh01-technical-stack-autonomous-agents]]).
 
 ## Mentioned in
 
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]]
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — x402 stablecoin protocol; ERC-8004 co-author.
 
 ## Related entities
 

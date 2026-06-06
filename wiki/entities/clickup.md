@@ -3,7 +3,7 @@ type: entity
 title: ClickUp
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://clickup.com
 aliases: []
 tags: [task-management, ai-os-connection, stub]
@@ -32,6 +32,7 @@ No primary source about ClickUp's product surface is yet ingested.
 ## Mentioned in
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] — the "ClickUp searcher" sub-agent is the worked example of the markdown-vs-TOML sub-agent format difference between [[wiki/entities/claude-code|Claude Code]] and [[wiki/entities/codex-cli|Codex CLI]] (same job, markdown in Claude Code, TOML in Codex).
 
 ## Related concepts
 

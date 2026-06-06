@@ -3,7 +3,7 @@ type: entity
 title: OpenAI Agents SDK
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://github.com/openai/openai-agents-python
 aliases: [openai-agents]
 tags: [agent-framework, openai, sdk]
@@ -26,6 +26,11 @@ The OpenAI Agents SDK is the official OpenAI-authored toolkit for building agent
 - **Mar 2026 version**: v0.13.1.
 - **Tool format**: function object with parameters schema.
 - **Notable abstractions** (per source): handoffs, guardrails, tracing.
+- **Harness interface**: implements the harness via a `Runner` class with async, sync, and streamed modes (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Code-first**: workflow logic lives in native Python rather than graph DSLs (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Tool types**: function tools, hosted tools (WebSearch / CodeInterpreter / FileSearch), and MCP server tools (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Guardrails**: three levels — input, output, and tool guardrails — with a "tripwire" halt mechanism (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Composition**: supports agents-as-tools and handoffs for subagents (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
 
 ## Positions and claims
 
@@ -34,6 +39,7 @@ The OpenAI Agents SDK is the official OpenAI-authored toolkit for building agent
 ## Mentioned in
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]]
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — implements the harness through the `Runner` class.
 
 ## Related entities
 

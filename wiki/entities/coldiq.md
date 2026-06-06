@@ -3,7 +3,7 @@ type: entity
 title: ColdIQ
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://coldiq.com
 aliases: []
 tags: [agency, services-as-software, ai-services, stub]
@@ -25,6 +25,8 @@ This page is a stub-leaning-substantive. ColdIQ appears in this wiki only via [[
 - **Funding**: bootstrapped — no VC, no angel, no pitch deck.
 - **Focus**: cold-outbound services for client businesses; the "cold accelerator" layer is content-driven and scales independently of delivery headcount.
 - **Internal automation**: claimed 11 internal AI agents shipping to program members.
+- **Track record (per [[wiki/sources/itsalexvacca-3-phases-ai-layer]], May 2026)**: run as a services-as-software company for 3+ years; $7M+ ARR, 400+ B2B clients served, team of 30+ across 10 countries; 2,200 cold email campaigns shipped; email generated $10M+ for clients.
+- **Stack (per [[wiki/sources/itsalexvacca-3-phases-ai-layer]])**: [[wiki/entities/attio|Attio]] as the single CRM; sends across 4 ESPs simultaneously; [[wiki/entities/clay|Clay]] as the canonical data table ("the agency's memory"); Reply Manager agent runs on [[wiki/entities/n8n|n8n]].
 
 ## Positions and claims
 
@@ -35,11 +37,13 @@ This page is a stub-leaning-substantive. ColdIQ appears in this wiki only via [[
 ## Mentioned in
 
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
+- [[wiki/sources/itsalexvacca-3-phases-ai-layer]] — source of every worked example in the post on the AI layer.
 
 ## Related entities
 
 - [[wiki/entities/alex-vacca]] — co-founder.
 - [[wiki/entities/aiagency-io]] — packaged version of ColdIQ's operating system.
+- [[wiki/entities/attio]] — the single CRM ColdIQ standardizes its spine on.
 
 ## Related concepts
 

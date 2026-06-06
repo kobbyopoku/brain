@@ -2,7 +2,7 @@
 type: concept
 title: AI Automation Services
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 aliases: [AI automation business, automation services]
 tags: [services-business, ai-automation, monetization]
 ---
@@ -34,6 +34,17 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 - [[wiki/sources/exploraX_-google-maps-leadgen]] — *2026-05-09*. **Fills the lead-generation gap in the wiki.** All prior sources covered *what to deliver* (Khairallah/Vacca/Moran/Saraev/heynavtoor) and *what to charge*. exploraX_ covers *how to find first 20 paying small-business clients today*: 4 prospect signals on Google Maps (low reviews / no website / no review-responses / missing basics) → Instant Data Scraper → 2 verbatim Claude Code prompts (filter + email-fallback) → 10-second cold-call opening + 3-objection script → meeting-close with 3 productized offers (one-page website / review automation / AI receptionist). Cold-call beats cold-email ~10× for high-intent local prospects. **Concrete acquisition layer for the niche**.
 - [[wiki/sources/Ai_here202-mcp-opportunity]] — *2026-05-09*. **MCP-server-builds as a specific niche** under the AI-services umbrella. *"USB for AI"* analogy. 3 monetization paths (freelance $5K-$15K / productized $50-$200 mo / enterprise $25K-$100K). 3-month learning plan (build → solve real business problems → package and sell). Same time-window claim as Khairallah (Ai_here202: ~2 years before drag-and-drop builders / no-code platforms / pre-built servers shrink the premium). **Names a 6th niche category** (custom MCP servers for Internal Tools / Data Pipelines / Compliance & Security / Industry-Specific Workflows).
 - [[wiki/sources/bloggersarvesh-20-seo-prompts]] — *2026-05-09*. **Productized prompt-pack as service deliverable.** 20 detailed Claude prompts deployed by Sarvesh's [[wiki/entities/alventra-marketing|Alventra Marketing]] agency for home-services clients. Operational instance of *"the skill file is the engine of every automation"* (Khairallah) at the local-SEO niche.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] frames the [[forward-deployed-engineering|FDE]] as the individual-engineer delivery unit inside the firm-level AI-automation-services model; the source profiles the human role rather than the firm.
+- [[wiki/sources/insomnia_vip-ai-models-that-make-money]] frames the *"relationship-style content powered mostly by automation"* monetization stream as a consumer-facing, ethically loaded instance of automating a service offering.
+- [[wiki/sources/av1dlive-build-a-voice-agent-full-guide]] frames voice agents (booking, order lookup, confirmation SMS, human transfer, CRM updates, intake forms) as concretely sellable AI-services deliverables; the SMB phone-answering use case sits squarely in this cluster.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] frames it as the most beginner-/non-engineer-facing articulation of the model: no MCP/skill-file depth, a $500 entry price, a 7-step operational walkthrough, and a 5-automations-this-week starter list. Adds a lower price floor and a recruiting-agency niche.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] frames it as Model 3, *"the sweet spot"* — wire AI into existing business work. Reaffirms setup-fee ($500-5k) + monthly-retainer ($1-5k) pricing; *"5 clients at $3k = $15k MRR."* Frames Claude Code agentic workflows as a self-healing wedge over no-code.
+- [[wiki/sources/leopardracer-one-person-business-2026-ai]] frames the client route ($1K-$5K services, one $5K client every other day or $10K every 4 days) as the same services-business model, framed as the easiest entry point for beginners without an audience.
+- [[wiki/sources/gregisenberg-36-startup-opportunities]] names opportunity #2 (*"managed AI employees for businesses"*) as the single biggest b2b opportunity — corroborating market signal from a high-reach source.
+- [[wiki/sources/itsalexvacca-3-phases-ai-layer]] frames the broader build cluster this diagnoses; closing advice (*"install the spine, deploy two agents, save every output as an input — in that order"*) is the actionable prescription for a half-built stack.
+- [[wiki/sources/kushwah-aaryan-future-of-work]] frames the one-person-company economics as the macro justification for the AI-automation-services business model.
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] frames it as the consumer-content-economy variant: same $10k/mo target reached via content-clipping reward payouts rather than selling automations to businesses.
+- [[wiki/sources/everestchris6-100m-ai-opportunity]] frames it as the demand-side / opportunity complement to existing supply-side build-and-sell playbooks: *"find a boring business, automate one painful thing, charge for it."* Adds three build archetypes (voice agent, invoicing dashboard, AI-personalized direct mail) and a niche list (concrete/dental/roofing/HVAC/landscaping/plumbing/accounting/manufacturing/real-estate/law).
 
 ## Sub-claims and details
 
@@ -63,6 +74,7 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 - [[mcp-server]] — the integration layer central to skills 3 and 4.
 - [[scheduled-automation]] — the highest-value automation class, per Khairallah.
 - [[markdown-as-agent-contract]] — the deliverable artifact (skill files, context files) is markdown.
+- [[forward-deployed-engineering]] — the individual-engineer delivery unit inside the firm-level model.
 
 ## Related entities
 
@@ -84,3 +96,14 @@ It is also the **opposite economic frame** of [[wiki/sources/regent0x-claude-cod
 - [[wiki/sources/exploraX_-google-maps-leadgen]] — *2026-05-09*. Lead-gen layer (Google Maps + 4 signals + cold-call playbook). Fills wiki's biggest pre-existing gap.
 - [[wiki/sources/Ai_here202-mcp-opportunity]] — *2026-05-09*. MCP-server-builds as a 6th niche category under the services umbrella.
 - [[wiki/sources/bloggersarvesh-20-seo-prompts]] — *2026-05-09*. Productized 20-prompt pack as agency deliverable.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] — *2026-06-06*. FDE as the individual-engineer delivery unit of the firm-level model.
+- [[wiki/sources/insomnia_vip-ai-models-that-make-money]] — *2026-06-06*. Relationship-style automated content as a consumer-facing service stream.
+- [[wiki/sources/av1dlive-build-a-voice-agent-full-guide]] — *2026-06-06*. Voice agents as concrete sellable deliverables; SMB phone-answering.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] — *2026-06-06*. Most beginner-facing articulation; $500 floor, recruiting-agency niche.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — *2026-06-06*. Model 3 "sweet spot"; $15k MRR math, self-healing-wedge framing.
+- [[wiki/sources/leopardracer-one-person-business-2026-ai]] — *2026-06-06*. Client route as easiest entry for beginners without an audience.
+- [[wiki/sources/gregisenberg-36-startup-opportunities]] — *2026-06-06*. Opportunity #2 "managed AI employees" as biggest b2b play.
+- [[wiki/sources/itsalexvacca-3-phases-ai-layer]] — *2026-06-06*. Prescription for a half-built services stack.
+- [[wiki/sources/kushwah-aaryan-future-of-work]] — *2026-06-06*. One-person-company economics as macro justification.
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] — *2026-06-06*. Content-clipping variant of the $10k/mo target.
+- [[wiki/sources/everestchris6-100m-ai-opportunity]] — *2026-06-06*. Demand-side opportunity framing; 3 archetypes + boring-business niche list.

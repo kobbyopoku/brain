@@ -2,7 +2,7 @@
 type: concept
 title: AI SEO
 created: 2026-05-04
-updated: 2026-05-09
+updated: 2026-06-06
 aliases: [generative engine optimization, GEO, AI search optimization, citation SEO]
 tags: [seo, ai-search, content, marketing]
 ---
@@ -38,6 +38,8 @@ For the wiki itself, AI SEO is also an interesting reflexive case: the wiki *is*
   - **Review sentiment analysis** (Prompt 13) — reverse-engineer competitor reviews to extract the **emotional language customers use**, then rewrite GBP/website copy in that customer voice. Voice-profile extension at the *customer* level (vs creator-voice).
   - **4-stage buyer-journey keyword mapping** (Prompt 16) — categorize every keyword into Problem-unaware / Problem-aware / Solution-aware / Ready-to-hire. *"Stage 4 keywords have lower volume but they convert at 5-10× the rate."*
 - [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — *thesis* sibling: $10K/mo SEO agency replacement using Cowork. Compose with the prompt-pack source as *thesis* + *arsenal*.
+- [[wiki/sources/suyashkarn2-ai-trillion-dollar-blind-spot-static-website]] frames it from the **destination side**: if AI answer engines intercept discovery (the [[answer-engine-discovery]] shift), optimizing to appear inside those answers (AI SEO) matters, and the website's residual job changes from learn-about-you to conversion / trust-verification.
+- [[wiki/sources/shabnam-google-2026-roadmap-keynote]] frames it as a **platform-side cause**: states *"SEO is evolving into AI optimization"* as a sector implication — the supply-side driver of the practitioner-side shift the wiki already covers.
 
 ## Sub-claims and details
 
@@ -105,3 +107,5 @@ The right framing: **AI SEO is additive to traditional SEO**, not a replacement.
 - [[wiki/sources/bloggersarvesh-x-2032130279494853118]] — Cowork-for-SEO agency replacement thesis.
 - [[wiki/sources/bloggersarvesh-20-seo-prompts]] — 20-prompt arsenal across GBP / Website / Backlinks / Content+Tracking.
 - [[wiki/sources/exploraX_-google-maps-leadgen]] — adjacent (review automation as one of 3 productized small-business offers).
+- [[wiki/sources/suyashkarn2-ai-trillion-dollar-blind-spot-static-website]] — destination-side framing of the answer-engine shift.
+- [[wiki/sources/shabnam-google-2026-roadmap-keynote]] — *"SEO is evolving into AI optimization"* as a 2026 roadmap implication.

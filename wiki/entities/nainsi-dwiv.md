@@ -3,7 +3,7 @@ type: entity
 title: Nainsi Dwiv
 entity_type: person
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/NainsiDwiv50980
 aliases: [NainsiDwiv50980]
 tags: [author, claude-code-skills, agent-reliability, tool-calling]
@@ -25,7 +25,7 @@ Across both posts, the consistent stance is that LLM reliability comes from **di
 ## Key facts
 
 - **X handle**: @NainsiDwiv50980.
-- **Posts in wiki**: 2 substantive — both treat agent reliability as a systems-engineering problem.
+- **Posts in wiki**: 3 substantive — first two treat agent reliability as a systems-engineering problem; the third is an accessible onboarding-style Claude Code setup guide.
 
 ## Positions and claims
 
@@ -34,11 +34,13 @@ Across both posts, the consistent stance is that LLM reliability comes from **di
 - **Skills add power and risk together** — poorly designed skills can leak data, call unsafe APIs, execute unintended actions; the mindset has to shift from prompt engineering to system design.
 - **Reasoning engine, not execution engine** — agents should call deterministic tools to act; the model handles reasoning and tool selection. (Mirrors [[reasoning-execution-split]].)
 - **Tool-layer reliability is its own discipline** — protocol, tool-definition contracts, error handling, parallelization, catalog size, security, evaluation are seven discrete dimensions, each requiring deliberate design.
+- **Claude Code setup is context engineering, not prompt engineering** — frames the setup guide around engineering the context Claude Code operates in rather than crafting prompts. (Argued in [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]].)
 
 ## Mentioned in
 
 - [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]] — Anthropic Agent Skills deep-dive.
 - [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] — 7-step tool-calling reliability roadmap.
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] — accessible Claude Code setup guide framed as context engineering (2026-05-19).
 
 ## Related concepts
 

@@ -2,7 +2,7 @@
 type: concept
 title: Reliability Decay Math
 created: 2026-05-03
-updated: 2026-05-03
+updated: 2026-06-06
 aliases: [chained probability decay, reliability multiplication, multi-step reliability]
 tags: [agentic-workflows, reliability, math, foundational]
 ---
@@ -41,6 +41,7 @@ For builders of [[ai-automation-services]], this is the difference between shipp
 - [[wiki/sources/saraev-agentic-workflows-2026]] — canonical wiki source. *"If you have 90% success for step 1 times 90% for step 2 ... you don't end up with a 90% success rate across the entire process. You end up with a 59% success rate."* Used as the core motivation for the DO framework.
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — adjacent: hooeem's "workflows vs. agents" distinction is a response to the same problem. Workflows have deterministic steps that don't decay; agents inherit the chained-probability problem.
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — orthogonal but related: Mnilax measures *cost* decay (overhead %). Saraev describes *reliability* decay. Both are silent failures that compound across long-running sessions.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] frames it as the unevaluated-system failure mode that Phase 6 (evaluation/safety checks) guards against.
 
 ## Sub-claims and details
 
@@ -94,3 +95,4 @@ Most public LLM-agent demos are 2-3 steps. At 90% × 90% × 90% = 73%, demos loo
 ## Mentioned in
 
 - [[wiki/sources/saraev-agentic-workflows-2026]]
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]]

@@ -2,7 +2,7 @@
 type: concept
 title: Agent Workflow Patterns
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [5 workflow patterns, anthropic agent patterns]
 tags: [agents, patterns, foundational]
 ---
@@ -33,6 +33,10 @@ Patterns also give you a vocabulary for describing existing agent setups. The 5-
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — canonical wiki source. Names all five patterns, describes when each applies, and gives concrete use cases. Argues *"most problems can actually be solved without needing full autonomy."*
 - [[wiki/sources/saraev-agentic-workflows-2026]] — independently arrives at the workflow-vs-agent tradeoff via the [[reliability-decay-math]] argument: chained probabilistic steps decay multiplicatively, so deterministic workflow patterns are economically necessary for client-grade reliability. Saraev's [[do-framework]] is a specific implementation of orchestrator-workers where the workers (executions) are deterministic Python rather than additional LLM calls.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] frames the pattern choice as part of the harness's "seven decisions": single vs multi-agent, and ReAct vs plan-and-execute (citing LLMCompiler's 3.6x speedup for plan-and-execute).
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] frames it as expressible in a prompt template, not just orchestration topology: its Pattern 2 (extended critique loops — generate, self-critique "what breaks at scale?", revise, critique again, final-with-confidence) is the evaluator-optimizer / self-critique pattern written as a prompt.
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] frames its Validation→Refinement stage as the evaluator-optimizer pattern — an iterate-on-failure loop.
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] states a workflow-pattern in prose: a repeatable Feature Workflow (Research → Planning → File analysis → Implementation → Refactoring → Testing → Documentation), claiming the predictable structure reduces hallucinations.
 
 ## Sub-claims and details
 
@@ -63,6 +67,10 @@ Patterns also give you a vocabulary for describing existing agent setups. The 5-
 - **Use when**: Clear evaluation criteria exist; iterative refinement adds measurable value.
 - **Examples**: Translation, code generation, writing.
 - **Cross-cut**: [[wiki/entities/tdd-guard]] is a runtime evaluator-optimizer for code (write code → test → fail → revise).
+- **Prompt-template expression**: [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] shows the evaluator and generator can be the *same* model in one extended prompt — generate, self-critique ("what breaks at scale?"), revise, critique again, deliver with a confidence statement. [[wiki/sources/suryanshti777-stop-prompting-design-systems]]'s Validation→Refinement stage is the same iterate-on-failure loop.
+
+### Plan-and-execute vs ReAct
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] adds the single-vs-multi-agent and ReAct-vs-plan-and-execute axes to the pattern menu, citing LLMCompiler's 3.6x speedup for plan-and-execute over step-by-step ReAct.
 
 ## Open questions and contradictions
 
@@ -90,3 +98,7 @@ Patterns also give you a vocabulary for describing existing agent setups. The 5-
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]]
 - [[wiki/sources/heynavtoor-10-repos-replace-eng-team]] — multi-agent frameworks (CrewAI, LangGraph) implement these patterns.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]]
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]]
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]]

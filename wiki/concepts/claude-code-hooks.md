@@ -2,9 +2,9 @@
 type: concept
 title: Claude Code Hooks
 created: 2026-05-02
-updated: 2026-05-02
-aliases: [hooks, lifecycle hooks]
-tags: [claude-code, mechanism, automation]
+updated: 2026-05-21
+aliases: [hooks, lifecycle hooks, agent hooks]
+tags: [claude-code, mechanism, automation, deterministic-control, lifecycle-events]
 ---
 
 # Claude Code Hooks
@@ -25,10 +25,39 @@ Hooks complement [[claude-code-skills]] (which teach the agent how to perform ta
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — names three concrete hook patterns: a **pre-commit hook** that enforces TDD via [[wiki/entities/tdd-guard]], a **session-start hook** that loads memory from Obsidian and recent session logs (priming context), a **pre-push hook** that runs security review before code hits the remote.
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — **cost counterpoint**. UserPromptSubmit hook injection is the 3rd-largest [[claude-code-overhead-patterns|overhead pattern]] (~11% of tokens). Author had 4 plugins → 3 UserPromptSubmit hooks injecting context = 6,200 tokens *before Claude reads what you asked*. Cut to 1 hook (just git branch); saved 5,800 tokens per prompt. Plugin auto-update SessionStart hooks were a separate 9th pattern (~3% of tokens, just for "loaded successfully" notifications). The principle: audit every hook; if you can't articulate why this hook fires on every prompt, kill it.
+- [[wiki/sources/dabit3-agent-hooks-in-depth]] — *2026-05-15*. **Canonical depth treatment.** Nader Dabit articulates the **6-lifecycle-point starter set**: `SessionStart` / `UserPromptSubmit` / `PreToolUse` / `PostToolUse` / `Stop` / `SessionEnd`. The **operating model**: *event → optional matcher/filter → handler → outcome*. Companion repo at [dabit3/agent-hooks-in-depth](https://github.com/dabit3/agent-hooks-in-depth). Strongest articulation of the *prompts-vs-hooks* discipline: *"Use prompts for guidance. Use hooks for behavior that should run every time."* Maps prompt-style rules to hook-style enforcement: *"do not edit generated files"* (prompt) → `PreToolUse` blocks the edit (hook).
+- [[wiki/sources/zodchiii-x-claude-code-settings]] — *2026-05-09*. Concrete `PostToolUse` (auto-prettier on `Write(*.ts)`) and `PreToolUse` (log preprocessing — grep ERROR/WARN before Claude reads 10K-line logs) examples.
+- [[wiki/sources/zodchiii-10-claude-code-agents]] — *2026-05-12*. Names **hooks as one of three Claude Code agent host surfaces** (alongside slash commands at `.claude/commands/` and hosted scripts via Claude Agent SDK). Worked examples: PR-reviewer (GitHub hook), bug-hunter (PostToolUse), doc-generator (PostToolUse), security-auditor (PreToolUse / pre-commit).
 
 ## Sub-claims and details
 
-- **Common hook events** (per regent0x_): session start, pre-commit, pre-push. Other events likely exist (pre-tool-use, post-tool-use) but aren't enumerated in current sources.
+### The 6 canonical lifecycle points (per Dabit's starter set)
+
+| Hook | When | Use for |
+|---|---|---|
+| **SessionStart** | Session starts | Load project conventions, active constraints, environment facts, runbook context |
+| **UserPromptSubmit** | Before model sees prompt | Add context, route the request, block known-bad prompts |
+| **PreToolUse** | Before tool call runs | Block / approve / modify behavior per project policy |
+| **PostToolUse** | After successful tool call | Validation: run tests, formatting, scanning, logging, state capture |
+| **Stop** | Before agent finishes turn | Check whether agent is allowed to finish (e.g. tests must pass) |
+| **SessionEnd** | Session ends | Final logs, flush metrics, export summary, clean up temp state |
+
+Other hooks exist (e.g. git-specific events per regent0x_, plugin-update events) — the 6 above are the *main flow* most developers need first.
+
+### Operating model
+
+```
+event → optional matcher/filter → handler → outcome
+```
+
+- **event**: lifecycle point.
+- **matcher/filter**: narrow which calls/events trigger (e.g. `PreToolUse` only for `Write` on `*.generated.ts`).
+- **handler**: user-defined script.
+- **outcome**: return context, make a decision, perform side effect, or block.
+
+### Original sub-claims
+
+- **Common hook events** (per regent0x_): session start, pre-commit, pre-push.
 - **Hook actions**: gating (block the action), augmenting (inject context), observing (log).
 - **Composition with skills**: a hook can invoke a skill (e.g. session-start hook calls a "load-memory" skill). The hook is the trigger; the skill is the work.
 - **Composition with [[subagents]]**: hooks fire across subagent invocations; e.g. pre-commit fires regardless of which subagent commits.

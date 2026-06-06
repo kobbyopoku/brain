@@ -3,7 +3,7 @@ type: entity
 title: Obsidian
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://obsidian.md
 aliases: []
 tags: [tooling, markdown, editor, claude-code-ecosystem]
@@ -44,6 +44,10 @@ Obsidian is a local-first markdown editor that treats a folder of markdown files
 
 Combined with [[wiki/entities/claude-mem]] (session compression) and [[wiki/entities/claude-subconscious]] (continuous background memory), this turns the vault into the durable memory of a Claude Code workflow.
 
+## As a live dashboard / operating-system substrate (CyrilXBT)
+
+CyrilXBT builds on Obsidian as the **storage layer (Layer 1)** of a personal operating system — the plain-text Markdown vault holding all of the user's information — structured into exactly eight numbered folders (`00 - CAPTURE` through `07 - ARCHIVE`), each note in exactly one folder ([[wiki/sources/cyrilxbt-personal-operating-system]]). In a companion build, a single root note (`Dashboard.md`) reads from the vault to surface "everything that matters today"; two Obsidian features make this possible — **Dataview** (community plugin, installed via Settings → Community Plugins → Browse) and **Properties** (YAML frontmatter metadata) ([[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]]).
+
 ## Positions and claims
 
 _(none — Obsidian is a tool, not a position-holder.)_
@@ -52,10 +56,15 @@ _(none — Obsidian is a tool, not a position-holder.)_
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]] — recommended editor; specific tips on Web Clipper, Dataview, Marp, and image localization.
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — used as the persistent-memory layer of a Claude Code dev workflow with the `/decisions`, `/errors`, `/patterns`, `/sessions`, `/stack` structure.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — host environment for a single-note live dashboard (`Dashboard.md`) built on Dataview + Properties.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — Layer 1 (storage) of a personal operating system; vault structured into eight numbered folders (`00 - CAPTURE` … `07 - ARCHIVE`).
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — Day-1 environment install; target of the Phase-4 RAG-over-notes "searchable second brain" project.
 
 ## Related entities
 
 - [[wiki/entities/andrej-karpathy]] — recommends Obsidian as part of the workflow.
+- [[wiki/entities/dataview]] — community plugin / query engine over the vault; powers CyrilXBT's live dashboard.
+- [[wiki/entities/n8n]] — orchestration layer that reads/writes the vault on a schedule in CyrilXBT's setups.
 - [[wiki/entities/qmd]] — complementary search tool that can run alongside Obsidian.
 - [[wiki/entities/claude-mem]] — pairs with Obsidian for session-end memory compression.
 - [[wiki/entities/claude-subconscious]] — pairs with Obsidian for continuous background memory.

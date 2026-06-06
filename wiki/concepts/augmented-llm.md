@@ -2,7 +2,7 @@
 type: concept
 title: Augmented LLM
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [augmented language model]
 tags: [agents, foundational, agent-architecture]
 ---
@@ -34,6 +34,8 @@ The framing is also a check on premature complexity. *"Most agents don't need co
 ## Treatment across sources
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — canonical articulation. Names tools, retrieval, and memory as the three augmentations and gives concrete tool-schema examples for both Anthropic and OpenAI. Asserts that *"workflows vs. true agents"* hinges on the augmented LLM: a deterministic workflow uses augmentation in code-controlled ways; an agent lets the LLM decide when to invoke each augmentation.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] frames the harness itself as the augmentation layer — tools, memory, retrieval, and state — that turns a stateless model into an agent.
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]] presents memory specifically as the augmentation that turns a stateless LLM into an evolving agent.
 
 ## Sub-claims and details
 
@@ -44,6 +46,8 @@ The framing is also a check on premature complexity. *"Most agents don't need co
   - **Compressed long-term** — session-summarized state ([[wiki/entities/claude-mem]]).
   - **External knowledge** — files, RAG, [[wiki/entities/obsidian|Obsidian]] vaults, [[llm-wiki-pattern|LLM Wikis]].
 - **Composition with [[claude-code-skills]]**: a Claude Code skill is itself a packaged augmentation — it bundles instructions and (often) tool calls into a re-usable unit.
+- **Harness = augmentation layer** (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]): the agent harness — tools, memory, retrieval, and state management — is the concrete software embodiment of the augmentation profile that wraps a stateless model.
+- **Memory as the agent-defining augmentation** (per [[wiki/sources/techwith-ram-agentic-memory-breakdown]]): of the three augmentations, memory is what turns a stateless LLM into an *evolving* agent that accumulates context across interactions.
 
 ## Open questions and contradictions
 
@@ -70,3 +74,5 @@ The framing is also a check on premature complexity. *"Most agents don't need co
 ## Mentioned in
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]]
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]]

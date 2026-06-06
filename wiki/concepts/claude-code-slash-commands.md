@@ -2,7 +2,7 @@
 type: concept
 title: Claude Code Slash Commands
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [slash commands, /commands, custom commands]
 tags: [claude-code, mechanism, automation]
 ---
@@ -25,6 +25,8 @@ Slash commands are also the **most user-visible part of the Claude Code agent su
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — names concrete examples: `/fix-issue 456` (read GitHub issue → branch → fix with tests → open PR), `/review` (trigger reviewer subagent with security and coverage checks), `/deploy staging` (run full deployment pipeline through the ops subagent). References [[wiki/entities/wshobson-commands]] (1.7k+ stars per the post: "15 workflows + 42 tools").
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — references the `/schedule` command as the entry point to [[scheduled-automation]]; positions scheduled automations as the highest-value class of automation a service-provider can sell.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] frames it as the invocation surface for a skill: Step 4's `/your-skill` is how the skill workflow gets called.
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] frames it as the front of an autonomy loop: Setup 7's `/goal` is a slash command paired with a completion condition that drives 30-50 autonomous turns.
 
 ## Sub-claims and details
 
@@ -59,3 +61,5 @@ Slash commands are also the **most user-visible part of the Claude Code agent su
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]]
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]]
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]]

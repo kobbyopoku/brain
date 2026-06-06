@@ -3,7 +3,7 @@ type: entity
 title: Apple
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-04
+updated: 2026-06-06
 website: https://apple.com
 aliases: []
 tags: [refero-catalog, design-md-ingested]
@@ -22,6 +22,9 @@ Apple appears in this wiki via [[wiki/sources/refero-design-systems-for-ai-agent
 - **Website**: https://apple.com
 - **Refero style page**: https://styles.refero.design/style/c9cabb96-32fa-4896-837a-f2497ce1c856
 - **Refero mood descriptor**: "Gallery wall at natural light —…" *(truncated in source)*
+- **Apple Silicon — unified memory**: Apple Silicon gives the CPU and GPU direct access to the same memory pool (unified memory), cited in [[wiki/sources/theahmadosman-inference-engines-local-ai-hardware]].
+- **M3 Ultra memory bandwidth**: up to 819 GB/s unified-memory bandwidth, cited in [[wiki/sources/theahmadosman-inference-engines-local-ai-hardware]].
+- **MLX**: Apple created the MLX array framework for Apple Silicon, cited in [[wiki/sources/theahmadosman-inference-engines-local-ai-hardware]].
 
 ## Design system summary
 
@@ -42,6 +45,7 @@ The two surfaces share the **single-CTA-blue + monochrome-neutrals + carved-typo
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — initial catalog reference.
 - [[wiki/sources/apple-design-md]] — MacBook Neo DESIGN.md ingested 2026-05-02; raw refreshed with official Copy.md 2026-05-04.
 - [[wiki/sources/apple-design-md-alt]] — alternate Apple surface DESIGN.md ingested 2026-05-04.
+- [[wiki/sources/theahmadosman-inference-engines-local-ai-hardware]] — maker of Apple Silicon unified-memory hardware and the MLX framework.
 
 ## Related entities
 

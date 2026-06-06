@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 90 sources · 300 entities · 48 concepts · 12 projects · 6 syntheses · last updated 2026-05-30 *(Africart project rename from AfriMart)*
+**Stats**: 145 sources · 668 entities · 211 concepts · 12 projects · 6 syntheses · last updated 2026-06-06 *(bulk backlog ingest — 47 sources; full raw backlog cleared)*
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -125,6 +125,71 @@ Full Web-Clipper desktop captures with verbatim bodies (vs the URL-only mobile-s
 **Image-only stub (1)**:
 - [[wiki/sources/wizofecom-x-2045182674130837681]] — wizofecom's *"Millions of views on X as a SaaS founder, 90 days"* — body is in 3 Twitter media images that aren't OCR'd. Recovery: re-clip with OCR.
 
+### Wave ingest (2026-05-21) — Cluster 1: Helm/Hermes/multi-agent (8 of 54)
+
+First cluster of a 54-source wave. Focus: agents that compose directly into [[wiki/projects/helm|Helm]]'s 6-agent build + the Hermes-Agent ecosystem maturation.
+
+- [[wiki/sources/IBuzovskyi-x-hermes-goal-full-guide]] — **Hermes v0.14 `/goal` command** full guide. 7 commands (`/goal` / `/goal status` / `/goal pause` / `/goal resume` / `/goal clear` / `/subgoal` / `/handoff`). Promotes Hermes from reactive chat to autonomous background worker.
+- [[wiki/sources/shannholmberg-hermes-agent-operator]] — **Hermes operator playbook**. 4-level fleet model (one agent → direct specialists → orchestrator → automated team). Agent-control-room pattern (`/root/vps-agents/` side control plane). 5-layer SEO agent architecture (one Docker container, 21 steps). Hermes at **150K stars / #1 on OpenRouter**.
+- [[wiki/sources/itsolelehmann-hermes-12-integrations]] — **4-job integration model** (Research / Action / Workspace / Memory). 12 specific integrations + 3 stacked-workflow worked examples. **5th wild citation of [[llm-wiki-pattern]]** (explicit *"Karpathy-style LLM wiki second-brain maxxing"*).
+- [[wiki/sources/VadimStrizheus-hermes-10k-clipping]] — **Commercial Hermes use case ($10K/mo clipping pages)**. Hermes orchestrates Vugola (clip-extraction) + Postiz (publish) from one Telegram message. Consumer-content-scale variant of [[ai-automation-services]].
+- [[wiki/sources/cyrilxbt-claude-agent-manages-business]] — **The mental-model post**: agent vs automation. Automation executes fixed sequence; agent reads situation + context + makes judgment. Sequel framing under the 5-agent implementation.
+- [[wiki/sources/zodchiii-10-claude-code-agents]] — **10 Claude Code agents to build**, framed as *job description + trigger + output*. Three host surfaces: slash commands / hooks / hosted scripts (Claude Agent SDK).
+- [[wiki/sources/Mnilax-9-cowork-prompt-templates]] — **9 Cowork slash-command templates** that pulled back 34 hours/week (47-min median active-supervision in a former 8-hour workday). *"The plugin is the kitchen, the slash command is the recipe."*
+- [[wiki/sources/dabit3-agent-hooks-in-depth]] — **Canonical agent-hooks deep-dive**. 6 lifecycle points (`SessionStart` / `UserPromptSubmit` / `PreToolUse` / `PostToolUse` / `Stop` / `SessionEnd`). Operating model: *event → matcher → handler → outcome*. *"Use prompts for guidance. Use hooks for behavior that should run every time."*
+
+### Batch backlog ingest (2026-06-06) — 47 sources from the un-ingested raw backlog
+
+Bulk workflow ingest of the remaining raw backlog. 47 source pages, ~351 new entities, ~158 new concepts. Spans quant open-source, Claude Code tooling, AI-engineer roadmaps, agentic memory + harness theory, voice agents, backend scalability, AI business models, inference engines, and agentic capital markets.
+
+- [[wiki/sources/zostaff-22-hedge-fund-quant-open-source-repos]] — 22 open-source repos from 7 elite quant firms (Two Sigma, Man Group, Jane Street, D.E. Shaw, HRT, Optiver, WorldQuant); thesis: open vs closed source maps onto whether a firm's moat is talent or alpha.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — 9 Claude Code plugins/MCP servers (Context7, GitHub, Playwright, Filesystem, Sequential Thinking, Browser Tools, Database, Terminal, Memory) framed as "tooling > prompting."
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — 7-stage AI-engineer roadmap (Python → dev tools → LLMs → frameworks → projects → advanced skills → LLMOps); thesis: AI engineering is still software engineering.
+- [[wiki/sources/suyashkarn2-ai-trillion-dollar-blind-spot-static-website]] — founder thesis (pitch for Interact Labs): the static website is AI's trillion-dollar blind spot; replace it with a conversational, self-assembling interface; discovery is moving into AI answer engines.
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]] — agentic-memory reference: continuity/context/learning; 4 memory types (in-context, external, episodic, parametric); ChromaDB+OpenAI+Claude code; decay/importance/consolidation. "20% storage, 80% retrieval."
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] — Warp's Petra Donka on building Buzz, a self-improving community-engagement agent: principles over rules, a learn-how-to-learn skill, a low-friction Slack feedback loop, and self-improvement shipped as reviewed daily PRs — the loop matters more than the prompt.
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] — reverse-engineers xAI's (claimed) open-sourced For You feed into a 14-signal weighted-sum model; 3 Claude-Code blueprints for a voice-cloning personal X agent (Session / Approval-Telegram / Autonomous feedback-loop).
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — nateherk builds a full fictional brand ("Tally") end-to-end in Claude Design — deck, landing page, mobile, video, live to Vercel — plus a weekly-quota-stretching playbook (plan in chat, execute in Design, ship from Code).
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] — definitive guide to the Forward Deployed Engineer (FDE) role: why Applied AI firms need FDEs, the Audit/Evals/Deployment lifecycle, and a 30-day break-in roadmap. Varick recruiting funnel.
+- [[wiki/sources/shreyas-get-to-the-core-of-the-thing]] — Shreyas Doshi: refuse high-altitude product binaries (wide/deep, CAC/LTV) as theater; the real question is one level down — specific bets on specific features grounded in customer insight.
+- [[wiki/sources/shabnam-google-2026-roadmap-keynote]] — interpretive X thread reframing Google I/O 2026 as a decade strategy: Gemini as Google's AI operating layer; agentic AI, AI-native Android, browser/YouTube/XR; the real contest is the interface layer.
+- [[wiki/sources/retrochainer-claude-700k-musk-tweets]] — case study: trader "Aniki" nets $700K market-making Polymarket Musk-tweet markets + tail "lottery" bets (Taleb barbell + Kelly), with Claude used as infrastructure to author the trading-bot logic; promotional.
+- [[wiki/sources/insomnia_vip-ai-models-that-make-money]] — building monetizable AI influencer / virtual-persona accounts; consistency-over-tooling thesis + ~10 income streams (incl. automated "relationship-style" content). Off-cluster; ethical flag; no audited figures.
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] — 18-step consumer Claude.ai playbook (Projects + Custom Instructions + thinking-partner reframe + token hygiene + 5 ready prompts); shares the "10% of potential" thesis.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — heynavtoor's 7-layer ~60-min no-code recipe for a persistent personal Claude (Preferences → Projects → Memory → voice → file uploads → connectors → scheduled tasks); compound-effect thesis.
+- [[wiki/sources/av1dlive-build-a-voice-agent-full-guide]] — ~6,000-word voice-agent build guide: real-time five-component pipeline (STT/RAG/LLM/TTS/functions) inside a ~700ms latency budget, dual-agent RAG cache (VoiceAgentRAG), conversation design, two-checkpoint safety, four-layer eval.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — CyrilXBT's full Dataview "read not store" Obsidian dashboard (6 live-query sections) + Claude Code/MCP 6 AM morning briefing & property writeback.
+- [[wiki/sources/akintola-steve-backend-1-million-users]] — 10-section 2026 blueprint for a backend at 1M users: scale cube, modular monolith, edge layer, stateless services, sharded polyglot DBs, multi-layer caching, observability, Outbox/Saga/idempotency, zero-trust + chaos engineering.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] — Khairallah's beginner-facing 7-step AI-automation-services playbook: niche → workflow → 5-min POC demo → 3 tiered offers ($500-$5k + retainer) → first 3 clients → templates.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — m0h's survey of 5 solo AI business models (influencer / engineer / automation / websites / micro-SaaS), each with a named receipt; unifying thesis: distribution is the moat.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — CyrilXBT's anti-breakdown Obsidian "personal OS": 3 layers (Obsidian + Claude/MCP + N8N), 8-folder vault, 1 CLAUDE.md, 5 self-running workflows.
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] — nateherk's portability playbook: a Claude Code project converts to Codex in one prompt because the shared markdown knowledge layer is tool-agnostic; only thin config + sub-agent format (md vs TOML) differ. Run both in parallel, hand off with a session-handoff skill. Anti-lock-in thesis.
+- [[wiki/sources/rork-scale-mobile-app-50k]] — Rork's 4-step playbook to take a vibe-coded mobile app to $50k+/mo: pick one app, obsess distribution (self-content → influencers → UGC → paid ads), nail 3-act onboarding, then scale. "Building is easy, distribution is the moat."
+- [[wiki/sources/leopardracer-one-person-business-2026-ai]] — fundamentals-first one-person-business-to-$1M playbook (Brand/Content/Offer) using AI as accelerator, not autonomous agent; anti-agent-hype, Eden/Dan Koe templates.
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]] — non-technical solo founder's guide to vibecoding a B2C web app (CiteSure), scaling via self-made organic UGC, and exiting to Jenni AI for $375K in 6 months; distribution-is-the-moat thesis.
+- [[wiki/sources/theahmadosman-inference-engines-local-ai-hardware]] — Ahmad Osman's Part-3 guide to LLM inference engines (llama.cpp/MLX/ExLlama/vLLM/SGLang/TensorRT-LLM/Dynamo); engine follows hardware+workload+serving model; prefill-vs-decode + memory-movement-plus-scheduling thesis.
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] — X-thread reframing the viral CLAUDE.md ruleset as cost-math: 3 categories (DEFAULTS/BEHAVIOR/MEMORY+STACK) = $975/week per dev; same 21 rules + Karpathy 4-rules + 65→94% as TheAIWorld22 sibling.
+- [[wiki/sources/tricalt-memory-skills-same-harness]] — tricalt (Cognee/topoteretes) argues memory and skills are one "world model" harness; Cognee stores both in one graph with a self-improvement loop.
+- [[wiki/sources/athletickoder-building-agents-first-principles]] — Anshuman Mishra's first-principles agent post-training walkthrough (toy text-to-diagram agent): environment → teacher trajectories → SFT (syntax) → RL/GRPO (optimization); "environment design first, algorithm selection second."
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] — Akshay Pachaar's walkthrough of Hermes Agent's ~/.hermes home dir — SOUL.md identity, MEMORY/USER.md, self-evolving skills/, state.db (FTS5) tier-2 memory, cron/; names three-tier memory + GEPA.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] — Charlie Hills's 6-step ladder (Install → Context → Memory → Skills → Agents → Routines) for turning Claude Code into a self-running agent system; names Claude Routines (Anthropic cloud scheduling) + Opus/Sonnet/QA-gate tiering.
+- [[wiki/sources/gregisenberg-36-startup-opportunities]] — Greg Isenberg's market map of 36 startup opportunities; through-line is "reactions to AI" (loneliness, verification, analog) vs agentic-AI verticals; #2 = managed AI employees.
+- [[wiki/sources/daleverett-postgres-as-graph-pggraph]] — pgGraph launch + comparison: Apache-2.0 pgrx/Rust Postgres extension compiling FK relationships into in-memory CSR for sub-50ms deep graph traversal; vs recursive CTEs & pgRouting; LDBC benchmark, ~34x less memory than Neo4j.
+- [[wiki/sources/itsalexvacca-3-phases-ai-layer]] — Alex Vacca's spine → agents → loop build-order for the AI fulfilment layer; ColdIQ worked example; two agents pay back first, the loop compounds, judgment stays human.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — the agent harness systematized: 12 components + 7 architectural decisions wrapping an LLM; "if you're not the model, you're the harness"; harness > model for production perf.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — zodchiii's verbatim repackaging of Bessemer's Shopify AI-first playbook: 6 copy-paste Claude Code patterns (LLM proxy, parallel agents, critique loops, dev MCP, lean committed CLAUDE.md, permission guardrails) across 23,000 engineers targeting ~90% autonomous coding by Q3 2026.
+- [[wiki/sources/prajwaltomar-claude-design-workflow]] — 4-step pre-establishment workflow for Claude Design (design system → templates → copy skill → build); anti-vibe-designing, token-discipline, Claude Code handoff.
+- [[wiki/sources/kushwah-aaryan-future-of-work]] — historical-economics essay: AI agents collapse all business operational overhead at once, making the one-person company the default and returning to a nation of small operators; thesis behind result.dev. 36-month falsifiable predictions.
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] — manifesto thread: Claude Code mastery is system design, not prompting; 7-stage Context→Constraints→Reasoning→Execution→Validation→Memory→Refinement pipeline; execution → orchestration.
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — awrigh01's market-infrastructure thesis: a 3-plane (trust/market/control), 10-layer stack for autonomous-agent marketplaces; ERC-8004 as connective trust substrate; "own identity, settlement, governance, own the marketplace."
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] — 8-step Claude Code onboarding guide reframing it as an AI coworker; coins the "context engineering, not prompt engineering" slogan ("infrastructure for intelligence").
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]] — argues /goal is a cross-vendor agent primitive (prompting → assigning); Codex builds, Claude Code reviews, Hermes orchestrates + verifies; "trust the verifier, not the worker's self-report."
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] — 7 reusable Claude setups built in one weekend (CLAUDE.md / Project / Skill / 2 Connectors / daily scheduled task / model routing / /goal); 90/10 fluency rule; Gumroad funnel.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — Shruti's ~14-week free-resource AI-engineer learning path (env → fundamentals → ML → deep learning from scratch via Karpathy → LLM eng/RAG → agents/MCP → deploy+evaluate). Thesis: best AI education is already free; the scarce resource is correct order + building over consuming. Near-twin of Tech With Tim's roadmap.
+- [[wiki/sources/nurijanian-goal-for-product-managers]] — /goal reframes PM work around executable definitions of done — Ralph-loop-with-product-design; "define done, prove done, keep proof outside the chat." Author behind PM OS.
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] — 8xgrowth's 5-phase 100-day "restart to $10k/mo" via content-clipping reward campaigns (Content Rewards) + AI agents (Adaptive) that decode viral Shorts and auto-post; consumer-content cousin of the AI-services playbooks.
+- [[wiki/sources/everestchris6-100m-ai-opportunity]] — opportunity-framing X-thread: the $100M AI play is automating one painful workflow for "boring" small businesses, not raising for an AI wrapper. 3 build examples (voice agent, invoicing dashboard, AI-rendered church postcards).
+
 #### DESIGN.md ingests (32 brands, 33 surfaces — initial 20 ingested 2026-05-02; +12 brands and Apple alt added 2026-05-04)
 
 Initial 20:
@@ -171,6 +236,10 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 ### People — authors
 
 - [[wiki/entities/Ai_here202]] — MCP-server business-opportunity author (USB-for-AI analogy; App-Store-2009 framing).
+- [[wiki/entities/dabit3]] — Nader Dabit; canonical agent-hooks reference (6 lifecycle points + operating model).
+- [[wiki/entities/IBuzovskyi]] — Igor Buzovskyi; Hermes /goal v0.14 full guide.
+- [[wiki/entities/itsolelehmann]] — Ole Lehmann; 4-job integration model for agents (Research / Action / Workspace / Memory); aisolo.beehiiv.com newsletter; 5th wild citation of LLM Wiki pattern.
+- [[wiki/entities/VadimStrizheus]] — Vadim Strizheus; commercial Hermes use case ($10K/mo clipping pages).
 - [[wiki/entities/akshay_pachaar]] — author of *"You're doing RAG wrong"*; chunk-as-unit-is-the-bug thesis.
 - [[wiki/entities/anatoli-kopadze]] — author of the 20 Claude Prompts catalog.
 - [[wiki/entities/andrej-karpathy]] — author of the LLM Wiki pattern.
@@ -353,6 +422,13 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 - [[wiki/entities/ahrefs]] — *(stub)* backlink audit tool.
 - [[wiki/entities/instant-data-scraper]] — *(stub)* free Chrome extension for bulk-extracting tabular data; used in m0h's lead-gen workflow.
 - [[wiki/entities/postiz]] — *(stub)* open-source self-hostable social scheduler; publish layer in Shann's Content OS.
+- [[wiki/entities/vugola]] — AI clip-extraction + captioning. Ships MCP server (`vugola-mcp@1.3.1`) with 8 tools. Used in Vadim Strizheus's $10K/mo clipping pages stack.
+- [[wiki/entities/firecrawl]] — *(stub)* agent-optimized web search; Hermes Research-job integration per Ole Lehmann.
+- [[wiki/entities/bland]] — *(stub)* voice/phone-call API for agents.
+- [[wiki/entities/twilio]] — *(stub)* voice + SMS + comms API; Bland alternative.
+- [[wiki/entities/google-workspace]] — *(stub)* Gmail + Calendar + Drive + Docs + Sheets unified connector.
+- [[wiki/entities/granola]] — *(stub)* searchable meeting transcripts; agent Memory integration.
+- [[wiki/entities/devin-cli]] — *(stub)* Cognition Labs coding-agent CLI; implements lifecycle hooks.
 
 ### Theoretical / formal methods
 
@@ -579,6 +655,382 @@ All 139 Open Design brands are now reachable as wiki entities. The 27 most-cross
 
 *Section count: 99 brands listed.*
 
+### Batch backlog ingest entities (2026-06-06)
+
+New entity pages from the 47-source backlog ingest, grouped by `entity_type`. Stubs marked *(stub)*.
+
+**People**
+
+- [[wiki/entities/zostaff]] — *(stub)* compiler of the 22 quant-firm open-source repos thread.
+- [[wiki/entities/suryanshti777]] — *(stub)* author of the 9-Claude-Code-plugins + stop-prompting design-systems threads.
+- [[wiki/entities/techwithtimm]] — Tech With Tim; author of the 2026 AI-engineer roadmap.
+- [[wiki/entities/suyashkarn2]] — *(stub)* Interact Labs founder; "static website is AI's blind spot" thesis.
+- [[wiki/entities/techwith-ram]] — *(stub)* author of the agentic-memory detailed breakdown.
+- [[wiki/entities/petra-donka]] — Warp engineer; built Buzz; "agents need feedback loops, not perfect prompts."
+- [[wiki/entities/doublenickk]] — *(stub)* author of the personal-X-agent + 14-signal algorithm thread.
+- [[wiki/entities/vasuman]] — *(stub)* author of Forward Deployed Engineering 101; Varick.
+- [[wiki/entities/shreyas-doshi]] — product-strategy thinker; "get to the core of the thing."
+- [[wiki/entities/shabnam-774]] — *(stub)* author of the Google 2026 roadmap keynote thread.
+- [[wiki/entities/retrochainer]] — *(stub)* author of the Claude/$700K Musk-tweet trading case study.
+- [[wiki/entities/aniki]] — *(stub)* trader in the RetroChainer case study ($700K market-making Musk tweets).
+- [[wiki/entities/elon-musk]] — *(stub)* xAI/X founder; subject of the Polymarket tweet markets.
+- [[wiki/entities/nassim-taleb]] — *(stub)* origin of the barbell strategy invoked in the trading case study.
+- [[wiki/entities/insomnia-vip]] — *(stub)* author of the AI-models-that-make-money thread.
+- [[wiki/entities/av1dlive]] — author of the full voice-agent build guide.
+- [[wiki/entities/akintola-steve]] — *(stub)* author of the 1M-user backend blueprint.
+- [[wiki/entities/leopardracer]] — author of the one-person-business-2026-with-AI playbook.
+- [[wiki/entities/mattgittleson]] — Matt Gittleson; vibecoded CiteSure and exited for $375K.
+- [[wiki/entities/ahmad-osman]] — author of the inference-engines + local-AI-hardware guide.
+- [[wiki/entities/0xdepressionn]] — *(stub)* author of the Karpathy-CLAUDE.md-as-cost-math thread.
+- [[wiki/entities/tricalt]] — *(stub)* Cognee/topoteretes; "memory and skills are the same harness."
+- [[wiki/entities/sarah-wooders]] — *(stub)* referenced agentic-memory researcher (Letta).
+- [[wiki/entities/harrison-chase]] — *(stub)* LangChain founder; referenced in agent-harness discourse.
+- [[wiki/entities/anshuman-mishra]] — author of "On Building Agents From First Principles."
+- [[wiki/entities/mert-loves-ai]] — *(stub)* AI architect referenced in the agent-harness/Claude-Design discourse.
+- [[wiki/entities/odyzhou]] — *(stub)* ody (@odyzhou); referenced creator.
+- [[wiki/entities/charlie-hills]] — author of the 6-step full Claude Code agent system.
+- [[wiki/entities/gregisenberg]] — Greg Isenberg; the 36-biggest-startup-opportunities map.
+- [[wiki/entities/howard-lerman]] — *(stub)* referenced in the startup-opportunities thread.
+- [[wiki/entities/josephmiclaus]] — *(stub)* Joseph Miclaus; referenced creator.
+- [[wiki/entities/thomaspower]] — *(stub)* Thomas Power; referenced creator.
+- [[wiki/entities/nickvasiles]] — *(stub)* Nick Vasilescu; referenced creator.
+- [[wiki/entities/daleverett]] — *(stub)* author of the pgGraph "Postgres as a graph database" launch.
+- [[wiki/entities/awrigh01]] — author of the 3-plane / 10-layer autonomous-agent stack thesis.
+- [[wiki/entities/saboo-shubham]] — Shubham Saboo; "the ultimate guide to /goal."
+- [[wiki/entities/zephyr-hg]] — Zephyr; "7 setups and one weekend" Claude-fluency thread.
+- [[wiki/entities/nurijanian]] — author of "/goal for Product Managers"; PM OS.
+- [[wiki/entities/8xgrowth]] — *(stub)* author of the 100-days-to-$10k content-clipping thread.
+- [[wiki/entities/everestchris6]] — *(stub)* author of the $100M-AI-opportunity thread.
+- [[wiki/entities/prajwal-tomar]] — author of the Claude Design workflow thread; IgnytLabs.
+- [[wiki/entities/ben-ai]] — *(stub)* referenced in the Claude Design / design-system discourse.
+- [[wiki/entities/kushwah-aaryan]] — *(stub)* Aaryan Kushwah; "The Future of Work" essay; result.dev.
+- [[wiki/entities/riley-brown]] — referenced vibecoding/AI-app creator.
+- [[wiki/entities/sajjaad-khader]] — referenced AI-app/automation creator.
+- [[wiki/entities/pavlo]] — *(stub)* referenced creator.
+- [[wiki/entities/marc-lou]] — *(stub)* referenced indie-hacker/micro-SaaS creator.
+- [[wiki/entities/deronin]] — *(stub)* referenced creator.
+- [[wiki/entities/kallaway]] — *(stub)* referenced content/personal-brand creator.
+- [[wiki/entities/dan-koe]] — *(stub)* one-person-business writer; referenced in leopardracer playbook.
+- [[wiki/entities/martin-kleppmann]] — *(stub)* DDIA author; referenced in backend-scalability blueprint.
+- [[wiki/entities/beren-millidge]] — *(stub)* referenced in agent-post-training / RL discourse.
+- [[wiki/entities/vivek-trivedy]] — *(stub)* referenced in agent-post-training discourse.
+- [[wiki/entities/farhan-thawar]] — *(stub)* Shopify VP Eng; cited in the 23,000-engineers playbook.
+- [[wiki/entities/mike-krieger]] — *(stub)* Anthropic CPO; referenced re Claude Design.
+- [[wiki/entities/haegeon]] — *(stub)* referenced creator (Claude Design / branding).
+- [[wiki/entities/ryan-singer]] — *(stub)* Shape Up author; referenced in /goal-for-PMs.
+- [[wiki/entities/matt-pocock]] — *(stub)* referenced creator.
+- [[wiki/entities/william-whyte]] — *(stub)* author of *The Organization Man*; referenced in Future of Work.
+- [[wiki/entities/john-maynard-keynes]] — *(stub)* economist; referenced in Future of Work.
+- [[wiki/entities/wassily-leontief]] — *(stub)* input-output economist; referenced in Future of Work.
+- [[wiki/entities/daniel-pink]] — *(stub)* author of *Free Agent Nation*; referenced in Future of Work.
+- [[wiki/entities/mlabonne]] — *(stub)* Maxime Labonne; LLM-course author referenced in AI-engineer roadmaps.
+- [[wiki/entities/teknium]] — Nous Research founder; ships Hermes updates almost daily.
+- [[wiki/entities/daniel-bitton]] — *(stub)* operator of Content Rewards; the clipping-economy payout platform.
+- [[wiki/entities/mrbeast]] — *(stub)* YouTuber running a 1,000+ clipper army; clipping-economy market context.
+
+**Organizations**
+
+- [[wiki/entities/two-sigma]] — quant hedge fund; ArcticDB / flint / marbles / cook open-source.
+- [[wiki/entities/man-group]] — quant asset manager; ArcticDB / dtale / notebooker / PyBloqs.
+- [[wiki/entities/jane-street]] — quant trading firm; OCaml core / magic-trace / async / hardcaml.
+- [[wiki/entities/d-e-shaw]] — quant hedge fund; pyflyby / pjrmi.
+- [[wiki/entities/hudson-river-trading]] — HFT firm; versioned-hdf5 / nbstripout-fast.
+- [[wiki/entities/optiver]] — market maker; corral / optiver-asyncpg.
+- [[wiki/entities/worldquant]] — quant firm; alpha101 code / slang-server / heracles-ql / timestamp9.
+- [[wiki/entities/renaissance-technologies]] — quant fund; named in the talent-vs-alpha moat thesis.
+- [[wiki/entities/citadel]] — *(stub)* hedge fund; named in the closed-source-moat camp.
+- [[wiki/entities/citadel-securities]] — *(stub)* market maker; Applied-AI/FDE reference.
+- [[wiki/entities/bridgewater-associates]] — *(stub)* hedge fund; named in the quant thread.
+- [[wiki/entities/millennium-management]] — *(stub)* multi-strat fund; named in the quant thread.
+- [[wiki/entities/point72]] — *(stub)* hedge fund; named in the quant thread.
+- [[wiki/entities/aqr-capital]] — *(stub)* quant fund; named in the quant thread.
+- [[wiki/entities/bloomberg]] — *(stub)* financial-data platform; referenced in quant tooling.
+- [[wiki/entities/quansight-labs]] — *(stub)* open-source-infra firm; referenced re ArcticDB/PyData.
+- [[wiki/entities/interact-labs]] — *(stub)* SuyashKarn2's conversational-website startup.
+- [[wiki/entities/salesforce]] — *(stub)* CRM/enterprise-software company.
+- [[wiki/entities/salesforce-ai-research]] — *(stub)* research lab referenced in the voice-agent guide.
+- [[wiki/entities/deepgram]] — *(stub)* speech-to-text provider; voice-agent stack.
+- [[wiki/entities/google]] — referenced as the AI-operating-layer subject of the 2026 roadmap thread.
+- [[wiki/entities/times-of-india]] — *(stub)* outlet cited in the Google roadmap thread.
+- [[wiki/entities/economic-times]] — *(stub)* outlet cited in the Google roadmap thread.
+- [[wiki/entities/android-central]] — *(stub)* outlet cited in the Google roadmap thread.
+- [[wiki/entities/varick]] — *(stub)* Applied-AI recruiting firm behind the FDE 101 guide.
+- [[wiki/entities/palantir]] — *(stub)* archetypal Forward-Deployed-Engineer firm.
+- [[wiki/entities/topoteretes]] — *(stub)* maintainer org of Cognee.
+- [[wiki/entities/intel]] — *(stub)* hardware vendor; OpenVINO inference path.
+- [[wiki/entities/amd]] — *(stub)* GPU vendor; local-AI hardware.
+- [[wiki/entities/microsoft]] — *(stub)* AutoGen maintainer; agent-framework reference.
+- [[wiki/entities/jetbrains]] — *(stub)* IDE vendor; PyCharm.
+- [[wiki/entities/bytebytego]] — *(stub)* system-design education brand; backend-blueprint reference.
+- [[wiki/entities/highlevel]] — *(stub)* agency CRM/automation platform; AI-services reference.
+- [[wiki/entities/amazon]] — *(stub)* referenced employer/FDE comparator.
+- [[wiki/entities/georgia-tech]] — *(stub)* referenced credential/origin.
+- [[wiki/entities/ignytlabs]] — Prajwal Tomar's studio; Claude Design workflow source.
+- [[wiki/entities/jenni-ai]] — AI-writing company; acquirer of CiteSure.
+- [[wiki/entities/myfitnesspal]] — *(stub)* comparator app in the vibecoded-B2C thread.
+- [[wiki/entities/quizlet]] — *(stub)* comparator app in the vibecoded-B2C thread.
+- [[wiki/entities/fiverr]] — *(stub)* freelance marketplace; AI-services distribution.
+- [[wiki/entities/upwork]] — *(stub)* freelance marketplace; AI-services distribution.
+- [[wiki/entities/acquire-marketplace]] — *(stub)* startup-acquisition marketplace.
+- [[wiki/entities/flippa]] — *(stub)* website/app marketplace.
+- [[wiki/entities/microns]] — *(stub)* micro-startup acquisition marketplace.
+- [[wiki/entities/empire-flippers]] — *(stub)* online-business brokerage.
+- [[wiki/entities/y-combinator]] — *(stub)* accelerator; referenced in opportunity framing.
+- [[wiki/entities/bessemer]] — *(stub)* VC firm; author of the Shopify AI-first playbook.
+- [[wiki/entities/general-motors]] — *(stub)* referenced in the Organization-Man Future-of-Work essay.
+- [[wiki/entities/circle]] — *(stub)* stablecoin issuer; agent-settlement layer.
+- [[wiki/entities/visa]] — *(stub)* payments network; agent-settlement layer.
+- [[wiki/entities/brex]] — *(stub)* corporate-card/fintech; agent-spend reference.
+- [[wiki/entities/column-bank]] — *(stub)* developer bank; agent-settlement layer.
+- [[wiki/entities/cheqd]] — *(stub)* decentralized-identity network; agent-identity layer.
+- [[wiki/entities/sphereon]] — *(stub)* verifiable-credentials vendor; agent-identity layer.
+- [[wiki/entities/ethereum-foundation]] — *(stub)* steward of ERC-8004 / EIP-712 standards.
+- [[wiki/entities/agentproof]] — *(stub)* agent-verification/attestation vendor.
+- [[wiki/entities/turnkey]] — *(stub)* wallet-infrastructure vendor; agent settlement.
+- [[wiki/entities/privy]] — *(stub)* embedded-wallet vendor; agent settlement.
+- [[wiki/entities/fireblocks]] — *(stub)* digital-asset custody; agent settlement.
+- [[wiki/entities/cordum]] — *(stub)* agent-governance/control vendor.
+- [[wiki/entities/aegis-ai]] — *(stub)* agent-security/control vendor.
+- [[wiki/entities/galileo-ai]] — *(stub)* Galileo Agent Control; agent-governance vendor.
+- [[wiki/entities/airia]] — *(stub)* agent-governance/orchestration vendor.
+- [[wiki/entities/arize]] — *(stub)* ML/agent observability vendor.
+- [[wiki/entities/espressio]] — Shann Holmberg's Lisbon marketing-AI operation; stack built on Hermes Agent.
+- [[wiki/entities/evokoa]] — *(stub)* GitHub owner hosting the pgGraph repository.
+- [[wiki/entities/pika]] — *(stub)* company cited for the "agent eats the subscription stack" thesis.
+- [[wiki/entities/whop]] — *(stub)* marketplace with a ~1M-person free clipping community; clipping-economy scale context.
+
+**Products / tools**
+
+- [[wiki/entities/arcticdb]] — *(stub)* Man Group/Two Sigma time-series DataFrame database.
+- [[wiki/entities/dtale]] — *(stub)* Man Group visual pandas-DataFrame inspector.
+- [[wiki/entities/notebooker]] — *(stub)* Man Group parametrized-notebook report runner.
+- [[wiki/entities/pybloqs]] — *(stub)* Man Group composable HTML-report blocks.
+- [[wiki/entities/flint]] — *(stub)* Two Sigma time-series library for Spark.
+- [[wiki/entities/beakerx]] — *(stub)* Two Sigma polyglot Jupyter extensions.
+- [[wiki/entities/marbles]] — *(stub)* Two Sigma open-source utility.
+- [[wiki/entities/cook]] — *(stub)* Two Sigma open-source utility.
+- [[wiki/entities/janestreet-core]] — *(stub)* Jane Street OCaml standard-library replacement.
+- [[wiki/entities/magic-trace]] — *(stub)* Jane Street Intel-PT performance tracer.
+- [[wiki/entities/janestreet-async]] — *(stub)* Jane Street OCaml async concurrency library.
+- [[wiki/entities/hardcaml]] — *(stub)* Jane Street OCaml hardware-design library.
+- [[wiki/entities/pyflyby]] — *(stub)* D.E. Shaw Python autoimport/productivity tools.
+- [[wiki/entities/pjrmi]] — *(stub)* D.E. Shaw Python↔Java bridge.
+- [[wiki/entities/versioned-hdf5]] — *(stub)* HRT versioned-HDF5 storage library.
+- [[wiki/entities/nbstripout-fast]] — *(stub)* HRT fast notebook-output stripper.
+- [[wiki/entities/corral]] — *(stub)* Optiver open-source tool.
+- [[wiki/entities/optiver-asyncpg]] — *(stub)* Optiver async Postgres client fork/util.
+- [[wiki/entities/slang-server]] — *(stub)* WorldQuant language-server tool.
+- [[wiki/entities/heracles-ql]] — *(stub)* WorldQuant query-language tool.
+- [[wiki/entities/timestamp9]] — *(stub)* WorldQuant nanosecond-timestamp Postgres extension.
+- [[wiki/entities/apache-spark]] — *(stub)* distributed compute engine; quant data tooling.
+- [[wiki/entities/jupyter]] — *(stub)* notebook environment; quant + ML tooling.
+- [[wiki/entities/ocaml]] — *(stub)* functional language; Jane Street's core stack.
+- [[wiki/entities/context7]] — up-to-date library-docs MCP server.
+- [[wiki/entities/github-mcp]] — GitHub MCP server.
+- [[wiki/entities/playwright-mcp]] — browser-automation MCP server.
+- [[wiki/entities/filesystem-mcp]] — filesystem MCP server.
+- [[wiki/entities/sequential-thinking-mcp]] — Sequential Thinking MCP server.
+- [[wiki/entities/browser-tools-mcp]] — *(stub)* browser-tools MCP server.
+- [[wiki/entities/database-mcp]] — *(stub)* database MCP server.
+- [[wiki/entities/nextjs]] — Next.js React framework.
+- [[wiki/entities/langchain]] — LLM application framework.
+- [[wiki/entities/tailwind]] — *(stub)* utility-first CSS framework.
+- [[wiki/entities/postgres]] — PostgreSQL relational database.
+- [[wiki/entities/mysql]] — *(stub)* relational database.
+- [[wiki/entities/sqlite]] — *(stub)* embedded relational database.
+- [[wiki/entities/transformers]] — *(stub)* Hugging Face Transformers library.
+- [[wiki/entities/docker-model-runner]] — *(stub)* Docker local-model runner.
+- [[wiki/entities/numpy]] — *(stub)* numerical-computing library.
+- [[wiki/entities/pandas]] — *(stub)* DataFrame library.
+- [[wiki/entities/git]] — *(stub)* version control.
+- [[wiki/entities/vs-code]] — *(stub)* code editor.
+- [[wiki/entities/pycharm]] — *(stub)* Python IDE.
+- [[wiki/entities/fastapi]] — *(stub)* Python async web framework.
+- [[wiki/entities/docker]] — *(stub)* containerization platform.
+- [[wiki/entities/kubernetes]] — *(stub)* container orchestration.
+- [[wiki/entities/chatgpt]] — *(stub)* OpenAI consumer assistant.
+- [[wiki/entities/chromadb]] — open-source vector database; agentic-memory store.
+- [[wiki/entities/pinecone]] — *(stub)* managed vector database.
+- [[wiki/entities/pgvector]] — *(stub)* Postgres vector-search extension.
+- [[wiki/entities/qdrant]] — *(stub)* vector database.
+- [[wiki/entities/redis]] — *(stub)* in-memory data store / cache.
+- [[wiki/entities/buzz]] — Warp's self-improving community-engagement agent.
+- [[wiki/entities/oz]] — Warp's agent-management/runtime surface.
+- [[wiki/entities/x-corp]] — *(stub)* X platform; subject of the personal-X-agent build.
+- [[wiki/entities/grok]] — *(stub)* xAI assistant.
+- [[wiki/entities/telegram]] — *(stub)* messaging platform; agent approval/notify surface.
+- [[wiki/entities/x-api]] — *(stub)* X posting/data API.
+- [[wiki/entities/opus-4-7]] — Claude Opus 4.7 model.
+- [[wiki/entities/sonnet-4-6]] — *(stub)* Claude Sonnet 4.6 model.
+- [[wiki/entities/gpt-image-2]] — *(stub)* OpenAI image model.
+- [[wiki/entities/kling]] — *(stub)* AI video-generation model.
+- [[wiki/entities/hyperframes]] — *(stub)* AI video/animation tool.
+- [[wiki/entities/max-20x]] — *(stub)* Claude Max 20x subscription tier.
+- [[wiki/entities/gemini]] — *(stub)* Google's Gemini model family.
+- [[wiki/entities/gemini-omni]] — *(stub)* multimodal Gemini variant.
+- [[wiki/entities/gemini-3-5-flash]] — *(stub)* fast Gemini model variant.
+- [[wiki/entities/gemini-spark]] — *(stub)* Gemini-powered product surface.
+- [[wiki/entities/universal-cart]] — *(stub)* Google agentic-commerce cart.
+- [[wiki/entities/ask-youtube]] — *(stub)* Gemini-in-YouTube feature.
+- [[wiki/entities/android]] — Google's mobile OS; AI-native direction.
+- [[wiki/entities/android-xr]] — Google's XR platform.
+- [[wiki/entities/chrome]] — Google's browser; agentic direction.
+- [[wiki/entities/youtube]] — Google video platform; AI features.
+- [[wiki/entities/polymarket]] — *(stub)* prediction market; Musk-tweet trading venue.
+- [[wiki/entities/claude-projects]] — Claude.ai Projects workspace feature.
+- [[wiki/entities/google-calendar]] — *(stub)* calendar; personal-AI connector.
+- [[wiki/entities/gpt-realtime-2]] — *(stub)* OpenAI realtime speech model; voice-agent stack.
+- [[wiki/entities/voiceagentrag]] — dual-agent RAG-cache pattern/component in the voice-agent guide.
+- [[wiki/entities/deepgram-flux]] — *(stub)* Deepgram streaming-STT product.
+- [[wiki/entities/dataview]] — Obsidian Dataview plugin; read-not-store dashboard.
+- [[wiki/entities/citus]] — *(stub)* Postgres sharding/scale-out extension.
+- [[wiki/entities/cassandra]] — *(stub)* wide-column distributed database.
+- [[wiki/entities/scylladb]] — *(stub)* high-performance Cassandra-compatible database.
+- [[wiki/entities/dragonfly]] — *(stub)* Redis-compatible in-memory store.
+- [[wiki/entities/kafka]] — *(stub)* distributed event-streaming platform.
+- [[wiki/entities/pulsar]] — *(stub)* distributed messaging/streaming platform.
+- [[wiki/entities/vitess]] — *(stub)* MySQL horizontal-scaling system.
+- [[wiki/entities/pgbouncer]] — *(stub)* Postgres connection pooler.
+- [[wiki/entities/cloudflare]] — *(stub)* edge/CDN platform.
+- [[wiki/entities/fastly]] — *(stub)* edge/CDN platform.
+- [[wiki/entities/prometheus]] — *(stub)* metrics/monitoring system.
+- [[wiki/entities/jaeger]] — *(stub)* distributed tracing system.
+- [[wiki/entities/loki]] — *(stub)* Grafana log-aggregation system.
+- [[wiki/entities/grafana]] — *(stub)* observability dashboards.
+- [[wiki/entities/opentelemetry]] — *(stub)* observability instrumentation standard.
+- [[wiki/entities/alertmanager]] — *(stub)* Prometheus alert router.
+- [[wiki/entities/pagerduty]] — *(stub)* incident-response platform.
+- [[wiki/entities/k6]] — *(stub)* load-testing tool.
+- [[wiki/entities/locust]] — *(stub)* load-testing tool.
+- [[wiki/entities/go-language]] — *(stub)* Go programming language.
+- [[wiki/entities/rust-language]] — *(stub)* Rust programming language.
+- [[wiki/entities/nestjs]] — *(stub)* Node.js backend framework.
+- [[wiki/entities/spring-boot]] — *(stub)* Java backend framework.
+- [[wiki/entities/nodejs]] — *(stub)* JavaScript runtime.
+- [[wiki/entities/python]] — *(stub)* programming language; AI-engineer stage 1.
+- [[wiki/entities/vibecode]] — *(stub)* mobile-app vibecoding tool.
+- [[wiki/entities/make]] — *(stub)* no-code automation platform.
+- [[wiki/entities/manychat]] — *(stub)* chat-marketing automation tool.
+- [[wiki/entities/rork]] — AI mobile-app builder; the $50k/mo scaling guide.
+- [[wiki/entities/apple-app-store]] — *(stub)* iOS app distribution surface.
+- [[wiki/entities/tiktok]] — short-video platform; UGC distribution.
+- [[wiki/entities/instagram]] — social platform; UGC distribution.
+- [[wiki/entities/youtube-shorts]] — *(stub)* short-video surface; clipping distribution.
+- [[wiki/entities/eden]] — leopardracer's one-person-business template/product.
+- [[wiki/entities/openclaw]] — *(stub)* referenced tool in the one-person-business stack.
+- [[wiki/entities/citesure]] — Matt Gittleson's vibecoded B2C citation app.
+- [[wiki/entities/cal-ai]] — *(stub)* AI calorie-tracking app comparator.
+- [[wiki/entities/coconote]] — *(stub)* AI note-taking app comparator.
+- [[wiki/entities/answers-ai]] — *(stub)* AI homework-help app comparator.
+- [[wiki/entities/halo-ai]] — *(stub)* AI app comparator.
+- [[wiki/entities/umax]] — *(stub)* AI looksmaxxing app comparator.
+- [[wiki/entities/trustmrr]] — *(stub)* revenue-verification service for acquisitions.
+- [[wiki/entities/llama-cpp]] — C/C++ LLM inference engine.
+- [[wiki/entities/mlx]] — Apple-silicon ML framework.
+- [[wiki/entities/mlx-lm]] — MLX LLM serving package.
+- [[wiki/entities/exllamav2]] — quantized-LLM inference engine (GPU).
+- [[wiki/entities/exllamav3]] — next-gen ExLlama inference engine.
+- [[wiki/entities/vllm]] — high-throughput LLM serving engine (PagedAttention).
+- [[wiki/entities/sglang]] — structured-generation LLM serving engine.
+- [[wiki/entities/tensorrt-llm]] — NVIDIA TensorRT LLM inference engine.
+- [[wiki/entities/tgi]] — Hugging Face Text Generation Inference server.
+- [[wiki/entities/mlc-llm]] — cross-platform compiled LLM runtime.
+- [[wiki/entities/onnx-runtime-genai]] — ONNX Runtime generative-AI inference.
+- [[wiki/entities/openvino]] — Intel inference toolkit.
+- [[wiki/entities/lmdeploy]] — *(stub)* LLM deployment/serving toolkit.
+- [[wiki/entities/nvidia-dynamo]] — *(stub)* NVIDIA disaggregated-serving framework.
+- [[wiki/entities/lm-studio]] — *(stub)* local-LLM desktop runner.
+- [[wiki/entities/harbor]] — *(stub)* local-AI stack orchestrator.
+- [[wiki/entities/tabbyapi]] — *(stub)* ExLlama-backed OpenAI-compatible server.
+- [[wiki/entities/cognee]] — open-source memory+skills graph "world model" layer.
+- [[wiki/entities/trl]] — *(stub)* Hugging Face RL/SFT training library.
+- [[wiki/entities/unsloth]] — *(stub)* fast LLM fine-tuning library.
+- [[wiki/entities/prime-rl]] — *(stub)* distributed RL training framework.
+- [[wiki/entities/verl]] — *(stub)* volcano-engine RL training framework.
+- [[wiki/entities/openrlhf]] — *(stub)* RLHF training framework.
+- [[wiki/entities/tldraw]] — *(stub)* canvas/diagram library; agent text-to-diagram target.
+- [[wiki/entities/qwen]] — open-weight LLM family; agent post-training base model.
+- [[wiki/entities/pydantic]] — Python data-validation library; structured outputs.
+- [[wiki/entities/claude-routines]] — *(stub)* Anthropic cloud-scheduled agent runs.
+- [[wiki/entities/pggraph]] — Apache-2.0 pgrx/Rust Postgres graph-traversal extension.
+- [[wiki/entities/pgrouting]] — Postgres routing/graph extension; pgGraph comparator.
+- [[wiki/entities/postgis]] — *(stub)* Postgres spatial extension.
+- [[wiki/entities/neo4j]] — *(stub)* native graph database; pgGraph comparator.
+- [[wiki/entities/pgrx]] — *(stub)* Rust framework for Postgres extensions.
+- [[wiki/entities/attio]] — *(stub)* modern CRM; AI-fulfilment-layer reference.
+- [[wiki/entities/clay-com]] — *(stub)* GTM data-enrichment platform.
+- [[wiki/entities/wiza]] — *(stub)* B2B contact-enrichment tool.
+- [[wiki/entities/fullenrich]] — *(stub)* waterfall contact-enrichment tool.
+- [[wiki/entities/prospeo]] — *(stub)* email-finder/enrichment tool.
+- [[wiki/entities/instantly]] — *(stub)* cold-email sending platform.
+- [[wiki/entities/predictleads]] — *(stub)* buying-signal data provider.
+- [[wiki/entities/common-room]] — *(stub)* community-signal intelligence platform.
+- [[wiki/entities/apollo]] — *(stub)* B2B sales-data/outreach platform.
+- [[wiki/entities/autogen]] — Microsoft multi-agent framework.
+- [[wiki/entities/deep-agents]] — *(stub)* LangChain deep-agents pattern/library.
+- [[wiki/entities/manus]] — *(stub)* autonomous general-purpose agent product.
+- [[wiki/entities/github-copilot]] — *(stub)* AI pair-programmer; Shopify-playbook comparator.
+- [[wiki/entities/shopify-dev-mcp]] — Shopify dev MCP server.
+- [[wiki/entities/ruby-on-rails]] — *(stub)* web framework; Shopify stack.
+- [[wiki/entities/sorbet]] — *(stub)* Ruby type checker; Shopify stack.
+- [[wiki/entities/dribbble]] — *(stub)* design-inspiration platform.
+- [[wiki/entities/behance]] — *(stub)* design-portfolio platform.
+- [[wiki/entities/result-dev]] — *(stub)* Aaryan Kushwah's one-person-company product.
+- [[wiki/entities/whatsapp]] — *(stub)* messaging platform; agent surface.
+- [[wiki/entities/midjourney]] — *(stub)* AI image generator.
+- [[wiki/entities/erc-8004]] — Ethereum agent-trust standard (identity/reputation/validation).
+- [[wiki/entities/a2a-protocol]] — *(stub)* agent-to-agent communication protocol.
+- [[wiki/entities/eip-712]] — *(stub)* typed-structured-data signing standard.
+- [[wiki/entities/metamask]] — *(stub)* Ethereum wallet; agent-settlement reference.
+- [[wiki/entities/safe-wallet]] — *(stub)* Safe smart-account wallet; agent settlement.
+- [[wiki/entities/assury-enforce]] — *(stub)* agent-policy enforcement product.
+- [[wiki/entities/policylayer]] — *(stub)* agent-governance policy product.
+- [[wiki/entities/complyedge]] — *(stub)* AI-compliance product.
+- [[wiki/entities/modal]] — *(stub)* serverless compute/sandbox platform.
+- [[wiki/entities/e2b]] — *(stub)* agent code-execution sandbox.
+- [[wiki/entities/daytona]] — *(stub)* dev-environment/sandbox platform.
+- [[wiki/entities/mem0]] — *(stub)* agent-memory layer.
+- [[wiki/entities/letta]] — *(stub)* agent-memory framework (MemGPT lineage).
+- [[wiki/entities/zep]] — *(stub)* agent-memory / temporal-knowledge-graph store.
+- [[wiki/entities/langfuse]] — *(stub)* LLM observability/eval platform.
+- [[wiki/entities/helicone]] — *(stub)* LLM observability/proxy.
+- [[wiki/entities/braintrust]] — *(stub)* LLM eval platform.
+- [[wiki/entities/langsmith]] — *(stub)* LangChain tracing/eval platform.
+- [[wiki/entities/google-adk]] — *(stub)* Google Agent Development Kit.
+- [[wiki/entities/kleros]] — *(stub)* decentralized dispute-resolution protocol.
+- [[wiki/entities/gumroad]] — *(stub)* digital-product sales platform; creator funnels.
+- [[wiki/entities/coursera]] — *(stub)* online-course platform; AI-engineer resources.
+- [[wiki/entities/lancedb]] — *(stub)* embedded vector database.
+- [[wiki/entities/gradio]] — *(stub)* ML demo-UI framework.
+- [[wiki/entities/streamlit]] — *(stub)* data-app framework.
+- [[wiki/entities/hugging-face-spaces]] — *(stub)* hosted ML-app platform.
+- [[wiki/entities/deepeval]] — *(stub)* LLM evaluation framework.
+- [[wiki/entities/ragas]] — *(stub)* RAG evaluation framework.
+- [[wiki/entities/lora]] — *(stub)* low-rank adaptation fine-tuning method/tooling.
+- [[wiki/entities/qlora]] — *(stub)* quantized LoRA fine-tuning method/tooling.
+- [[wiki/entities/pm-os]] — nurijanian's PM operating-system product.
+- [[wiki/entities/content-rewards]] — *(stub)* creator content-clipping reward platform.
+- [[wiki/entities/adaptive-ai]] — *(stub)* Adaptive; AI auto-posting/clipping agent.
+- [[wiki/entities/claude]] — Anthropic's assistant; referenced throughout the batch.
+
+**Works**
+
+- [[wiki/entities/worldquant-alpha101-code]] — *(stub)* WorldQuant 101 Formulaic Alphas reference code.
+- [[wiki/entities/generative-agents]] — *(stub)* Park et al. (2023) generative-agents paper; episodic-memory ancestor.
+- [[wiki/entities/x-algorithm-repo]] — *(stub)* claimed xai-org/x-algorithm For-You-feed repository.
+- [[wiki/entities/ldbc-social-network-benchmark]] — *(stub)* graph-DB benchmark used in the pgGraph comparison.
+- [[wiki/entities/free-agent-nation]] — *(stub)* Daniel Pink book; referenced in Future of Work.
+- [[wiki/entities/claude-mastery]] — *(stub)* Zephyr's Gumroad Claude-fluency product/guide.
+- [[wiki/entities/tally]] — *(stub)* fictional brand built end-to-end as a Claude Design demo.
+
+**Other**
+
+- [[wiki/entities/kano-model]] — *(stub)* product-prioritization framework; Shreyas product-strategy reference.
+- [[wiki/entities/gepa]] — *(stub)* named optimization method (Akshay Pachaar's Hermes deep-dive); not yet explained.
+- [[wiki/entities/meta-platforms]] — *(stub)* Meta (Facebook/Instagram parent); paid-ads + UGC distribution.
+- [[wiki/entities/eu-ai-act]] — *(stub)* EU AI regulation; agent-governance/compliance reference.
+- [[wiki/entities/atonomi]] — *(stub)* referenced org/protocol in the autonomous-agent stack.
+
 ## Concepts
 
 ### Operations of the LLM Wiki
@@ -664,6 +1116,174 @@ All 139 Open Design brands are now reachable as wiki entities. The 27 most-cross
 ### Personal productivity / prompts
 
 - [[wiki/concepts/personal-claude-prompts]] — curated personal prompt libraries as a productivity multiplier.
+
+### Batch backlog ingest concepts (2026-06-06)
+
+New concept pages from the 47-source backlog ingest, alphabetical. Stubs marked *(stub)*.
+
+- [[wiki/concepts/abstraction-altitude-framing]] — refusing high-altitude product binaries; the real question is one level down.
+- [[wiki/concepts/agent-evals]] — systematic evaluation of agent behavior; FDE deployment lifecycle pillar.
+- [[wiki/concepts/agent-feedback-loop]] — closing the loop on agent behavior beats perfecting the prompt.
+- [[wiki/concepts/agent-governance]] — control/policy plane for autonomous agents.
+- [[wiki/concepts/agent-guardrails]] — safety constraints/checkpoints in agent execution.
+- [[wiki/concepts/agent-harness]] — the 12-component, 7-decision scaffolding wrapping an LLM; "if you're not the model, you're the harness."
+- [[wiki/concepts/agent-identity]] — Know-Your-Agent: verifiable agent identity in agentic markets.
+- [[wiki/concepts/agent-post-training]] — environment → teacher trajectories → SFT → RL pipeline for agents.
+- [[wiki/concepts/agent-reputation]] — on-chain/verifiable agent reputation layer.
+- [[wiki/concepts/agent-settlement]] — payments/settlement rails for autonomous agents.
+- [[wiki/concepts/agent-skills]] — *(stub)* reusable packaged agent workflows (e.g. `/grill-me`, `/shaping`) invoked as commands.
+- [[wiki/concepts/agent-stack]] — *(stub)* 3-plane / 10-layer market infrastructure agents need to transact (trust / market / control).
+- [[wiki/concepts/agent-verification]] — trust-the-verifier-not-the-worker's-self-report.
+- [[wiki/concepts/agentic-ai]] — *(stub)* AI that reads situations and takes actions vs fixed automation.
+- [[wiki/concepts/agentic-capital-markets]] — market infrastructure for autonomous-agent economies.
+- [[wiki/concepts/agentic-memory]] — continuity/context/learning across 4 memory types; "20% storage, 80% retrieval."
+- [[wiki/concepts/ai-as-infrastructure]] — *(stub)* AI as a substrate layer rather than a feature.
+- [[wiki/concepts/ai-automation-agency]] — *(stub)* services model: automate one painful workflow for a "boring" small business and charge for it.
+- [[wiki/concepts/ai-compliance]] — regulatory/audit posture for AI agents (EU AI Act etc.).
+- [[wiki/concepts/ai-coworker]] — *(stub)* reframing Claude Code from tool to coworker.
+- [[wiki/concepts/ai-engineer]] — the AI-engineer career path (roadmap target).
+- [[wiki/concepts/ai-engineering]] — discipline of building LLM-powered systems; "still software engineering."
+- [[wiki/concepts/ai-fulfillment-layer]] — spine → agents → loop build-order for services-as-software delivery.
+- [[wiki/concepts/ai-influencer]] — monetizable AI/virtual-persona accounts.
+- [[wiki/concepts/ai-native-os]] — *(stub)* operating systems rebuilt around AI as the operating layer.
+- [[wiki/concepts/ai-overhang]] — *(stub)* AI-capability arbitrage window before adoption catches up.
+- [[wiki/concepts/answer-engine-discovery]] — discovery moving from search to AI answer engines.
+- [[wiki/concepts/backend-scalability-blueprint]] — 10-section 2026 blueprint for a backend at 1M users.
+- [[wiki/concepts/barbell-strategy]] — *(stub)* Taleb safe-core + tail-bet allocation; the trading case study.
+- [[wiki/concepts/chaos-engineering]] — deliberately injecting failure to validate resilience.
+- [[wiki/concepts/claude-as-infrastructure]] — *(stub)* Claude used as build/runtime infrastructure, not chat.
+- [[wiki/concepts/claude-fluency]] — practical mastery via a small set of reusable setups.
+- [[wiki/concepts/claude-memory]] — Claude.ai persistent-memory feature.
+- [[wiki/concepts/claude-projects]] — Claude.ai Projects as a knowledge/workspace primitive.
+- [[wiki/concepts/competitive-moat]] — *(stub)* talent-vs-alpha framing of open vs closed source.
+- [[wiki/concepts/compounding-judgement]] — *(stub)* human judgment compounding as agents take routine work.
+- [[wiki/concepts/content-clipping]] — *(stub)* the content-clipping reward economy.
+- [[wiki/concepts/content-os]] — *(stub)* systematized content-production operating system.
+- [[wiki/concepts/content-waterfall]] — one long-form piece cascaded into many short-form posts.
+- [[wiki/concepts/context-engineering]] — designing the agent's context as infrastructure; "not prompt engineering."
+- [[wiki/concepts/context-management]] — *(stub)* managing what enters/leaves the context window.
+- [[wiki/concepts/context-rot]] — degradation of long contexts; motivates context management.
+- [[wiki/concepts/context-window]] — the model's working-context budget.
+- [[wiki/concepts/continuous-batching]] — *(stub)* request-batching throughput technique in LLM serving.
+- [[wiki/concepts/conversation-design]] — designing turn-taking/flows for voice + chat agents.
+- [[wiki/concepts/conversational-website]] — generative interface replacing the static website.
+- [[wiki/concepts/conversion-funnel]] — staged distribution → activation → conversion model.
+- [[wiki/concepts/cosine-similarity]] — *(stub)* vector-similarity measure for retrieval.
+- [[wiki/concepts/customer-avatar]] — sharply-defined target customer for offers/content.
+- [[wiki/concepts/customer-insight]] — *(stub)* grounding product bets in real customer understanding.
+- [[wiki/concepts/daily-ai-briefing]] — scheduled morning briefing generated by Claude/MCP over the vault.
+- [[wiki/concepts/data-flywheel]] — *(stub)* usage → data → better product → more usage loop.
+- [[wiki/concepts/data-moat]] — *(stub)* proprietary data as defensibility.
+- [[wiki/concepts/database-sharding]] — horizontal partitioning of data across nodes.
+- [[wiki/concepts/design-system]] — token/component foundation established before generation.
+- [[wiki/concepts/distribution-as-moat]] — distribution, not building, is the defensible advantage.
+- [[wiki/concepts/dual-agent-rag-cache]] — VoiceAgentRAG two-agent retrieval cache for latency.
+- [[wiki/concepts/embeddings]] — vector representations of text; retrieval/memory foundation.
+- [[wiki/concepts/environment-design]] — RL environment design first, algorithm second.
+- [[wiki/concepts/episodic-memory]] — event/experience memory; one of the 4 agentic-memory types.
+- [[wiki/concepts/evaluator-optimizer]] — *(stub)* self-critique loop where the agent generates, critiques, and revises ("argue with itself").
+- [[wiki/concepts/executable-definition-of-done]] — defining + proving "done" outside the chat.
+- [[wiki/concepts/extended-thinking]] — Claude's extended-thinking/reasoning mode.
+- [[wiki/concepts/external-memory]] — out-of-context stored memory; one of the 4 agentic-memory types.
+- [[wiki/concepts/fine-tuning]] — adapting a base model to a task/domain.
+- [[wiki/concepts/firm-as-variable]] — the firm's size/existence as an economic variable that AI shrinks.
+- [[wiki/concepts/format-first-product-ideation]] — designing the content/product format before the idea.
+- [[wiki/concepts/forward-deployed-engineering]] — the FDE role: audit → evals → deployment with the customer.
+- [[wiki/concepts/four-golden-signals]] — latency/traffic/errors/saturation observability signals.
+- [[wiki/concepts/function-calling]] — LLMs invoking typed tools/functions.
+- [[wiki/concepts/gepa]] — *(stub)* GEPA prompt/skill optimization.
+- [[wiki/concepts/goal-command]] — /goal as a cross-vendor "assign, don't prompt" agent primitive.
+- [[wiki/concepts/graph-traversal]] — deep relationship traversal; pgGraph CSR in-memory approach.
+- [[wiki/concepts/grpo]] — Group Relative Policy Optimization for agent RL.
+- [[wiki/concepts/harness-engineering]] — *(stub)* engineering the harness around the model.
+- [[wiki/concepts/human-in-the-loop]] — human review/approval gates in agent loops.
+- [[wiki/concepts/idempotency-keys]] — safe-retry keys preventing duplicate side effects.
+- [[wiki/concepts/in-context-memory]] — memory held in the prompt/context; one of the 4 types.
+- [[wiki/concepts/inference-engine]] — the runtime that serves an LLM; engine follows hardware+workload.
+- [[wiki/concepts/interface-layer]] — *(stub)* control of the interface as the real strategic contest.
+- [[wiki/concepts/kelly-criterion]] — *(stub)* optimal bet-sizing; the trading case study.
+- [[wiki/concepts/kv-cache]] — attention key/value cache; central to decode-phase serving.
+- [[wiki/concepts/latency-budget]] — the ~700ms end-to-end budget for real-time voice agents.
+- [[wiki/concepts/lifestyle-business]] — small, profitable, owner-operated business model.
+- [[wiki/concepts/llm-evaluation]] — measuring LLM/agent output quality.
+- [[wiki/concepts/llm-proxy]] — central LLM-routing proxy (Shopify-playbook pattern).
+- [[wiki/concepts/llm-serving-benchmarking]] — *(stub)* measuring throughput/latency across serving engines.
+- [[wiki/concepts/llmops]] — operating LLM systems in production.
+- [[wiki/concepts/local-ai]] — *(stub)* self-hosting LLM inference on local hardware; pick hardware + workload first, engine follows.
+- [[wiki/concepts/market-making]] — *(stub)* providing two-sided liquidity; the Polymarket case study.
+- [[wiki/concepts/memory-bandwidth]] — the binding constraint in LLM decode; hardware selection driver.
+- [[wiki/concepts/memory-consolidation]] — decay/importance/consolidation of agentic memories.
+- [[wiki/concepts/micro-saas]] — small, focused, solo-run SaaS business model.
+- [[wiki/concepts/mixture-of-experts]] — *(stub)* MoE architecture; serving implications.
+- [[wiki/concepts/mobile-app-distribution]] — self-content → influencers → UGC → paid-ads ladder.
+- [[wiki/concepts/multi-layer-caching]] — layered client/edge/app/DB caching strategy.
+- [[wiki/concepts/multimodal-ai]] — *(stub)* models spanning text/image/audio/video.
+- [[wiki/concepts/observability]] — metrics + traces + logs for production systems.
+- [[wiki/concepts/offer-creation]] — designing tiered, outcome-priced offers.
+- [[wiki/concepts/onboarding-as-conversion]] — 3-act onboarding as the primary conversion lever.
+- [[wiki/concepts/one-person-company]] — the AI-enabled one-person company as the default firm shape.
+- [[wiki/concepts/open-source-as-recruiting]] — *(stub)* open-sourcing tooling to win talent.
+- [[wiki/concepts/operational-overhead-collapse]] — AI collapsing all business operational overhead at once.
+- [[wiki/concepts/organic-ugc-engine]] — founder-made organic UGC as the growth engine.
+- [[wiki/concepts/organization-man]] — Whyte's mid-century corporate archetype the essay inverts.
+- [[wiki/concepts/outbox-pattern]] — transactional outbox for reliable event publishing.
+- [[wiki/concepts/paged-attention]] — vLLM's paged KV-cache memory management.
+- [[wiki/concepts/parametric-memory]] — knowledge baked into weights; one of the 4 memory types.
+- [[wiki/concepts/persistent-memory]] — *(stub)* memory surviving across sessions.
+- [[wiki/concepts/persona-consistency]] — *(stub)* keeping an AI persona consistent across content.
+- [[wiki/concepts/personal-ai-system]] — layered persistent personal Claude setup.
+- [[wiki/concepts/personal-brand]] — distribution asset built around the individual.
+- [[wiki/concepts/postgres-as-platform]] — extending Postgres to absorb adjacent workloads (graph, vector).
+- [[wiki/concepts/prediction-markets]] — *(stub)* event-outcome markets (Polymarket).
+- [[wiki/concepts/prefill-vs-decode]] — the two LLM-inference phases with different bottlenecks.
+- [[wiki/concepts/principles-over-rules]] — give agents principles, not brittle rule lists.
+- [[wiki/concepts/product-differentiation]] — *(stub)* differentiating on specific feature bets.
+- [[wiki/concepts/product-strategy]] — specific bets on specific features grounded in insight.
+- [[wiki/concepts/prompt-engineering]] — crafting prompts; framed as subordinate to context engineering.
+- [[wiki/concepts/proof-of-authority]] — verifiable agent legal/acting authority.
+- [[wiki/concepts/properties-as-metadata]] — Obsidian properties written back as queryable metadata.
+- [[wiki/concepts/quantization]] — reducing weight precision to fit/serve models locally.
+- [[wiki/concepts/ralph-loop]] — autonomous build-verify loop; /goal-with-product-design variant.
+- [[wiki/concepts/ralph-wiggum-loop]] — the canonical Ralph (Wiggum) autonomous loop.
+- [[wiki/concepts/reactions-to-ai-opportunities]] — the "reactions to AI" (loneliness/verification/analog) opportunity pattern.
+- [[wiki/concepts/read-not-store-dashboard]] — Dataview live-query dashboard that reads rather than stores state.
+- [[wiki/concepts/recommendation-algorithm]] — X For-You-feed 14-signal weighted-sum scoring model.
+- [[wiki/concepts/reward-hacking]] — agents exploiting reward specs; RL failure mode.
+- [[wiki/concepts/rlvr]] — RL with verifiable rewards / verifiers.
+- [[wiki/concepts/saga-pattern]] — distributed-transaction orchestration via compensating steps.
+- [[wiki/concepts/scaffolded-llm]] — an LLM wrapped in tools/loops/state (the harness view).
+- [[wiki/concepts/scale-cube]] — x/y/z-axis scaling model for backends.
+- [[wiki/concepts/selling-websites]] — AI-built local-business web-agency model.
+- [[wiki/concepts/self-evolving-skills]] — skills the agent writes/improves for itself.
+- [[wiki/concepts/self-hosted-llm]] — running open-weight LLMs on owned hardware.
+- [[wiki/concepts/sequential-thinking]] — *(stub)* step-wise structured reasoning (MCP server).
+- [[wiki/concepts/skills-as-code]] — agent skills shipped as reviewed code/PRs.
+- [[wiki/concepts/soul-md]] — SOUL.md agent-identity file in ~/.hermes.
+- [[wiki/concepts/specific-bets]] — *(stub)* concrete feature-level bets vs high-altitude binaries.
+- [[wiki/concepts/speculative-decoding]] — *(stub)* draft-model speedup for decode.
+- [[wiki/concepts/state-machine]] — explicit states for conversation/agent control flow.
+- [[wiki/concepts/stateless-services]] — externalizing state so services scale horizontally.
+- [[wiki/concepts/strategic-acquisition]] — building to be acquired; the CiteSure → Jenni exit.
+- [[wiki/concepts/supervised-fine-tuning]] — SFT to teach an agent task syntax/format.
+- [[wiki/concepts/teacher-trajectories]] — teacher-model rollouts used as SFT training data.
+- [[wiki/concepts/tensor-parallelism]] — *(stub)* sharding a model across GPUs for serving.
+- [[wiki/concepts/three-tier-memory]] — Hermes-style in-context / state.db / files memory tiers.
+- [[wiki/concepts/time-series-data-engineering]] — *(stub)* time-series storage/compute; quant tooling.
+- [[wiki/concepts/tool-scoping]] — restricting an agent's tool set to what the task needs.
+- [[wiki/concepts/trading-bot]] — 24/7 API-connected automation that executes a trading strategy at scale; the product, not a shortcut.
+- [[wiki/concepts/ugc-marketing]] — user/founder-generated content as a marketing channel.
+- [[wiki/concepts/unified-memory]] — shared CPU/GPU memory (Apple silicon) for local inference.
+- [[wiki/concepts/vector-database]] — store/query embeddings; memory + RAG substrate.
+- [[wiki/concepts/verification-loops]] — *(stub)* verify-before-trust loops in agent workflows.
+- [[wiki/concepts/vibe-coding]] — *(stub)* building software by prompting rather than hand-coding.
+- [[wiki/concepts/vibe-designing]] — designing by vibes without a system; the anti-pattern.
+- [[wiki/concepts/viral-content-system]] — repeatable system for producing viral short-form content.
+- [[wiki/concepts/voice-agent]] — real-time five-component STT/RAG/LLM/TTS/functions pipeline.
+- [[wiki/concepts/voice-matching]] — making an agent post/write in the user's own voice.
+- [[wiki/concepts/voice-style-guide]] — captured voice/style guide driving voice-matched output.
+- [[wiki/concepts/workflow-design]] — Context→Constraints→Reasoning→Execution→Validation→Memory→Refinement pipeline.
+- [[wiki/concepts/world-model]] — *(stub)* unified memory+skills "world model" harness.
+- [[wiki/concepts/zero-trust-security]] — never-trust-always-verify security posture.
 
 ## Projects
 

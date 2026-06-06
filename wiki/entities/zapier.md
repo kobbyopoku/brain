@@ -3,7 +3,7 @@ type: entity
 title: Zapier
 entity_type: product
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://zapier.com
 aliases: []
 tags: [automation, integration-platform, no-code, design-md-available, open-design-catalog, stub]
@@ -18,10 +18,12 @@ tags: [automation, integration-platform, no-code, design-md-available, open-desi
 - **Website**: https://zapier.com
 - **Open Design DESIGN.md**: `raw/open-design/design-systems/zapier/DESIGN.md`
 - **Adjacent to**: [[wiki/concepts/ai-automation-services|AI automation services]] — Zapier-style integration but with LLMs in the loop.
+- Named (with [[wiki/entities/make|Make]] and n8n) as a drag-and-drop no-code automation tool getting outclassed by agentic workflows, per [[wiki/sources/exploraX_-5-solo-ai-business-models]].
 
 ## Mentioned in
 
 - [[wiki/sources/open-design-catalog]]
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — no-code automation tool framed as being outclassed by agentic workflows.
 
 ## Related concepts
 - [[design-md]]

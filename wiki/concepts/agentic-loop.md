@@ -2,7 +2,7 @@
 type: concept
 title: Agentic Loop
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [agent loop, core agent loop]
 tags: [agents, foundational, agent-architecture]
 ---
@@ -24,6 +24,11 @@ The loop is also why agents are simultaneously "conceptually simple" and "operat
 ## Treatment across sources
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — canonical articulation in this wiki. Frames the loop as: *"User input → LLM thinks → LLM decides (respond or call a tool) → if tool: execute it, feed result back → repeat."* Names the pieces *"brain / hands / notepad"* (LLM / tools / memory). Asserts the loop is invariant across LangGraph, CrewAI, Anthropic SDK, and OpenAI Agents SDK.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] presents the loop as the harness's heartbeat: the Thought-Action-Observation / ReAct cycle (assemble prompt, call LLM, parse, execute tools, feed result back, repeat). Mechanically a `while` loop; *"complexity lives in everything the loop manages"*.
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]] frames memory as bookending the LLM call (retrieve before, write after); the stateless model is made to appear stateful by the memory system wrapping the loop.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] sets a checkpoint-1 task to write a script running the loop *"prompt → model → response → next step"*, referencing Anthropic's *Building Effective Agents*.
+- [[wiki/sources/shabnam-google-2026-roadmap-keynote]] describes an embedded-at-the-platform variant of the agent runtime: take action, coordinate across apps, and complete workflows without manual app navigation.
+- [[wiki/sources/kushwah-aaryan-future-of-work]] treats AI agents as the enabling technology — the first tech to collapse the whole operational stack at once — but does not detail agent mechanics.
 
 ## Sub-claims and details
 
@@ -33,6 +38,8 @@ The loop is also why agents are simultaneously "conceptually simple" and "operat
 - **Loop ≠ agent**: the loop is the *substrate*. An [[augmented-llm]] running inside the loop with tools and memory is an agent. Without tools, it's a chatbot.
 - **Frameworks compose loops**: in [[agent-workflow-patterns|orchestrator-workers]], the orchestrator runs a loop in which each "tool call" might itself be a sub-agent running its own loop. Loops nest.
 - **Failure modes inside the loop** (per [[wiki/sources/hooeem-build-an-ai-agent-today]]): the loop can spin forever if the LLM keeps calling tools without progressing; the tool description can be ambiguous so the LLM picks the wrong tool; the tool can return a result the LLM misinterprets. Each failure has a specific mitigation (max-iterations, clearer descriptions, structured tool errors).
+- **Loop-as-ReAct cycle** (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]): the loop is the Thought-Action-Observation cycle — assemble the prompt, call the LLM, parse the output, execute tools, feed the observation back, and repeat. The loop itself is a simple `while`; the harness's complexity lives in everything the loop manages.
+- **Memory bookends the loop** (per [[wiki/sources/techwith-ram-agentic-memory-breakdown]]): the memory system retrieves relevant context before the LLM call and writes new memories after it, so a stateless model appears stateful.
 
 ## Open questions and contradictions
 
@@ -57,3 +64,8 @@ The loop is also why agents are simultaneously "conceptually simple" and "operat
 ## Mentioned in
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]]
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]]
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]]
+- [[wiki/sources/shabnam-google-2026-roadmap-keynote]]
+- [[wiki/sources/kushwah-aaryan-future-of-work]]

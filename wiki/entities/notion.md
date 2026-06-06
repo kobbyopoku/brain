@@ -3,7 +3,7 @@ type: entity
 title: Notion
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://notion.so
 aliases: []
 tags: [knowledge-platform, productivity, ai-os-connection, mcp-integration, design-md-available, open-design-catalog]
@@ -82,6 +82,8 @@ Built-in AI features that compete partially with this wiki's use case (LLM-power
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — Notion as AI OS Connections layer (Tasks + Knowledge).
 - [[wiki/sources/open-design-catalog]] — Open Design catalog entry.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] — skill-workflow destination (Step 4, Notion → Gmail → Drive → Output) and Routine output target ("Weekly Monday → drops to Notion").
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] — named as one of six candidate Claude Connectors for Setup 4 (two-Connectors setup).
 
 ## Related entities
 

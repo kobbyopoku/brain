@@ -2,7 +2,7 @@
 type: concept
 title: Question Form First
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [turn-1-form, mandatory-discovery-form, structured-intake]
 tags: [agent-contract, ux-pattern, requirements-gathering, generation-discipline]
 ---
@@ -28,6 +28,8 @@ The pattern matters in three ways:
 ## Treatment across sources
 
 - [[wiki/sources/nexu-io-open-design]] — canonical wiki source. Open Design enforces Turn-1 mandatory: a discovery form locks surface / audience / tone / brand context / scale before any design generation. Claim: prevents 80% of redirects.
+- [[wiki/sources/shreyas-get-to-the-core-of-the-thing]] is an adjacent treatment in a different register — it shares the kernel "the form of the question is load-bearing" but lives in human-strategy (the framing decides the discussion), whereas this concept lives in agent-UX (mandatory structured intake).
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] frames its Step 5 ("ask me the 5 most important questions before you start") as the lightweight free-text consumer-prompt form of the mandatory-intake discipline this concept codifies.
 - *Adjacent treatments not yet ingested*: Cal.com / Calendly booking forms (intake before consultation); medical clinic intake forms; loan application forms; many B2B SaaS onboarding flows. The pattern is universal in human-staffed services; Open Design is the first wiki source applying it explicitly to agent generation.
 
 ## Sub-claims and details
@@ -68,6 +70,12 @@ The fields are *finite* (most are dropdowns) and *orthogonal* (each captures a d
 
 Each domain has its own 4-6 fields; the structure is invariant.
 
+### The free-text consumer form (Kopadze)
+- Step 5 of an "18 steps" Claude-usage guide — "ask me the 5 most important questions before you start" — is the lightweight, free-text, consumer-prompt form of the same mandatory-intake discipline: the user prompts the model to interrogate them before generating, rather than the UI rendering a typed form. [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]]
+
+### The human-strategy sibling (Doshi)
+- The same kernel — the form of the question is load-bearing — appears in product strategy: high-altitude framing lets people avoid hard, specific thinking, and the fix is to drop the question "one level down." This is the human-decision-making analogue of Turn-1 intake. [[wiki/sources/shreyas-get-to-the-core-of-the-thing]] See [[abstraction-altitude-framing]].
+
 ### Anti-pattern: forms that are too long
 
 The discipline only works if the form is *short enough that users actually fill it out*. Open Design's 5-field form takes ~30 seconds; a 20-field form would be skipped. The art of the pattern is identifying the *minimal sufficient* set of fields.
@@ -91,6 +99,7 @@ Together they bound generation: explicit input + disciplined output. Either alon
 
 ## Related concepts
 
+- [[abstraction-altitude-framing]] — the human-strategy sibling; both turn on "the form of the question is load-bearing."
 - [[anti-ai-slop-machinery]] — composable; together they bound generation input + output.
 - [[markdown-as-agent-contract]] — the form output is a structured agent contract.
 - [[switching-forces]] — domain-specific intake fields for marketing copy.
@@ -106,3 +115,5 @@ Together they bound generation: explicit input + disciplined output. Either alon
 ## Mentioned in
 
 - [[wiki/sources/nexu-io-open-design]]
+- [[wiki/sources/shreyas-get-to-the-core-of-the-thing]]
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]]

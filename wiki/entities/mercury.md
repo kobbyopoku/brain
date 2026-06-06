@@ -3,10 +3,10 @@ type: entity
 title: Mercury
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://mercury.com
 aliases: []
-tags: [refero-catalog, design-md-ingested]
+tags: [refero-catalog, design-md-ingested, agent-payments]
 ---
 
 # Mercury
@@ -22,6 +22,7 @@ Mercury appears in this wiki via [[wiki/sources/refero-design-systems-for-ai-age
 - **Website**: https://mercury.com
 - **Refero style page**: https://styles.refero.design/style/3172cd4d-118a-4a16-a259-6b634d32322e
 - **Refero mood descriptor**: "Mountain Top Command Center"
+- **Settlement rail**: named among direct-debit and ACH settlement rails (cheap, slow, irreversible) suited to B2B agent-to-agent invoicing (per [[wiki/sources/awrigh01-technical-stack-autonomous-agents]]). *(This is Mercury the business-banking company, distinct from the unrelated "Mercury" design-system brand.)*
 
 ## Design system summary
 
@@ -35,6 +36,7 @@ From [[wiki/sources/mercury-design-md]]: Twilight dark palette (`#171721` outer 
 
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — initial catalog reference.
 - [[wiki/sources/mercury-design-md]] — full DESIGN.md ingested 2026-05-02.
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — direct-debit/ACH settlement rail for B2B agent invoicing.
 
 ## Related entities
 

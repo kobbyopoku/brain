@@ -2,7 +2,7 @@
 type: concept
 title: Markdown as Agent Contract
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 aliases: [markdown as agent config, agent-readable markdown]
 tags: [meta-pattern, ai-agents, markdown, agent-config, foundational]
 ---
@@ -51,6 +51,23 @@ This vault is itself an instance: [[CLAUDE]] is the contract, [[llm-wiki-pattern
 - [[wiki/sources/heygurisingh-x-cowork-setup]] — *2026-05-08*. The pattern applied to a **workspace-folder-level contract** for [[cowork|Claude Cowork]]. Guri prescribes paste-ready Global Instructions (a per-user master agent contract) and three folder-level conventions (`ABOUT ME/`, `PROJECTS/`, `TEMPLATES/`, `CLAUDE OUTPUTS/`) — folders themselves become a contract, with the agent expected to read context from `ABOUT ME/` and write output to `CLAUDE OUTPUTS/`. **Folder-as-contract** is a sub-pattern worth tracking — the directory structure encodes input/output expectations the same way markdown encodes them.
 - [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — *2026-05-08*. The pattern applied to **task templates** in Khairallah's three-session Cowork architecture. Each template specifies input source, processing steps, output format, and save location — a contract between the human's intent ("produce a weekly report") and the agent's execution. The pattern crosses scope again: from project (CLAUDE) → folder (Cowork) → individual task (Khairallah's templates).
 - [[wiki/sources/akshay_pachaar-x-rag-wrong]] — *2026-05-08*. **An attack on chunks as the unit of agent input** that strengthens the meta-pattern. Akshay argues against unstructured chunks of text in a RAG pipeline, in favor of typed Q-A packets ("IdeaBlocks") with governance fields. CLAUDE.md is *narrative-prose* contract; IdeaBlock is *atomic-typed* contract — both are markdown-shaped artifacts a human writes that an agent acts on, distinguished by structural granularity. Worth tracking: as the meta-pattern matures, the unit gets smaller and more typed.
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] frames it as Buzz's principle-based skill files being agent contracts; the source refines the meta-pattern with two claims — write principles not rules, and govern the contract like code (PR review, rollback).
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] frames it via Blueprint 01 (Session Agent) loading voice + topic positioning + algorithm scoring priorities from a CLAUDE.md/MEMORY.md project file every session — the contract-markdown pattern applied to a personal posting agent.
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] frames it as Project Instructions / Custom Instructions functioning as a chat-product agent contract — the consumer-app counterpart to CLAUDE.md.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] frames it as Layers 1-2 (Personal Preferences + Project instructions) being the consumer-UI-field expression of the agent-contract pattern, rather than markdown files; gives a concrete Personal Preferences template (WHO I AM / HOW I WORK / WHAT I DO NOT WANT / GOALS, <500 words).
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] frames it as the daily-note conventions OPEN: / DONE: / UPDATE: being informal command surfaces an agent parses — DONE:/UPDATE: drive Claude's automatic property writeback; OPEN: drives the open-loops query. A narrow read/write instance of the agent-contract pattern.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] frames it as the deliverable unit being a documented Claude workflow built around a system prompt plus a context document; system-prompt-as-deliverable, with a concrete luxury-real-estate copywriter system prompt example.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] frames it as CLAUDE.md being the single source of truth governing every workflow; updating it updates all generated output. Note same-name collision with the Claude Code project-instruction convention — here it is a personal life-context file.
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] frames it generalized across tools: CLAUDE.md and AGENTS.md are the same content under two filenames, and the shared markdown knowledge layer is read unchanged by any agent. Strongest wiki articulation that the agent-contract pattern is vendor-neutral by construction.
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] frames it as 21 paste-ready CLAUDE.md instructions — concrete instances of the meta-pattern; distinct contribution is an explicit ROI/cost argument ($975/week per dev) for adopting the markdown contract, which prior wiki sources framed only qualitatively.
+- [[wiki/sources/tricalt-memory-skills-same-harness]] frames it by arguing a memory API, skills, and an agent-md file are "the same play" — even compaction strategies — collapsing the contract-format distinction into one world model.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] frames it as SOUL.md, MEMORY.md, and USER.md being markdown files injected into the system prompt as the agent's identity/knowledge contract — a Hermes-internal instance of the pattern, scoped to persona + memory.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] frames it as both the CLAUDE.md context and the per-correction memory .md files being markdown contracts the agent reads.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] frames it via Pattern 4: CLAUDE.md as git-committed team infrastructure (Stack/Commands/Architecture/Rules), shared across 23,000 engineers, kept deliberately small (<60 lines); "stuffing it with every standard makes performance worse."
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] frames it as the "context + constraints + persistent project memory" lever mapping directly onto CLAUDE.md as the environment Claude reasons in.
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] frames it as CLAUDE.md treated as "onboarding documentation for your AI coworker" — define instructions once vs repeating every session; the most slogan-level articulation of the meta-pattern (candidate sections: overview, stack, conventions, folder structure, design rules, API patterns, deployment, testing, forbidden actions).
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]] frames it as SPEC.md being the written done-criteria contract the builder runs /goal against; Hermes authors it as the first card.
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] frames it via Setup 1 (project-root CLAUDE.md declaring voice/audience/constraints/output rules) as a consumer-grade instance of this meta-pattern; "every chat starts as a specialist in your work."
 
 ## Sub-claims and details
 
@@ -108,3 +125,20 @@ This wiki page should not be cited to claim markdown is always the right agent f
 - [[wiki/sources/heygurisingh-x-cowork-setup]] — folder-as-contract sub-pattern + paste-ready Global Instructions.
 - [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — task-template-as-contract at the production-block scope.
 - [[wiki/sources/akshay_pachaar-x-rag-wrong]] — chunks vs typed Q-A packets as the unit of agent input.
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] — principle-based skill files as agent contracts; govern the contract like code.
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] — Session Agent loading voice/positioning/scoring from a project CLAUDE.md/MEMORY.md.
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] — Project/Custom Instructions as the consumer-app counterpart to CLAUDE.md.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — Personal Preferences + Project instructions as UI-field expression of the pattern.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — OPEN:/DONE:/UPDATE: daily-note conventions as informal command surfaces.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] — system-prompt-plus-context-document as the deliverable unit.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — CLAUDE.md as single source of truth (personal life-context variant).
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] — CLAUDE.md = AGENTS.md; vendor-neutral by construction.
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] — 21 paste-ready CLAUDE.md instructions + explicit ROI ($975/week per dev).
+- [[wiki/sources/tricalt-memory-skills-same-harness]] — memory API + skills + agent-md as "the same play."
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] — SOUL.md/MEMORY.md/USER.md as Hermes identity/knowledge contract.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] — CLAUDE.md + per-correction memory .md files as agent contracts.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — CLAUDE.md as git-committed team infra (<60 lines) across 23,000 engineers.
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] — context + constraints + persistent project memory lever.
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] — CLAUDE.md as onboarding documentation for your AI coworker.
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]] — SPEC.md as the written done-criteria contract for /goal.
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] — Setup 1 project-root CLAUDE.md as consumer-grade instance.

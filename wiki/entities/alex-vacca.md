@@ -3,7 +3,7 @@ type: entity
 title: Alex Vacca
 entity_type: person
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://x.com/itsalexvacca
 aliases: [itsalexvacca]
 tags: [author, services-as-software, agency, founder]
@@ -33,10 +33,14 @@ Alex Vacca is the founder/co-founder of ColdIQ, a bootstrapped services-as-softw
 - **Risk reversal + daily content** in combination crack the zero-proof wall; alone, neither does.
 - **Pricing pressure on hour-based work compresses every operator** who hasn't built infrastructure underneath the human layer.
 - **What survives LLM compression**: judgment, relationship, taste, accountability.
+- **AI-layer build sequence is spine → agents → loop** — the order, not the tools/agents/stack, is what matters; he says it took him two years to understand this. *(See [[wiki/sources/itsalexvacca-3-phases-ai-layer]].)*
+- **Previously argued "services don't scale"** and wrote a separate piece on "the four feedback edges." *(Per [[wiki/sources/itsalexvacca-3-phases-ai-layer]].)*
+- **Demonstrated building a cold email campaign with 4 agents** in one session, end-to-end, in under an hour (video). *(Per [[wiki/sources/itsalexvacca-3-phases-ai-layer]].)*
 
 ## Mentioned in
 
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
+- [[wiki/sources/itsalexvacca-3-phases-ai-layer]] — author; states the spine → agents → loop sequencing thesis for the AI layer.
 
 ## Related entities
 

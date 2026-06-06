@@ -2,7 +2,7 @@
 type: concept
 title: Claude Code Overhead Patterns
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [claude code waste, the 9 overhead patterns, claude code optimization]
 tags: [claude-code, optimization, cost-analysis, foundational]
 ---
@@ -31,6 +31,9 @@ For the brain itself, the concept is operationally critical. The wiki's [[CLAUDE
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — operational sibling: Nate independently identifies *"prefer API endpoints saved as markdown over MCPs"* (same as Mnilax's pattern #6) and emphasizes hardcoding values into skill.md to avoid runtime data crawls (variant of #6).
 - [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]] — conceptual sibling: [[progressive-disclosure]] is the architectural answer to pattern #5 (skill loading on irrelevant tasks).
 - [[wiki/sources/saraev-agentic-workflows-2026]] — independently observes the MCP overhead pattern in action: *"This thing has basically filled up about half of my entire context window. ... [MCP tools eat] 8.2% of my entire context window."* Third independent confirmation of Mnilax's pattern #6, with the same operational fix (load only the MCPs the directive needs).
+- [[wiki/sources/nateherk-claude-design-tally-brand]] frames it as a token-economy discipline applied to Claude Design's separate weekly quota: the quota-stretching playbook (in-canvas edits over prompting, Sonnet for tweaks, one change per prompt, tight spec up front, watch-and-stop) is analogous to the measured overhead patterns.
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] frames it as the consumer-chat-layer analogue — coarser and unmeasured: Steps 10/12/13 (specify output length, stop re-explaining via Projects, new-chat-per-topic to avoid context bleed) are token-overhead discipline at the chat layer.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] frames it via *"you pay for all of it on every turn"* — the cost-per-turn / context-bloat argument that motivates the keep-CLAUDE.md-lean (<60 line) prescription.
 
 ## The 9 patterns (ranked by cost)
 
@@ -100,4 +103,7 @@ Anthropic acknowledged the broader usage-limit problem in late March 2026: Max 5
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
 - [[wiki/sources/NainsiDwiv50980-equipping-agents-for-real-world]]
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — *2026-06-06*. Token-economy discipline applied to Claude Design's separate weekly quota (in-canvas edits, Sonnet for tweaks, one change per prompt, tight spec, watch-and-stop).
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] — *2026-06-06*. Consumer-chat-layer analogue (Steps 10/12/13): output-length control, Projects to stop re-explaining, new-chat-per-topic.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — *2026-06-06*. *"You pay for all of it on every turn"*; motivates the <60-line CLAUDE.md prescription.
 - [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. [[wiki/entities/hermes-agent|Hermes Agent]]'s AGENTS.md elevates **prompt-cache preservation** to an architectural rule — state-changing commands default to *deferred* invalidation with explicit `--now` opt-in, rather than the naive "every change invalidates immediately" default. This is the structural answer to Mnilax's measured cache-invalidation cost pattern: rather than asking users to be careful, encode the discipline in command semantics.

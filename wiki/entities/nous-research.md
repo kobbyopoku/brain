@@ -3,7 +3,7 @@ type: entity
 title: Nous Research
 entity_type: organization
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://nousresearch.com
 aliases: [nousresearch]
 tags: [ai-research, open-weight-models, ai-tooling, hermes-series]
@@ -42,6 +42,7 @@ This page is **partially substantive**. Nous Research appears in the wiki via it
 ## Mentioned in
 
 - [[wiki/sources/nousresearch-hermes-agent]] — canonical source via the Hermes Agent product.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] — maintainer of the Hermes Agent whose `~/.hermes` folder layout the post anatomizes.
 
 ## Related entities
 

@@ -3,7 +3,7 @@ type: entity
 title: Akshay Pachaar
 entity_type: person
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/akshay_pachaar
 aliases: [akshay_pachaar]
 tags: [author, ml-educator, rag, ai-agents, content-creator]
@@ -29,10 +29,14 @@ Akshay's content sits in the *technical educator* lane of AI-content X — adjac
 - **Embed claims, not chunks.** A *question + validated answer + typed governance fields* is the right atomic unit.
 - **Less data, more accuracy.** Distilled corpus (semantic dedup at 80-85%) outperforms undistilled by 13.55% on vector accuracy (per Blockify's internal benchmark).
 - **Governance belongs in the data layer**, not bolted onto the orchestrator. Role / version / clearance as typed fields per IdeaBlock.
+- **Three-tier memory split** — Tier 1 for always-in-context facts, Tier 2 for searchable history, external providers for deeper persistence — argued in [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]].
+- **Skills as self-contained units make the model interchangeable.** Swapping the model underneath does not require rewriting capabilities, so the harness is the durable layer and the model is interchangeable — argued in [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]].
 
 ## Mentioned in
 
 - [[wiki/sources/akshay_pachaar-x-rag-wrong]] — canonical wiki source.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] — anatomizes the `~/.hermes` folder file-by-file (2026-05-13); companion deep-dive covers Hermes architecture, memory system, self-evolving skills, GEPA optimization, multi-agent setup. His 2nd substantive wiki post.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — author of "The Anatomy of an Agent Harness" (2026-04-06); shares daily tutorials on AI, ML, and vibe-coding best practices.
 
 ## Related entities
 

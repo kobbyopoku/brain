@@ -3,7 +3,7 @@ type: entity
 title: Skilljar
 entity_type: product
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://anthropic.skilljar.com/
 aliases: []
 tags: [learning-platform, certification, anthropic-academy, stub]
@@ -20,6 +20,7 @@ This page is a **stub**. Skilljar appears in the wiki only as the delivery platf
 ## Mentioned in
 
 - [[wiki/sources/rubenhassid-claude-certifications]] — sole mention as Anthropic cert delivery surface.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — Anthropic Academy is delivered at `anthropic.skilljar.com` (free account).
 
 ## Related entities
 

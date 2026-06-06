@@ -3,7 +3,7 @@ type: entity
 title: Cowork
 entity_type: product
 created: 2026-05-04
-updated: 2026-05-09
+updated: 2026-06-06
 website: ""
 aliases: [Claude Cowork]
 tags: [claude-code, ai-coding, anthropic, automation-platform]
@@ -28,7 +28,7 @@ The two compose perfectly: read Guri first to set up the workspace, then Khairal
 - **Relationship to [[wiki/entities/claude-code]]**: Cowork is a Claude Code mode (not a separate product). Claude Code is the engine; Cowork is the workspace.
 - **Filesystem write capability**: Cowork operates on actual files — it creates documents, updates spreadsheets, compiles reports, saves to specified locations. This is the pivotal capability that distinguishes systems-mode from conversation-mode.
 - **MCP integration**: shares Claude Desktop's connector configuration (`claude_desktop_config.json`); commonly-used connectors are Gmail, Google Calendar, Slack, Google Drive, Notion.
-- **Scheduling**: supports `/schedule` slash command for cron-style task execution.
+- **Scheduling**: supports `/schedule` slash command for cron-style task execution. Also exposes **Scheduled Tasks** via Settings → Scheduled Tasks (write prompt, set time, choose connectors) — named in [[wiki/sources/heynavtoor-personal-ai-system-claude]] as one of two scheduled-automation hosts alongside Claude Code Routines.
 - **Sub-agent parallelization**: per Khairallah, *"a stack of 20 documents gets handled in minutes not hours"* via parallel sub-agents.
 - **Plugins**: Guri names 11 official Anthropic plugins.
 - **AskUserQuestion**: per Guri, the most-transformative built-in tool — Cowork pauses to ask the human for clarification when uncertain rather than guessing.
@@ -79,6 +79,8 @@ Manual [[self-annealing]] — the human is the optimizer. Composes with [[wiki/s
 - [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]] — original mention as Claude Code alternative in 5-tool stack.
 - [[wiki/sources/heygurisingh-x-cowork-setup]] — Cowork onboarding setup.
 - [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — three-session daily architecture.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — named in Layer 7 as a host for scheduled automations via Scheduled Tasks.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] — named as the Package-2 (System Build) delivery substrate alongside Claude Code routines.
 
 ## Related concepts
 

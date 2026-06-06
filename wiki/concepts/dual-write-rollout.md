@@ -2,7 +2,7 @@
 type: concept
 title: Dual-write rollout
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-06-06
 aliases: [parallel-write-rollout, additive-rollout, expand-and-contract-data-pipeline]
 tags: [migration-pattern, data-engineering, deployment, safety, observability]
 ---
@@ -108,4 +108,5 @@ What unifies them: **the new and old systems coexist long enough for the differe
 
 ## Mentioned in
 
+- [[wiki/sources/akintola-steve-backend-1-million-users]] — does not name the dual-write rollout, but its **Outbox pattern** is the transactional-event reliability primitive behind this migration pattern: writing the state change and the to-be-published event in the same transaction so a side effect is never lost on retry. Cross-link to the Outbox/transactional-event reliability mechanism that the new write path depends on.
 - [[wiki/projects/kivora]] — the **2026-05-08 Tier 1 Finding-schema migration** is the worked example. `ComposioFindingsBridge` is the bridge; `kivora.findings.composio-emission-enabled` is the toggle (default off, flipped on in production for the 2-week observation window). Pilot tenant: Brolly Africa. The unique idempotency index is `uq_findings_idempotency` over `(tenant_id, workspace_id, run_id, resource_type, resource_id)`. Failures are swallowed in `ComposioFindingsBridge.ingestQuietly()`. Cutover (Tier 2A) explicitly deferred to after the observation window. ADR: `backend/docs/adr/0001-finding-schema.md`.

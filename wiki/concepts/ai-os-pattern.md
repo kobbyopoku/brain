@@ -2,7 +2,7 @@
 type: concept
 title: AI OS Pattern
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [AI Operating System, Three Ms, Four Cs]
 tags: [claude-code, framework, foundational]
 ---
@@ -40,6 +40,9 @@ The Three Ms separately address the **mindset trap** that kills most AI OS attem
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — canonical wiki source. Author runs the pattern at $3M/yr business scale; ships a starter repo ([[wiki/entities/ais-os|github.com/nateherkai/AIS-OS]]) with three skills (Audit, Level Up, Onboard) that bootstrap the OS in five minutes. Includes operational specifics: separate API accounts per service, "prefer API endpoints saved as markdown over MCPs", `.env` discipline, daily/weekly improvement loops via `/audit` + `/level-up`.
 - [[wiki/sources/saraev-agentic-workflows-2026]] — sibling architecture at the workflow scope. Saraev's [[do-framework]] (Directives + Executions) is structurally similar to nateherk's AI OS (`Contexts/`, `Decisions/`, `References/`, `.claude/skills/`). Both are folder-shaped agent contracts; nateherk's is broader (the OS), Saraev's is more workflow-specific (one directive per repeatable task). The DO framework can be read as the *delivery surface* of an AI OS — workflows the OS exposes to the user.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — *2026-06-06*. The dashboard is the human-facing read surface of a Claude-as-OS personal-business stack (Claude Max + N8N + Obsidian + Filesystem MCP), the same runtime as CyrilXBT's 5-agents post.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — *2026-06-06*. The personal-life instantiation of the AI-OS pattern: treats Obsidian + Claude + N8N as an operating system for one person's life areas, paralleling nateherk's business-facing version.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] — *2026-06-06*. A clean 6-step restatement of the layered Claude-Code-as-OS stack (Install → Context → Memory → Skills → Agents → Routines), where "everything below it compounds."
 
 ## Sub-claims and details
 
@@ -112,3 +115,7 @@ If 2/3 are true within a month, the system has taken.
 ## Mentioned in
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/saraev-agentic-workflows-2026]]
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]]
+- [[wiki/sources/cyrilxbt-personal-operating-system]]
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]]

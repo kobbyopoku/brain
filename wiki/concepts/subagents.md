@@ -2,7 +2,7 @@
 type: concept
 title: Subagents
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [subagent, sub-agents, claude-code-subagents]
 tags: [claude-code, multi-agent, architecture]
 ---
@@ -25,6 +25,9 @@ A second value: **role enforcement via tool scoping.** Because each subagent has
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — describes a 5-role setup as a recommended baseline: **architect** (specs/plans, no code), **coder** (writes code, full tool access), **reviewer** (security-first PR review), **tester** (TDD enforcement, paired with [[wiki/entities/tdd-guard]]), **ops** (deploy/CI/CD/infra). References two pre-built collections: [[wiki/entities/wshobson-agents]] and [[wiki/entities/davepoon-subagents-collection]].
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — gives a worked example of the **context-window-isolation pattern**: a Pulse Check skill delegates heavy [[wiki/entities/clickup|ClickUp]] data work to a `clickup-searcher` sub-agent so the heavy data never blows the main context window. The principle: subagents aren't only for role specialization — they're also for **isolating expensive context loads** that would otherwise pollute the main session.
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] frames it as a **cross-tool portability** concern: sub-agents diverge only in file format (markdown in Claude Code, TOML in Codex) and in routing behavior — Claude Code auto-routes to sub-agents by their description, whereas Codex requires explicit by-name invocation.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] frames it as Step 5 of a 6-step build: *"each agent gets one file and one job"* — Strategist / Builder / QA Gate as single-purpose subagents.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] frames it as a **context-management strategy**: each subagent explores extensively but returns only a 1,000-2,000-token condensed summary to the parent, preserving the parent's context budget.
 
 ## Sub-claims and details
 
@@ -34,6 +37,10 @@ A second value: **role enforcement via tool scoping.** Because each subagent has
 - **Composition with skills**: a subagent can have its own skills loaded too. A reviewer subagent + the trail-of-bits security skill collection = a security-first PR reviewer.
 - **Composition with [[multi-agent-orchestration]]**: subagents are the unit; orchestrators (e.g. [[wiki/entities/claude-squad]]) run multiple unit-instances in parallel via git worktrees.
 - **Failure mode**: subagents that need shared state (e.g. coder writes a file the tester needs to read) require explicit handoff. Without it, isolation becomes a wall instead of a fence.
+- **File format is platform-specific**: subagent definitions are markdown in Claude Code and TOML in Codex ([[wiki/sources/nateherk-claude-code-codex-same-project]]).
+- **Routing differs by platform**: Claude Code auto-routes to a subagent by matching its description; Codex requires the parent to invoke the subagent explicitly by name ([[wiki/sources/nateherk-claude-code-codex-same-project]]).
+- **Summarize-on-return is a context-preservation move**: a subagent can explore at length yet return only a 1,000-2,000-token condensed summary, keeping the parent's context lean ([[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]). This reframes subagents as a [[context-window]]-management primitive, not only a role-specialization one.
+- **One-file-one-job naming**: the discipline of giving each subagent a single file and a single responsibility (e.g. Strategist / Builder / QA Gate) keeps roles legible and enforceable ([[wiki/sources/charliejhills-full-agent-system-6-steps]]).
 
 ## Open questions and contradictions
 
@@ -58,3 +65,7 @@ A second value: **role enforcement via tool scoping.** Because each subagent has
 ## Mentioned in
 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]]
+- [[wiki/sources/nateherk-claude-code-os-3m-business]]
+- [[wiki/sources/nateherk-claude-code-codex-same-project]]
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]]
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]

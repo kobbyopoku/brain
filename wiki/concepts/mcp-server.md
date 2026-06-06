@@ -2,7 +2,7 @@
 type: concept
 title: MCP Server
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 aliases: [MCP, Model Context Protocol server]
 tags: [claude-code, integration, infrastructure, tool-use]
 ---
@@ -31,6 +31,15 @@ For [[ai-automation-services]] specifically, MCP is the layer where the *value* 
 - [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] — *2026-05-08*. **Strongest tool-layer reliability articulation in the wiki.** NainsiDwiv's 7-step roadmap — Protocol / Tool definitions as contracts / Error handling / Parallelization / Catalog size / Security / Evaluation — treats the tool surface (which MCP servers expose) as a discrete reliability discipline rather than a side-effect of agent design. Quote: *"Reliable agents treat the model as a reasoning engine — not an execution engine."* Worth absorbing into MCP design discipline: when a wiki source ingests a new MCP-exposing product, evaluate its tool surface against these 7 dimensions. Particularly relevant to step 5 (catalog size): aligns with [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]]'s 12-MCPs-becomes-7,200-tokens overhead finding — too many MCPs is a tool-catalog problem, not a model problem.
 - [[wiki/sources/Ai_here202-mcp-opportunity]] — *2026-05-09*. The **business-opportunity view** complementing NainsiDwiv's engineering-discipline view. Cleanest analogy in the wiki: *"MCP is USB for AI."* 3-capability framing: **Tools** (functions the AI can DO) / **Resources** (data the AI can REFERENCE) / **Prompts** (templates the AI should FOLLOW). Frames the ecosystem as *"the App Store in 2009"* with a ~2-year window before drag-and-drop builders + no-code + pre-built servers shrink the premium. **Pricing data**: freelance custom MCP builds $5K-$15K, productized $50-$200/mo or $500-$2K lifetime, enterprise $25K-$100K (consulting + customization + maintenance). Highest-margin verticals: industry-specific workflows (real estate / marketing / e-commerce).
 - [[wiki/sources/zodchiii-x-claude-code-settings]] — *2026-05-09*. Adds a *third* token-cost data point: *"MCP servers load 18K+ tokens per turn per server. 5+ servers = 90K tokens of overhead before your first prompt."* Higher than [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax's]] 600-token average; consistent with PostgreSQL-MCP-tier servers. Strengthens the trim-MCP-servers canon. Operational fix: `/mcp` command to inspect tool counts per connected server.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — *2026-06-06*. The thread is effectively an MCP-server inventory — most of the named "plugins" (GitHub, Playwright, Filesystem, Database, Browser Tools) are MCP servers extending Claude Code's reach to repos, browsers, files, and databases.
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — *2026-06-06*. Stage VI item 6 of the AI-engineer roadmap; advises learning to build, deploy, and connect MCP servers/clients to models as systems standardize tool/data/API connections.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] — *2026-06-06*. Deployment principle "build APIs over existing data layer (SharePoint/databases) + model as orchestrator" and the named portfolio project "an MCP connecting an LLM to legacy software" instantiate the MCP-over-legacy pattern.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — *2026-06-06*. Layer 6. Treats connectors (Gmail/Calendar/Drive/Slack + "MCP connectors") as the tool-integration layer that grounds Claude's outputs in the user's real email/calendar/Slack data.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — *2026-06-06*. The Filesystem MCP is the read/write bridge between Claude Code and the Obsidian vault, enabling both the briefing (read) and property writeback (write).
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — *2026-06-06*. Named in the AI-engineer roadmap layer 3 (MCP for tool access).
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — *2026-06-06*. Pattern 3: the Shopify dev MCP server (7 tools) is presented as essential to stop Claude hallucinating API fields — grounding the agent in real docs/schemas/operations.
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — *2026-06-06*. MCP and A2A framed as interop foundations (not marketplaces) underpinning the discovery layer; the MCP server registry pattern "indexes tools, not autonomous services."
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — *2026-06-06*. Phase 5; Anthropic MCP courses; framed as "the standard way AI systems connect to tools, APIs, and external environments."
 
 ## Sub-claims and details
 
@@ -108,3 +117,12 @@ The first three are *design-time* properties; the last four are *operational* pr
 - [[wiki/sources/NainsiDwiv50980-tool-calling-roadmap]] — strongest tool-layer reliability articulation; 7-step checklist for MCP integration discipline.
 - [[wiki/sources/Ai_here202-mcp-opportunity]] — *2026-05-09*. Business-opportunity view; USB-for-AI analogy; 3-capability framing; App-Store-2009 market timing.
 - [[wiki/sources/zodchiii-x-claude-code-settings]] — *2026-05-09*. Third token-cost data point (18K+ per server / 90K with 5 servers).
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — *2026-06-06*. "Plugin" inventory that is mostly MCP servers (GitHub, Playwright, Filesystem, Database, Browser Tools).
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — *2026-06-06*. Roadmap Stage VI: build/deploy/connect MCP servers and clients.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] — *2026-06-06*. MCP-over-legacy deployment pattern + portfolio project.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — *2026-06-06*. MCP connectors as the personal-AI tool-integration layer (layer 6).
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — *2026-06-06*. Filesystem MCP as read/write bridge to the Obsidian vault.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — *2026-06-06*. MCP for tool access (roadmap layer 3).
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — *2026-06-06*. Shopify dev MCP server (7 tools) grounds the agent against API hallucination.
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — *2026-06-06*. MCP/A2A as interop foundations; registry indexes tools not services.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — *2026-06-06*. Phase 5; MCP as the standard tool/API connection layer.

@@ -2,7 +2,7 @@
 type: concept
 title: Online Business Models — 2026
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [10 online business models, what works in 2026]
 tags: [business-model, monetization, online-business, 2026]
 ---
@@ -24,6 +24,11 @@ The catalog also functions as a **falsifiability list**: if a future source clai
 ## Treatment across sources
 
 - [[wiki/sources/realbrianmoran-making-money-online-2026]] — canonical wiki source. Catalog of 10 working models + 1 dying. Author bases the catalog on top-seller data from [[wiki/entities/samcart]] (claimed $6B+ in processed sales for 100k+ entrepreneurs). Master thesis: *"Pure information is becoming free... the human touch is becoming MORE valuable as AI takes over information."*
+- [[wiki/sources/insomnia_vip-ai-models-that-make-money]] positions AI influencers as an emerging, fast-scaling 2026 online business model (low barrier to entry, multi-stream monetization).
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] is a sibling / AI-specific cut of the 2026-business-models genre; the realbrianmoran source covers the broader 10-model version.
+- [[wiki/sources/leopardracer-one-person-business-2026-ai]] gives paths-to-$1M (18× $150 products/day, 111× $25 subscriptions/day, $5K client every other day, $10K client every 4 days) that overlap Brian Moran's catalog; adds the beginner heuristic that the client/services route is easiest without an audience.
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]] treats the build-vibecoded-B2C-app-and-exit play as a distinct, time-boxed 2026 model ("the window is open but won't stay open"); extends the catalog.
+- [[wiki/sources/gregisenberg-36-startup-opportunities]] is a 2026 sibling to the catalog: a 36-item opportunity list, same breadth-over-depth, trend-thesis vintage.
 
 ## The catalog
 
@@ -127,3 +132,8 @@ The source asserts course sellers are 12-18 months from being undercut by AI. Th
 ## Mentioned in
 
 - [[wiki/sources/realbrianmoran-making-money-online-2026]]
+- [[wiki/sources/insomnia_vip-ai-models-that-make-money]]
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]]
+- [[wiki/sources/leopardracer-one-person-business-2026-ai]]
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]]
+- [[wiki/sources/gregisenberg-36-startup-opportunities]]

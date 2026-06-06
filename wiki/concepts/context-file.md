@@ -2,7 +2,7 @@
 type: concept
 title: Context File
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [context engineering, business context file]
 tags: [agent-config, ai-automation]
 ---
@@ -26,6 +26,12 @@ The context-file / skill-file split is a useful generalization beyond AI automat
 ## Treatment across sources
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — the canonical source. Defines context-file design as one of four core technical competencies for an AI automation services builder. Practice prescription: build 3 context files for 3 hypothetical businesses in 3 different industries (real estate agency, marketing consultancy, e-commerce brand), each containing business description, audience profile, voice and tone, current projects, quality standards.
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] frames it as: steps 2-3 (identity template in the Project knowledge base + Custom Instructions) are the Claude.ai-chat equivalent of a persistent context file read at session start.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] frames it as: the "context document" shipped with every Package-1 deliverable — treated here as a packaged artifact rather than (as in the sibling source) a distinct engineered skill.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] frames it as: Step 2, ~/CLAUDE.md as "the onboarding doc" read before every session and auto-loaded into every chat.
+- [[wiki/sources/prajwaltomar-claude-design-workflow]] frames it as: the design system functions as persistent brand context the tool reads before generating — analogous to a context file that front-loads decisions so the model guesses less.
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] frames it as: Step 4's project-documentation folders (architecture notes, feature explanations, workflows, DB schemas, design systems, prior decisions) are context-files at repo granularity — "better documentation, not better prompting."
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] frames it as: Setup 2, a Claude Project with tone guide, past work, brand spine, and audience attached — the context-file pattern in consumer form: "Claude reads from your business, not from generic internet data."
 
 ## Sub-claims and details
 
@@ -56,3 +62,9 @@ The context-file / skill-file split is a useful generalization beyond AI automat
 ## Mentioned in
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]]
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]]
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]]
+- [[wiki/sources/prajwaltomar-claude-design-workflow]]
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]]
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]]

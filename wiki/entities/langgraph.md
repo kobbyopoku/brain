@@ -3,7 +3,7 @@ type: entity
 title: LangGraph
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://github.com/langchain-ai/langgraph
 aliases: [langchain-ai/langgraph]
 tags: [agent-framework, orchestration, open-source]
@@ -24,15 +24,24 @@ LangGraph is an orchestration framework from LangChain — a graph-based runtime
 - **Role per heynavtoor**: architect replacement; orchestration layer for production AI systems.
 - **Properties** (per heynavtoor): stateful, durable, observable.
 - **Claimed stars** (per heynavtoor): 11.4k+ — *(unverified; same number cited for [[wiki/entities/claude-flow]], so cross-check against repo data.)*
+- **Positioning vs LangChain**: described as more advanced than LangChain; lets you define steps, track state, branch on conditions, and control agent movement through a workflow (per [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]]).
+- **Lineage**: evolved from LangChain's deprecated `AgentExecutor` (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
 
 ## Positions and claims
 
 - **Production AI systems need a graph-shaped orchestration layer**, not just a prompt + tool call. *(Implicit by the framework's positioning.)*
+- **The agent harness is an explicit state graph** — `akshay_pachaar` models the harness as `llm_call` and `tool_node` nodes joined by a conditional edge, with typed-dictionary state flowing through nodes and reducers merging updates (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Checkpointing enables resume and time-travel debugging** — LangGraph checkpoints at super-step boundaries (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Four error types** — distinguishes transient, LLM-recoverable, user-fixable, and unexpected errors (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
 
 ## Mentioned in
 
 - [[wiki/sources/heynavtoor-10-repos-replace-eng-team]] — "architect replacement"; orchestration layer.
 - [[wiki/sources/hooeem-build-an-ai-agent-today]] — named as a canonical framework wrapping the [[agentic-loop]].
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — Stage IV framework #2; advanced workflow control beyond LangChain.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — named in layer 3 (intelligent systems) for building multi-step workflows.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — models the agent harness as an explicit state graph.
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — orchestration framework (Layer 10) where multi-agent state, handoffs, parallelism, and failure recovery get encoded.
 
 ## Related entities
 

@@ -3,7 +3,7 @@ type: entity
 title: The Verge
 entity_type: product
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: ""
 aliases: []
 tags: [media-consumer, design-md-available, open-design-catalog, stub]
@@ -25,6 +25,7 @@ This page is a **stub**. The Verge appears in the wiki only via the [[wiki/sourc
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]
 - [[wiki/sources/design-systems-master-index]]
+- [[wiki/sources/shabnam-google-2026-roadmap-keynote]] — cited as tech-press source for the Android XR prominence and Gemini Omni importance claims at Google I/O 2026.
 
 ## Related concepts
 - [[design-md]]

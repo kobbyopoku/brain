@@ -2,7 +2,7 @@
 type: concept
 title: BYOK Proxy
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [byok-multi-provider-proxy, multi-provider-llm-proxy, sse-normalizing-proxy]
 tags: [llm-infrastructure, byok, multi-provider, sse, security, proxy-pattern]
 ---
@@ -36,6 +36,7 @@ Why this is worth a wiki concept (vs just an implementation detail):
 
 - [[wiki/sources/nexu-io-open-design]] — canonical wiki source. Open Design's BYOK proxy at `/api/proxy/{anthropic,openai,azure,google}/stream` with SSE normalization + SSRF blocking is the most explicit codification in the wiki to date.
 - [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. **The proxy pattern collapsed into the agent itself**: [[wiki/entities/hermes-agent|Hermes Agent]] is model-agnostic by core architecture, not via an external proxy layer. Instead of "agent → BYOK proxy → providers," Hermes is "agent (with built-in provider abstraction) → providers." `/model` switches mid-conversation across Nous Portal / [[wiki/entities/openrouter|OpenRouter]] / NVIDIA NIM / Xiaomi MiMo / Kimi / MiniMax / Hugging Face / OpenAI / Anthropic / AWS Bedrock / custom endpoints. Cross-cite: Hermes also integrates with [[wiki/entities/openrouter|OpenRouter]], which is itself the *platform-scale* version of the BYOK proxy pattern — single endpoint fronting 200+ models. This gives a three-tier hierarchy: *application-level proxy* (Open Design) → *agent-level abstraction* (Hermes) → *platform-level aggregator* (OpenRouter / LiteLLM / Portkey / Helicone). Each layer solves the multi-provider problem at a different granularity.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] frames it as the enterprise-control-plane generalization of this pattern — Shopify's internal LLM proxy is not sandbox-key-passthrough but org-wide request routing for cost control, usage analytics, and model-swapping. See the dedicated [[llm-proxy]] page for that broader framing.
 - *Adjacent treatments not yet ingested as primary sources*: LiteLLM (Python proxy library), Portkey (commercial proxy SaaS), Helicone (proxy + observability). [[wiki/entities/openrouter|OpenRouter]] is now in the wiki as a stub.
 
 ## Sub-claims and details
@@ -104,6 +105,7 @@ Open Design ships the proxy primitive; downstream consumers can layer these. Lit
 - [[mcp-server]] — adjacent: MCP is the *tool* abstraction; BYOK proxy is the *model* abstraction. Both are agent-infrastructure plumbing.
 - [[markdown-as-agent-contract]] — adjacent: SKILL.md and BYOK proxy are different layers of the same "agent infrastructure" stack.
 - [[reasoning-execution-split]] — proxy is firmly on the deterministic-execution side.
+- [[llm-proxy]] — broader: the enterprise control-plane generalization (Shopify's org-wide gateway). BYOK proxy is the BYOK-specific instance of the LLM-proxy family.
 
 ## Related entities
 
@@ -116,3 +118,4 @@ Open Design ships the proxy primitive; downstream consumers can layer these. Lit
 
 - [[wiki/sources/nexu-io-open-design]]
 - [[wiki/sources/nousresearch-hermes-agent]]
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]]

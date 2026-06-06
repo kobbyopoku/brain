@@ -2,7 +2,7 @@
 type: concept
 title: LLM Wiki Pattern
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 aliases: [LLM Wiki, Karpathy wiki pattern]
 tags: [pattern, knowledge-management, foundational, agent-config]
 ---
@@ -28,7 +28,15 @@ This is also a workable answer to a problem [[memex]] left open in 1945: *who do
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — second wild secondary citation. nateherk runs two LLM Wikis in production (a YouTube transcripts vault with 36+ ingested videos, and a personal "Herk Brain" with meeting notes / decisions / priorities). Cites Karpathy's pattern directly: *"No fancy RAG. No embeddings. No vector DB. Just a folder with markdown files, an index file, and a log file."* Adds one operational extension to the pattern: the [[hot-cache]] (`_hot.md`) — a 500-token file capturing what's most recently active, loaded first on read-mode queries. Cites an X user who reduced query token usage by 95% by introducing this layer (unverified upper bound). Two independent secondary citations is a strong signal the pattern is propagating in the wild.
 - [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. The **agent-internal alternative** to the external-markdown LLM Wiki pattern. [[wiki/entities/hermes-agent|Hermes Agent]] builds the same persistent-state-across-sessions goal directly into the agent (self-improving learning loop, FTS5-indexed conversation search, accumulated user model) rather than as an external markdown wiki the agent reads. This is the **first wiki source proposing an alternative architecture** for the underlying problem the LLM Wiki solves. Tradeoffs: external markdown is human-inspectable, version-controllable, portable across agents; agent-internal state is more autonomous but less observable and harder to migrate. Both approaches converge on the same goal — *"the agent gets smarter about you over time"* — via opposite implementation choices.
 - [[wiki/sources/cyrilxbt-x-2052235121416188114]] — *2026-05-08*. **Third wild secondary citation** of the LLM Wiki pattern. CyrilXBT runs a 4-layer Obsidian + Claude vault (Capture / Pipeline / Storage / Intelligence) with two operational extensions Karpathy's original doesn't mandate: (a) a **Daily Brief** automated 6am prompt that surfaces *"3 most interesting connections"* between recent captures and older notes; (b) a **15-minute Weekly Synthesis** session examining theses, contradictions, knowledge gaps, and highest-leverage actions. The Daily Brief is a faster-cadence + connection-finding extension of [[hot-cache|nateherk's `_hot.md`]]; the Weekly Synthesis is structurally [[lint]] applied to personal knowledge.
-- [[wiki/sources/Shruti_0810-self-improving-obsidian]] — *2026-05-09*. **Fourth wild secondary citation.** Shruti's 4-layer architecture (Capture / Pipeline / Vault / AI Intelligence) with **5-folder vault structure only** (Inbox / Notes / Ideas / Projects / Archive) and a 6AM Daily AI Briefing. Closest sibling to CyrilXBT's architecture — both Obsidian-based, both 4-layer, both with morning briefing; Shruti goes simpler on vault structure. Her framing of *"externalized cognition"* (vs note-taking) and *"storage vs intelligence"* is the strongest explicit articulation of the pattern's *why* in the wiki. **Four independent wild secondary citations** (regent0x_ → nateherk → CyrilXBT → Shruti) means the pattern is no longer "one author + a few practitioners" — it is **stable convention with multiple operational variants**.
+- [[wiki/sources/Shruti_0810-self-improving-obsidian]] — *2026-05-09*. **Fourth wild secondary citation.** Shruti's 4-layer architecture (Capture / Pipeline / Vault / AI Intelligence) with **5-folder vault structure only** (Inbox / Notes / Ideas / Projects / Archive) and a 6AM Daily AI Briefing. Closest sibling to CyrilXBT's architecture — both Obsidian-based, both 4-layer, both with morning briefing; Shruti goes simpler on vault structure. Her framing of *"externalized cognition"* (vs note-taking) and *"storage vs intelligence"* is the strongest explicit articulation of the pattern's *why* in the wiki.
+- [[wiki/sources/itsolelehmann-hermes-12-integrations]] — *2026-05-18*. **Fifth wild secondary citation.** Ole Lehmann explicitly references *"Obsidian is for Karpathy-style LLM wiki second-brain maxxing"* in his 12-Hermes-integrations playbook, naming Obsidian as the Memory job in his 4-job agent model. **Five independent wild secondary citations** (regent0x_ → nateherk → CyrilXBT → Shruti → Ole Lehmann) means the pattern is now beyond convention into **named idiom** — practitioners cite Karpathy directly when describing their second-brain stack.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — *2026-06-06*. The source's "read not store" principle is the structured-metadata complement to Karpathy's curated-prose wiki: both enforce single-source-of-truth and reject duplication — one over note properties, one over prose pages.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — *2026-06-06*. Obsidian + LLM second brain; this source extends it with an unattended N8N automation layer so workflows fire without human triggering (vs Karpathy's human-invoked maintenance).
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] — *2026-06-06*. Adjacent, not a lineage citation: the wiki holds Karpathy's LLM Wiki pattern as a primary source, but this source's Karpathy coding-CLAUDE.md ruleset is a separate, uncited contribution. The source does not itself invoke the LLM Wiki pattern; cross-linked for provenance disambiguation.
+- [[wiki/sources/tricalt-memory-skills-same-harness]] — *2026-06-06*. Cognee's self-amending graph is presented as an alternative substrate to the markdown LLM wiki; the post cites a hackathon that built 21 "LLM Knowledge Wikis" in 3 hours on Cognee + Redis.
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] — *2026-06-06*. Step 4 ("the solution is better documentation, not better prompting") is a convergent, UNCITED statement of Karpathy's external-documentation thesis — parallel thinking, not a lineage citation.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — *2026-06-06*. The Phase-4 RAG-over-notes "second brain" is a structural cousin; Shruti's first source is a wild citation of the pattern.
+- [[wiki/sources/nurijanian-goal-for-product-managers]] — *2026-06-06*. Sibling pattern: external markdown as the source of truth the agent reloads rather than trusting chat memory. The post's spec/plan/status-file triad is a project-scoped version of the same externalized-state philosophy.
 
 ## Sub-claims and details
 
@@ -76,3 +84,11 @@ This is also a workable answer to a problem [[memex]] left open in 1945: *who do
 - [[wiki/sources/nousresearch-hermes-agent]]
 - [[wiki/sources/cyrilxbt-x-2052235121416188114]]
 - [[wiki/sources/Shruti_0810-self-improving-obsidian]] — 4th wild citation; "externalized cognition" framing.
+- [[wiki/sources/itsolelehmann-hermes-12-integrations]]
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]]
+- [[wiki/sources/cyrilxbt-personal-operating-system]]
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]]
+- [[wiki/sources/tricalt-memory-skills-same-harness]]
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]]
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]]
+- [[wiki/sources/nurijanian-goal-for-product-managers]]

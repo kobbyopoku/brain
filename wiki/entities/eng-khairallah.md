@@ -3,7 +3,7 @@ type: entity
 title: Khairallah AL-Awady
 entity_type: person
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/eng_khairallah1
 aliases: [eng_khairallah1, Khairallah]
 tags: [author, ai-automation, services-business, claude-cowork]
@@ -34,6 +34,11 @@ Across both, the thesis is consistent — **AI value lives in the systems layer,
 - **Pricing should be value-based, not hours-based.**
 - **A ~18-month window exists** before the AI-automation services market saturates.
 
+### From the beginner-facing "real money" course
+
+- **AI automations for small businesses are a "gold rush"** filling the gap between businesses knowing AI exists and actually using it — argued in [[wiki/sources/eng_khairallah1-real-money-ai-automations]].
+- **No software-engineering background is required** to build the AI-automation services business — see [[wiki/sources/eng_khairallah1-real-money-ai-automations]].
+
 ### From the three-session Cowork architecture
 
 - **Conversation vs system**: *"Most people's relationship with AI is a conversation. That is not productivity. That is interruption management."*
@@ -47,6 +52,7 @@ Across both, the thesis is consistent — **AI value lives in the systems layer,
 
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — provider-side playbook (canonical).
 - [[wiki/sources/eng_khairallah1-x-2052684086414852546]] — three-session Cowork daily architecture.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] — beginner-facing "real money" AI-automation-services course (sibling of the $10K/mo playbook; posted 2026-05-17).
 
 ## Related concepts
 

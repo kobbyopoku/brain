@@ -3,7 +3,7 @@ type: entity
 title: Anthropic Agent SDK
 entity_type: product
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://github.com/anthropics/claude-agent-sdk
 aliases: [Claude Agent SDK, Claude Code SDK]
 tags: [agent-framework, anthropic, sdk]
@@ -27,6 +27,7 @@ The Anthropic Agent SDK is the official Anthropic-authored toolkit for building 
   - **Mar 2026**: current release v0.1.50 (per source).
 - **Tool format**: JSON schema with `input_schema` field.
 - **Strength** (per source): file edit + shell + web + MCP + coding workflows.
+- **Harness interface**: exposes the harness through a `query()` function that creates the [[agentic-loop]] and returns an async iterator streaming messages (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
 
 ## Positions and claims
 
@@ -35,6 +36,7 @@ The Anthropic Agent SDK is the official Anthropic-authored toolkit for building 
 ## Mentioned in
 
 - [[wiki/sources/hooeem-build-an-ai-agent-today]]
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — exposes the harness via a single `query()` function.
 
 ## Related entities
 

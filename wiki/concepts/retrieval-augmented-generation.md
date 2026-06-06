@@ -2,7 +2,7 @@
 type: concept
 title: Retrieval-Augmented Generation
 created: 2026-05-02
-updated: 2026-05-09
+updated: 2026-06-06
 aliases: [RAG]
 tags: [llm, retrieval, contrast-case]
 ---
@@ -43,6 +43,14 @@ Both critiques converge on the same diagnosis: **RAG fails when its unit of know
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]] — characterizes RAG as "rediscovering knowledge from scratch on every question," with "no accumulation," and positions the LLM Wiki pattern as the alternative for cases where knowledge should compound.
 - [[wiki/sources/akshay_pachaar-x-rag-wrong]] *(2026-05-08)* — argues the chunk is the structural bug, not retrieval algorithm tuning. Reports concrete benchmark numbers from [[wiki/entities/blockify|Blockify]]'s preprocessing layer: 2.29× retrieval distance reduction, 13.55% vector-accuracy improvement after deduplication, 40× corpus-size compression. Introduces 7-stage preprocessing pipeline (Scoping → Ingestion → Chunking → Semantic Dedup → Auto-tagging → Human Validation → Export) that sits between document parser and vector store.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] *(2026-06-06)* — Context7's fresh-docs injection is an RAG-adjacent move; framed as docs-injection to prevent hallucination rather than as a retrieval architecture.
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] *(2026-06-06)* — Stage VI item 3; beginner framing (store → retrieve relevant pieces → pass as context). Called one of the most practical AI-engineering skills because companies want AI over their own data.
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]] *(2026-06-06)* — reinforces with the "20% storage, 80% retrieval" claim: retrieval design is the bottleneck; if you don't retrieve the right memory, the agent acts as if it doesn't exist.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] *(2026-06-06)* — a RAG pipeline on an industry dataset (legal/medical/financial) is named as one of four core FDE portfolio projects.
+- [[wiki/sources/av1dlive-build-a-voice-agent-full-guide]] *(2026-06-06)* — reframed as grounding-as-trust ("a confident wrong answer makes a caller feel deceived"). Four-part trust system: source-of-truth ("ANSWER ONLY FROM THE CONTEXT PROVIDED"), graceful refusal, confidence-aware response (BM25 thresholds >0.6 / 0.3-0.6 / <0.3), knowledge-base hygiene. Adds voice-specific latency challenge (50-300ms vector query) and a dual-agent cache answer.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] *(2026-06-06)* — building block in the AI-engineer roadmap layer 3 (RAG + vector databases for letting AI search your own data).
+- [[wiki/sources/daleverett-postgres-as-graph-pggraph]] *(2026-06-06)* — does not name RAG, but pitches sub-50ms graph traversal as "real-time structural context" for agentic workflows — a structural sibling to vector-retrieval-as-context; graph-traversal-as-context as alternative/complement to chunk-and-embed retrieval.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] *(2026-06-06)* — Phase 4 + the flagship Phase-4 project (RAG over personal notes via ChromaDB/LanceDB). Frames embeddings understanding as a prerequisite people skip before building RAG apps — a beginner-ordering framing.
 
 ## Sub-claims and details
 
@@ -114,3 +122,11 @@ The trend across all three: **move work earlier in the pipeline so the query is 
 
 - [[wiki/sources/llm-wiki-pattern-karpathy]]
 - [[wiki/sources/akshay_pachaar-x-rag-wrong]]
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — *2026-06-06*. Context7 fresh-docs injection (RAG-adjacent).
+- [[wiki/sources/techwithtimm-ai-engineer-roadmap-2026]] — *2026-06-06*. Roadmap Stage VI; store → retrieve → pass-as-context.
+- [[wiki/sources/techwith-ram-agentic-memory-breakdown]] — *2026-06-06*. "20% storage, 80% retrieval."
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] — *2026-06-06*. RAG pipeline as FDE portfolio project.
+- [[wiki/sources/av1dlive-build-a-voice-agent-full-guide]] — *2026-06-06*. Grounding-as-trust; four-part trust system; voice latency.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — *2026-06-06*. RAG + vector DBs (roadmap layer 3).
+- [[wiki/sources/daleverett-postgres-as-graph-pggraph]] — *2026-06-06*. Graph-traversal-as-context (sibling to vector retrieval).
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — *2026-06-06*. Phase 4; RAG over personal notes; embeddings as prerequisite.

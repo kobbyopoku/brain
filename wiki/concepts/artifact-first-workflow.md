@@ -2,7 +2,7 @@
 type: concept
 title: Artifact-First Workflow
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [artifact-workflow, artifact-emission-pattern, single-artifact-pattern]
 tags: [agent-output, ai-design, artifacts, sandboxed-preview, generation-pattern]
 ---
@@ -38,6 +38,9 @@ The pattern is also **architecturally clean** for tools like Open Design: one in
 - [[wiki/sources/nexu-io-open-design]] — canonical wiki source. Open Design's workflow centers on artifact emission and sandboxed rendering. Open Design's `import/claude-design` ZIP endpoint also confirms Claude Design uses the same pattern with portable artifacts.
 - [[wiki/entities/claude-design]] — the proprietary Anthropic product that originated the pattern. No primary source from Anthropic is yet ingested directly; observations are inferred.
 - [[wiki/sources/trq212-x-html-effectiveness]] — *2026-05-08*. **Strongest first-party Anthropic argument for the pattern yet ingested.** [[wiki/entities/trq212|Thariq Shihipar]] (Claude Code lead at Anthropic) makes the substantive case: *"if an output is meant to be reviewed, clicked, compared, edited, or shared, HTML is often closer to the real workspace."* Distinguishes the artifact-first pattern from Markdown-as-default and provides 20 worked examples at [thariqs.github.io/html-effectiveness](https://thariqs.github.io/html-effectiveness). Validates Open Design's architectural bet from inside Anthropic.
+- [[wiki/sources/nateherk-claude-design-tally-brand]] frames it as the **strongest first-party evidence yet** for the pattern: Claude Design's verifier loop (screenshot → inspect → fix before the user sees it) is the artifact-first surface extended with an evaluator-optimizer self-validation loop.
+- [[wiki/sources/prajwaltomar-claude-design-workflow]] frames it **obliquely**: describes the user-facing Claude Design workflow that drives artifact emission, but does not discuss the artifact mechanism directly — it is the underlying emission model.
+- [[wiki/sources/suyashkarn2-ai-trillion-dollar-blind-spot-static-website]] frames it **adjacently**: the generated-interface-as-surface idea echoes the HTML/artifact-as-output thesis; both argue generated artifacts beat static formats as the interface.
 - *Adjacent treatments not yet ingested*: Vercel v0 (similar pattern: AI generates Next.js components, renders in sandboxed preview); Figma Make (different format but similar pattern); HTML-PDF tooling like Puppeteer / Playwright.
 
 ## Sub-claims and details
@@ -105,6 +108,10 @@ This is a **stateful iteration** model — every turn produces a fresh artifact,
 
 The artifact-first model has a useful property: **every turn's artifact is shareable independently**. The user can export turn 3's version while continuing to iterate; turn 7's version remains a separate artifact. No save points, no version control complexity — every turn is a release.
 
+### Verifier loop over the artifact
+
+Per [[wiki/sources/nateherk-claude-design-tally-brand]], Claude Design wraps artifact emission in a **self-validation loop**: it renders the artifact, takes a screenshot, inspects the result, and fixes defects *before the user sees the preview*. This is the artifact-first surface composed with an evaluator-optimizer pattern — the artifact is not just emitted and shown, it is emitted, evaluated against its own rendered output, and corrected in the same turn.
+
 ## Open questions and contradictions
 
 - **Single-artifact emission limits multi-component design work.** A landing page is one artifact, but a design system spanning a landing page + dashboard + email is three artifacts. The pattern handles this by treating each as a separate generation, but loses the cross-artifact consistency that comes from a unified design source.
@@ -136,3 +143,6 @@ The artifact-first model has a useful property: **every turn's artifact is share
 
 - [[wiki/sources/nexu-io-open-design]]
 - [[wiki/sources/trq212-x-html-effectiveness]]
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — verifier-loop evidence for the pattern.
+- [[wiki/sources/prajwaltomar-claude-design-workflow]] — user-facing workflow driving artifact emission.
+- [[wiki/sources/suyashkarn2-ai-trillion-dollar-blind-spot-static-website]] — generated-interface-as-surface echo of the artifact thesis.

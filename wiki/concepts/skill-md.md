@@ -2,7 +2,7 @@
 type: concept
 title: SKILL.md
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [skill.md]
 tags: [agent-config, markdown, stub]
 ---
@@ -18,12 +18,15 @@ This page is a **stub**. SKILL.md is mentioned in this wiki as one of the canoni
 ## Treatment across sources
 
 - [[wiki/concepts/markdown-as-agent-contract]] — lists SKILL.md as an instance of the meta-pattern, with frontmatter that defines when and how the skill activates.
+- [[wiki/sources/tricalt-memory-skills-same-harness]] frames it as a "procedure-level claim" ("to do task T, run X, Y, Z") and a "compressed procedure" — the narrow, what-to-do slice of the world model, inseparable from memory.
 
 ## Sub-claims and details
 
 - Defines a **single capability** rather than a project-wide contract — narrower scope than [[CLAUDE]] or [[agents-md]].
 - Frontmatter typically includes `name` and `description` fields that determine when an agent decides the skill applies.
 - Skills are invokable via the `Skill` tool in Claude Code and can be plugin-namespaced (e.g. `superpowers:writing-plans`).
+- A skill encodes a **procedure-level claim** of the form "to do task T, run X, Y, Z." ([[wiki/sources/tricalt-memory-skills-same-harness]])
+- A skill is a **compressed procedure** — the narrow, what-to-do slice of the world model — and is inseparable from memory. ([[wiki/sources/tricalt-memory-skills-same-harness]])
 
 ## Open questions and contradictions
 
@@ -41,3 +44,4 @@ This page is a **stub**. SKILL.md is mentioned in this wiki as one of the canoni
 ## Mentioned in
 
 - [[wiki/concepts/markdown-as-agent-contract]]
+- [[wiki/sources/tricalt-memory-skills-same-harness]]

@@ -3,7 +3,7 @@ type: entity
 title: CyrilXBT
 entity_type: person
 created: 2026-05-08
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/cyrilxbt
 aliases: [cyrilxbt, cyrilXBT]
 tags: [author, x-creator, llm-wiki-pattern, ai-automation-services, knowledge-vault]
@@ -25,7 +25,7 @@ Both posts share an underlying architecture (Obsidian vault as durable substrate
 ## Key facts
 
 - **X handle**: [@cyrilxbt](https://x.com/cyrilxbt).
-- **Posts in wiki**: 3 (1 not-retrievable + 2 substantive).
+- **Posts in wiki**: 5 (1 not-retrievable + 4 substantive).
 - **Architecture**: Obsidian + N8N + Claude (cross-cite: [[wiki/entities/obsidian]], [[wiki/entities/n8n]], [[wiki/entities/claude-code]]).
 - **Substantive contributions to the wiki**:
   - 3rd wild citation of [[llm-wiki-pattern]] (Daily Brief + Weekly Synthesis extensions).
@@ -39,12 +39,17 @@ Both posts share an underlying architecture (Obsidian vault as durable substrate
 - **Specialization > generalism for AI agents.** Dedicated agents per role beat one generalist agent.
 - **Sequential deployment > simultaneous deployment.** One agent per week over 6 weeks beats deploying 5 at once.
 - **Where they live is the entire game** *(via darkzodchi sibling-thread cross-cite)* — infrastructure matters more than agent intelligence alone.
+- **A dashboard should read from the vault, not store its own information** — the dashboard is a single note that surfaces what already lives in the vault (argued in [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]]).
+- **A personal operating system should be designed to "survive bad days," not optimize good ones** — resilience over peak performance (argued in [[wiki/sources/cyrilxbt-personal-operating-system]]).
 
 ## Mentioned in
 
 - [[wiki/sources/cyrilxbt-x-2052235121416188114]] — Obsidian + Claude knowledge vault (3K likes; 3rd wild citation of LLM Wiki pattern).
 - [[wiki/sources/cyrilxbt-x-2052570518667378918]] — 5-agents-replace-5-employees (377 likes; concrete cost arithmetic). **Full Web-Clipper body now in `raw/` (verbatim system prompts + master CLAUDE.md + cost breakdown + build order).**
 - [[wiki/sources/cyrilxbt-x-2052923836090167526]] — 205 likes; thread not retrievable (deleted or invalid).
+- [[wiki/sources/cyrilxbt-claude-agent-manages-business]] — *2026-05-18*. **The mental-model post**: agent vs automation. Automation executes fixed sequence on trigger; agent reads situation + business context + makes judgment + takes contextually appropriate action. Same trigger → completely different output. Sequel framing under the 5-agent implementation.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — *2026-05-19*. How to build an Obsidian dashboard (single note reading from the vault) that surfaces what matters today; morning briefing runs via N8N at 6 AM, written by Claude Code over Filesystem MCP.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — *2026-05-20*. Turning Obsidian into a personal operating system "that never breaks down"; gated CTA promises CLAUDE.md templates, N8N workflow configs, and Filesystem MCP setup.
 
 ## Related entities
 

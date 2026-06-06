@@ -3,7 +3,7 @@ type: entity
 title: darkzodchi (zodchiii)
 entity_type: person
 created: 2026-05-08
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/zodchiii
 aliases: [zodchiii, darkzodchi]
 tags: [author, x-creator, claude-code, ai-infrastructure, content-marketing, technical-tutorial]
@@ -21,7 +21,7 @@ darkzodchi's range across the two ingested posts is wider than initially assesse
 
 - **X handle**: [@zodchiii](https://x.com/zodchiii).
 - **Telegram channel**: [t.me/zodchixquant](https://t.me/zodchixquant) — daily AI, vibe coding, finance notes.
-- **Posts in wiki**: 2 substantive (one ethically-flagged content-marketing, one purely technical).
+- **Posts in wiki**: 4 substantive (one ethically-flagged content-marketing; the rest Claude Code technical / architecture).
 - **Distinguishing range**: writes across both *infrastructure-as-game thesis* (Teamly post) and *Claude Code internals tutorial* (settings post).
 
 ## Positions and claims
@@ -44,6 +44,8 @@ darkzodchi's range across the two ingested posts is wider than initially assesse
 
 - [[wiki/sources/zodchiii-x-2052368125480354000]] — Teamly content-marketing post (ethical_flag).
 - [[wiki/sources/zodchiii-x-claude-code-settings]] — 15 Claude Code settings tutorial.
+- [[wiki/sources/zodchiii-10-claude-code-agents]] — *2026-05-12*. **The 10 Claude Code agents nobody told you to build.** Frames Claude Code agents as *job description + trigger + output* (not chat sessions). Three host surfaces: slash commands (`.claude/commands/`), hooks (`.claude/hooks/<event>.sh`), hosted scripts (Claude Agent SDK). 3rd substantive post; cements zodchiii as one of the wiki's stronger Claude Code architecture voices.
+- [[wiki/sources/zodchiii-shopify-23000-engineers-claude-code-setup]] — *2026-05-18* (X status 2056319284641460626). **The Claude Code setup behind Shopify's 23,000 engineers.** 4th substantive post; tours [[wiki/entities/shopify|Shopify]]'s internal LLM proxy, parallel-agent workflow, git-committed `CLAUDE.md`, and `settings.json` guardrails.
 
 ## Related concepts
 
@@ -60,3 +62,4 @@ darkzodchi's range across the two ingested posts is wider than initially assesse
 - [[wiki/entities/teamly]] — subject of the first post (content-marketing flag).
 - [[wiki/entities/claude-code]] — primary subject of the second post.
 - [[wiki/entities/anthropic]] — vendor; subject of the silently-lowered-effort claim.
+- [[wiki/entities/shopify]] — enterprise subject of the 4th post.

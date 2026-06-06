@@ -3,7 +3,7 @@ type: entity
 title: Figma
 entity_type: product
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://figma.com
 aliases: []
 tags: [design-tool, collaborative-design, design-md-available, mcp-integration, design-systems-tooling, open-design-catalog]
@@ -58,6 +58,7 @@ Bridges design (Figma) and engineering (code). Surfaces design tokens, measureme
 ## Mentioned in
 
 - [[wiki/sources/open-design-catalog]] — Open Design catalog entry.
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — the incumbent design tool [[wiki/entities/claude-design|Claude Design]] is positioned against; nateherk frames Claude Design as not replacing Figma but replacing the gap between an idea and a shipped brand.
 
 ## Related entities
 

@@ -2,7 +2,7 @@
 type: concept
 title: Self-Annealing
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [self-annealing, self-annealing systems, self-improving workflows]
 tags: [agentic-workflows, self-improvement, reliability, doe-framework]
 ---
@@ -37,6 +37,12 @@ This is the architectural answer to *"why doesn't my agentic workflow get better
 - [[wiki/sources/saraev-agentic-workflows-2026]] — the canonical wiki source. Saraev demonstrates the 4-step error-recovery loop (run → diagnose → fix → update) but doesn't use the term *self-annealing* explicitly in the original course — it appears in his follow-up content.
 - [[wiki/sources/bob-mwathu-doe-framework-linkedin]] — *2025-2026*. First wiki source to explicitly cite the term. *"Systems that can self-improve over time (what Nick calls self-annealing)."*
 - [[wiki/sources/prakash-bhandari-doe-framework]] — *2025-2026*. Doesn't use the *self-annealing* term but describes the underlying mechanism via the *"Act → Observe → Think → Act"* loop with explicit *"adapts the plan when results come back unexpected"*.
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] frames it as a sibling self-improvement mechanism (Saraev, directive-markdown-encoded). Buzz is the same goal via a different route: it adds an explicit human-review gate (daily PR) and a dedicated learning meta-skill that generalizes feedback into principles.
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] frames it as a content-domain self-annealing loop: the Optimization Agent in Blueprint 03 rewriting the Voice Style Guide from observed engagement metrics (e.g. "posts ending with a question got 3.2x more replies → add question to 70% of posts") makes the directive accumulate evidence-based fixes and improve with use.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] frames it as implicit in the claim that Claude Code agentic workflows "self-heal when something breaks" — the wedge over deterministic no-code node graphs.
+- [[wiki/sources/tricalt-memory-skills-same-harness]] frames it as a self-improvement / self-annealing mechanism via the Observe → Inspect → Amend → Evaluate loop and scored SkillRunEntry feedback, but encoded in a graph store rather than directive markdown.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] frames it as memory consolidation (merge entries, drop redundancy, keep dense/useful when files fill up) — an agent-internal self-improvement mechanism, sibling to directive-file self-annealing.
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] frames it as feedback loops "where Claude becomes dangerous" — generate→test→analyze→refine→repeat as the compounding self-improvement mechanism.
 
 ## Sub-claims and details
 
@@ -100,3 +106,9 @@ Both produce systems that improve over time but at different layers. CD is *engi
 - [[wiki/sources/saraev-agentic-workflows-2026]]
 - [[wiki/sources/bob-mwathu-doe-framework-linkedin]]
 - [[wiki/sources/prakash-bhandari-doe-framework]]
+- [[wiki/sources/petradonka-agents-need-feedback-loops]]
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]]
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]]
+- [[wiki/sources/tricalt-memory-skills-same-harness]]
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]]
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]]

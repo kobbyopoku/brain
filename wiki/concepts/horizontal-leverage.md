@@ -2,7 +2,7 @@
 type: concept
 title: Horizontal Leverage
 created: 2026-05-03
-updated: 2026-05-03
+updated: 2026-06-06
 aliases: [horizontal automation leverage, automate-90-of-many]
 tags: [ai-automation, economics, foundational]
 ---
@@ -32,6 +32,12 @@ For [[ai-automation-services|AI automation services]] businesses, horizontal lev
 - [[wiki/sources/saraev-agentic-workflows-2026]] — canonical wiki source. *"Automating 100% of one person's role is equivalent to basically providing one unit of economic value. Whereas, if you automate 90% of 10,000 people's, you're providing 9,000 units of economic value. ... I call this horizontal leverage and it's very, very strong."*
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — implicit corroboration. ColdIQ's services-as-software model captures horizontal leverage by template-izing per-niche workflows so each new client adds incremental cost, not full re-build.
 - [[wiki/sources/khairallah-ai-automations-10k-month]] — implicit corroboration via niche selection. Khairallah's "pick one niche and build the same 5 automations for everyone in it" is the horizontal-leverage strategy at the early-stage scale.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] frames it as "Build once. Sell many times. Customize lightly for each client" across same-niche clients — horizontal leverage expressed in prose; underpins the margin-growth claim.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] frames the "distribution is the moat" thesis as the audience-side complement to the build-side horizontal leverage.
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]] instantiates the thesis that "one non-technical person, with a laptop and a system, can now do what used to require a team and a year" — the solo-operator leverage claim.
+- [[wiki/sources/kushwah-aaryan-future-of-work]] frames it at firm-level macro-economic scale (vs. Saraev's operator-level concept) — one operator performing what previously required many specialized functions.
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] restates the leverage thesis as "they've built systems that multiply output" / "strong systems compound relentlessly."
+- [[wiki/sources/everestchris6-100m-ai-opportunity]] frames it implicitly: automate one painful slice across millions of structurally-similar small businesses rather than fully automating one — the value is in breadth of the long tail, which "big companies will catch up on slowly over two years."
 
 ## Sub-claims and details
 
@@ -87,3 +93,9 @@ The same dynamic is unfolding now with knowledge work. The horizontal-leverage o
 ## Mentioned in
 
 - [[wiki/sources/saraev-agentic-workflows-2026]]
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]]
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]]
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]]
+- [[wiki/sources/kushwah-aaryan-future-of-work]]
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]]
+- [[wiki/sources/everestchris6-100m-ai-opportunity]]

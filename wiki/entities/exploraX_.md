@@ -3,7 +3,7 @@ type: entity
 title: m0h (exploraX_)
 entity_type: person
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/exploraX_
 aliases: [exploraX_, m0h]
 tags: [author, x-creator, ai-automation-services, lead-generation, cold-outreach]
@@ -31,7 +31,9 @@ Whole flow: ~2 hours per session. Manual equivalent: ~1 week.
 
 - **X handle**: [@exploraX_](https://x.com/exploraX_).
 - **Pen name**: signs as "m0h."
-- **Posts in wiki**: 1 substantive.
+- **Posts in wiki**: 2 substantive.
+- **Background**: researcher and content creator on X with 5+ years experience; posts daily on AI tools and money paths (cited to [[wiki/sources/exploraX_-5-solo-ai-business-models]]).
+- **Self-selected path**: picked the AI Influencer path for himself (cited to [[wiki/sources/exploraX_-5-solo-ai-business-models]]).
 - **Genre**: hands-on AI services lead-gen tactic guides.
 - **Strongest contribution**: the *4-signals* framework + 10-second cold-call opening + 2 verbatim Claude Code prompts as task-scope agent contracts.
 
@@ -46,7 +48,8 @@ Whole flow: ~2 hours per session. Manual equivalent: ~1 week.
 
 ## Mentioned in
 
-- [[wiki/sources/exploraX_-google-maps-leadgen]] — sole substantive ingest.
+- [[wiki/sources/exploraX_-google-maps-leadgen]] — Google Maps lead-gen playbook.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — guide to 5 solo AI business models (6–7 figure solo AI business in 2026); picks the AI Influencer path for himself.
 
 ## Related concepts
 

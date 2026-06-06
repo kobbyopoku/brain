@@ -2,7 +2,7 @@
 type: concept
 title: DOE Framework (Directive + Orchestration + Execution)
 created: 2026-05-03
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [DOE framework, doe-framework, DO framework, directives and executions, directive execution architecture, directive orchestration execution]
 tags: [agentic-workflows, ai-automation, architecture, foundational]
 ---
@@ -58,6 +58,11 @@ For wiki citations: prefer **DOE Framework** as the canonical name when writing 
 - [[wiki/sources/regent0x-claude-code-247-dev-team]] — adjacent: regent0x_'s 5-role subagent setup (architect/coder/reviewer/tester/ops) is a similar separation-of-concerns move at a different scope (per-task instead of per-workflow).
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — adjacent: nateherk's `.claude/skills/` + reference files structure is a similar but more general-purpose layout. DOE is more opinionated; AI OS template is broader.
 - [[wiki/sources/nousresearch-hermes-agent]] — adjacent: Hermes Agent's "self-improving learning loop" is the *agent-internal* version of DOE's [[self-annealing|self-annealing]] property — same goal (systems get better over time without ongoing intervention) via different mechanism (agent-managed state vs file-managed directives).
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] frames it as the AI-automation learning path: Saraev's directive → orchestration → execution. Points to Saraev's free 6-hour course as the canonical resource.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] frames it as the spine of the Queue Processor: the `VERB-topic.md` filename convention encodes trigger + prompt + output via file naming, and the five workflows are DOE Directive (prompt) + Orchestration (N8N cron) + Execution (Claude).
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] frames it motivationally: *"the valuable skill is shifting from execution → orchestration"* — DOE's Directive/Orchestration/Execution split stated as prose rather than architecture.
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]] arrives at the same decomposition independently: Saboo's role triad maps onto DOE — Orchestrator ≈ Orchestration, Builder+Reviewer ≈ Execution, the `/goal` text ≈ Directive.
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] frames it implicitly: each Adaptive agent is a trigger + prompt + output unit, and the plan is DOE composition across four agents though the source never uses the term.
 
 ## Sub-claims and details
 
@@ -118,6 +123,14 @@ DOE systems improve themselves over time without ongoing intervention. The orche
 
 Because the LLM (in the orchestration layer) is composing deterministic units, the search space the model operates in is small ("which directive applies?", "did this execution succeed?"). Long autonomous runs that would otherwise drift get bounded by the framework's structure.
 
+### Filename-as-directive encoding
+
+The Queue Processor's `VERB-topic.md` filename convention encodes a directive's trigger, prompt, and output through the filename itself ([[wiki/sources/cyrilxbt-personal-operating-system]]) — a compact instance of the directive layer where the file's *name* carries the DOE metadata rather than YAML frontmatter.
+
+### Independent rediscoveries of the decomposition
+
+Several sources arrive at the same three-way split without using the DOE vocabulary: Saboo's Orchestrator / Builder+Reviewer / `/goal`-text triad ([[wiki/sources/saboo-shubham-ultimate-guide-to-goal]]) and 8xgrowth's four-agent trigger+prompt+output composition ([[wiki/sources/8xgrowth-100-days-to-10k-clipping]]) both map cleanly onto Directive / Orchestration / Execution. The convergence is evidence the decomposition is a natural attractor for agentic-workflow design rather than a single author's idiosyncrasy.
+
 ## Open questions and contradictions
 
 - **Versioning**: a directive that worked last month may fail this month if the underlying APIs change. No versioning convention captured. Worth tracking when next ingest covers this.
@@ -151,3 +164,8 @@ Because the LLM (in the orchestration layer) is composing deterministic units, t
 - [[wiki/sources/saraev-agentic-workflows-2026]]
 - [[wiki/sources/prakash-bhandari-doe-framework]]
 - [[wiki/sources/bob-mwathu-doe-framework-linkedin]]
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]]
+- [[wiki/sources/cyrilxbt-personal-operating-system]]
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]]
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]]
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]]

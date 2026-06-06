@@ -2,7 +2,7 @@
 type: concept
 title: Personal Claude Prompts
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [curated prompts, prompt library, personal prompt catalog]
 tags: [prompts, personal-productivity, claude, prompt-engineering]
 ---
@@ -33,6 +33,8 @@ The practice is **adjacent to but distinct from [[claude-code-skills]]**. A Clau
 
 - [[wiki/sources/AnatoliKopadze-20-claude-prompts]] — canonical wiki source. Twenty detailed prompts across five categories (deep research, writing, career, daily life, learning). Each is fully written out, with role / task / structured output spec / explicit rules.
 - [[wiki/sources/godofprompt-paul-graham-startup-prompts]] — narrower domain (startup evaluation). Six prompts framed as `<role>...<task>...` patterns invoking Paul-Graham-style personas.
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]] belongs to the genre; ships 5 verbatim ready-to-use prompts (Feynman explanation, travel, expense analysis, reflection partner, business-idea stress-test) plus setup meta-prompts.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] is the systems-level (settings/projects/memory) counterpart to prompt-library approaches — adjacent theme of Claude-as-personal-productivity-multiplier.
 
 ## Sub-claims and details
 
@@ -90,3 +92,5 @@ The benefit of registering: invocation by description-matching, no copy-paste, c
 
 - [[wiki/sources/AnatoliKopadze-20-claude-prompts]]
 - [[wiki/sources/godofprompt-paul-graham-startup-prompts]]
+- [[wiki/sources/AnatoliKopadze-how-to-actually-use-claude-18-steps]]
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]]

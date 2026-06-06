@@ -2,7 +2,7 @@
 type: concept
 title: Churn at Scale
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 aliases: [agency churn, churn defense]
 tags: [services-business, agency, math, retention]
 ---
@@ -33,6 +33,7 @@ This argument is the load-bearing motivation for the **accelerator layer** in [[
 ## Treatment across sources
 
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]] — canonical wiki source. The author runs the math explicitly and frames churn defense as a three-front problem: under-promise + over-deliver, meeting cadence as deliverable, and a non-delivery revenue layer. *"You cannot out-sell churn at scale."*
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]] frames it as the product-MRR analogue of the agency-side argument: retention is treated as the determinant of acquisition multiple, where high churn means acquirers discount MRR as not-truly-recurring. Same underlying math, different surface (consumer app subscriptions rather than agency retainers).
 
 ## Sub-claims and details
 
@@ -62,6 +63,11 @@ This argument is the load-bearing motivation for the **accelerator layer** in [[
 - Buffers services-margin volatility.
 - See [[services-as-software]] for the accelerator-pattern detail.
 
+### Product-MRR surface (consumer apps)
+
+- Per [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]], in a B2C subscription app retention determines the acquisition multiple: an acquirer discounts MRR that churns out quickly because it is not truly recurring revenue.
+- This is the same `r × N` pressure as the agency case, but it surfaces at exit-valuation time rather than as closer-headcount cost — high churn caps the multiple a strategic acquirer will pay. See [[strategic-acquisition]].
+
 ### Implications for early-stage builders
 
 Per [[wiki/sources/khairallah-ai-automations-10k-month]], early-stage builders should price retainers ($500-1,000/mo) as a recurring revenue layer that is *not* the accelerator layer Vacca describes — those retainers still scale with delivery headcount and don't solve churn at scale. The Khairallah retainer is the *first* recurring layer; the Vacca accelerator is the *second*, and it's what makes 70-client scale sustainable.
@@ -77,6 +83,7 @@ Per [[wiki/sources/khairallah-ai-automations-10k-month]], early-stage builders s
 - [[services-as-software]] — the model the accelerator layer enables.
 - [[ai-automation-services]] — sibling concept; the early-stage business this churn math eventually applies to.
 - [[scheduled-automation]] — the unattended delivery class that helps with delivery-side cost.
+- [[strategic-acquisition]] — where the product-MRR surface of this math caps the exit multiple.
 
 ## Related entities
 
@@ -86,3 +93,4 @@ Per [[wiki/sources/khairallah-ai-automations-10k-month]], early-stage builders s
 ## Mentioned in
 
 - [[wiki/sources/itsalexvacca-services-as-software-7m-agency]]
+- [[wiki/sources/mattgittleson-vibecoded-b2c-375k-exit]]

@@ -2,7 +2,7 @@
 type: concept
 title: Switching Forces
 created: 2026-05-04
-updated: 2026-05-04
+updated: 2026-06-06
 aliases: [push pull habit anxiety, four switching forces]
 tags: [marketing, cro, customer-research, framework]
 ---
@@ -38,6 +38,7 @@ The framework is especially powerful because it's *generative* — once you map 
 ## Treatment across sources
 
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — canonical wiki source. Documented in the [[wiki/entities/marketingskills-repo|marketingskills repo]]'s Switching Forces skill. Framed as *"the most underrated framework in the entire repo."* Origins predate this — typically attributed to Bob Moesta and Chris Spiek's Jobs-to-Be-Done research — but this source is the wiki's first ingest with the framework named.
+- [[wiki/sources/rork-scale-mobile-app-50k]] — does not name the framework, but its consumer-app onboarding mechanic is the analogue of the model: making users convince themselves they have a problem manufactures **Push**, and reducing paywall hesitation via loss aversion lowers **Anxiety**.
 
 ## Sub-claims and details
 
@@ -60,6 +61,11 @@ For Vedge's marketing site to convert, copy must address all four. *Pull-only* m
 - **Anxiety**: "Your data stays [where] / [Specific compliance certification] / 30-day money-back / [Real customer quote about successful switch]."
 
 The CTA itself can address forces: *"Start with one [small commitment]"* (anxiety-killer); *"Migrate from [competitor] in 5 minutes"* (habit-killer); *"Get [outcome] this week"* (pull).
+
+### Consumer-app analogue (mobile onboarding)
+
+- [[wiki/sources/rork-scale-mobile-app-50k]] frames onboarding questions as existing to make users *self-persuade they have a problem* and to *mirror their answers back* — a Push-manufacturing mechanic applied to consumer apps rather than B2B switching.
+- The same source treats paywall preparation via **loss aversion** (longer 10–15 minute onboarding converts better) as an Anxiety-reduction lever before the conversion ask.
 
 ### Composition with other frameworks
 
@@ -87,3 +93,4 @@ The CTA itself can address forces: *"Start with one [small commitment]"* (anxiet
 ## Mentioned in
 
 - [[wiki/sources/noisyb0y1-marketingskills-repo]]
+- [[wiki/sources/rork-scale-mobile-app-50k]]

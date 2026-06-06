@@ -2,7 +2,7 @@
 type: concept
 title: Claude Code Skills
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [skills, claude skills, skill plugins]
 tags: [claude-code, mechanism, agent-config]
 ---
@@ -31,6 +31,14 @@ This concept is **distinct from the file format** captured in [[skill-md]]. SKIL
 - [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — the cost counterpoint: skill loading on irrelevant tasks is the 5th-largest [[claude-code-overhead-patterns|overhead pattern]] (~7% of total tokens). Author had 11 active skills loading "just in case"; cut to 4 and saved 9,000+ tokens per task on average. Auto-invocation is conservative (when in doubt, load), so unused skills cost on every task.
 - [[wiki/sources/nexu-io-open-design]] — *2026-05-05*. The **largest substantive skill-pack** in the wiki — [[wiki/entities/open-design|Open Design]]'s `skills/` directory contains **71 SKILL.md bundles (live count, 2026-05-05)** spanning prototypes (web/mobile/dashboard/landing), HTML decks (21+ deck flavors), documents (PRDs, runbooks, OKRs, finance reports), media generation, integrations (orbit family), and meta-skills (critique, tweaks, fidelity audit). Bundles [[wiki/entities/guizang-ppt-skill|guizang-ppt-skill]] verbatim with attribution.
 - [[wiki/sources/open-design-catalog]] — *2026-05-05*. Catalog enumeration of all 71 skills with descriptions; raw bundles fetched at `raw/open-design/skills/<name>.md`. Adds a notable observation: the **orbit family** (`orbit-general`, `orbit-github`, `orbit-gmail`, `orbit-linear`, `orbit-notion`) implies a **platform-integration substrate** in the Open Design daemon — functionally analogous to MCP servers but skill-shaped (the agent calls an `orbit-github` skill rather than calling a github MCP). Worth investigating whether orbits are a meaningful alternative to MCPs or just thin wrappers around them. The wiki now has three substantive non-Anthropic skill-packs in size order: Open Design (71) > Refero design-md (33) > marketingskills (139 tactics packed across fewer files).
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] frames it as Buzz running on ~15 skills across triage, drafting, learning, analytics, and reporting; the learning behaviour itself is implemented as a separate dedicated skill.
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] frames it as skills being markdown files with YAML frontmatter in both Claude Code and Codex; same format and structure, only the folder differs (.claude/skills vs .agents). Claims full interchangeability — same file in both places, no rewrite.
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] frames it as an adjacent .claude/ configuration surface; thin mention via the CLAUDE.md root-file mechanism.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] frames it as the Hermes skill layout (SKILL.md procedure + references/ docs + scripts/ helpers) mirroring the Claude Code skill-pack structure; reinforces the cross-vendor SKILL.md convention.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] frames it via Step 4: a skill is "one command [that] fires a whole workflow across tools," replacing a 200-word prompt; worked shape /your-skill → Notion → Gmail → Drive → Output.
+- [[wiki/sources/prajwaltomar-claude-design-workflow]] frames it via Step 3: a skill (in Claude Code or Claude Desktop) used as a reusable, build-once copy-writing workflow that decides which template layouts to use per section and writes section copy with variations, emitting a ready-to-paste design prompt — a concrete cross-tool use of skills feeding Claude Design.
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] frames it via Setup 3 (write the prompt once, save as a Skill, run with one click); named anti-pattern is rewriting the same prompt 200 times a year.
+- [[wiki/sources/nurijanian-goal-for-product-managers]] frames it via /shaping (Ryan Singer) and /grill-me (Matt Pocock) — named external skill-pack instances used for requirement-writing; PM OS bundles them. Adds requirement-shaping as a skill-pack use case.
 - [[wiki/sources/noisyb0y1-marketingskills-repo]] — the **most substantive non-design skill-pack example yet ingested**. Surfaces [[wiki/entities/marketingskills-repo|coreyhaines31/marketingskills]] — a free, open-source skill-pack containing 139 growth tactics, 12 programmatic-SEO playbooks, frameworks for copywriting / CRO / A/B testing / pricing / [[ai-seo|AI SEO]], and a tool registry (GA4, GSC, Mixpanel, [[wiki/entities/posthog|PostHog]], [[wiki/entities/stripe|Stripe]], etc.) with API/MCP/CLI availability noted per tool. Architectural pattern: **every skill begins by reading `product-marketing-context.md`** ([[context-file]] applied to product-marketing) before any other action — no [[context-file]], no useful output. Claims to replace a $10K/mo marketing agency. Sibling to [[wiki/entities/refero|Refero]] (design-tokens-as-skills): same shape, different domain.
 
 ## Sub-claims and details
@@ -91,3 +99,11 @@ This concept is **distinct from the file format** captured in [[skill-md]]. SKIL
 - [[wiki/sources/noisyb0y1-marketingskills-repo]]
 - [[wiki/sources/nexu-io-open-design]]
 - [[wiki/sources/open-design-catalog]]
+- [[wiki/sources/petradonka-agents-need-feedback-loops]]
+- [[wiki/sources/nateherk-claude-code-codex-same-project]]
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]]
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]]
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]]
+- [[wiki/sources/prajwaltomar-claude-design-workflow]]
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]]
+- [[wiki/sources/nurijanian-goal-for-product-managers]]

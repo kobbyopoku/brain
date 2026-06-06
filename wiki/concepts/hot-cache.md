@@ -2,7 +2,7 @@
 type: concept
 title: Hot Cache
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [_hot.md, active-state cache]
 tags: [llm-wiki, optimization, claude-code]
 ---
@@ -30,6 +30,15 @@ The pattern composes naturally with [[progressive-disclosure]]: hot cache is L0 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]] — canonical wiki source for the pattern. Author describes a `_hot.md` file at the top of his Karpathy-style wiki: *"a 500-token cache of what was most recently active"*. Calls it *"the move I'd missed"* until adoption. Cites a 95% token-usage reduction from a third party (unverified).
 - [[wiki/sources/nousresearch-hermes-agent]] — *2026-05-05*. The **agent-internal alternative** to the external-`_hot.md` pattern: [[wiki/entities/hermes-agent|Hermes Agent]] builds active state into the agent itself rather than as an external markdown file. Self-improving learning loop creates and refines skills from experience, persists knowledge across sessions, searches its own past conversations, builds a deepening user model. Both approaches solve the same problem (persistent agent state across sessions) via different mechanisms (passive markdown read by agent vs active state managed by agent). Worth comparing when designing a new agent setup: external markdown is simpler to inspect and version; agent-internal is more autonomous but less observable.
 - [[wiki/sources/cyrilxbt-x-2052235121416188114]] — *2026-05-08*. **Daily Brief variant** of the hot-cache pattern. Where nateherk's `_hot.md` is *manually updated recent state*, CyrilXBT's Daily Brief is an *automated 6am prompt* that surfaces *"3 most interesting connections"* between recent captures and older notes — adds **connection-finding** to the recent-state-summary semantics. A natural extension worth tracking as a sub-pattern within the hot-cache family.
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — *2026-06-06*. Sibling to nateherk's own `_hot.md` discipline: the *"drop a tight markdown spec before you generate"* move front-loads context to minimize iteration burn.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — *2026-06-06*. Memory + Personal Preferences fill the persistent-active-context role that `_hot.md` plays in the wiki's engineering stacks — the always-loaded layer that makes each session start *"at mile 10."*
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — *2026-06-06*. The CLAUDE.md *"Current Priorities"* section (updated every Monday) functions as the always-loaded hot context, analogous to the `_hot.md` file pattern.
+- [[wiki/sources/nateherk-claude-code-codex-same-project]] — *2026-06-06*. **Hot-cache-adjacent**: the session-handoff skill externalizes live session state (summary + active files + decisions + next steps) into a portable artifact — here for cross-tool handoff rather than session-restart.
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]] — *2026-06-06*. The MEMORY.md / ERRORS.md / permanent-facts instructions (section 3) are external-markdown persistent state — same family as nateherk's `_hot.md`; a passive alternative to agent-internal self-update.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] — *2026-06-06*. The frozen-snapshot-at-session-start injection of MEMORY.md/USER.md is Hermes's internal analogue of the external `_hot.md` always-loaded-context pattern.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] — *2026-06-06*. Step 3's *"every correction becomes its own .md file"* is a finer-grained sibling — one file per mistake rather than one rolling file.
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]] — *2026-06-06*. *"Memory is the most underrated part"* — persistent project memory beats prompt tricks; treat sessions as project-aware, not stateless.
+- [[wiki/sources/nurijanian-goal-for-product-managers]] — *2026-06-06*. Same mechanism at the file layer: durable external state outside the decaying conversation. The status-file-as-durable-memory and reloaded-spec ideas are the PM-spec instantiation of the hot-cache principle.
 
 ## Sub-claims and details
 
@@ -106,3 +115,13 @@ Worth implementing as a follow-up. The maintenance discipline is the question �
 
 - [[wiki/sources/nateherk-claude-code-os-3m-business]]
 - [[wiki/sources/nousresearch-hermes-agent]]
+- [[wiki/sources/cyrilxbt-x-2052235121416188114]]
+- [[wiki/sources/nateherk-claude-design-tally-brand]]
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]]
+- [[wiki/sources/cyrilxbt-personal-operating-system]]
+- [[wiki/sources/nateherk-claude-code-codex-same-project]]
+- [[wiki/sources/0xDepressionn-karpathy-claude-md-82k-stars]]
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]]
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]]
+- [[wiki/sources/suryanshti777-stop-prompting-design-systems]]
+- [[wiki/sources/nurijanian-goal-for-product-managers]]

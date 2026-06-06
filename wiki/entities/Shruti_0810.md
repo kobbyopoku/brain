@@ -3,7 +3,7 @@ type: entity
 title: Shruti (Shruti_0810)
 entity_type: person
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-06
 website: https://x.com/Shruti_0810
 aliases: [Shruti_0810, Shruti]
 tags: [author, x-creator, llm-wiki-pattern, second-brain, obsidian, externalized-cognition]
@@ -29,7 +29,8 @@ Her framing distinguishes from CyrilXBT's near-identical architecture by emphasi
 ## Key facts
 
 - **X handle**: [@Shruti_0810](https://x.com/Shruti_0810).
-- **Posts in wiki**: 1 substantive.
+- **Posts in wiki**: 2 substantive.
+- **Roadmap thread (2026-05-16)**: frames a ~14-week path from absolute beginner to production-grade AI systems; recommends building neural nets from scratch (Karpathy) before touching frameworks (cited to [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]]).
 - **Architecture**: Obsidian + n8n + Claude + Readwise + Telegram + Whisper.
 - **Vault structure**: deliberately minimal 5-folder model (Inbox / Notes / Ideas / Projects / Archive).
 - **Distinguishing claim**: *"the simpler the structure, the smarter the system becomes over time."*
@@ -46,6 +47,7 @@ Her framing distinguishes from CyrilXBT's near-identical architecture by emphasi
 ## Mentioned in
 
 - [[wiki/sources/Shruti_0810-self-improving-obsidian]] — sole substantive ingest.
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — author of the *"Zero to AI Engineer — The Roadmap Nobody Explains Properly"* thread (2026-05-16): a ~14-week roadmap from absolute beginner to production-grade AI systems; recommends building neural nets from scratch (Karpathy) before touching frameworks.
 
 ## Related concepts
 

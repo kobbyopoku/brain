@@ -2,7 +2,7 @@
 type: concept
 title: Scheduled Automation
 created: 2026-05-02
-updated: 2026-05-05
+updated: 2026-06-06
 aliases: [/schedule, scheduled tasks, cron automation, recurring agents]
 tags: [claude-code, automation, mechanism]
 ---
@@ -33,6 +33,18 @@ Scheduled automations also make the [[lint]] operation in this wiki concrete —
   - **Local Scheduled Tasks** (desktop app): can catch up on missed runs; needs app open + computer awake.
   - **Loop**: one-off recurring runs in a single session; 3-day expiry then auto-deletes; great for "every 5 minutes check if my deploy is done"; wrong for weekly recurring jobs.
   Author's framing: *"Routines basically inject a prompt into a real Claude Code session. The same prompt you'd type yourself. So write specific, one-shot prompts; the routine isn't going to ask clarifying questions."*
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] frames it via Buzz's once-a-day learning run that aggregates feedback and opens a PR, plus scheduled-job triggers via Oz — instances of scheduled agent automation.
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] frames it via Blueprints 02/03: weekly batch generation (Sunday evening) plus scheduled posting at algorithm-optimal times (Tue–Thu, 8–10 AM / 6–8 PM in the audience timezone, per the source's rule of thumb).
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] frames it indirectly via the ROI volume gate: agents must run on lengthy, high-volume automations (not ~5x/month) to be worth deploying.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] frames it as Layer 7, instantiated via Cowork Scheduled Tasks / Claude Code Routines with three concrete jobs (6:30 AM Morning Briefing, Friday Weekly Report, Sunday Content Plan). The Morning Briefing is the same shape as Khairallah's 7 AM and Shruti's 6 AM briefings — recurring pattern.
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] frames it via the N8N 6 AM cron as the orchestration trigger that runs the briefing unattended and deposits it before the user starts the day.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] frames it implicitly via the Weekly Report Generator automation idea, but notably omits the explicit /schedule unattended-automation emphasis of the sibling $10K/mo source.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] frames it via the N8N cron layer firing five workflows unattended (6AM briefing, 8PM capture processor, Sun 7PM weekly review, every-2-hours queue processor, Mon 7AM project health monitor) — scheduled automation layered onto an LLM-maintained vault.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] frames it via cron/jobs.json + output/ with a gateway daemon ticking every 60s to run due jobs in isolated sessions; plain-English schedules converted by Hermes — a concrete instance of native agent scheduling.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] frames it via Step 6: Claude Routines on "Anthropic's cloud" on a daily/weekly schedule ("Set the schedule. Walk away.").
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]] frames it as goals running as background workers tracked on a durable Kanban board; "setup is just another goal" extends orchestrator scope to environment provisioning.
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] frames it via Setup 5 (one daily scheduled task: research brief / inbox summary / status writeup); "the moment Claude starts producing while you're not at the keyboard."
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] frames it via the "machine that studies the market while you sleep" framing and the Auto-Post (Drive → socials) loop — unattended scheduled-automation instances.
 
 ## Sub-claims and details
 
@@ -72,3 +84,15 @@ Scheduled automations also make the [[lint]] operation in this wiki concrete —
 - [[wiki/sources/khairallah-ai-automations-10k-month]]
 - [[wiki/sources/regent0x-claude-code-247-dev-team]]
 - [[wiki/sources/nousresearch-hermes-agent]] — Hermes ships native cron + kanban as durable-by-default primitives.
+- [[wiki/sources/petradonka-agents-need-feedback-loops]] — daily learning run + Oz scheduled-job triggers.
+- [[wiki/sources/doublenickk-personal-x-agent-algorithm]] — weekly batch generation + scheduled algorithm-optimal posting.
+- [[wiki/sources/vasuman-forward-deployed-engineering-101]] — ROI volume gate: high-volume automations only.
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — Layer 7 Scheduled Tasks/Routines (Morning Briefing, Weekly Report, Content Plan).
+- [[wiki/sources/cyrilxbt-obsidian-dashboard-everything-today]] — N8N 6 AM cron as the briefing orchestration trigger.
+- [[wiki/sources/eng_khairallah1-real-money-ai-automations]] — Weekly Report Generator; omits explicit /schedule emphasis.
+- [[wiki/sources/cyrilxbt-personal-operating-system]] — N8N cron layer firing five unattended workflows on a vault.
+- [[wiki/sources/akshay_pachaar-x-hermes-folder-anatomy]] — cron/jobs.json + 60s gateway daemon; plain-English schedules.
+- [[wiki/sources/charliejhills-full-agent-system-6-steps]] — Step 6 Claude Routines on Anthropic's cloud.
+- [[wiki/sources/saboo-shubham-ultimate-guide-to-goal]] — goals as background workers on a durable Kanban board.
+- [[wiki/sources/zephyr-hg-7-setups-claude-fluency]] — Setup 5 one daily scheduled task.
+- [[wiki/sources/8xgrowth-100-days-to-10k-clipping]] — "studies the market while you sleep" + Auto-Post loop.

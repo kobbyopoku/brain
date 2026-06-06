@@ -3,7 +3,7 @@ type: entity
 title: Framer
 entity_type: product
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://framer.com
 aliases: []
 tags: [design-tool, website-builder, motion-design, design-md-available, open-design-catalog, stub]
@@ -21,6 +21,7 @@ tags: [design-tool, website-builder, motion-design, design-md-available, open-de
 
 ## Mentioned in
 - [[wiki/sources/open-design-catalog]]
+- [[wiki/sources/prajwaltomar-claude-design-workflow]] — cited as a site to find layout inspiration (alongside Dribbble and Behance) when building Claude Design templates.
 
 ## Related concepts
 - [[design-md]]

@@ -3,7 +3,7 @@ type: entity
 title: heynavtoor
 entity_type: person
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://x.com/heynavtoor
 aliases: []
 tags: [author, ai-tooling, ai-automation-services]
@@ -22,6 +22,9 @@ heynavtoor (X handle @heynavtoor) is a content creator publishing operationally-
 - **X handle**: @heynavtoor
 - **Notable thread (2026-04-22)**: 10 GitHub repos to replace an engineering team — [[wiki/sources/heynavtoor-10-repos-replace-eng-team]].
 - **Notable thread (2026-05-03)**: How to Build a $10K Per Month Claude Automation Business in 90 Days — [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]]. Derivative of Khairallah.
+- **Notable post (2026-05-15)**: How to Build a Personal AI System With Claude That Knows Everything About You — [[wiki/sources/heynavtoor-personal-ai-system-claude]]. Signs the post "Nav".
+- **Publishing cadence**: posts a Claude tutorial every Tuesday and Friday on skills, sub-agents, and overnight agents ([[wiki/sources/heynavtoor-personal-ai-system-claude]]).
+- **Personal AI system**: set up his own three months before writing; runs three scheduled tasks (6:30 AM Morning Briefing, 4 PM Friday Weekly Report, 8 PM Sunday Content Plan) and organizes Claude into five Projects — Content Creation, Client Work, Business Operations, Research & Learning, Personal ([[wiki/sources/heynavtoor-personal-ai-system-claude]]).
 - **Companion article referenced (not yet ingested)**: "30 Claude Code Sub-Agents I Actually Use" — paste-ready sub-agent template library.
 
 ## Positions and claims
@@ -36,3 +39,4 @@ heynavtoor (X handle @heynavtoor) is a content creator publishing operationally-
 
 - [[wiki/sources/heynavtoor-10-repos-replace-eng-team]]
 - [[wiki/sources/heynavtoor-10k-claude-automation-business-90-days]]
+- [[wiki/sources/heynavtoor-personal-ai-system-claude]] — author of the 7-layer personal-AI-system tutorial; his 3rd substantive wiki post.

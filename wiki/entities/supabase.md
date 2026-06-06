@@ -3,7 +3,7 @@ type: entity
 title: Supabase
 entity_type: product
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://supabase.com
 aliases: []
 tags: [backend, postgres, firebase-alternative, open-source, apache-2, mcp-integration, design-md-available, open-design-catalog]
@@ -72,6 +72,9 @@ The full platform runs as a Docker Compose / Kubernetes deployment. Key implicat
 ## Mentioned in
 
 - [[wiki/sources/open-design-catalog]] — Open Design catalog entry.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — named both as a Context7 docs target and as a [[wiki/entities/database-mcp|Database MCP]] target database.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — backend in the micro-SaaS shipping stack ([[wiki/entities/claude-code|Claude Code]] + [[wiki/entities/stripe|Stripe]] + Supabase + a domain).
+- [[wiki/sources/NainsiDwiv50980-ultimate-claude-code-setup]] — backend in the source's worked CLAUDE.md example, a Next.js + Supabase SaaS analytics dashboard.
 
 ## Related entities
 

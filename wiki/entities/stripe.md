@@ -3,7 +3,7 @@ type: entity
 title: Stripe
 entity_type: organization
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-06-06
 website: https://stripe.com
 aliases: []
 tags: [refero-catalog, yc-unicorn, payments, landing-page-patterns, design-md-ingested]
@@ -45,6 +45,16 @@ Per [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]]:
 - **Audience personalization**: developers vs. business owners.
 - **Footer as navigation hub**: 50+ links organized by category.
 
+### Product, infrastructure, and agent-commerce facts
+*(the non-design axis the earlier ingests left open)*
+- **Agent harness default**: Stripe's production harness caps retry attempts at two (per [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]]).
+- **Micro-SaaS stack**: named as the payment layer in the [[wiki/entities/claude-code|Claude Code]] + Stripe + [[wiki/entities/supabase|Supabase]] + domain shipping stack; referenced via the "wake up to Stripe notifications" fantasy (per [[wiki/sources/exploraX_-5-solo-ai-business-models]]).
+- **Payments-cost collapse**: cited as the technology that "made payments cheap," one collapsed dimension of operational overhead (per [[wiki/sources/kushwah-aaryan-future-of-work]]).
+- **Agent-managed accounts prediction**: the essay predicts Stripe's agent-managed financial accounts cross 100,000 active accounts by end of 2026 (per [[wiki/sources/kushwah-aaryan-future-of-work]]).
+- **Stablecoin rails**: Stripe's Bridge acquisition is named among stablecoin settlement rails (per [[wiki/sources/awrigh01-technical-stack-autonomous-agents]]).
+- **Agent-to-merchant settlement**: Stripe Issuing provides virtual cards scoped to a single transaction with a single merchant (per [[wiki/sources/awrigh01-technical-stack-autonomous-agents]]).
+- **Strategy-reference reflex**: named by Doshi as the company teams reflexively reference to sound strategic — "Someone will reference what Stripe did" (per [[wiki/sources/shreyas-get-to-the-core-of-the-thing]]).
+
 ## Positions and claims
 
 - **A landing page should describe the category it owns, not what the product does technically** — Stripe's "financial infrastructure for the internet" is the canonical example of [[landing-page-patterns|category-defining headlines]]. *(Implicit by the source's analysis.)*
@@ -54,6 +64,12 @@ Per [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]]:
 - [[wiki/sources/refero-design-systems-for-ai-agents]] — featured brand in the design-reference catalog.
 - [[wiki/sources/clear_graphics-yc-unicorn-landing-pages]] — landing-page analyzed as an exemplar of multiple patterns.
 - [[wiki/sources/stripe-design-md]] — full DESIGN.md (colors, typography, spacing, components, philosophy) ingested 2026-05-02.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — named docs target for Context7.
+- [[wiki/sources/shreyas-get-to-the-core-of-the-thing]] — cited as the archetypal "what [big company] did" reference reflex in strategy meetings.
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — payment layer in the micro-SaaS stack; "wake up to Stripe notifications" framing.
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — cited for a concrete production error-handling default (retry attempts capped at two).
+- [[wiki/sources/kushwah-aaryan-future-of-work]] — prediction about agent-managed financial accounts; payments-cost-collapse example.
+- [[wiki/sources/awrigh01-technical-stack-autonomous-agents]] — Bridge acquisition (stablecoins) + Stripe Issuing virtual cards for agent-to-merchant settlement.
 
 ## Related entities
 

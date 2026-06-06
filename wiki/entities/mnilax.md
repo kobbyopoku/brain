@@ -3,19 +3,19 @@ type: entity
 title: Mnilax
 entity_type: person
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-21
 website: https://x.com/Mnilax
 aliases: []
-tags: [author, claude-code, instrumentation, stub]
+tags: [author, claude-code, claude-cowork, instrumentation, slash-commands, operational-discipline]
 ---
 
 # Mnilax
 
-> Author of [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — the wiki's canonical source on [[claude-code-overhead-patterns]]: 90 days of HTTP-proxy-instrumented Claude Code usage revealing 9 named patterns that consume 73% of tokens.
+> Author of two substantive wiki sources on Claude Code / Cowork **operational discipline** through instrumentation. (1) The 430-hours-Claude-Code-usage study identifying 9 overhead patterns consuming 73% of tokens. (2) The 9 Cowork slash-command templates that pulled back 34 hours/week of his workload (47-min median active-supervision in a former 8-hour workday). Both anchored on the same methodology: paired before/after measurements over 30+ days.
 
 ## Profile
 
-This page is a **stub**. Mnilax (X handle @Mnilax) appears in this wiki only as the author of "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns" (2026-05-01). The author promises a Part 2 on prompt-cache deep-dive in their Telegram channel — worth ingesting if/when it appears.
+Mnilax has now graduated from stub to substantive — two posts establishing a consistent voice: *instrument first, prescribe second*. The 430-hours post is the diagnostic; the 9-templates post is the prescription. *"None of this is about Cowork being clever, it's about the prompts being shaped right."*
 
 ## Key facts
 
@@ -33,7 +33,8 @@ This page is a **stub**. Mnilax (X handle @Mnilax) appears in this wiki only as 
 
 ## Mentioned in
 
-- [[wiki/sources/Mnilax-430-hours-claude-code-waste]]
+- [[wiki/sources/Mnilax-430-hours-claude-code-waste]] — diagnostic: 9 overhead patterns / 73% of tokens / instrumented HTTP-proxy study.
+- [[wiki/sources/Mnilax-9-cowork-prompt-templates]] — *2026-05-19*. **Prescription**: 9 Cowork slash-command templates that pulled back 34 hours/week. The clean articulation: *"the plugin is the kitchen, the slash command is the recipe."*
 
 ## Related concepts
 

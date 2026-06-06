@@ -3,7 +3,7 @@ type: entity
 title: Nick Saraev
 entity_type: person
 created: 2026-05-03
-updated: 2026-05-03
+updated: 2026-06-06
 website: https://www.youtube.com/@nicksaraev
 aliases: [Saraev]
 tags: [author, agentic-workflows, ai-automation, video-creator]
@@ -24,6 +24,10 @@ Nick Saraev is best known in the wiki as the author of the *AGENTIC WORKFLOWS: B
 - **Coined**: the [[do-framework]] (Directives + Executions architecture).
 - **Coined**: [[horizontal-leverage]] as the economic framing for AI automation services.
 - **Articulated**: the [[reliability-decay-math]] argument that motivates separation-of-concerns architecture for LLM workflows.
+- **Runs two AI service agencies doing $160k/month combined revenue**, solo-led, building in public on YouTube. *(See [[wiki/sources/exploraX_-5-solo-ai-business-models]].)*
+- **Created a free 6-hour course on agentic workflows**, and open-sourced his system prompts. *(See [[wiki/sources/exploraX_-5-solo-ai-business-models]].)*
+- **His DO framework (directive → orchestration → execution) is used by many solo automation builders.** *(See [[wiki/sources/exploraX_-5-solo-ai-business-models]].)*
+- **Teaches** self-annealing workflows, IDE setup, cloud deployment with webhooks, and parallel sub-agents. *(See [[wiki/sources/exploraX_-5-solo-ai-business-models]].)*
 
 ## Positions and claims
 
@@ -36,6 +40,7 @@ Nick Saraev is best known in the wiki as the author of the *AGENTIC WORKFLOWS: B
 ## Mentioned in
 
 - [[wiki/sources/saraev-agentic-workflows-2026]]
+- [[wiki/sources/exploraX_-5-solo-ai-business-models]] — receipt for the AI Automation path; two agencies at $160k/mo combined, free 6-hour agentic-workflows course, open-sourced system prompts.
 
 ## Related concepts
 

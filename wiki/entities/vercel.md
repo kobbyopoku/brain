@@ -3,7 +3,7 @@ type: entity
 title: Vercel
 entity_type: organization
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-06-06
 website: https://vercel.com
 aliases: []
 tags: [devtools, hosting, frontend, edge-compute, ai-infrastructure, geist-typography, design-md-available, open-design-catalog]
@@ -68,11 +68,22 @@ Turborepo-based production-grade SaaS starter for Next.js. Bundles auth (Clerk),
 - **Edge-deployed serverless is the right default for modern web apps.** Vercel pioneered Next.js's hybrid SSR/SSG/edge-rendering model and ships it as the platform default.
 - **AI infrastructure should be platform-integrated, not bolt-on.** AI SDK + AI Gateway + Sandbox + Workflow are not separate products — they're integrated layers on the same platform. Architectural bet: AI infrastructure is *the* next big workload class for hosting platforms.
 - **Open-source typefaces are platform branding, not just brand decoration.** Releasing Geist as freely-licensed reduces ecosystem friction and aligns Vercel's brand with developer-friendly open-source identity.
+- **Fewer tools improve agent performance.** Cited in [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] for removing 80% of tools from v0 and getting better results.
+
+## Facts from harness / tooling sources
+
+- The **Vercel AI SDK** is one of the docs targets [[wiki/entities/context7|Context7]] keeps fresh — cited in [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]].
+- Per [[wiki/sources/nateherk-claude-design-tally-brand]], Vercel deploys a GitHub repo to a live domain in about 60 seconds, and served a 404 on first deploy because the build was nested in a folder instead of at the repo root.
+- Named as a deployment target for finished AI projects (Phase 6) in [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]], and as a Phase-6 deployment target generally.
 
 ## Mentioned in
 
 - [[wiki/sources/open-design-catalog]] — Open Design catalog entry.
 - [[wiki/sources/ui-design-md]] — uses Vercel's Geist typeface.
+- [[wiki/sources/suryanshti777-9-claude-code-plugins-senior-engineer]] — named via Vercel AI SDK as a Context7 docs target.
+- [[wiki/sources/nateherk-claude-design-tally-brand]] — deployment target for the final live build (60s deploy; nested-build 404).
+- [[wiki/sources/akshay_pachaar-x-anatomy-of-an-agent-harness]] — cited as evidence that fewer tools improve performance (removed 80% of v0's tools).
+- [[wiki/sources/Shruti_0810-zero-to-ai-engineer-roadmap]] — Phase-6 deployment target for finished AI projects.
 
 ## Related entities
 
