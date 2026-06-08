@@ -2,8 +2,10 @@
 type: project
 title: Brolly
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-08
 status: active
+owner_org: brolly-africa
+affiliation: brolly-africa-product
 repo: multi-repo workspace (Brolly-Africa GitHub org + brolly1 GitLab mirrors)
 local_path: /Users/kobbyopoku/Brolly
 stack: [java, kotlin, spring-boot, jhipster, gradle, react, typescript, nextjs, vite, tailwindcss, redux-toolkit, react-query, postgres, paystack, aws-s3]
