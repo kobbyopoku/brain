@@ -2,12 +2,13 @@
 type: synthesis
 title: Godwin Opoku Duah — Portfolio Landscape
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-08
 aliases: [roam-portfolio, kobby-portfolio, godwin-projects]
 tags: [synthesis, portfolio, roam-labs, brolly-africa, project-landscape, wiki-owner]
 ---
 
 > **Refresh log**: 2026-05-09 — added Bucket 5 (ROAM Labs internal tools) for [[wiki/projects/helm|Helm]]. Brolly project still pending its Brolly Africa entity.
+> **⚠ Stale (flagged 2026-06-08 by lint):** this landscape predates two ROAM Labs products now in the brain — [[wiki/projects/glydr|Glydr]] (P2P carpooling for Ghana, added 2026-05-17) and [[wiki/projects/africart|Africart]] (added 2026-05-30, renamed from AfriMart) — neither yet appears in the Bucket 1 products table below. The brain now holds **12** projects vs the 10 mapped here. Full table rows pending owner refresh.
 
 # Godwin Opoku Duah — Portfolio Landscape
 
