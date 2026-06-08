@@ -3,6 +3,7 @@ type: source
 title: Raycast Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/3b6a17f0-3bdf-418c-a95e-0b89e5a8b2f8
 source_type: design-md
 author: Refero

@@ -3,6 +3,7 @@ type: source
 title: 8 YC Unicorn Landing Pages and the Patterns They Share — clear_graphics
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/clear_graphics/status/2047720400952418574
 source_type: x-thread
 author: clear_graphics

@@ -3,6 +3,7 @@ type: source
 title: I Want to Build an AI Agent Today (Full Course) — hooeem
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/hooeem/status/2037250422403113188
 source_type: x-thread
 author: hooeem

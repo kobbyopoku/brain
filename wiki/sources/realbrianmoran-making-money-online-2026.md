@@ -3,6 +3,7 @@ type: source
 title: The Truth About Making Money Online in 2026 (And What's About to Die) — Brian Moran
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/realbrianmoran/status/2020158933885739490
 source_type: x-thread
 author: Brian Moran

@@ -3,6 +3,7 @@ type: source
 title: The DOE Framework — How AI Agents Think, Plan & Act — Prakash Bhandari
 created: 2026-05-05
 updated: 2026-05-05
+content_status: substantive
 source_url: https://www.prakashbhandari.com.np/posts/doe-framework-how-ai-agents-think-plan-and-act/
 source_type: blog-post
 author: Prakash Bhandari

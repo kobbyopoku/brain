@@ -8,7 +8,7 @@ tags: [synthesis, portfolio, roam-labs, brolly-africa, project-landscape, wiki-o
 ---
 
 > **Refresh log**: 2026-05-09 — added Bucket 5 (ROAM Labs internal tools) for [[wiki/projects/helm|Helm]]. Brolly project still pending its Brolly Africa entity.
-> **⚠ Stale (flagged 2026-06-08 by lint):** this landscape predates two ROAM Labs products now in the brain — [[wiki/projects/glydr|Glydr]] (P2P carpooling for Ghana, added 2026-05-17) and [[wiki/projects/africart|Africart]] (added 2026-05-30, renamed from AfriMart) — neither yet appears in the Bucket 1 products table below. The brain now holds **12** projects vs the 10 mapped here. Full table rows pending owner refresh.
+> **Refresh log**: 2026-06-08 — added [[wiki/projects/glydr|Glydr]] (P2P carpooling for Ghana, added to brain 2026-05-17) and [[wiki/projects/africart|Africart]] (added 2026-05-30, renamed from AfriMart) to the Bucket 1 products table; landscape now maps all **12** brain projects. Rows drafted by lint from the project pages — owner may want to refine framing/status wording.
 
 # Godwin Opoku Duah — Portfolio Landscape
 
@@ -56,6 +56,8 @@ These carry [[wiki/entities/roam-labs|ROAM Labs]] IP and recurring-revenue logic
 | [[wiki/projects/vedge]] | Vedge | African healthcare OS | Spring Boot 3.4 + Next.js 16 + Flutter ×2 + React Email | Active build; modular monolith with 11+ modules |
 | [[wiki/projects/kivora]] | **ROAM GRC** | Multi-tenant SaaS GRC | Spring Boot 3 + Vite/React 19 + FastAPI Claude + pgvector RAG | Active; Tier 1 Finding-schema migration shipped 2026-05-08 |
 | [[wiki/projects/clarvyn]] | Clarvyn | AI-first HR for startup founders | Spring Boot 3.3.5 + FastAPI Claude (Sonnet 4 + Haiku 4) + pgvector + Vite/React 19 + RN/Expo 54 | Active; Wave 6 shipped — proactive conversations + MCP layer |
+| [[wiki/projects/glydr]] | Glydr *(working name)* | P2P intercity carpooling for Ghana (cost-sharing) | Spring Boot 3.5/Java 21 + Next.js 16 ×2 (landing + control-center) + Flutter mobile | Active; KYC flow + control-center Phase 2 wired (14/14 backend tests); brand name not yet locked |
+| [[wiki/projects/africart]] | Africart *(renamed from AfriMart 2026-05-30)* | Two-sided grocery marketplace — African diaspora, Houston ("Instacart-for-X") | NestJS/Fastify + Postgres 16/PostGIS + Next.js 15 + Expo/RN (Tamagui) + Stripe Connect | Active; pre-implementation (local-only workspace, git not yet initialized) |
 | [[wiki/projects/roamlabs]] | _roamlabs | Agency corporate marketing | Next.js 14 + custom NeuralNetwork canvas hero | Active; visual direction in flux |
 
 **Pattern**: Spring Boot backend + FastAPI Claude agent + pgvector RAG + React/Vite (or Next.js) web + React Native mobile. Same architecture across Kivora and Clarvyn; Vedge keeps Spring Boot + Next.js + Flutter (no FastAPI agent service yet but planned). High reuse.

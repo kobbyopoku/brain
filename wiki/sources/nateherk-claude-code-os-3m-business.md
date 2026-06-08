@@ -3,6 +3,7 @@ type: source
 title: My Claude Code OS Runs My $3M/yr Business — Steal This — nateherk
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/nateherk/status/2050116705322512766
 source_type: x-thread
 author: nateherk

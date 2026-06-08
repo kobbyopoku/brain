@@ -3,6 +3,7 @@ type: source
 title: Acctual Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://styles.refero.design/style/aeefc294-a8f7-443d-b76a-538dddc29afe
 source_type: design-md
 author: Refero

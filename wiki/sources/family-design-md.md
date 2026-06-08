@@ -3,6 +3,7 @@ type: source
 title: Family Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/1bcae895-2245-4d33-aa43-1c1e80719554
 source_type: design-md
 author: Refero

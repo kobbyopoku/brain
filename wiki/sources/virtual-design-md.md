@@ -3,6 +3,7 @@ type: source
 title: Virtual Design System (DESIGN.md from Refero)
 created: 2026-05-04
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/virtual
 source_type: design-md
 author: Refero

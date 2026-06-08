@@ -3,6 +3,7 @@ type: source
 title: nexu-io/open-design — Open-Source Alternative to Claude Design
 created: 2026-05-05
 updated: 2026-05-05
+content_status: substantive
 source_url: https://github.com/nexu-io/open-design
 source_type: github-repo
 author: nexu-io

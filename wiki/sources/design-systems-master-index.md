@@ -3,6 +3,7 @@ type: source
 title: Design Systems Master Index — every DESIGN.md path in the brain
 created: 2026-05-05
 updated: 2026-05-05
+content_status: substantive
 source_url: ""
 source_type: master-index
 author: maintainer

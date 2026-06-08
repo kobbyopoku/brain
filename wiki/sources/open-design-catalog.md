@@ -3,6 +3,7 @@ type: source
 title: Open Design Catalog — full inventory of 139 design systems + 71 skills + 9 craft docs
 created: 2026-05-05
 updated: 2026-05-05
+content_status: substantive
 source_url: https://github.com/nexu-io/open-design
 source_type: github-repo-catalog
 author: nexu-io

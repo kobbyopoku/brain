@@ -3,10 +3,10 @@ type: entity
 title: ColdIQ
 entity_type: organization
 created: 2026-05-02
-updated: 2026-06-06
+updated: 2026-06-08
 website: https://coldiq.com
 aliases: []
-tags: [agency, services-as-software, ai-services, stub]
+tags: [agency, services-as-software, ai-services]
 ---
 
 # ColdIQ
@@ -15,7 +15,7 @@ tags: [agency, services-as-software, ai-services, stub]
 
 ## Profile
 
-This page is a stub-leaning-substantive. ColdIQ appears in this wiki only via [[wiki/sources/itsalexvacca-services-as-software-7m-agency]], but the source is operationally rich. ColdIQ is described as four years old (founded 2022 in spirit, formal partnership somewhat later), bootstrapped, with a content-driven "cold accelerator" revenue layer on top of services delivery — the structural piece that makes the [[services-as-software]] math work.
+ColdIQ is covered substantively from two operationally rich sources ([[wiki/sources/itsalexvacca-services-as-software-7m-agency]] and [[wiki/sources/itsalexvacca-3-phases-ai-layer]]). ColdIQ is described as four years old (founded 2022 in spirit, formal partnership somewhat later), bootstrapped, with a content-driven "cold accelerator" revenue layer on top of services delivery — the structural piece that makes the [[services-as-software]] math work.
 
 ## Key facts
 

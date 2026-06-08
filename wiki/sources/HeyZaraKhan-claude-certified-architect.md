@@ -3,6 +3,7 @@ type: source
 title: Claude Certified Architect Resource List — HeyZaraKhan
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/HeyZaraKhan/status/2036096566256455971
 source_type: x-thread
 author: HeyZaraKhan

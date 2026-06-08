@@ -3,6 +3,7 @@ type: source
 title: 139 Marketing Tactics + CRO Framework as Claude Skills (marketingskills repo) — noisyb0y1
 created: 2026-05-04
 updated: 2026-05-04
+content_status: substantive
 source_url: https://x.com/noisyb0y1/status/2050523761481285898
 source_type: x-thread
 author: noisyb0y1

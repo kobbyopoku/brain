@@ -3,6 +3,7 @@ type: source
 title: Equipping Agents for the Real World — A Deeper Look at Agent Skills — NainsiDwiv50980
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/NainsiDwiv50980/status/2050509548272930881
 source_type: x-thread
 author: NainsiDwiv50980

@@ -3,6 +3,7 @@ type: source
 title: Design Systems for AI Agents — Refero
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/
 source_type: webpage
 author: Refero

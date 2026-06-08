@@ -3,6 +3,7 @@ type: source
 title: Minimalissimo Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/35ff063b-1fcc-48a2-83b3-56da01e23880
 source_type: design-md
 author: Refero

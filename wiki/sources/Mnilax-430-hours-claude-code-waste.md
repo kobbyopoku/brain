@@ -3,6 +3,7 @@ type: source
 title: I Tracked 430 Hours of Claude Code Usage — 73% Was Wasted on These 9 Patterns — Mnilax
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/Mnilax/status/2050261839653556522
 source_type: x-thread
 author: Mnilax

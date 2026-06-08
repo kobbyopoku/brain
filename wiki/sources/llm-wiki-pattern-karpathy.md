@@ -3,6 +3,7 @@ type: source
 title: LLM Wiki — Karpathy
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 source_type: gist
 author: Andrej Karpathy

@@ -3,6 +3,7 @@ type: source
 title: Stripe Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/48e5de76-05d5-4c4e-a269-c7c245b291ec
 source_type: design-md
 author: Refero

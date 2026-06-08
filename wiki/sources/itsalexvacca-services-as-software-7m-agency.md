@@ -3,6 +3,7 @@ type: source
 title: How I Quit Sam Altman and Built a $7M Services-as-Software Agency — Alex Vacca
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/itsalexvacca/status/2050231011242594537
 source_type: x-thread
 author: Alex Vacca

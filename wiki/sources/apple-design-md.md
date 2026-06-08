@@ -3,6 +3,7 @@ type: source
 title: Apple Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/c9cabb96-32fa-4896-837a-f2497ce1c856
 source_type: design-md
 author: Refero

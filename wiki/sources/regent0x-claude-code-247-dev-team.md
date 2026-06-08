@@ -3,6 +3,7 @@ type: source
 title: How I Turned My Claude Code Into 24/7 Dev Team — regent0x_
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/regent0x_/status/2049499354323399002
 source_type: x-thread
 author: regent0x_

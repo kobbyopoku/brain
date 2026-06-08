@@ -3,6 +3,7 @@ type: source
 title: "AGENTIC WORKFLOWS: Build & Sell AI Automations (2026) — Nick Saraev"
 created: 2026-05-03
 updated: 2026-05-03
+content_status: substantive
 source_url: https://www.youtube.com/watch?v=MxyRjL7NG18
 source_type: video
 author: Nick Saraev

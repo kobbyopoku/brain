@@ -3,6 +3,7 @@ type: source
 title: How to Build & Sell AI Automations That Generate $10K Per Month — Khairallah
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/eng_khairallah1/status/2050505874125529592
 source_type: x-thread
 author: Khairallah (@eng_khairallah1)

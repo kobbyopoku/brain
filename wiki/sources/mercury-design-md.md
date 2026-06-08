@@ -3,6 +3,7 @@ type: source
 title: Mercury Design System (DESIGN.md from Refero)
 created: 2026-05-02
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/3172cd4d-118a-4a16-a259-6b634d32322e
 source_type: design-md
 author: Refero

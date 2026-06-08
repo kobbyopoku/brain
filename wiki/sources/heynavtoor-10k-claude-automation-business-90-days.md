@@ -3,6 +3,7 @@ type: source
 title: How to Build a $10K Per Month Claude Automation Business in 90 Days — heynavtoor
 created: 2026-05-04
 updated: 2026-05-04
+content_status: substantive
 source_url: https://x.com/heynavtoor/status/2050876037047685435
 source_type: x-thread
 author: heynavtoor

@@ -3,6 +3,7 @@ type: source
 title: 6 Paul Graham-Style Startup Evaluation Prompts — godofprompt
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/godofprompt/status/2040377584551358575
 source_type: x-thread
 author: godofprompt

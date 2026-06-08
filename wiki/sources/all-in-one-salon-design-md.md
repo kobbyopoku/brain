@@ -3,6 +3,7 @@ type: source
 title: All-In-One Salon (GlossGenius) Design System (DESIGN.md from Refero)
 created: 2026-05-04
 updated: 2026-05-04
+content_status: substantive
 source_url: https://styles.refero.design/style/all-in-one-salon
 source_type: design-md
 author: Refero

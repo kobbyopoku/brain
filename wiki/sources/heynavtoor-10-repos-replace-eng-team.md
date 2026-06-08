@@ -3,6 +3,7 @@ type: source
 title: 10 GitHub Repos to Replace an Engineering Team — heynavtoor
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/heynavtoor/status/2046838684260188406
 source_type: x-thread
 author: heynavtoor

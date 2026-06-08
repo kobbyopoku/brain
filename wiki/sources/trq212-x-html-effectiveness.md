@@ -3,6 +3,7 @@ type: source
 title: Using Claude Code — The Unreasonable Effectiveness of HTML — Thariq (@trq212)
 created: 2026-05-08
 updated: 2026-05-08
+content_status: substantive
 source_url: https://x.com/trq212/status/2052809885763747935
 source_type: x-thread
 author: Thariq Shihipar

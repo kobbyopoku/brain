@@ -3,6 +3,7 @@ type: source
 title: 20 Claude Prompts that Turn a $20 Subscription into a Personal Assistant, Editor, Coach, and Analyst — Anatoli Kopadze
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/AnatoliKopadze/status/2049492553133629950
 source_type: x-thread
 author: Anatoli Kopadze

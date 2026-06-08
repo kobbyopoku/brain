@@ -3,6 +3,7 @@ type: source
 title: Anthropic Just Open-Sourced Skills — HeyZaraKhan
 created: 2026-05-02
 updated: 2026-05-02
+content_status: substantive
 source_url: https://x.com/HeyZaraKhan/status/2035773764881793330
 source_type: x-thread
 author: HeyZaraKhan

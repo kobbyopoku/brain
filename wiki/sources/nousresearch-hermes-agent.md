@@ -3,6 +3,7 @@ type: source
 title: NousResearch/hermes-agent — Self-Improving Open-Source AI Agent
 created: 2026-05-05
 updated: 2026-05-05
+content_status: substantive
 source_url: https://github.com/NousResearch/hermes-agent
 source_type: github-repo
 author: Nous Research

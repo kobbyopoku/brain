@@ -3,6 +3,7 @@ type: source
 title: There's a new way to build AI agentic systems — Bob Mwathu (LinkedIn)
 created: 2026-05-05
 updated: 2026-05-05
+content_status: substantive
 source_url: https://www.linkedin.com/posts/bob-mwathu_theres-a-new-way-to-build-ai-agentic-systems-activity-7413147110675750912-cRU4
 source_type: linkedin-post
 author: Bob Mwathu
