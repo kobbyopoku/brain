@@ -2,7 +2,7 @@
 type: concept
 title: Ralph Loop
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-08
 aliases: [initializer-coding-agent-loop, two-phase-agent-loop]
 tags: [agent-harness, agentic-loop, long-horizon-tasks, anthropic, agentic-ai]
 ---
@@ -41,6 +41,7 @@ It is a concrete answer to the long-horizon problem in agent harnesses: how to m
 
 ## Related concepts
 
+- [[ralph-wiggum-loop]] — the community bash-loop sibling: an agent re-run against the same repo context each iteration, relying on fresh context per pass. Same filesystem-as-continuity idea; this Ralph Loop is the Anthropic two-phase (Initializer + Coding agent) formalization of it.
 - [[agentic-loop]] — the Ralph Loop is a specific multi-session instance of an agentic loop.
 - [[agent-harness]] — the pattern is a harness-level design for long-horizon work.
 - [[external-memory]] — the filesystem-as-continuity mechanism.
