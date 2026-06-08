@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 145 sources · 668 entities · 211 concepts · 12 projects · 6 syntheses · last updated 2026-06-06 *(bulk backlog ingest — 47 sources; full raw backlog cleared)*
+**Stats**: 145 sources · 668 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-08 *(Kivora project update + 3 concepts seeded: cross-env-publishing-infrastructure, multi-agent-delegation-with-verifier, hybrid-rag-retrieval)*
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -1049,6 +1049,7 @@ New entity pages from the 47-source backlog ingest, grouped by `entity_type`. St
 ### Patterns and meta-patterns
 
 - [[wiki/concepts/attractor-engineering]] — *(new 2026-05-09)* Hiroyuki Nakahata's design theory for AI-era software development: codebase as field, PR as force, CI/CD as dissipative system, ArchSig as observer.
+- [[wiki/concepts/cross-env-publishing-infrastructure]] — *(new 2026-06-08)* Ed25519-signed manifest envelopes + 2-person approval + atomic upsert with stable codes + nonce replay protection + audit log; pattern for safely propagating shared content across environments. Worked example: Kivora's W2-W5 + Phase A-D rollouts.
 - [[wiki/concepts/dual-write-rollout]] — additive parallel-write migration pattern: new path runs next to legacy, failures swallowed, observed for a window, then ownership flips. Worked example: Kivora's 2026-05-08 Finding-schema migration.
 - [[wiki/concepts/llm-wiki-pattern]] — persistent, LLM-maintained markdown wiki built on top of curated raw sources. **4 wild citations now.**
 - [[wiki/concepts/markdown-as-agent-contract]] — meta-pattern: markdown files as the contract layer between humans and AI agents.
@@ -1072,12 +1073,14 @@ New entity pages from the 47-source backlog ingest, grouped by `entity_type`. St
 - [[wiki/concepts/do-framework]] — Saraev's DOE framework (Directive + Orchestration + Execution; previously framed as 2-layer DO). The deterministic-agentic-workflow architecture.
 - [[wiki/concepts/self-annealing]] — system-level property of DOE workflows: directives accumulate fixes via the orchestrator's error-recovery loop, getting more reliable with use.
 - [[wiki/concepts/hot-cache]] — `_hot.md`: 500-token active-state file extending the LLM Wiki pattern.
+- [[wiki/concepts/multi-agent-delegation-with-verifier]] — *(new 2026-06-08)* one persona synchronously delegates to specialized personas; an independent Verifier persona gates destructive side-effects with its own context. Separates "who decides" from "who confirms safe to do." Worked example: Kivora's Compass + Pulse + Autopilot + Verifier souls package.
 - [[wiki/concepts/progressive-disclosure]] — load metadata first, content on demand.
 - [[wiki/concepts/reasoning-execution-split]] — LLM reasons; deterministic code executes.
 - [[wiki/concepts/reliability-decay-math]] — chained-probability problem that motivates separation-of-concerns architectures.
 
 ### Integration & data layer
 
+- [[wiki/concepts/hybrid-rag-retrieval]] — *(new 2026-06-08)* BM25 + dense vector candidate generation merged via Reciprocal Rank Fusion + cross-encoder reranker for the final top-N. Higher precision than single-method retrieval. Worked example: Kivora's Phase 2 Wave 3 RAG layer.
 - [[wiki/concepts/mcp-server]] — Model Context Protocol server; the tool-integration layer.
 
 ### Agent-contract markdown files
