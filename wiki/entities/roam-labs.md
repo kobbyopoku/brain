@@ -45,6 +45,7 @@ Verified corporate identity (per ROAM Labs' legal documents + filled [[wiki/sour
 - **Lines of business**: primary — Software Development / Computer Programming (ISIC 6201); secondary — IT Consultancy & Hardware Development (ISIC 6202, 6209). Premises leased; currency GHS.
 - **Governance**: directors Godwin Opoku Duah and Richmond Opoku Duah; company secretary Frank Opoku Mensah Duah. (Names/roles only — officer contact details, personal TINs, and beneficial-ownership PII are intentionally not recorded here.)
 - **Source documents** (certificate of incorporation, standard regulations, Form BO beneficial-ownership, filled D&B questionnaire): held locally at `~/Library/Mobile Documents/com~apple~CloudDocs/ROAM/Legal Documents/` — **not stored in this repo** (legal/PII; kept out of version control).
+- **D-U-N-S® application** (2026-06-17): initiated with Dun & Bradstreet for the **free** standard issuance (~30 working days); paid $900 DUNS Certificate declined. Order form requested; documents pending (address proof outstanding). See [[wiki/sources/dnb-duns-number-outreach]].
 
 ## Portfolio
 

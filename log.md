@@ -845,3 +845,7 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 ## [2026-06-17] update | ROAM Labs — verified corporate identity from legal docs
 - pages updated: [[wiki/entities/roam-labs]] (new "Legal & registration" section: legal name ROAMLABS TECHNOLOGY CONSULT LTD, Reg CS029810226, inc. 12-Feb-2026, registered address, capital, LOB, governance), [[wiki/sources/dnb-duns-number-outreach]] (open question resolved → ROAM Labs)
 - notes: Facts sourced from ROAM legal pack at ~/.../ROAM/Legal Documents/ (filled D&B questionnaire + incorporation docs). RAW DOCUMENTS AND PERSONAL/OFFICER PII DELIBERATELY NOT STORED in the repo (incorporation scans, Form BO beneficial-ownership, director TINs/contacts/home address) — repo is pushed to GitHub. Only company-level public-record identity captured.
+
+## [2026-06-17] update | D&B D-U-N-S application — free tier elected, reply sent
+- pages updated: [[wiki/sources/dnb-duns-number-outreach]] (paid $900 DUNS Certificate tier recorded; status: free standard issuance elected, $900 declined, order form requested, docs pending; sender email + corrected source_date 2026-06-05), [[wiki/entities/shariq-quraishi]] (email QuraishiS@dnbsame.com), [[wiki/entities/roam-labs]] (D-U-N-S application status line)
+- notes: Godwin sent the reply electing free issuance; documents not yet attached (address proof still outstanding). No PII/raw docs added.

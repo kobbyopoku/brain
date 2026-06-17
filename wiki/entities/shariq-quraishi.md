@@ -17,7 +17,8 @@ Appears in this wiki via [[wiki/sources/dnb-duns-number-outreach]].
 ## Key facts
 
 - **Affiliation**: Dun & Bradstreet, South Asia, Middle East & Africa (SAMEA) region. (per [[wiki/sources/dnb-duns-number-outreach]])
-- **Role observed**: outbound contact offering D-U-N-S® Number issuance and "value-added services." (per [[wiki/sources/dnb-duns-number-outreach]])
+- **Email**: QuraishiS@dnbsame.com. (per [[wiki/sources/dnb-duns-number-outreach]])
+- **Role observed**: outbound contact offering D-U-N-S® Number issuance and the paid $900 DUNS Certificate upsell. (per [[wiki/sources/dnb-duns-number-outreach]])
 
 ## Mentioned in
 

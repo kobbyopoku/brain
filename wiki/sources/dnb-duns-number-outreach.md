@@ -5,8 +5,8 @@ created: 2026-06-17
 updated: 2026-06-17
 source_url:
 source_type: other
-author: Shariq Quraishi (Dun & Bradstreet South Asia, Middle East & Africa)
-source_date: 2026-06-17
+author: Shariq Quraishi (Dun & Bradstreet South Asia, Middle East & Africa) <QuraishiS@dnbsame.com>
+source_date: 2026-06-05
 raw_path: raw/dnb-duns-outreach-shariq-quraishi.md
 content_status: substantive-verbatim
 tags: [business-operations, business-identity, due-diligence, outreach, sales-email, stub-adjacent]
@@ -31,9 +31,11 @@ tags: [business-operations, business-identity, due-diligence, outreach, sales-em
 
 ## Notes
 
-This is a cold/outbound sales email, so its framing is promotional; the headline statistics are vendor-reported and should not be cited as fact without independent verification. The substantive, actionable content is the **document checklist** and the **address-consistency requirement**, which are the real gating factors for issuance. The "value-added services" line is the upsell hook — a D-U-N-S Number itself is free to obtain directly from D&B, so any paid tier (e.g., expedited issuance, credit-building products, monitoring) should be evaluated separately on its own merits.
+This is a cold/outbound sales email, so its framing is promotional; the headline statistics are vendor-reported and should not be cited as fact without independent verification. The substantive, actionable content is the **document checklist** and the **address-consistency requirement**, which are the real gating factors for issuance. The "value-added services" line is the upsell hook — a D-U-N-S Number itself is free to obtain directly from D&B, so any paid tier should be evaluated separately on its own merits. A follow-up email (2026-06-05) made the upsell concrete: a paid **DUNS Certificate** (a printable certificate document, 5–10 working days, **USD $900, advance payment**) — distinct from, and not required to hold, the free standard D-U-N-S Number.
 
-~~Open question: which entity should carry the D-U-N-S Number?~~ **Resolved 2026-06-17**: the application is being filed for [[wiki/entities/roam-labs|ROAMLABS TECHNOLOGY CONSULT LTD]] (Reg. CS029810226, incorporated 12-Feb-2026). The D&B questionnaire has been completed (`Questionnaire_DnB_ROAMLABS_Filled.docx`, 2026-06-12) and the supporting legal documents (incorporation certificate, regulations, Form BO) are assembled in `~/.../ROAM/Legal Documents/`. Remaining "to be provided" fields in the questionnaire: telephone, website, employee counts, estimated sales, and bank details.
+~~Open question: which entity should carry the D-U-N-S Number?~~ **Resolved 2026-06-17**: the application is being filed for [[wiki/entities/roam-labs|ROAMLABS TECHNOLOGY CONSULT LTD]] (Reg. CS029810226, incorporated 12-Feb-2026). The D&B questionnaire has been completed and finalized (`Questionnaire_DnB_ROAMLABS_Filled_v2.docx`, 2026-06-17 — employees 3/3/3, sales pre-revenue, all blanks filled) and the supporting legal documents (incorporation certificate, regulations, Form BO, company profile) are assembled in `~/.../ROAM/Legal Documents/`.
+
+**Status (2026-06-17)**: Godwin replied to [[wiki/entities/shariq-quraishi|Shariq]] electing the **free standard issuance (~30 working days)** and **declining the $900 DUNS Certificate**, requesting the official order form. The reply did **not** yet attach the documents — those are to be submitted with/after the order form. Outstanding before document submission: a **valid address proof** (utility bill or notarized lease matching the registered office) — not yet on file.
 
 ## Mentioned entities
 
