@@ -3,9 +3,9 @@ type: entity
 title: ROAM Labs
 entity_type: organization
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-17
 website: ""
-aliases: [ROAM, _roamlabs]
+aliases: [ROAM, _roamlabs, ROAMLABS TECHNOLOGY CONSULT LTD, RoamLabs]
 tags: [organization, ai-products, services-agency, founded-by-wiki-owner, ghana, primary-org]
 ---
 
@@ -30,6 +30,21 @@ The "ROAM" umbrella covers product sub-brands:
 - **Marketing surface**: [[wiki/projects/roamlabs|_roamlabs]] corporate site (Next.js 14 + custom NeuralNetwork canvas hero).
 - **Architectural signature**: Spring Boot 3 + FastAPI + Claude (Sonnet 4 / Haiku 4) + pgvector RAG + React 19 / Next.js + React Native + Expo + PostgreSQL + Redis.
 - **MCP integration**: production in Clarvyn (Wave 6E); native to Kivora; planned for Vedge.
+
+## Legal & registration
+
+Verified corporate identity (per ROAM Labs' legal documents + filled [[wiki/sources/dnb-duns-number-outreach|D&B questionnaire]], 2026). Company-level public-record facts only — personal/officer PII deliberately excluded.
+
+- **Legal name**: ROAMLABS TECHNOLOGY CONSULT LTD (trading style: *RoamLabs*).
+- **Legal structure**: Private Limited Company (Company Limited by Shares), incorporated under Ghana's **Companies Act 2019 (Act 992)**.
+- **Registration No.**: CS029810226 (former Business Name registration: BN284600422).
+- **Tax Identification No. (company)**: C0066862108.
+- **Date of incorporation**: 12 February 2026 (perpetual succession).
+- **Registered / office address**: GA-686 Amomorle Estates, Near Rasta Camp, Ningo Prampram, Greater Accra, Ghana (Ghana Post GPS: GN-0729-2794). Postal: P.O. Box OS 1834, Osu–Accra.
+- **Capital**: authorized 1,000,000 ordinary shares; issued 50,000; **stated capital GHS 50,000** (fully paid).
+- **Lines of business**: primary — Software Development / Computer Programming (ISIC 6201); secondary — IT Consultancy & Hardware Development (ISIC 6202, 6209). Premises leased; currency GHS.
+- **Governance**: directors Godwin Opoku Duah and Richmond Opoku Duah; company secretary Frank Opoku Mensah Duah. (Names/roles only — officer contact details, personal TINs, and beneficial-ownership PII are intentionally not recorded here.)
+- **Source documents** (certificate of incorporation, standard regulations, Form BO beneficial-ownership, filled D&B questionnaire): held locally at `~/Library/Mobile Documents/com~apple~CloudDocs/ROAM/Legal Documents/` — **not stored in this repo** (legal/PII; kept out of version control).
 
 ## Portfolio
 

@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 145 sources · 668 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-08 *(Kivora project update + 3 concepts seeded: cross-env-publishing-infrastructure, multi-agent-delegation-with-verifier, hybrid-rag-retrieval)*
+**Stats**: 146 sources · 671 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-17 *(filed D&B D-U-N-S® Number outreach — Dun & Bradstreet, D-U-N-S Number, Shariq Quraishi entities)*
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -203,6 +203,7 @@ Initial 20:
 - [[wiki/sources/column-design-md]] — same-philosophy as Stripe, different execution.
 - [[wiki/sources/cursor-design-md]] — *"Warm ivory software studio."*
 - [[wiki/sources/dia-browser-design-md]] — 8px base, 5-stop spectrum gradient.
+- [[wiki/sources/dnb-duns-number-outreach]] — inbound D&B sales email offering a free [[wiki/entities/d-u-n-s-number|D-U-N-S® Number]] (9-digit global business identifier, ~30 working days); document checklist + address-consistency requirements; "value-added services" upsell flagged. First business-operations source in the wiki.
 - [[wiki/sources/elevenlabs-design-md]] — most chromatically restrained.
 - [[wiki/sources/family-design-md]] — most chromatically rich; illustration-led.
 - [[wiki/sources/general-intelligence-company-design-md]] — bi-modal dark hero + light UI.
@@ -288,6 +289,7 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/dhanian]] — *(stub)* author of the System Design ebook the e_opore thread promotes.
 - [[wiki/entities/paul-graham]] — invoked as named persona in startup-eval prompts.
 - [[wiki/entities/sam-altman]] — Worldcoin founder; OpenAI CEO (widely known, partially sourced).
+- [[wiki/entities/shariq-quraishi]] — *(stub)* Dun & Bradstreet SAMEA rep; sent Godwin the D-U-N-S® Number outreach.
 - [[wiki/entities/vannevar-bush]] — 1945 originator of the [[memex]]; conceptual ancestor of the LLM Wiki.
 
 ### People — wiki owner
@@ -305,6 +307,7 @@ Added 2026-05-04 (12 new brands + Apple alt surface):
 - [[wiki/entities/alventra-marketing]] — *(stub)* Sarvesh's local-SEO agency; runs the 20-prompt Claude Cowork system as managed service.
 - [[wiki/entities/anthropic]] — AI research company; maintainer of Claude and Claude Code.
 - [[wiki/entities/coldiq]] — Alex Vacca's $7M ARR services-as-software agency.
+- [[wiki/entities/dun-and-bradstreet]] — global business-data company; issuer of the [[wiki/entities/d-u-n-s-number|D-U-N-S® Number]]. Reached out to Godwin via its SAMEA region.
 - [[wiki/entities/iternal-technologies]] — *(stub)* maintainer of [[wiki/entities/blockify|Blockify]]; enterprise RAG preprocessing focus.
 - [[wiki/entities/lunar-strategy]] — *(stub)* Shann Holmberg's content-strategy agency; deploys Content OS for clients.
 - [[wiki/entities/nous-research]] — open-weight AI research collective; publisher of Hermes-series models and [[wiki/entities/hermes-agent|Hermes Agent]].
@@ -412,6 +415,7 @@ Tools named in [[wiki/sources/nateherk-claude-code-os-3m-business]] as connectio
 ### Protocols / standards
 
 - [[wiki/entities/model-context-protocol]] — *(stub)* Anthropic's open standard for AI-tool integration (distinct from individual MCP servers; see [[mcp-server]] concept).
+- [[wiki/entities/d-u-n-s-number]] — Dun & Bradstreet's unique 9-digit business identifier (Data Universal Numbering System); used for global business verification and due diligence. Free standard issuance.
 
 ### SEO / lead-gen / publish tooling
 
