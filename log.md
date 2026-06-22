@@ -849,3 +849,10 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 ## [2026-06-17] update | D&B D-U-N-S application — free tier elected, reply sent
 - pages updated: [[wiki/sources/dnb-duns-number-outreach]] (paid $900 DUNS Certificate tier recorded; status: free standard issuance elected, $900 declined, order form requested, docs pending; sender email + corrected source_date 2026-06-05), [[wiki/entities/shariq-quraishi]] (email QuraishiS@dnbsame.com), [[wiki/entities/roam-labs]] (D-U-N-S application status line)
 - notes: Godwin sent the reply electing free issuance; documents not yet attached (address proof still outstanding). No PII/raw docs added.
+
+## [2026-06-22] lint | Weekly wiki health check — 1 auto-fix, 4 items for human review
+- pages updated: [[index]] (llm-wiki-pattern Concepts entry: "4 wild citations" → "5 wild citations")
+- auto-fixes: 1 (stale wild-citation count in index.md Concepts section)
+- mechanical lint: exit 0, 1053 files audited, 0 issues
+- human-review items: (1) ai-engineer vs ai-engineering concept overlap; (2) 8 content-incomplete X/Twitter source re-clip backlog; (3) Hermes Agent 150k+ star count unverified; (4) Zodchiii unverified thinking-effort claim now 6 weeks stale
+- notes: LINT_REPORT.md written at repo root. Semantic pass found no new contradictions or orphans beyond items already tracked from 2026-06-08 pass.
