@@ -849,3 +849,8 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 ## [2026-06-17] update | D&B D-U-N-S application — free tier elected, reply sent
 - pages updated: [[wiki/sources/dnb-duns-number-outreach]] (paid $900 DUNS Certificate tier recorded; status: free standard issuance elected, $900 declined, order form requested, docs pending; sender email + corrected source_date 2026-06-05), [[wiki/entities/shariq-quraishi]] (email QuraishiS@dnbsame.com), [[wiki/entities/roam-labs]] (D-U-N-S application status line)
 - notes: Godwin sent the reply electing free issuance; documents not yet attached (address proof still outstanding). No PII/raw docs added.
+
+## [2026-06-26] update-project | Helm
+- page updated: [[wiki/projects/helm]]
+- changes: current focus rewritten (design → working platform, 5 slices shipped); 7 new architecture decisions (#13–19); frontmatter updated: 2026-05-09 → 2026-06-26, repo/stack revised; open questions + lessons learned + risks refreshed; index.md helm line de-staled
+- notes: Core abstraction pivoted from the fixed 6-agent GTM roster to a generic Org→Workspace→Agents platform (decision #13). Hermes topology B adopted (per-agent HERMES_HOME, decision #14). Repos pushed to personal godwin-roam account, NOT the planned ROAM-Labs org (decision #19, revises Q2). One live blocker: OpenRouter 402 (no credits). Status unchanged (active); index entry de-staled (not moved). No concept page created (declined). No project source modified.

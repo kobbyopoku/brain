@@ -2,11 +2,11 @@
 type: project
 title: Helm
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-06-26
 status: active
-repo: multi-repo (local .git in each of helm-backend, helm-portal, helm-mcp as of 2026-05-09; outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; remotes pending github.com/ROAM-Labs/{helm-backend,helm-portal,helm-mcp} org creation per Q2)
+repo: multi-repo (4 repos as of 2026-06-26 — outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; remotes now exist at github.com/godwin-roam/{helm-backend,helm-portal,helm-mcp,helm-docs} — pushed 2026-06-26 to the personal godwin-roam account, NOT the originally-planned ROAM-Labs org per revised Q2/decision #19; active branch feat/agents with main==feat/agents on backend+portal; helm-docs is a 4th repo holding specs/ + plans/)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm
-stack: [hermes-agent, python-3.11, fastapi, alembic, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, railway, vercel, docker-compose]
+stack: [hermes-agent, python-3.11, fastapi, sqlalchemy-2.0, alembic, apscheduler, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, shadcn-ui, base-ui, pnpm, railway, vercel, docker-compose, docker]
 started: 2026-05-09
 owner_org: roam-labs
 affiliation: roam-labs-internal
@@ -35,6 +35,21 @@ ROAM Labs has 3 owned products, 2 client engagements, 1 government subcontract, 
 ## Current focus
 
 > _Updated as Godwin progresses through the build order._
+
+**2026-06-26 — From design to a working platform; core abstraction pivoted.** Backend has ~47 commits, portal ~39, docs ~16 since the 2026-05-09 scaffold. The build diverged from the original fixed 6-agent GTM roster (Lead / Sales / Marketing / Ops / PM / Analytics) into a **generic multi-agent ops platform**:
+
+- **Data model pivot**: `Org → Workspace(=product/project) → Agents(1:N)`. Users create workspaces and spin up arbitrary agents via a UI; the prescribed CyrilXBT roster became *example* agents, not a hardcoded set. `/leads` was de-scoped (mock deleted; `Lead` re-scoped under a workspace). See decision #13.
+- **Hermes topology B decided** (spike verdict, commit `49db1b3`): a standalone `helm-hermes` container with **per-agent `HERMES_HOME`** dirs — supersedes the original in-process FastAPI-embedding assumption (decisions #1/#2). UI agent config → Hermes profile provisioning; Save re-provisions.
+- **Shipped slices** (all on branch `feat/agents`, subagent-driven SDD, Playwright-verified):
+  - **A** — workspaces + data model (Org/Workspace/Agent models; async Alembic migrations 0001–0005; lead scoping).
+  - **B** — UI-driven agents → Hermes profiles (agent CRUD, per-agent chat, kind→starter-soul templates, toolset options).
+  - **#1** — task execution engine: in-process APScheduler worker (`claim/run/reap`), `tasks` + `activity_events` tables, `/tasks` `/activity` `/health` APIs.
+  - **#2** — AI Studio shell + agent playground (`shadcn/ui` on `@base-ui/react`, dark theme, AppShell, per-agent Chat/Activity/Tasks/Overview tabs + settings panel).
+  - **#3** — cross-workspace dashboard (`GET /dashboard`) + portal restyle + workspace profile UX.
+  - **#4** — task scheduling: `Schedule` model + DB-polled `schedule_tick` (once + interval, overdue→fire-once-no-backfill, pile-up guard, ends_at/max_runs); Schedules tab + New-task dialog modes.
+- **Running locally**: `docker compose up -d` → portal :3000, backend :8000, hermes, postgres (host :5433). Playground verified live.
+- **The ONE blocker for live agent runs**: OpenRouter **402 (no credits)**. Chat + task runs reach `hermes → OpenRouter` and 402 (backend wraps it as 502; portal renders an inline chat-error bubble / task lands `failed`). Everything else works to that boundary — add credits and agents go live. Key lives only in `helm-backend/.env` (gitignored).
+- **Repos pushed** (2026-06-26): all four to `github.com/godwin-roam/*` over an SSH host alias `github-roam` (the planned `ROAM-Labs` org was unavailable — kobbyopoku lacked repo-create there). See decision #19.
 
 **2026-05-09 — Multi-repo scaffold materialized.** All three sub-repos exist at `/Users/kobbyopoku/ROAM/CascadeProjects/helm/`. Each has `.git` initialized but **no commits yet** — everything sits as untracked working-tree state awaiting first commits + remote creation:
 
@@ -352,6 +367,13 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 | 10 | **Tailwind 4 CSS-first config (helm-portal)** — no `tailwind.config.ts`; theme tokens declared in `app/globals.css` via `@theme` | Tailwind 4 default; theme lives next to the CSS that uses it; one fewer config file | Scaffold 2026-05-09 |
 | 11 | **`vercel.ts` over `vercel.json` (helm-portal)** | Vercel 2026 platform default; full TypeScript with `@vercel/config`, IntelliSense, env access in config | Scaffold 2026-05-09 |
 | 12 | **docker-compose at wrapper for local Postgres + pgvector** | Local-dev parity with Railway-managed Postgres; bind-mounting `helm-backend/db/schema.sql` as init script makes `docker compose up -d` reproducibly stand up the schema; faster iteration than tunneling to Railway during development | Scaffold 2026-05-09 (intra-day) |
+| 13 | **Generic `Org → Workspace(=product/project) → Agents(1:N)` data model** (supersedes the fixed 6-agent GTM roster) | Once built, a workspace/agent abstraction proved more flexible than a hardcoded roster; the CyrilXBT 6 became *example* agents users create via UI, not wired-in code. `/leads` de-scoped, `Lead` re-scoped under a workspace | Build 2026-06 (revises Layer 5 design) |
+| 14 | **Hermes topology B — standalone `helm-hermes` container + per-agent `HERMES_HOME`** | Spike verdict (`49db1b3`): per-agent home dirs give clean agent isolation + profile provisioning; supersedes the original in-process FastAPI embedding (decisions #1/#2) | Spike 2026-06 (`49db1b3`) |
+| 15 | **In-process APScheduler task worker (`claim/run/reap`) + DB-polled `schedule_tick`** | Tasks claimed/run/reaped in-process; schedules fire by a 30s DB-polled tick (once + interval, no backfill, pile-up guard). Matches Clarvyn's APScheduler pattern (decision #8); no external queue for v1 | Build 2026-06 (#1, #4) |
+| 16 | **SQLAlchemy 2.0 async ORM + async Alembic migrations** | Replaces the raw `schema.sql` init path; typed `Mapped[...]` models + migrations 0001–0005 as the source of truth; `alembic upgrade head` on startup | Build 2026-06 |
+| 17 | **shadcn/ui on `@base-ui/react` + AI Studio dark theme + AppShell** | UI-component discipline + a single shell (sidebar + center + right/bottom slots) wrapping all routes; pnpm for reproducible installs | Build 2026-06 (#2) |
+| 18 | **Spec-driven, subagent-driven dev (SDD) via `helm-docs`** | Each slice = spec → plan (N tasks) → subagent-executed tasks → review → merge to `feat/agents`; specs + plans live in the `helm-docs` repo | Practice 2026-06 |
+| 19 | **Repos pushed to personal `godwin-roam` GitHub account, not the planned `ROAM-Labs` org** | kobbyopoku lacked repo-create in the ROAM-Labs org; repos created under godwin-roam and pushed via SSH alias `github-roam`. Revises the Q2 (2026-05-09) "new ROAM-Labs org" resolution | Push 2026-06-26 |
 
 ## Resolved decisions (2026-05-09)
 
@@ -375,11 +397,16 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 
 ## Open questions
 
-*(All resolved as of 2026-05-09. Project is in build-ready state.)*
+*(2026-05-09 design questions all resolved. As of 2026-06-26, build is well underway — 5 feature slices shipped on `feat/agents`.)*
+
+- **Active blocker**: OpenRouter has no credits → live agent runs 402. The full pipeline (`portal → backend → hermes → OpenRouter`) is verified up to that boundary; add credits to go live. See Current focus 2026-06-26.
+- **Q2 repo-location resolved differently than planned**: repos now live under the personal `github.com/godwin-roam` account, not a `ROAM-Labs` org (decision #19). Open: migrate to a `ROAM-Labs` org if/when repo-create access exists there.
 
 ## Lessons learned
 
-*(none yet — project is at the brief-and-design stage)*
+- **Design pivots on contact with implementation.** The fixed 6-agent GTM roster (modeled on CyrilXBT) gave way to a generic `Org → Workspace → Agents` abstraction once code started — the durable data model outlived the prescribed roster, which became *example* agents rather than wired-in code (decision #13).
+- **Per-agent `HERMES_HOME` (topology B) beat in-process embedding** for agent isolation + profile provisioning — the spike inverted the original 2026-05 in-process assumption (decision #14).
+- **Subagent-driven SDD scales cleanly**: spec → plan (N tasks) → isolated subagent execution → review → merge carried 5 feature slices to `feat/agents` with browser-verified, review-clean merges each time (decision #18).
 
 ## Risks
 
@@ -388,6 +415,7 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 - **Single-user assumption**: if Godwin hires a team, Helm's no-RBAC architecture becomes a refactor liability. Mitigation: data model carries `tenant_id` from day 1 (per the multi-tenant pivot insurance in [[wiki/syntheses/helm-commercialization-paths]]); a `user_id` column on per-tenant write rows is implied by the same scoping. UI surfaces neither in v1.
 - **Cross-product context bleed**: a Lead Management agent that pitches Vedge to a clinic might also accidentally cross-sell Clarvyn (HR for clinic owners?) — could be feature, could be confusion. Mitigation: `primary_product` ENUM column on every business-data row (see Layer 3 schema); agent system prompts explicitly include *"lead with `primary_product`; mention secondary products only if signals strongly support"*.
 - **Hermes Agent's self-improving loop**: it creates skills from experience. Without supervision, it might create skills that don't match Godwin's preferences. Mitigation: skill-creation review queue in Helm UI.
+- **Live agent runs gated on OpenRouter credit (2026-06-26)**: the whole pipeline is verified up to the `hermes → OpenRouter` call, which 402s with no credits. Single hard dependency between "everything works" and "agents actually run"; mitigation is simply funding the key (`helm-backend/.env`, gitignored).
 
 ## Composition with the brain
 
