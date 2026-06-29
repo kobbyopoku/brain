@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 146 sources · 671 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-17 *(filed D&B D-U-N-S® Number outreach — Dun & Bradstreet, D-U-N-S Number, Shariq Quraishi entities)*
+**Stats**: 146 sources · 671 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-29 *(weekly lint — corrected llm-wiki-pattern citation count in index from 4 → 5+)*
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -1055,7 +1055,7 @@ New entity pages from the 47-source backlog ingest, grouped by `entity_type`. St
 - [[wiki/concepts/attractor-engineering]] — *(new 2026-05-09)* Hiroyuki Nakahata's design theory for AI-era software development: codebase as field, PR as force, CI/CD as dissipative system, ArchSig as observer.
 - [[wiki/concepts/cross-env-publishing-infrastructure]] — *(new 2026-06-08)* Ed25519-signed manifest envelopes + 2-person approval + atomic upsert with stable codes + nonce replay protection + audit log; pattern for safely propagating shared content across environments. Worked example: Kivora's W2-W5 + Phase A-D rollouts.
 - [[wiki/concepts/dual-write-rollout]] — additive parallel-write migration pattern: new path runs next to legacy, failures swallowed, observed for a window, then ownership flips. Worked example: Kivora's 2026-05-08 Finding-schema migration.
-- [[wiki/concepts/llm-wiki-pattern]] — persistent, LLM-maintained markdown wiki built on top of curated raw sources. **4 wild citations now.**
+- [[wiki/concepts/llm-wiki-pattern]] — persistent, LLM-maintained markdown wiki built on top of curated raw sources. **5+ wild citations (regent0x_ → nateherk → CyrilXBT → Shruti → Ole Lehmann).**
 - [[wiki/concepts/markdown-as-agent-contract]] — meta-pattern: markdown files as the contract layer between humans and AI agents.
 - [[wiki/concepts/memex]] — Vannevar Bush's 1945 vision of a personal, associative knowledge store.
 - [[wiki/concepts/retrieval-augmented-generation]] — per-query retrieval over raw documents; contrast case + chunk-as-unit-is-the-bug critique (Akshay/Blockify, 2026-05-08).

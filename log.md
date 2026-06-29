@@ -854,3 +854,9 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - page updated: [[wiki/projects/helm]]
 - changes: current focus rewritten (design → working platform, 5 slices shipped); 7 new architecture decisions (#13–19); frontmatter updated: 2026-05-09 → 2026-06-26, repo/stack revised; open questions + lessons learned + risks refreshed; index.md helm line de-staled
 - notes: Core abstraction pivoted from the fixed 6-agent GTM roster to a generic Org→Workspace→Agents platform (decision #13). Hermes topology B adopted (per-agent HERMES_HOME, decision #14). Repos pushed to personal godwin-roam account, NOT the planned ROAM-Labs org (decision #19, revises Q2). One live blocker: OpenRouter 402 (no credits). Status unchanged (active); index entry de-staled (not moved). No concept page created (declined). No project source modified.
+
+## [2026-06-29] lint | Weekly health check — 1 auto-fix, 6 flagged items, vault mechanically clean
+- script: `bin/wiki_lint.py` — 0 broken wikilinks, 0 orphan pages, 0 index drift, 0 frontmatter issues (1,053 files audited)
+- auto-fixes: [[index]] — corrected `[[wiki/concepts/llm-wiki-pattern]]` entry from "4 wild citations" → "5+ wild citations" to match concept page (itsolelehmann ingest 2026-05-21 was the missing 5th); updated stats line to 2026-06-29
+- pages created: `LINT_REPORT.md` at repo root (human-review items)
+- flagged (no edits): (1) `wiki/projects/cpc-rtbvd` stale — award-status unknown, 15 May kickoff date passed with no brain update; (2) `wiki/projects/vedge` 7 weeks stale; (3) 59 source files have git mtime 2026-06-08 but original `updated:` dates — content_status backfill from 644c7af, judgment call whether to bump; (4) zodchiii "thinking effort lowered" claim 4 months unverified; (5) `wiki/entities/brolly-africa` entity page still missing (CLAUDE.md acknowledged TODO); (6) 8-source re-clip backlog carried forward from 2026-06-08 lint
