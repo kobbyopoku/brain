@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 146 sources · 671 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-17 *(filed D&B D-U-N-S® Number outreach — Dun & Bradstreet, D-U-N-S Number, Shariq Quraishi entities)*
+**Stats**: 146 sources · 671 entities · 214 concepts · 12 projects · 6 syntheses · last updated 2026-06-26 *(Helm — pivoted to generic Org→Workspace→Agents platform; decisions #13–19; 4 repos pushed to godwin-roam)*
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 

@@ -854,3 +854,11 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - page updated: [[wiki/projects/helm]]
 - changes: current focus rewritten (design → working platform, 5 slices shipped); 7 new architecture decisions (#13–19); frontmatter updated: 2026-05-09 → 2026-06-26, repo/stack revised; open questions + lessons learned + risks refreshed; index.md helm line de-staled
 - notes: Core abstraction pivoted from the fixed 6-agent GTM roster to a generic Org→Workspace→Agents platform (decision #13). Hermes topology B adopted (per-agent HERMES_HOME, decision #14). Repos pushed to personal godwin-roam account, NOT the planned ROAM-Labs org (decision #19, revises Q2). One live blocker: OpenRouter 402 (no credits). Status unchanged (active); index entry de-staled (not moved). No concept page created (declined). No project source modified.
+
+## [2026-07-06] lint | Weekly health check — 1 auto-fix, 7 semantic items flagged
+- pages updated: [[index]] (stats "last updated" corrected 2026-06-17 → 2026-06-26)
+- pages created: `LINT_REPORT.md` at repo root
+- script: `python3 bin/wiki_lint.py` exit 0 — 0 broken links, 0 ambiguous links, 0 orphans, 0 index drift, 0 frontmatter issues across 1,053 files (1,049 wiki pages)
+- auto-fix: index.md stats "last updated" date corrected to 2026-06-26 (Helm update was the most recent operation; stats header had not been bumped)
+- flagged (human review): (1) wiki/projects/helm.md — 4 stale sub-sections not cleaned up by the 2026-06-26 Helm update: "GitHub org" subsection still says ROAM-Labs/ (decision #19 resolved to godwin-roam/); blocker #2 not struck through; "proposed split (3 repos)" section now stale (4 repos); Q2 table row shows wrong resolution. (2) wiki/projects/vedge.md last updated 2026-05-09 (~8 weeks stale). (3) wiki/projects/glydr.md last updated 2026-05-17 (~7 weeks stale). (4) wiki/entities/brolly-africa.md still missing — owner-gated. (5) Hermes Agent star-count discrepancy (23k vs 150k) already annotated in entity page; no new action needed. (6) Re-clip backlog 8 sources unchanged from 2026-06-08 pass.
+- notes: Wiki mechanical health excellent. All flagged items are semantic. Full details in LINT_REPORT.md.
