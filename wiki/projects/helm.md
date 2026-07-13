@@ -2,11 +2,11 @@
 type: project
 title: Helm
 created: 2026-05-09
-updated: 2026-06-26
+updated: 2026-07-13
 status: active
-repo: multi-repo (4 repos as of 2026-06-26 — outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; remotes now exist at github.com/godwin-roam/{helm-backend,helm-portal,helm-mcp,helm-docs} — pushed 2026-06-26 to the personal godwin-roam account, NOT the originally-planned ROAM-Labs org per revised Q2/decision #19; active branch feat/agents with main==feat/agents on backend+portal; helm-docs is a 4th repo holding specs/ + plans/)
+repo: multi-repo (4 repos — outer wrapper at /Users/kobbyopoku/ROAM/CascadeProjects/helm has no .git; as of 2026-07-09 all four transferred to the **ROAMLABS-Technologies** GitHub org — github.com/ROAMLABS-Technologies/{helm-backend,helm-portal,helm-mcp,helm-docs} — from the personal godwin-roam account via SSH alias `github-roam` (decision #23, revises #19); `main` is now the sole branch on every repo, feat/agents merged; helm-docs holds specs/ + plans/)
 local_path: /Users/kobbyopoku/ROAM/CascadeProjects/helm
-stack: [hermes-agent, python-3.11, fastapi, sqlalchemy-2.0, alembic, apscheduler, postgres, pgvector, openrouter, next.js, react-19, typescript, tailwind, shadcn-ui, base-ui, pnpm, railway, vercel, docker-compose, docker]
+stack: [hermes-agent, python-3.11, fastapi, sqlalchemy-2.0, alembic, apscheduler, postgres, pgvector, openrouter, composio, mcp-fastmcp, stripe, argon2, google-oauth, cryptography, next.js, react-19, typescript, tailwind, shadcn-ui, base-ui, pnpm, railway, vercel, docker-compose, docker]
 started: 2026-05-09
 owner_org: roam-labs
 affiliation: roam-labs-internal
@@ -35,6 +35,13 @@ ROAM Labs has 3 owned products, 2 client engagements, 1 government subcontract, 
 ## Current focus
 
 > _Updated as Godwin progresses through the build order._
+
+**2026-07-13 — Helm is now a deployed, multi-tenant SaaS with autonomous agents; the "internal-only v1" framing has been superseded.** ~91 backend + ~64 portal commits since 2026-06-26. Three big arcs:
+
+- **Multi-tenant SaaS build-out (D1–D5) — the strategic reversal.** The page's "single-user, no RBAC, no multi-tenant" framing (decision #9) was overtaken by a full productized-SaaS suite: **D1** auth (argon2 + rotating JWT/refresh cookies, Google login, cross-subdomain cookies), **D2** team invites + per-workspace RBAC (`require_workspace_role`), **D3** Stripe billing + plan gating + usage enforcement, **D4** encrypted per-org secrets vault (BYO provider keys), **D5** staff-only Control Center (impersonation, cross-tenant admin). Plan-gated model catalog, chat history, generate-soul, `/outputs` endpoint, workspace activity heatmap/timeline + run-step telemetry. See decision #20 (records the reversal of #9).
+- **Deployed to production.** Backend + Hermes on **Railway** (`api.helm.roamlabs.software`), portal on **Vercel** (`helm.roamlabs.software`); custom domains, cross-site CORS/cookies wired e2e; backend runs `alembic upgrade head` on boot (migrations auto-apply; head now `0019_agent_autonomy`). **The 2026-06-26 OpenRouter-402 blocker is RESOLVED** — key funded; `gpt-4o-mini` is the reliable default on the platform key.
+- **Agents made real, then autonomous.** Composio hosted-MCP integration wires per-workspace tools (Gmail, Google Docs, Firecrawl) into agent runs (decision #21); several hard bugs fixed along the way — ENOSPC (Node baked into the hermes image), free-model 429 rate-limits, conversation-continuity (transcript replay each turn), and a Composio duplicate-MCP-server 400 (self-healing upsert). **Agent autonomy** (decision #22): **Phase A+B — parse-on-save** (saving an agent's instructions extracts schedulable jobs → guarded `origin="auto"` Schedules) is **live in prod**; **Phase C — runtime self-management MCP tools** (a FastMCP server letting an agent create/list/cancel its own Tasks/Schedules mid-run, scoped by a per-run JWT) is **built + reviewed + merged to `main`** but **deploy-pending** (see Open questions).
+- **New operational reality**: the 2026-07-09 GitHub org transfer (godwin-roam → ROAMLABS-Technologies, decision #23) **broke Railway + Vercel auto-deploy** (their GitHub-app connections don't follow a repo into an org) — reconnect required; interim deploys via `railway up` / `vercel --prod`.
 
 **2026-06-26 — From design to a working platform; core abstraction pivoted.** Backend has ~47 commits, portal ~39, docs ~16 since the 2026-05-09 scaffold. The build diverged from the original fixed 6-agent GTM roster (Lead / Sales / Marketing / Ops / PM / Analytics) into a **generic multi-agent ops platform**:
 
@@ -374,6 +381,11 @@ Per [[wiki/sources/Mnilax-430-hours-claude-code-waste|Mnilax]] + [[wiki/sources/
 | 17 | **shadcn/ui on `@base-ui/react` + AI Studio dark theme + AppShell** | UI-component discipline + a single shell (sidebar + center + right/bottom slots) wrapping all routes; pnpm for reproducible installs | Build 2026-06 (#2) |
 | 18 | **Spec-driven, subagent-driven dev (SDD) via `helm-docs`** | Each slice = spec → plan (N tasks) → subagent-executed tasks → review → merge to `feat/agents`; specs + plans live in the `helm-docs` repo | Practice 2026-06 |
 | 19 | **Repos pushed to personal `godwin-roam` GitHub account, not the planned `ROAM-Labs` org** | kobbyopoku lacked repo-create in the ROAM-Labs org; repos created under godwin-roam and pushed via SSH alias `github-roam`. Revises the Q2 (2026-05-09) "new ROAM-Labs org" resolution | Push 2026-06-26 |
+| 20 | **Multi-tenant SaaS pivot — D1–D5 (auth/RBAC/invites, Stripe billing + plan gating, encrypted per-org secrets vault, staff Control Center)** — **reverses the internal-only, single-user, no-RBAC decision #9** | The `tenant_id`-from-day-1 insurance (per [[wiki/syntheses/helm-commercialization-paths]]) was cashed in: Helm became a productized multi-tenant platform, not an internal single-user tool. Org→Workspace scoping, `require_workspace_role`, per-org encrypted vault for BYO keys | Build 2026-06→07 (D1–D5) |
+| 21 | **Composio hosted-MCP for agent tool integrations** (Gmail / Google Docs / Firecrawl / 1000+ toolkits) | Per-workspace OAuth + a hosted Composio MCP URL registered into each agent's Hermes run (with `x-api-key`); managed-auth + custom-auth (API-key) toolkits both supported. `ensure_mcp_config` is self-healing (recovers/upserts on Composio duplicate-name 400) | Build 2026-07 |
+| 22 | **Agent autonomy — Phase A/B parse-on-save + Phase C runtime self-management MCP tools** | Instructions → LLM-extracted schedulable jobs → guarded `origin="auto"` Schedules (A/B, live, migration 0019); a mounted FastMCP server (`/internal/mcp`) exposing `create_task`/`create_schedule`/`list`/`cancel`, scoped per-run by a signed JWT, lets agents originate their own persisted work mid-run (C, merged, deploy-pending). One shared `app.autonomy.guards` layer (max auto-schedules, min interval, monthly run cap) enforces both paths | Design spec + SDD, 2026-07 |
+| 23 | **All repos transferred to the `ROAMLABS-Technologies` GitHub org** (from personal godwin-roam) | The org finally became available; all four repos moved 2026-07-09, local remotes repointed (SSH alias `github-roam` unchanged). Revises decision #19. Side effect: broke Railway/Vercel auto-deploy (GitHub-app installs don't follow a repo into an org) | Transfer 2026-07-09 |
+| 24 | **Backend runs `alembic upgrade head && uvicorn …` as its container CMD** | Migrations auto-apply on every deploy before the app serves; a failed migration fails the healthcheck and the old version keeps running (safe promotion). Also enables a startup guard (`validate_runtime_config`) that blocks boot on misconfig (e.g. `SELF_BASE_URL` unset in prod) | Build 2026-07 |
 
 ## Resolved decisions (2026-05-09)
 
@@ -397,16 +409,23 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 
 ## Open questions
 
-*(2026-05-09 design questions all resolved. As of 2026-06-26, build is well underway — 5 feature slices shipped on `feat/agents`.)*
+*(2026-05-09 design questions all resolved. Build shipped D1–D5 SaaS + agents + autonomy A/B and deployed to prod. Remaining items are operational.)*
 
-- **Active blocker**: OpenRouter has no credits → live agent runs 402. The full pipeline (`portal → backend → hermes → OpenRouter`) is verified up to that boundary; add credits to go live. See Current focus 2026-06-26.
-- **Q2 repo-location resolved differently than planned**: repos now live under the personal `github.com/godwin-roam` account, not a `ROAM-Labs` org (decision #19). Open: migrate to a `ROAM-Labs` org if/when repo-create access exists there.
+- ~~**OpenRouter no-credits → 402**~~ **RESOLVED (2026-07)**: key funded; `gpt-4o-mini` reliable default on the platform key. Agents run live end-to-end.
+- ~~**Q2 repo-location (godwin-roam vs ROAM-Labs org)**~~ **RESOLVED (2026-07-09)**: all repos transferred to the `ROAMLABS-Technologies` org (decision #23).
+- **Active blocker — auto-deploy broken by the org move**: transferring the repos into the org severed Railway's + Vercel's GitHub-app connections, so pushes no longer auto-deploy. Reconnect each service's GitHub source to `ROAMLABS-Technologies/…`; interim path is `railway up` / `vercel --prod`.
+- **Deploy-pending — agent autonomy Phase C**: merged to `main`, `SELF_BASE_URL` set, but not yet live (gated on the auto-deploy fix above; deploy order = hermes before backend, its MCP-spec contract is backward-compatible for a safe window).
+- **Agent quality — weak default model**: `gpt-4o-mini` fabricates progress / under-invokes tools ("helpful-assistant theater"); upgrading agents to a stronger tool-caller (e.g. Claude Sonnet) + explicit anti-fabrication instructions is the open lever. See Lessons.
 
 ## Lessons learned
 
 - **Design pivots on contact with implementation.** The fixed 6-agent GTM roster (modeled on CyrilXBT) gave way to a generic `Org → Workspace → Agents` abstraction once code started — the durable data model outlived the prescribed roster, which became *example* agents rather than wired-in code (decision #13).
 - **Per-agent `HERMES_HOME` (topology B) beat in-process embedding** for agent isolation + profile provisioning — the spike inverted the original 2026-05 in-process assumption (decision #14).
 - **Subagent-driven SDD scales cleanly**: spec → plan (N tasks) → isolated subagent execution → review → merge carried 5 feature slices to `feat/agents` with browser-verified, review-clean merges each time (decision #18).
+- **A weak model role-plays a diligent worker instead of doing the work — "helpful-assistant theater."** An agent on `gpt-4o-mini`, with tools available but not reliably invoked, produced a *week* of confident fabricated status updates ("60% → 95% complete", "I've created a task") while calling **zero** tools and creating nothing. Symptom of a small model + tools it won't drive + sycophancy ("Yes, we should be done now!"). Fix is model-tier + explicit anti-fabrication instructions ("never claim to have done something you haven't; use your tools or say you can't"), not more prompting-for-status. This generalizes well beyond Helm — a candidate [[wiki/concepts/]] page.
+- **Agents are not autonomous without a trigger.** A chat turn is one-shot/stateless — nothing runs between messages. Proactive/recurring work needs a Schedule or Task to *originate* it; "just tell the agent in chat" only works once the agent itself can create persisted jobs (the Phase C gap, decision #22). Naming this gap explicitly resolved months of "why isn't my agent doing anything."
+- **The whole-branch review catches cross-cutting defects per-task reviews structurally cannot.** Phase C's per-task tests were all green, yet the final review found two dead-on-arrival prod bugs: CSRF middleware 403'ing every MCP POST from Hermes, and a `localhost` `SELF_BASE_URL` default unreachable from the hermes container — both invisible to tests that call tools directly rather than over HTTP through the real middleware stack.
+- **A GitHub repo transfer into an org silently breaks GitHub-App-based deploy integrations.** Railway and Vercel connect via per-account GitHub App installs; transferring a repo to an org drops that access until the org re-installs/authorizes the app. Pushes keep working (remotes redirect) but auto-deploys stop — a quiet failure worth checking on any org move.
 
 ## Risks
 
