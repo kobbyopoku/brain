@@ -7,6 +7,9 @@ created: 2026-07-22
 description:
 tags:
   - "clippings"
+  - "agentic-engineering"
+  - "loop-engineering"
+  - "ai-business-models"
 ---
 [ericosiu](https://x.com/ericosiu)[@ericosiu](https://x.com/ericosiu)
 

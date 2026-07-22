@@ -8,6 +8,9 @@ created: 2026-07-22
 description: "I don't run most of my business by prompting anymore. I run it on loops.A loop sets a target, checks reality against it, acts, remembers wha..."
 tags:
   - "clippings"
+  - "agentic-engineering"
+  - "loop-engineering"
+  - "ai-business-models"
 ---
 ![Image](https://pbs.twimg.com/media/HNsydOvXUAAO9cy?format=jpg&name=large)
 
