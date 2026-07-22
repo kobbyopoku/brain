@@ -254,6 +254,8 @@ python3 bin/wiki_lint.py
 
 Exit code is 1 if any issues are found, 0 if clean. The script honors inline-code and fenced-code spans so example wikilinks in the schema do not register as broken. Semantic checks (contradictions, stale claims, missing-but-implied pages) still require an LLM read pass — the script narrows the work, it doesn't replace the lint operation.
 
+**Automated (scheduled) lint runs — branch discipline** *(added 2026-07-22)*: an automated weekly lint run must land its results on `main` before the run ends — either commit directly to `main`, or if working on a `lint/YYYY-MM-DD` branch, merge that branch into `main` (resolving `log.md` append conflicts by keeping both sides in chronological order) and delete the branch after merging. Never leave an unmerged `lint/*` branch behind: five accumulated between 2026-06-15 and 2026-07-13, which meant `log.md` on `main` recorded no lint operations at all and each week's `LINT_REPORT.md` findings were invisible until manually reconciled on 2026-07-22. Fetch + rebase before pushing (the vault is iCloud-synced and multi-machine; see the owner's memory notes on stale `index.lock` files and `" 2.md"` duplicates).
+
 ---
 
 ## index.md format

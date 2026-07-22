@@ -2,13 +2,13 @@
 type: synthesis
 title: Godwin Opoku Duah — Portfolio Landscape
 created: 2026-05-09
-updated: 2026-06-08
+updated: 2026-07-22
 aliases: [roam-portfolio, kobby-portfolio, godwin-projects]
 tags: [synthesis, portfolio, roam-labs, brolly-africa, project-landscape, wiki-owner]
 ---
 
 > **Refresh log**: 2026-05-09 — added Bucket 5 (ROAM Labs internal tools) for [[wiki/projects/helm|Helm]]. Brolly project still pending its Brolly Africa entity.
-> **Refresh log**: 2026-06-08 — added [[wiki/projects/glydr|Glydr]] (P2P carpooling for Ghana, added to brain 2026-05-17) and [[wiki/projects/africart|Africart]] (added 2026-05-30, renamed from AfriMart) to the Bucket 1 products table; landscape now maps all **12** brain projects. Rows drafted by lint from the project pages — owner may want to refine framing/status wording.
+> **Refresh log**: 2026-07-22 — lint: added Glydr/Africart/Helm to the org ASCII diagram (was tables-only); Helm bucket-5 row de-staled (design-phase → deployed multi-tenant SaaS per the 2026-07-13 project update). Prior: 2026-06-08 — added [[wiki/projects/glydr|Glydr]] (P2P carpooling for Ghana, added to brain 2026-05-17) and [[wiki/projects/africart|Africart]] (added 2026-05-30, renamed from AfriMart) to the Bucket 1 products table; landscape now maps all **12** brain projects. Rows drafted by lint from the project pages — owner may want to refine framing/status wording.
 
 # Godwin Opoku Duah — Portfolio Landscape
 
@@ -43,8 +43,12 @@ tags: [synthesis, portfolio, roam-labs, brolly-africa, project-landscape, wiki-o
  Vedge      CBwBS         Asanti                    CPC RTBVD
  Kivora     Stace-                                  (end client:
  Clarvyn    Sprouts                                  CPC)
+ Glydr
+ Africart
  _roamlabs
  (self)
+ Helm
+ (internal)
 ```
 
 ## Bucket 1 — ROAM Labs owned products (commercial / IP-bearing)
@@ -95,7 +99,7 @@ Tools ROAM Labs builds for its own internal use. Not commercial; not client work
 
 | Project | Purpose | Status |
 |---|---|---|
-| [[wiki/projects/helm]] | Multi-agent ops platform automating GTM + business operations across all ROAM products + client work | Just-started 2026-05-09 — design phase complete, Week 1 build (Lead Management agent MVP) imminent. Single user (Godwin), Hermes Agent runtime ([[wiki/entities/hermes-agent]]), FastAPI on Railway, Next.js on Vercel, PostgreSQL + pgvector. 6-week sequential build modeled on CyrilXBT's 5-agent pattern (per [[wiki/sources/cyrilxbt-x-2052570518667378918]]). See [[wiki/syntheses/multi-agent-ops-platform-blueprint]] for the reusable blueprint Helm instantiates. |
+| [[wiki/projects/helm]] | Multi-agent ops platform automating GTM + business operations across all ROAM products + client work | Deployed to production (2026-07-13 update): multi-tenant SaaS on Railway + Vercel (helm.roamlabs.software), Hermes Agent runtime ([[wiki/entities/hermes-agent]]), Org→Workspace→Agents model, Stripe billing, Composio integrations, agent autonomy Phases A/B live. Original single-user/internal-only framing superseded (decision #20). See [[wiki/syntheses/multi-agent-ops-platform-blueprint]] for the reusable blueprint Helm instantiates. |
 
 This bucket may grow over time as Helm patterns prove out — candidate future internal tools include a centralized brain-MCP server (Week 5 of Helm), a bid-templating tool extracted from the CPC RTBVD `docs/build_*.py` scripts, and possibly a cross-product analytics dashboard layered on Helm's `agent_logs` table.
 

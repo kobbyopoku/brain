@@ -429,7 +429,7 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 
 ## Risks
 
-- **Hermes Agent maturity**: 23k+ stars but a relatively new project. If a critical bug surfaces, Godwin may need to fork and patch — adding maintenance burden.
+- **Hermes Agent maturity**: massive adoption (~219K stars as of 2026-07-22) but still a young project (Feb 2026 release). If a critical bug surfaces, Godwin may need to fork and patch — adding maintenance burden.
 - **Analytics agent prompt-rewrite quality**: bad rewrites could degrade the other 5 agents. Mitigation: review-mode permanent + system-prompt change history with rollback.
 - **Single-user assumption**: if Godwin hires a team, Helm's no-RBAC architecture becomes a refactor liability. Mitigation: data model carries `tenant_id` from day 1 (per the multi-tenant pivot insurance in [[wiki/syntheses/helm-commercialization-paths]]); a `user_id` column on per-tenant write rows is implied by the same scoping. UI surfaces neither in v1.
 - **Cross-product context bleed**: a Lead Management agent that pitches Vedge to a clinic might also accidentally cross-sell Clarvyn (HR for clinic owners?) — could be feature, could be confusion. Mitigation: `primary_product` ENUM column on every business-data row (see Layer 3 schema); agent system prompts explicitly include *"lead with `primary_product`; mention secondary products only if signals strongly support"*.

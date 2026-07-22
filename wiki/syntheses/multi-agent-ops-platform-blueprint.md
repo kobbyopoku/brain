@@ -2,7 +2,7 @@
 type: synthesis
 title: Multi-Agent Ops Platform — Reusable Blueprint
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-07-22
 aliases: [multi-agent-blueprint, ops-platform-blueprint, agent-stack-blueprint]
 tags: [synthesis, multi-agent, blueprint, reference-architecture, doe-framework, self-annealing]
 ---
@@ -59,7 +59,7 @@ Each layer has its own design choices, with cross-layer dependencies explicit.
 | Choice | When to pick | Trade-offs |
 |---|---|---|
 | **Build on existing stack** (Spring Boot + FastAPI + Anthropic SDK) | You already have a similar agent service running (Clarvyn, Kivora). Reuse compounds. | High control; high build time; no built-in skills |
-| **Hermes Agent** ([[wiki/entities/hermes-agent]]) | Internal tool, ship-speed > stack-elegance. Need built-in messaging surfaces (Telegram / Slack / Email / CLI). | MIT-licensed; 200+ provider routing via OpenRouter ([[wiki/entities/openrouter]]); built-in memory + skills; 23k+ stars; relatively new project |
+| **Hermes Agent** ([[wiki/entities/hermes-agent]]) | Internal tool, ship-speed > stack-elegance. Need built-in messaging surfaces (Telegram / Slack / Email / CLI). | MIT-licensed; 200+ provider routing via OpenRouter ([[wiki/entities/openrouter]]); built-in memory + skills; ~219K stars (2026-07-22); young but massively adopted |
 | **Anthropic Claude Agent SDK** | Pure-Anthropic shop, want native MCP, willing to write more glue | Most native MCP support; younger; less battle-tested than Hermes |
 
 (LangGraph / CrewAI / AutoGen are also options; the wiki has thinner coverage of those.)

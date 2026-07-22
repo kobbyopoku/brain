@@ -3,7 +3,7 @@ type: entity
 title: Nous Research
 entity_type: organization
 created: 2026-05-05
-updated: 2026-06-06
+updated: 2026-07-22
 website: https://nousresearch.com
 aliases: [nousresearch]
 tags: [ai-research, open-weight-models, ai-tooling, hermes-series]
@@ -21,7 +21,7 @@ This page is **partially substantive**. Nous Research appears in the wiki via it
 
 - **Website**: https://nousresearch.com
 - **Notable products**:
-  - [[wiki/entities/hermes-agent|Hermes Agent]] — MIT-licensed self-improving multi-platform agent CLI (Feb 2026, 23k+ stars).
+  - [[wiki/entities/hermes-agent|Hermes Agent]] — MIT-licensed self-improving multi-platform agent CLI (Feb 2026; ~219K stars as of 2026-07-22).
   - **Hermes-series models** (Hermes-2, Hermes-3, Hermes-4, etc.) — open-weight fine-tunes of base models (Llama, Mistral, Qwen) tuned for steerable behavior, function calling, and agentic workflows. Distributed via Hugging Face. *(Models referenced via the Hermes Agent's "Nous Portal" provider option but not separately ingested.)*
   - **Nous Portal** — provider endpoint for Nous Research's hosted model API.
 - **Domain positioning**: open-weight AI tooling with a focus on agentic / function-calling workflows. Distinct from:

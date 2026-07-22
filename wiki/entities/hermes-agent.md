@@ -3,7 +3,7 @@ type: entity
 title: Hermes Agent
 entity_type: product
 created: 2026-05-05
-updated: 2026-06-06
+updated: 2026-07-22
 website: https://hermes-agent.nousresearch.com
 aliases: [hermes, nousresearch-hermes-agent]
 tags: [agent-cli, autonomous-agent, self-improving, open-source, mit, nous-research, persistent-memory, multi-platform]
@@ -11,7 +11,7 @@ tags: [agent-cli, autonomous-agent, self-improving, open-source, mit, nous-resea
 
 # Hermes Agent
 
-> MIT-licensed, self-hosted, model-agnostic autonomous AI agent by [[wiki/entities/nous-research|Nous Research]]. Released February 2026, **150,000+ GitHub stars as of May 2026** (per Shann Holmberg — verify before relying; this is a 6× jump from earlier 23k+ figure). **#1 on OpenRouter for global token usage**. The **only agent in the wiki with a built-in self-improving learning loop** — autonomously creates skills from experience, refines them in use, persists knowledge across sessions, searches its own past conversations, builds a deepening user model. Multi-platform (CLI + Telegram + Discord + Slack + WhatsApp + Signal + Email + 20+ surfaces from a single process). Listed as one of [[wiki/entities/open-design|Open Design]]'s 15 auto-detected agent CLIs.
+> MIT-licensed, self-hosted, model-agnostic autonomous AI agent by [[wiki/entities/nous-research|Nous Research]]. Released February 2026, **~219K GitHub stars as of 2026-07-22** (218,761 verified via GitHub API; earlier waypoints: 23k+ May 2026, 150K+ per Shann Holmberg late May). **#1 on OpenRouter for global token usage**. The **only agent in the wiki with a built-in self-improving learning loop** — autonomously creates skills from experience, refines them in use, persists knowledge across sessions, searches its own past conversations, builds a deepening user model. Multi-platform (CLI + Telegram + Discord + Slack + WhatsApp + Signal + Email + 20+ surfaces from a single process). Listed as one of [[wiki/entities/open-design|Open Design]]'s 15 auto-detected agent CLIs.
 
 ## Profile
 

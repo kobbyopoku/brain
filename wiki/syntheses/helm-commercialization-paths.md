@@ -2,7 +2,7 @@
 type: synthesis
 title: Helm Commercialization Paths — Strategic Decision (Internal-Only for v1)
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-07-22
 aliases: [helm-strategy, helm-commercialization, helm-marketplace-decision]
 tags: [synthesis, helm, strategic-decision, commercialization, decision-record]
 ---
@@ -39,7 +39,7 @@ The cumulative wiki signal: *Shape A has 5+ documented playbooks; Shape B has 0;
 The agent-marketplace framing fails three checks:
 
 1. **Contradicts user's stated Q6 (a) decision** to be internal-only (recorded 2026-05-09 in [[wiki/projects/helm|Helm project page]]). Pivoting to multi-tenant adds back what was deliberately cut: RBAC, multi-tenant data scoping, billing infrastructure, self-service onboarding, productization polish. Estimate: 3-6 months of retrofit.
-2. **Wiki has zero evidence of a productized multi-tenant agent platform working at small founder-scale.** CyrilXBT runs *one* business. nateherk runs *one* AI OS. Vacca runs an *agency* (services-mode). Closest competitor is [[wiki/entities/hermes-agent|Hermes Agent]] itself with 23k+ stars and MIT licensing — beating it requires more than "we did it for ROAM Labs internal."
+2. **Wiki has zero evidence of a productized multi-tenant agent platform working at small founder-scale.** CyrilXBT runs *one* business. nateherk runs *one* AI OS. Vacca runs an *agency* (services-mode). Closest competitor is [[wiki/entities/hermes-agent|Hermes Agent]] itself with ~219K stars (2026-07-22) and MIT licensing — beating it requires more than "we did it for ROAM Labs internal."
 3. **Distribution surface doesn't exist.** Shape B requires inbound content marketing + paid acquisition + partnerships — none of which are existing ROAM Labs strengths. Shape A leverages existing relationships (Brolly companies / Asanti / CBwBS / StaceSprouts / CPC if awarded) that already trust Godwin.
 
 [[wiki/sources/Mnilax-430-hours-claude-code-waste]] adds an operational dimension: production AI cost discipline is brutal even for *single-tenant* deployments. Multi-tenant means *every customer's overhead patterns become Helm's problem* — a debugging surface that scales sub-linearly.

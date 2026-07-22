@@ -2,7 +2,7 @@
 type: source
 title: NousResearch/hermes-agent — Self-Improving Open-Source AI Agent
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-07-22
 content_status: substantive
 source_url: https://github.com/NousResearch/hermes-agent
 source_type: github-repo
@@ -14,7 +14,7 @@ tags: [agent-cli, autonomous-agent, self-improving, open-source, mit, nous-resea
 
 # NousResearch/hermes-agent — Self-Improving Open-Source AI Agent
 
-> MIT-licensed, self-hosted, model-agnostic autonomous AI agent by [[wiki/entities/nous-research|Nous Research]]. Released February 2026, currently at v0.11.0 (May 2026), 23k+ GitHub stars. The **only agent in the wiki with a built-in self-improving learning loop** — autonomously creates skills from experience, refines them during use, persists knowledge across sessions, searches its own past conversations, and builds a deepening user model. Multi-platform: CLI + Telegram + Discord + Slack + WhatsApp + Signal + Email + 15+ other surfaces from a single process. Listed as one of [[wiki/entities/open-design|Open Design]]'s 15 auto-detected agent CLIs.
+> MIT-licensed, self-hosted, model-agnostic autonomous AI agent by [[wiki/entities/nous-research|Nous Research]]. Released February 2026, currently at v0.11.0 (May 2026), 23k+ GitHub stars *(at ingest; ~219K by 2026-07-22)*. The **only agent in the wiki with a built-in self-improving learning loop** — autonomously creates skills from experience, refines them during use, persists knowledge across sessions, searches its own past conversations, and builds a deepening user model. Multi-platform: CLI + Telegram + Discord + Slack + WhatsApp + Signal + Email + 15+ other surfaces from a single process. Listed as one of [[wiki/entities/open-design|Open Design]]'s 15 auto-detected agent CLIs.
 
 ## TL;DR
 
@@ -178,7 +178,7 @@ The presence of named anti-patterns in the agent contract is itself an instance 
 - **The combination Hermes + Open Design is a fully-OSS, fully-local, persistent-memory, multi-agent, multi-platform AI workflow.** Hermes provides the agent runtime; Open Design provides the design pipeline and skill bundles. Both are MIT/Apache. Both run locally. Both BYOK across providers. For users wanting maximum architectural ownership, this is the pairing.
 - **The prompt-cache discipline in AGENTS.md is unusually explicit.** Most agent codebases don't elevate cache validity to an architectural rule; Hermes does. Worth applying as a pattern: command semantics should default to *deferred* state changes with explicit `--now` opt-in, not immediate state changes.
 - **Multi-provider via single command (`/model` to switch)** is a UX primitive most agents lack. Most agent CLIs require restart or config-file edit to switch providers. Hermes's `/model` is mid-conversation switching — useful for cost-routing (use cheap model for setup, expensive for the hard problem) and capability-routing (use Claude for reasoning, GPT for vision).
-- **23k+ stars is meaningful traction** for an agent that's only ~3 months old (Feb 2026 release → May 2026 status). For comparison, Anthropic's [[wiki/entities/anthropic-skills|skill collection]] and [[wiki/entities/superpowers|superpowers]] have substantially smaller star counts. Hermes is a real entrant in the agent-CLI category, not a side project.
+- **23k+ stars is meaningful traction** for an agent that's only ~3 months old (Feb 2026 release → May 2026 status). *(Update 2026-07-22: ~219K stars — the traction claim aged well.)* For comparison, Anthropic's [[wiki/entities/anthropic-skills|skill collection]] and [[wiki/entities/superpowers|superpowers]] have substantially smaller star counts. Hermes is a real entrant in the agent-CLI category, not a side project.
 - **For [[wiki/projects/vedge|Vedge]] specifically**: Hermes is *promising but premature*. The persistent-memory model is great for clinical-knowledge retention but the multi-platform messaging gateway introduces a comprehensive personal-data-aggregation surface that's the wrong shape for PHI-bearing systems. Vedge should track Hermes for v2-v3 of internal tooling, not adopt today.
 - **Comparison with Claude Code**: Hermes is *more autonomous* (self-improving loop, scheduled cron) but *less integrated* (no first-party Anthropic-stack alignment, no Claude.ai surface). Different bets on the agent-as-tool vs agent-as-employee spectrum. Claude Code is "tool you wield"; Hermes is "agent you delegate to."
 

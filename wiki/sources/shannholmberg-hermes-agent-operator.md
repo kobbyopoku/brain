@@ -2,7 +2,7 @@
 type: source
 title: Shann Holmberg — How to Become a Hermes Agent Operator
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-07-22
 source_url: https://x.com/shannholmberg/status/2055335043904492011
 source_type: x-thread
 author: Shann Holmberg (shannholmberg)
@@ -121,7 +121,7 @@ Routed per-agent via the tool gateway. If only one: heavy-content/copy → Opus;
 ## Hermes adoption metrics (per Shann's claims)
 
 - **#1 on OpenRouter** for global token usage.
-- **150,000 GitHub stars** on the Hermes repo *(was 23k+ in earlier 2026-05 ingest — 6× jump in ~2 weeks; verify against actual GitHub before relying)*.
+- **150,000 GitHub stars** on the Hermes repo *(was 23k+ in earlier 2026-05 ingest — 6× jump in ~2 weeks; verified 2026-07-22: 218,761 via GitHub API, so Holmberg's figure was credible)*.
 - 123 bundled skills before the agent writes one of its own.
 - 70+ built-in tools in the gateway, 300+ models, one subscription.
 - 6 deployment targets; 20+ messaging surfaces.

@@ -876,3 +876,11 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - pages created: [[wiki/concepts/helpful-assistant-theater]] (promoted from Helm lesson; repairs the broken link)
 - pages updated: [[wiki/projects/helm]] (link + updated date), [[index]] (concept line + stats header)
 - notes: merged origin/lint/2026-07-13 into main (log.md conflict resolved keeping both sides) — the weekly lint routine had been committing reports to unmerged branches, so no lint entries reached main since 2026-06-22; routine needs fixing (merge to main or commit direct). Stale branches lint/2026-06-{22,29} + lint/2026-07-06 to be deleted (superseded). Outstanding from LINT_REPORT.md (2026-07-13): Hermes star-count staleness, CPC RTBVD bid outcome, re-clip backlog, portfolio ASCII diagram. New backlog flagged: 550 stubs aging (207 since May), 94 raw sources queued un-ingested.
+
+## [2026-07-22] schema-update | lint-branch discipline for automated runs
+- pages updated: [[CLAUDE]] (§ Workflows → Lint — automated runs must merge to main before ending; never leave unmerged lint/* branches)
+- notes: root-cause fix for the five stranded lint/* branches (2026-06-15 → 2026-07-13); the weekly routine re-reads CLAUDE.md each session, so the rule self-applies to future runs.
+
+## [2026-07-22] lint | LINT_REPORT items — Hermes stars verified + portfolio de-staled
+- pages updated: [[wiki/entities/hermes-agent]], [[wiki/entities/nous-research]], [[wiki/projects/helm]], [[wiki/sources/nousresearch-hermes-agent]], [[wiki/sources/shannholmberg-hermes-agent-operator]], [[wiki/syntheses/helm-commercialization-paths]], [[wiki/syntheses/multi-agent-ops-platform-blueprint]], [[wiki/syntheses/godwin-portfolio]]
+- notes: Hermes star count verified via GitHub API — 218,761 (~219K) as of 2026-07-22; all 23k+/150K+ references updated or annotated (source-page ingest-time claims kept with dated annotations). Portfolio ASCII diagram gained Glydr + Africart + Helm(internal); Helm bucket-5 row de-staled (design-phase → deployed multi-tenant SaaS). Remaining LINT_REPORT items need owner input: CPC RTBVD bid outcome (60+ days past kickoff), 8-stub re-clip backlog (desktop Web Clipper).
