@@ -870,3 +870,9 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 - pages created: [[LINT_REPORT]] (repo root)
 - pages updated: [[index]] (stats date)
 - notes: 6 human-review items in LINT_REPORT.md: (1) Hermes star count stale on 5 pages (23k+ vs 150k+ per entity page); (2) CPC RTBVD bid status unknown — 60+ days past planned kickoff, no outcome captured; (3) Helm internal contradiction — "Repo Topology" section says ROAM-Labs org but decision #19 (2026-06-26) says repos pushed to godwin-roam personal account; (4) re-clip backlog — 8 url-only/image-only stubs, continuing from 2026-06-08; (5) godwin-portfolio ASCII diagram missing Glydr/Africart (tables correct, diagram stale); (6) informational — Kivora on Sonnet 4.5/Haiku 4.5.
+
+## [2026-07-22] lint | interactive pass — link fix + concept filed + lint-branch reconciliation
+- script: `bin/wiki_lint.py` — 1053 files audited; 1 broken wikilink (helm.md empty concept link), 0 orphans, 0 index drift, 0 frontmatter issues
+- pages created: [[wiki/concepts/helpful-assistant-theater]] (promoted from Helm lesson; repairs the broken link)
+- pages updated: [[wiki/projects/helm]] (link + updated date), [[index]] (concept line + stats header)
+- notes: merged origin/lint/2026-07-13 into main (log.md conflict resolved keeping both sides) — the weekly lint routine had been committing reports to unmerged branches, so no lint entries reached main since 2026-06-22; routine needs fixing (merge to main or commit direct). Stale branches lint/2026-06-{22,29} + lint/2026-07-06 to be deleted (superseded). Outstanding from LINT_REPORT.md (2026-07-13): Hermes star-count staleness, CPC RTBVD bid outcome, re-clip backlog, portfolio ASCII diagram. New backlog flagged: 550 stubs aging (207 since May), 94 raw sources queued un-ingested.
