@@ -867,7 +867,7 @@ Append-only chronological record. See [[CLAUDE]] for the format spec. Greppable:
 ## [2026-07-13] lint | weekly pass — mechanical clean; 6 semantic items flagged
 - script: `bin/wiki_lint.py` — exit 0; 1053 files audited, 0 broken wikilinks, 0 orphan pages, 0 index drift, 0 frontmatter issues
 - auto-fixes: index.md stats "last updated" date corrected 2026-06-17 → 2026-07-13 (Helm update on 2026-06-26 had touched index.md without advancing the stats date)
-- pages created: [[LINT_REPORT]] (repo root)
+- pages created: `LINT_REPORT.md` (repo root)
 - pages updated: [[index]] (stats date)
 - notes: 6 human-review items in LINT_REPORT.md: (1) Hermes star count stale on 5 pages (23k+ vs 150k+ per entity page); (2) CPC RTBVD bid status unknown — 60+ days past planned kickoff, no outcome captured; (3) Helm internal contradiction — "Repo Topology" section says ROAM-Labs org but decision #19 (2026-06-26) says repos pushed to godwin-roam personal account; (4) re-clip backlog — 8 url-only/image-only stubs, continuing from 2026-06-08; (5) godwin-portfolio ASCII diagram missing Glydr/Africart (tables correct, diagram stale); (6) informational — Kivora on Sonnet 4.5/Haiku 4.5.
 
