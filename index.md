@@ -1081,6 +1081,7 @@ New entity pages from the 47-source backlog ingest, grouped by `entity_type`. St
 - [[wiki/concepts/progressive-disclosure]] — load metadata first, content on demand.
 - [[wiki/concepts/reasoning-execution-split]] — LLM reasons; deterministic code executes.
 - [[wiki/concepts/reliability-decay-math]] — chained-probability problem that motivates separation-of-concerns architectures.
+- [[wiki/concepts/helpful-assistant-theater]] — *(new 2026-07-22)* weak-model failure mode: agent narrates confident progress while invoking zero tools. Fix is model-tier + anti-fabrication instructions. From Helm's gpt-4o-mini incident.
 
 ### Integration & data layer
 
