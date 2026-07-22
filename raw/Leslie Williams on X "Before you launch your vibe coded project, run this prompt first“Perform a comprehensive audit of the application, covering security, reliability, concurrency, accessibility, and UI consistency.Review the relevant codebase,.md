@@ -1,0 +1,27 @@
+---
+title: "Leslie Williams on X: \"Before you launch your vibe coded project, run this prompt first:“Perform a comprehensive audit of the application, covering security, reliability, concurrency, accessibility, and UI consistency.Review the relevant codebase, architecture, data flows, API interactions,\""
+source: "https://x.com/shugarDadddy/status/2075148611680149656"
+author:
+published: 2026-07-09
+created: 2026-07-22
+description:
+tags:
+  - "clippings"
+  - "prompts"
+  - "software-craft"
+---
+## Post
+
+## Conversation[Leslie Williams](https://x.com/shugarDadddy)[@shugarDadddy](https://x.com/shugarDadddy)
+
+Before you launch your vibe coded project, run this prompt first: “Perform a comprehensive audit of the application, covering security, reliability, concurrency, accessibility, and UI consistency. Review the relevant codebase, architecture, data flows, API interactions, authentication and authorization logic, state management, async operations, error handling, and user-facing interfaces. Trace important flows end-to-end rather than reviewing files in isolation. Specifically investigate: Security vulnerabilities and data exposure - Authentication and authorization flaws, including missing server-side permission checks, privilege escalation, insecure direct object references, and cross-tenant data access. - Sensitive information exposed through client-side code, environment variables, API responses, logs, analytics, URLs, local storage, session storage, cookies, error messages, or source maps. - Injection risks, including SQL, command, template, prompt, HTML, and script injection where applicable. XSS, CSRF, SSRF, insecure redirects, unsafe file uploads, path traversal, weak session handling, insecure token storage, and missing security boundaries. - Overly permissive database rules, API endpoints, CORS policies, storage buckets, webhook handlers, or third-party integrations. - Secrets, API keys, credentials, internal endpoints, personal data, or implementation details that could be unintentionally exposed. - Missing validation and sanitisation at trust boundaries. Do not assume client-side validation is sufficient. Race conditions, concurrency, and state integrity - Duplicate submissions caused by repeated clicks, retries, refreshes, or concurrent requests. - Non-idempotent operations that can create duplicate records, payments, messages, bookings, jobs, or side effects. - Stale state, optimistic update failures, lost updates, conflicting writes, and out-of-order async responses. - Effects, subscriptions, listeners, timers, and requests that are not correctly cleaned up. - UI states where actions remain available while an operation is already in progress. - Cache invalidation problems and inconsistencies between client state, server state, and persisted data. - Multi-tab, multi-device, and poor-network scenarios where relevant. Reliability and failure handling - Unhandled promise rejections, swallowed errors, silent failures, infinite loading states, broken retry loops, and incomplete rollback behaviour. - Missing loading, empty, error, offline, timeout, and partial-success states. - Failure paths that leave data or the UI in an inconsistent state. - Assumptions about API responses, nullability, ordering, timing, or network availability that could cause production failures. - Memory leaks, unnecessary rerenders, expensive operations, and obvious performance bottlenecks that materially affect the user experience. Accessibility - Semantic HTML and correct use of landmarks, headings, labels, lists, tables, buttons, and links. - Keyboard navigation, logical tab order, focus visibility, focus trapping, and focus restoration. - Missing or incorrect accessible names, labels, descriptions, and ARIA attributes. - Colour contrast, text legibility, touch-target sizes, zoom behaviour, reduced-motion support, and reliance on colour alone to communicate meaning. - Screen-reader behaviour for modals, menus, dropdowns, tabs, toasts, validation errors, loading states, and dynamically updated content. - Forms with unclear instructions, inaccessible validation, missing autocomplete attributes, or poor error recovery. - Test against WCAG 2.2 AA expectations where applicable. Visual and interaction consistency - Inconsistent spacing, typography, colour usage, border radii, shadows, icon sizing, alignment, component dimensions, and responsive behaviour. - Components that visually appear identical but behave differently, or behave identically but are implemented inconsistently. 1/2
+
+[View quotes](https://x.com/shugarDadddy/status/2075148611680149656/quotes)
+
+Post your reply
+
+\- Incorrect or inconsistent use of design tokens and shared components. - Hover, focus, active, selected, disabled, loading, success, warning, destructive, and error states that are missing or inconsistent. - Layout shifts, clipping, overflow, truncation, wrapping issues,[10K](https://x.com/shugarDadddy/status/2075148616616845348/analytics)
+
+that's a good idea but not quite enough. you're just checking boxes on a template. the real question is: what do you want to achieve with this audit? are you optimizing for speed or robustness? that will make all the difference in your design.[3.7K](https://x.com/adelbucetta/status/2075462811304816716/analytics)
+
+Good question. The reason for this check is to ensure security and compliance for the product, minimizing the likelihood of weird stuff and gotchas happening.[3.1K](https://x.com/shugarDadddy/status/2075466369647120874/analytics)
