@@ -129,7 +129,7 @@ This convention exists because *an agent might open just `helm-backend/`* in a C
 
 ### GitHub org
 
-All 3 repos sit under the new **`ROAM-Labs/`** GitHub org (per Q2 resolution 2026-05-09). Org to be created when Week 1 build starts. Naming convention: `ROAM-Labs/helm-<service>` for clarity within the org alongside other future ROAM-Labs/ repos.
+All 4 repos are in the **`ROAMLABS-Technologies`** GitHub org as of 2026-07-09 — `github.com/ROAMLABS-Technologies/{helm-backend,helm-portal,helm-mcp,helm-docs}` — per decision #23 (revises the original Q2 2026-05-09 `ROAM-Labs/` plan and the interim `godwin-roam` push in decision #19). Note: the org transfer broke Railway + Vercel auto-deploy; reconnect required (see open items).
 
 ### What each repo deploys to
 
@@ -429,7 +429,7 @@ Six of the seven open questions resolved per Godwin's "proceed" with recommended
 
 ## Risks
 
-- **Hermes Agent maturity**: 23k+ stars but a relatively new project. If a critical bug surfaces, Godwin may need to fork and patch — adding maintenance burden.
+- **Hermes Agent maturity**: 150k+ stars (per Shann Holmberg, May 2026; verify) but a relatively new project. If a critical bug surfaces, Godwin may need to fork and patch — adding maintenance burden.
 - **Analytics agent prompt-rewrite quality**: bad rewrites could degrade the other 5 agents. Mitigation: review-mode permanent + system-prompt change history with rollback.
 - **Single-user assumption**: if Godwin hires a team, Helm's no-RBAC architecture becomes a refactor liability. Mitigation: data model carries `tenant_id` from day 1 (per the multi-tenant pivot insurance in [[wiki/syntheses/helm-commercialization-paths]]); a `user_id` column on per-tenant write rows is implied by the same scoping. UI surfaces neither in v1.
 - **Cross-product context bleed**: a Lead Management agent that pitches Vedge to a clinic might also accidentally cross-sell Clarvyn (HR for clinic owners?) — could be feature, could be confusion. Mitigation: `primary_product` ENUM column on every business-data row (see Layer 3 schema); agent system prompts explicitly include *"lead with `primary_product`; mention secondary products only if signals strongly support"*.
