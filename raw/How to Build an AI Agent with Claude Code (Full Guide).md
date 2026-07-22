@@ -8,6 +8,8 @@ created: 2026-07-22
 description: "You do not need Python or a developer setup. By the end of this guide you have a working team of agents that research, write, and ship for y..."
 tags:
   - "clippings"
+  - "claude-code"
+  - "agentic-engineering"
 ---
 ![Image](https://pbs.twimg.com/media/HMonzW-XgAAM2Yd?format=jpg&name=large)
 
