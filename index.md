@@ -1082,6 +1082,8 @@ New entity pages from the 47-source backlog ingest, grouped by `entity_type`. St
 - [[wiki/concepts/reasoning-execution-split]] — LLM reasons; deterministic code executes.
 - [[wiki/concepts/reliability-decay-math]] — chained-probability problem that motivates separation-of-concerns architectures.
 - [[wiki/concepts/helpful-assistant-theater]] — *(new 2026-07-22)* weak-model failure mode: agent narrates confident progress while invoking zero tools. Fix is model-tier + anti-fabrication instructions. From Helm's gpt-4o-mini incident.
+- [[wiki/concepts/fail-open-vs-fail-safe-gating]] — *(new 2026-07-22)* per-gate choice of failure direction: availability guards fail-open, destructive-action gates fail-safe (no silent bypass). Worked example: Clarvyn's agent safety framework.
+- [[wiki/concepts/review-gate-on-autonomous-learning]] — *(new 2026-07-22)* quarantine machine-authored memories from recall until a human ratifies them; gate *who may teach* server-side by identity. Worked example: Clarvyn's self-learning + Team Memory review queue.
 
 ### Integration & data layer
 
