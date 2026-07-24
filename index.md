@@ -2,7 +2,7 @@
 
 The content-oriented index of this wiki. Read this first when answering a query, then drill into the linked pages. See [[CLAUDE]] for conventions and [[log]] for the chronological record of operations.
 
-**Stats**: 146 sources · 671 entities · 215 concepts · 12 projects · 6 syntheses · last updated 2026-07-22 *(lint pass: filed helpful-assistant-theater concept, merged 2026-07-13 weekly lint)*
+**Stats**: 146 sources · 671 entities · 215 concepts · 12 projects · 7 syntheses · last updated 2026-07-24 *(synthesis: Kivora agent improvement loops, filed back from a read-mode query)*
 
 **Raw layout**: every design system lives at `raw/<brand>/DESIGN.md` (Refero) or `raw/open-design/design-systems/<brand>/DESIGN.md` (Open Design). 172 DESIGN.md files in this canonical folder layout. See [[wiki/sources/design-systems-master-index]] for the complete brand → path lookup.
 
@@ -1335,6 +1335,7 @@ _(none yet)_
 - [[wiki/syntheses/multi-agent-ops-platform-blueprint]] — *2026-05-09*. **Reusable 5-layer reference architecture** for building a multi-agent operations platform that automates a small business's GTM + business operations. Compresses 7+ wild-cited multi-agent system descriptions in the brain (CyrilXBT / Khairallah / regent0x_ / Nateherk / Shruti / Shann Holmberg) plus the architectural foundations (DOE / reasoning-execution-split / markdown-as-agent-contract / self-annealing). Worked example: [[wiki/projects/helm|Helm]].
 - [[wiki/syntheses/helm-voice-profiles]] — *2026-05-09*. **Starter-draft voice profiles** for Helm's Marketing agent: Vedge (high confidence), Kivora / ROAM GRC (high), Clarvyn (medium), ROAM Labs corp (low / draft-only — brand unsettled). Extracted from existing landing-site copy via Shann Holmberg's brand-foundation-extraction methodology. Will migrate to `helm-repo/voice-profiles/` when the Helm repo exists; refine when 20-best-pieces curation is available.
 - [[wiki/syntheses/helm-commercialization-paths]] — *2026-05-09*. **Strategic decision record**: Helm proceeds as ROAM Labs internal OS for v1; agent-marketplace shape explicitly deferred. 3 shapes considered (A: services-as-software / B: productized multi-tenant marketplace / C: open-source-core + commercial layer). Shape A chosen with 5+ wiki sources of supporting evidence. Re-evaluation trigger: 3-5 paying customers operating real volumes + concrete churn/implementation/distribution evidence. Data model carries `tenant_id` columns from day 1 to keep pivot tractable.
+- [[wiki/syntheses/kivora-agent-improvement-loops]] — *2026-07-24*. **Kivora's agents reviewed against the wiki's agent patterns**, filed back from a read-mode query. Five unclosed improvement loops (self-annealing / failure-learning / evals / triggers / theater-detection) + a chain→graph restructuring argument from reliability-decay math; effort-ascending priority order ending in a promotion-gated Coach persona.
 
 ---
 
